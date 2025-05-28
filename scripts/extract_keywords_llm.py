@@ -46,7 +46,10 @@ def get_keywords_from_llm(text):
 
 
 def main():
-    pdf_name = "sample.pdf"
+    # pdf_name = "sample.pdf"
+    # pdf_name = "Class 10 Physics EM.pdf"
+    # pdf_name = "drug data sheets.pdf"
+    pdf_name = "ieee papers 2.pdf"
     pdf_path = f"../data/pdfs/{pdf_name}"
     output_path = f"../data/keywords/llm/{pdf_name.replace('.pdf', '.json')}"
 

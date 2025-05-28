@@ -5,9 +5,6 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
 
-# def load_keywords(path):
-#     return json.load(open(path))["keywords"]
-
 def load_keywords(path):
     data = json.load(open(path))
     if "keywords" in data:
@@ -34,7 +31,8 @@ def semantic_similarity(gt, pred):
     return np.mean([max(cosine_similarity([v], pred_vecs)[0]) for v in gt_vecs])
 
 def main():
-    pdf_name = "sample.pdf"
+    # pdf_name = "sample.pdf"
+    pdf_name = "ieee papers 2.pdf"
     gt = load_keywords(f"../data/ground_truth/{pdf_name.replace('.pdf', '.json')}")
     ml_pred = load_keywords(f"../data/keywords/ml/{pdf_name.replace('.pdf', '.json')}")
     llm_pred = load_keywords(f"../data/keywords/llm/{pdf_name.replace('.pdf', '.json')}")

@@ -1,0 +1,14 @@
+{
+  "ground_truth": [
+    "medicines",
+    "inhibitors",
+    "anticonvulsants",
+    "antimigraine",
+    "relaxants",
+    "anaphylaxis",
+    "analgesics",
+    "inflammatory",
+    "antineoplastic",
+    "immunologicals"
+  ]
+}

@@ -11,7 +11,10 @@ def generate_keywords(text, top_n=10):
     return [kw for kw, _ in kw_model.extract_keywords(text, top_n=top_n, stop_words='english')]
 
 def main():
-    pdf_name = "sample.pdf"
+    # pdf_name = "sample.pdf"
+    # pdf_name = "Class 10 Physics EM.pdf"
+    # pdf_name = "drug data sheets.pdf"
+    pdf_name = "ieee papers 2.pdf"
     pdf_path = f"../data/pdfs/{pdf_name}"
     output_path = f"../data/ground_truth/{pdf_name.replace('.pdf', '.json')}"
 

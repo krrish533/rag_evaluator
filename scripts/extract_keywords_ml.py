@@ -1,14 +1,16 @@
-import os, json
+import os, json, re
 from PyPDF2 import PdfReader
 from keybert import KeyBERT
-
 
 def extract_text(pdf_path):
     reader = PdfReader(pdf_path)
     return " ".join([p.extract_text() for p in reader.pages if p.extract_text()])
 
 def main():
-    pdf_name = "sample.pdf"
+    # pdf_name = "sample.pdf"
+    # pdf_name = "Class 10 Physics EM.pdf"
+    # pdf_name = "drug data sheets.pdf"
+    pdf_name = "ieee papers 2.pdf"
     pdf_path = f"../data/pdfs/{pdf_name}"
     output_path = f"../data/keywords/ml/{pdf_name.replace('.pdf', '.json')}"
     

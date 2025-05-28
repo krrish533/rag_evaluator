@@ -1,14 +1,14 @@
 {
   "ground_truth": [
-    "sciencephysical",
-    "chemistry",
-    "distribution",
-    "humblyphysical",
-    "hyderabad",
-    "physics",
-    "andhra",
-    "sri",
-    "lecturer",
-    "science"
+    "medicines",
+    "inhibitors",
+    "anticonvulsants",
+    "antimigraine",
+    "relaxants",
+    "anaphylaxis",
+    "analgesics",
+    "inflammatory",
+    "antineoplastic",
+    "immunologicals"
   ]
 }

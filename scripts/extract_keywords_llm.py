@@ -1,8 +1,10 @@
 import os
 import json
+import re
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
 from openai import AzureOpenAI
+
 
 # Load Azure OpenAI config from .env
 load_dotenv("../config/api_keys.env")
@@ -20,14 +22,28 @@ def extract_text(pdf_path):
     return " ".join([p.extract_text() for p in reader.pages[:2] if p.extract_text()])
 
 def get_keywords_from_llm(text):
-    prompt = f"Extract 8 relevant keywords from the following text:\n\n{text}"
+    # prompt = f"Extract 8 relevant keywords from the following text:\n\n{text}"
+    prompt = (
+    "From the following text, extract **only 8 single keywords** or topics.\n"
+    "Return them as a comma-separated list — no bullets, no numbers, no markdown, no explanation.\n\n"
+    f"{text}"
+    )
     response = client.chat.completions.create(
         model=deployment_name,
         messages=[{"role": "user", "content": prompt}],
         max_tokens=100,
         temperature=0.5
     )
-    return response.choices[0].message.content.strip().split(", ")
+    #return response.choices[0].message.content.strip().split(", ")
+    
+    keywords_raw = response.choices[0].message.content.strip()
+
+    # Clean markdown, bullets, and split by commas
+    cleaned_keywords = re.sub(r"[\*\n\d\.]", "", keywords_raw)  # remove markdown & bullets
+    keywords = [kw.strip() for kw in cleaned_keywords.split(",") if kw.strip()]
+    return keywords
+
+
 
 def main():
     pdf_name = "sample.pdf"

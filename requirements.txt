@@ -1,0 +1,6 @@
+PyPDF2
+keybert
+openai
+python-dotenv
+scikit-learn 
+sentence-transformers

@@ -1,0 +1,553 @@
+International Journal of Busine ss and Management; V ol. 17, No. 2; 2022 
+ISSN 1833-3850    E - I S S N  1833-8119 
+Published by Canadian Center of Science and Education 
+45 
+ Does Artificial Intelligence (AI)  Enabled Recruitment Improve 
+Employer Branding? 
+Giulia Baratelli1 & Elanor Colleoni1 
+1 Department of Business, Law, Economics and Consumption, IULM U niversity, Milan, Italy 
+Correspondence: Elanor Colleoni, Department of Business, Law an d Economics and Consumption, IULM 
+University, Milan, Italy. E-mail: Elanor.colleoni@iulm.it 
+ 
+Received: November 22,  2021       Accepted: December 24, 2021      Online Published: January 13, 2022 
+doi:10.5539/ijbm.v17n2p45         URL: https://doi.org/10.5539/ ijbm.v17n2p45 
+ 
+Abstract 
+Extant research over the last d ecades has stressed how artifici al intelligence (AI) can be used to boost the 
+recruitment process and to attr act the best talents. Although A I is increasingly used for talent acquisition, with 36% 
+of hiring processes expected to have a pre-screen through AI (O racle, 2019) in the next two years, we have 
+limited knowledge of how AI shapes talents’ perceptions about t he organisation to which they are applying to. 
+T h e  g o a l  o f  t h i s  r e s e a r c h  i s  t o  i n v e s t i g a t e  i f  a n d  h o w  t h e  u s a g e of AI in the recruitment process improves 
+employer attractiveness and employer branding in the eyes of th e applicants. To investig ate this issue a survey 
+has been conducted on a random sample of individuals composed o f 50% females and 50% males. To examine 
+the survey’s result a structural  equation modeling (SEM) has be en applied. Results showed a positive 
+relationship between EB and AI and more in particular that AI-e nabled tools are perceived in a positive way by 
+potential candidates. Thus, according to this study, AI is sign ificantly related to Employ er branding and therefore 
+it contributes to improving talent attraction.  
+Keywords:  Artificial intelligence, employer branding, AI-enabled recruit ment, employer attractiveness 
+1. Introduction 
+Organizations operating in the contemporary competitive environ ment derive much of their wealth from 
+intellectual capital (IC) (Kaplan and Norton, 2004). In this co ntext, the real competitive advantage lies in the 
+quality of the people the compan y employs (Beechler and Woodwar d, 2009). As a result, the ability to attract and 
+retain the best talents have become one of the key goals for or ganizations (Chambers et al., 1998). The role and 
+relevance of onboarding the best employees and keeping them ali gned is also emphasized by current theories of 
+customer centricity which stre ss how employees are key to succe ssfully engaging with customers and therefore 
+to implement the customer centricity paradigm within the organi zation (Colleoni et al., 2021). In order to attract 
+the best employees, companies increasingly implement sophistica ted targeted communication and marketing 
+actions, engaging in a process of Employer Branding (EB) with t he goal of building an attractive image for its 
+current and future employees. 
+The employer branding process is anchored on the belief that an  effective branding of an organisation as an 
+attractive employer, can give a co mpany an advantage in the “wa r for talent” by attracting and retaining a 
+talented workforce (Sutherland et al. 2002). Against the backdr op of the ascending role of human capital, the 
+technological context of how companies recruit people has also changed. Currently, companies are experiencing 
+a great transformation in their recruitment practices thanks to  the introduction of artific ial intelligence (AI) tools 
+in recruiting related activities. Based on Oracle’s (2019) rese arch, over a third (36%) of HR professionals say 
+they expect high utilization of AI in the next two years and 61 % of the respondents expect at least moderate 
+utilization within a year (Oracle,  2019). Therefore, in the fut ure HR professionals will need to become more 
+knowledgeable in this area as mor e recruitment-related products  and services will incorporate AI into them. It is 
+therefore crucial to understand how to use AI at best to ensure  the best selection of talents. 
+The majority of the research a lready conducted on recruiting an d selection through AI techniques focused largely 
+on the reliability and validity of recruitment and selection pr ocess, activities and techniques (Van Esch et al., 
+2021). Surprisingly, little research has been conducted on how AI shapes job candidates’ perceptions of the 
+organisation using AI in the selection process. Given the impor tance of candidate reactions to recruiting 
+techniques, the little number of empirical studies focusing on the topic (Van Esch, Bl ack, Franklin , & Harder, 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+46 
+ 2020), and the spread of the use of AI-enabled tools in recruit ing, it seems that a study of candidate perception 
+and reaction on AI-enabled recruiting could make worthwhile con tributions to both research and practice (Van 
+Esch, P., Black, J. S., & Ferolie, J., 2019). Therefore, aiming  to start filling the gap, this study assesses how the 
+perception of AI systems held by potential employees influences  the perceived employee brand attractiveness 
+and, as a consequence, the candidates’ intention to submit a jo b application to the organisation. 
+The paper is structured as follows. In the first part of the pa per, we review the literature on employer branding, 
+employer attractiveness, and AI-e nabled recruitment. In particu lar, in the first paragraph, we review the 
+state-of-the-art of employer branding debate, and outline the c urrent employer branding framework. In the 
+second paragraph, we introduce th e state-of-the art debate on A rtificial intelligence usage for recruitment, outline 
+open points, and formulate the hypothesis at the heart of the s tudy. Based on the hypothesis formulated, we 
+present an updated framework for employer branding that also in cludes AI-enabled recruitment. In the second 
+part, we present the data collected, the variables used in the analysis and the analytical procedure applied in 
+order to test the relevance and impact of AI-enabled recruitmen t in the employer branding process. In the third 
+section, we present the results of our statistical model and co nclude drawing implications of our findings for the 
+employer branding studies. 
+2. Theoretical Framework 2.1 Competing for Attracting Talents High-quality employees are critical to the firm's competitivene ss in the global economy. As extensive research 
+has shown, the ability of companies to attract and retain talen ts is crucial for a firm success (Chambers et al., 
+1998) because of the transition from the industrial age (produc t-based) to the information age (knowledge-based), 
+in which companies derive much of their value from the manageme nt and manipulation of knowledge, rather 
+than raw material (Johnson et al., 2005). However, while in the  past it has been relatively easy to find resources 
+for companies, radical changes in the labor market structure in  recent years have caused companies to be 
+involved in what McKinsey called a "war" for the acquisition of  talent to survive growing global competition 
+(Michaels et al., 2001). As a consequence, businesses face toug h times and need strategies to maintain their 
+position as companies highly valued by potential and existing e mployees (Lievens & Highhouse, 2003). To 
+attract and retain talents, traditional working benefits, such as high salaries and prestigious positions are relevant 
+but not always defining (Gray & Balmer, 1998). Instead, current  research has shown how talents increasingly 
+search for incentives different from financial (Lievens & Highh ouse, 2003). Increasingly workers look for 
+companies that they perceive can  maximize their career potentia l, increase their skills, provide a satisfying 
+working environment and leave up  to their ethical standards (Ch owdhury, 2003). Being able to create this 
+perception means creating an environment that first and foremos t conveys a coherent identity, that emanates trust 
+and above all an environment that  makes its employees proud. An  employee who is proud of his or her work and 
+the performance that his or her company can achieve, who feels that he or she is part of a group within which he 
+can be and express himself, certa inly has every intention of re maining in the company for as long as possible and 
+continue to contribute to its success. On the other hand, a com pany that is capable of doing this and that makes 
+its employees so proud, also has  a high chance of attracting ne w talent. Thus, the challenge of HR managers 
+today is to put in place long-term company strategies that make  their company being perceived as an attractive 
+place to work. 
+2.2 Employer Branding for Attracting Talents 
+The most popular framework used by companies in order to establ ish long term strategies to attract, select and 
+retain the most competent workers is known as Employer Branding  (EB). Despite the recent application of this 
+phenomenon, its birth can be traced back when Tim Ambler and Si mon Barrow first coined it as a way of 
+combining branding techniques with human resource practices (Am bler & Barrow, 1996). Kotler (2001) defines 
+a brand as “a name, term, sign, symbol, or design, or a combina tion of them which is intended to identify the 
+goods and services of one seller or group of sellers and to dif ferentiate them from those of competitors” (p.719). 
+The definition has primarily been used to describe product bran ds and the consumer’s relationship toward the 
+brand (Mosley, 2007). However, according to the current marketi ng literature, a brand has a positive impact on 
+the company as an employer as it allows external stakeholders t
+o identify the organization, the corporate brand 
+and the firm as a future w orkplace (Gaddam, 2008).  
+Before the concept of employer branding was created, Kotler (19 94) contributed to the current understanding of 
+the concept of employer branding using the term internal market ing to describe the task of successfully hiring, 
+training and motivating employees  to serve the customer well. B y satisfying employee’s needs, their motivation 
+increases as well as their involvement and commitment towards t he company. For instance, companies started 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+47 
+ realising that employees should be considered a tool to differe ntiate an employer among the competition in order 
+to attract highly skilled labor (Kotler, 1994). Thus, branding and EB are closely related, as what characterizes a 
+strong brand is mostly consistent with successful employer bran ds (Öster & Jonze, 2013). Accordingly, Branham 
+(2000) defines employer branding as the practice of “applying t raditional marketing principles to achieving the 
+status of Employer of Choice […], the process of placing an ima ge of being a great place to work in the mind of 
+the targeted candidate pool” (Branham, 2000, p.18). Soon, Backh aus and Tikoo (2004) build on this definition 
+and define employer branding as the process of building an iden tifiable and unique employer identity, and the 
+employer brand as a concept of the firm that differentiates it from its competitors. According to Sullivan (2004), 
+employer branding is a strategy to manage stakeholders’ awarene ss, perceptions, opinions, and beliefs with 
+regards to a particular organization. Employer branding represe nts organizations’ efforts to communicate to 
+internal and external audiences w hat makes it both desirable an d different as an employer. (Jenner & Taylor, 
+2007). It is concerned with building an image in the minds of t he potential employees that the company is a 
+‘great place to work’ (Ewing et  al., 2002). For this purpose, c ompanies have begun to develop targeted 
+recruitment marketing actions so to create a corporate image co nsistent with the identity of the company, aimed 
+at attracting and retaining talented resources. In other words,  employer branding as a concept summarises the 
+strategies of recruiting marketing aiming at developing an imag e of the company which is coherent with the 
+company’s identity as an ideal working environment (employer of  choice). In this way , the company is able to 
+attract and build a loyal relationship with talented employees.  
+2.2.1 Factors Influencing the Employer Attractiveness and the E mployer Branding Process 
+Employer branding is the result of a process in which a firm cr eates and communicates a convincing “employer 
+value proposition” (Backhaus & Tikoo, 2004). The “employer valu e proposition” (EVP) is defined as the full 
+“package of reward features or em ployment advantages and benefi ts offered to employees” (Barrow & Mosley, 
+2005; Edwards, 2010), which in order to be valuable for the tal ents must be linked to the central message that is 
+conveyed by the corporate brand (Backhaus & Tikoo, 2004). The c oncept of employer branding lies at the 
+intersection between EVP and business objectives, understood as  a set of activities aimed at spreading an 
+employer identity that allows to narrow the gap between the des ired image (by management) and perceived 
+image (by current or potential employees)” (Lievens et al., 201 6). Corporate brand image applied to EB can be 
+defined as the perception of an organization as reflected by th e brand association held in employee’s memory. 
+Collins & Stevens (2002) applied this acknowledgement to the em ployer branding context and defined the 
+employer attractiveness as the result of the “potential applica nts’ attitudes and perceived attributes about the job 
+or organization” and employer branding as the process of buildi ng a unique and attractive image as an employer 
+(Backhaus & Tikoo, 2004, p. 502).  
+According to Moroko & Uncles (20 08), future employees create th eir perception of the employer attractiveness 
+during the recruitment process, based on explicit information f rom the firm (job description), but also on 
+informal information (recruitment experience), which makes the recruitment process vital for the creation of a 
+strong employer image and the EB strategy. Ambler and Barrow (1 996) identified three factors driving employer 
+image, namely functional, economi c and psychological. Kucherov & Zavyalova (2012) extend this list to 
+comprise all the set of qualitative features of the employer im age that are attractive to a target audience. These 
+features are described by a totally positive image and an appro priate set of both material (economic) and 
+non-material (psychological and functional) advantages that dif ferentiate a company in the job market. Berthon 
+et al. (2005) developed and validated a multi-item scale to ide ntify and operationalize the dimensions of 
+employer image which in turn influences employer attractiveness . According to these authors, (1) interest value, 
+(2) social value, (3) economic v alue, (4) development value and  (5) cooperation/application value are the five 
+building blocks of the attractiveness of an employer’s brand: 1 . Interest value assesses attraction to an employer 
+that offers an exciting work environment, with forward-thinking  and creativity, and an organization that 
+encompasses innovation and intere st in product or services; 2. Social value which refers to the work environment 
+and relations to other employees; 3.Economic value which relate s to economic benefits such as salary, 
+compensation, promotion opportunities, and job security; 4. Dev elopment value assesses attraction to 
+employment which supports career-enhancing experience, the poss ibility for future opportunities and provides 
+recognition; 5. Cooperation value which encompasses the possibi lity to use what has been learned already, and it 
+identifies an environment that is oriented primarily to satisfy  s o c i e t a l  n e e d s .  T a b l e  1  s h o w s  t h e  d i f f e r e n t  
+dimensions, definitions and items as described by Berthon et al . (2005). 
+ 
+ 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+48 
+ Table 1. Employer image dimensions 
+Dimension Definition Items 
+Interest value “[…] the extent to which an individual is attrac ted to an employer that provides an 
+exciting work environment, novel work practices and that makes use of its 
+employees’ creativity to pr oduce high-quality, innovative produ cts and services” • Working in a challenging work 
+environment 
+• Innovative employer – innovative work practices/d isruptive ideas 
+• The organisation values and makes 
+use of its creativity • The organisation provides high 
+quality products and services 
+• The organisation provides innovative products and services 
+Social value “[…] the extent to which an individual is attracte d to an employer that provides a 
+working environment which is fun, happy, and which provides goo d collegial 
+relationships and a team atmosphere” • A fun work environment 
+• Have a good relationship with your 
+superiors 
+• Have a good relationship with your colleagues 
+• Encouraging and collaborative 
+colleagues • Good working environment 
+Economic 
+value “[…] the extent to which an individual is attracted to an emplo yer that provides an 
+above-average salary, a compensation package, job security, and  opportunities for 
+promotion” • Good opportunities for promotion 
+within the organisation 
+• Opportunity for inter-departmental 
+practical experience • Good working environment 
+• Above-average base salary 
+• Job security within the organization 
+Development 
+value “[…] the extent to which an indi vidual is attracted to an emplo yer that provides 
+recognition, self-worth and confidence, together with a career- enhancing 
+experience and a springboard to future employment” • Appreciation of your performance 
+by management 
+• A launching pad for future jobs 
+• Feeling good about yourself as a result of working for a particular 
+organisation 
+• Feeling more confident as a result of working for a particular 
+organisation 
+• Gaining professional experience 
+Cooperation 
+value “[…] the extent to which an individual is attracted to an emplo yer that provides an 
+opportunity for the employee to apply what they have learned an d to teach others, 
+in an environment that is both customer-orientated and humanita rian” • Humanitarian organization – gives 
+back to society • Opportunity to apply what has 
+been learned in a tertiary institution 
+• Opportunity to teach others what you have learned in the work context
+• Acceptance and belonging 
+• The organisation is customer-oriented 
+Note.  Employer branding dimensions as identified in Berthon et al. ( 2005). 
+ 
+Of these factors, interest value and social value capture the p sychological benefits, while development value and 
+cooperation value capture the fun ctional benefits. The differen t factors help build the employer image which then 
+defines the extent to which a person is attracted to an employe r (Berthon et al., 2005). E B is thus affected by the 
+employer’s notion of attractiveness and can be considered the r eflection of the image of an organisation. Figure 1. 
+shows the employer branding framework which summarizes the key factors driving employer attractiveness, as 
+resulting from the literature review. 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+49 
+  
+Figure 1. Employer branding framework  
+ 
+2.3 The Use of Artificial Intelligence to Improve th e Employer Image and Employer Attractiveness 
+Artificial intelligence (AI) “refer s to a field of computer sci ence dedicated to the creation of systems performing 
+tasks that usually require human intelligence. It can be loosel y interpreted as incorporation of human intelligence 
+into machines. In AI, machines com plete the task based on the s tipulated rules and algorithms. AI is an umbrella 
+term for any computer program that has the touch of human intel ligence.” (Yao et al., 2019, p.15). AI is 
+increasingly used to support deci sion-making processes in the w orkplace (Helbing et al., 2019), where 
+algorithms throughout the use of  machine learning methods impro ve decision making processes without 
+requiring the intervention of humans (Günther et al., 2017). Th e introduction of AI and its application in 
+recruiting has increased the efficiency of the process, marking  a profound change within the HR field. AI is 
+currently used to support three general sets of activities of r ecruitment, namely, outreach, screening, assessment. 
+In the outreach stage, firms aim to identify candidates and pro mote job opportunities in ways that will push them 
+to apply. AI supports this operation by tailoring the best pres entation methods (e.g., banner ads, email, text) for 
+the different target candidates. In other words, the system lea rns and places job opportun ities via banners, popups, 
+email, texts, etc. for the optim al uptake and response by targe ting the most suitable candidates’ profiles. The 
+second stage requires doing an initial screening, which can be easily done by the AI based on fixed criteria 
+defined by the recruiter (Campbell et al., 2020). Sharma has sh own how the use of AI at this stage can help 
+achieve significant reductions for  companies in lead time from 60% to 90%. In addition, not only are firms 
+competitive in the recruiting speed and efficiency that are pos sible with AI, but also, they potentially generate 
+effective and high-quality services as well. For example, recen t research demonstrates that AI-enabled tools 
+outperform at least 25% in screening applicants compared to hig h-quality, time-consuming evaluations of 
+humans (Kuncel et al., 2014). 
+The third stage refers to the use of AI not only in the pre-sel ection but also for assessment of the candidates. For 
+example, Unilever uses AI-enabled interviews and evaluations to  narrow the original pool of over 45,000 
+candidates for internships in the United States to 300 finalist s (Feloni, 2017). During the interview, the AI system 
+asked candidates various questions and candidates submitted the ir recorded responses. The questions were based 
+on an analysis of successful and average employees in those int ernship positions in the past. The system 
+analyzed not only the content of  candidates’ responses but thei r word choice, tone of voice, and micro facial 
+movements and correlated them to those of the company's success ful employees. Candidates were able to 
+participate in the virtual interview on any day or at any time convenient to them within a several-day window. 
+This not only saved countless hours in scheduling but also gave  candidates more control over the experience. 
+What makes this third stage par ticularly relevant for the emplo yer branding process is tha t at this stage, potential 
+candidates get in contact with the AI tool knowing they are goi ng to be evaluated by it. Ehrhart & Zieger (2005) 
+have shown how the use of technology in general during the recr uitment process has a positive impact on the 
+perceived attractiveness of the employer (Ehrhart & Zieger, 200 5). For instance, extant research reported that 
+organisations prompted to the use of social media were perceive d as more attractive by j ob applicants (Pramod & 
+Bharathi, 2016), as well as those  who actively used social medi a during the recruiting process (Van Esch et al., 
+2020). Furthermore, ext ant research has shown that the use of A I in products and services  is correlated with more 
+positive attitudes since people feel high control and accuracy towards the AI products and services (Hamilton & 
+Davison, 2018). Finally, while extant research has recently cri ticized the supposed objectivity of AI (Campolo & 
+Crawford, 2020; Crawford, 2016), showing how AI can also lead t o biases, research suggests that AI-enabled 
+
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+50 
+ systems are perceived as less bi ased and more objective than hu mans by users (Van Esch et al., 2019). 
+We can assume that all these factors can play a role in the acc eptance of AI-based technology when used for 
+recruiting, and in particular, we can hypothesize that AI-based  technology for recruiting can project a positive 
+image of the future employer, as it might be perceived as more objective, accurate, and unbiased, and therefore 
+improve its attractiveness. Therefore, it can be hypothesized t hat the use of AI might be positively impacting the 
+employer attractiveness and the employer image. We therefore de velop the follow hypothesis: 
+H1: The use of AI in the recruitment process has a significant positive impact on the employer attractiveness and 
+on the employer image. 
+Figure 2 shows the final framework that includes the effect on the use of AI-enabled recruitment, both direct on 
+employer attractiveness and indi rect through the impact on the employer image. 
+ 
+ 
+Figure 2. Employer branding framework with AI-enabled recruitme nt factor  
+ 
+3. Method 
+To assess whether the AI-enabled recruitment process is a relev ant factor significantly influencing the employer 
+image and consequently the employer attractiveness, a quantitat ive analysis has been conducted. In the following 
+paragraphs, we present the data , variables and model used to in vestigate how people perceive the use of AI in the 
+recruitment process and to test our hypothesis. 
+3.1 Data Collection This study employs a quantitative research approach by means of  a survey to answer the above research 
+questions. The survey was distributed to a sample of the Italia n population during October 2019. Respondents 
+were screened so that only those who were in the age range to b e potential job candidates were recruited, so that 
+the eligible target is composed of people between 18 and 44 yea rs old. The total number of respondents is 312, 
+however only 302 fit the validity of the study. The target repr esents country population distribution of gender for 
+the segment under consideration (18-44) which is 49.7% men and 50.3% women. The survey was conducted 
+using computer-assisted web interviewing (CAWI) methodology and  the questionnaire was presented online 
+through a web-interface. 
+3.2 Measures and Covariates 
+In developing the questionnaire’s structure and contents, the e xisting literature has been taken into consideration 
+in order to have a starting point of reference for the selected  study. The questionnaire (attached in appendix) 
+comprises 12 questions: closed-ended questions and Likert 7-poi nts-scale response questions. The Likert scale 
+was highly frequently used as a method of likelihood measuremen t as it allows respondents to choose one option 
+that best aligns with their view and express the extent to whic h they agree or disagree with a particular question 
+or statement. For instance, a t ypical scale might be “Strongly disagree, Disagree, Neutral, Agree, Strongly 
+agree.” 
+ 
+
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+51 
+ 3.2.1 Covariates 
+The following variables wer e used in the analysis: 
+Employer attractiveness 
+The overall employer attractiven ess is defined as the willingne ss to work for a company of the potential 
+candidates, following Luce et al.  (2001). Particip ants were pro mpted the following question: “How willing 
+would you be to undertake a selection process using artificial intelligence”. A 7-point Liker t scale ranging from 1 
+(Completely unwilling) to 7 (Compl etely willing) was used to me asure the degree of willingness. 
+AI-enabled recruitment factor 
+In order to assess the impact that AI-enabled recruitment has o n the employer attractiveness and employer image, 
+we developed an ad-hoc battery. The list of items resulted from  the literature review and comprises the following 
+items:  
+• Accuracy is defined as the perceived ability of AI to select th e best curricula in relation to the vacant 
+position (Sharma, 2018). 
+• Velocity is defined as the perceived ability of AI to provide c andidates with a final decision in a short 
+period of time (Sharma, 2018). 
+• Objectivity is defined as the perceived ability of AI to evalua te candidates only on skills and not on 
+non-verbal communication (Bilic, 2 016; Black, Van Esch, 2020). 
+• Reliability is defined as the pe rceived ability of AI to guaran tee no errors or misinterpretation during the 
+process (Bilic, 2016). 
+• Unbiasedness is defined as the perceived ability of AI to guara ntee a fair interview and evaluation only on 
+the performances of the candidates (Black & Van Esch, 2020). 
+We first run a correlation analysis with these five items and a  factor analysis to test whether all the items were 
+related and associated to the latent component of the AI-enable d recruitment process. The  correlation coefficient 
+showed that the Objectivity item had a general low correlation to the other variables compared to the rest of the 
+variables. Then we ran a factor analysis (extraction method Max imum Likelihood, Oblimin rotation), to test 
+whether all the items were contributing properly to the latent variable and found that the loading of the 
+Objectivity item was below the accepted value of 0.500. We ther efore removed this item and ran the factor 
+analysis with only four items. We found that all the items had high factor loadings on one factor, with Bartlett's 
+test of sphericity significantly p-value significantly smaller than 0.05 and Kaiser-M eyer-Olkin Measure of 
+Sampling Adequacy value around 0.902. The final list of items u sed in the final model comprises the following: 
+Accuracy, Velocity, Reliability, and Unbiasedness. 
+Employer image In order to capture the overall employer image, a multi-items s cale battery was used as developed by Berthon et 
+al. (2005). The battery captures the five dimensions of the emp loyer image, namely (1) interest value, (2) social 
+value, (3) economic value, (4) d evelopment value and (5) cooper ation/application value.  For each dimension, an 
+exploratory factor analysis was carried out with the goal of se lecting only the most relevant items. The items 
+were factor analyzed (extraction method Maximum Likelihood, Obl imin rotation), yielding a factorial structure 
+in line with the original studies that developed the scales (i. e., with high factor loadings on one factor), with 
+Bartlett's test of sphericity significantly p-value significant ly smaller than 0.05 and Ka iser-Meyer-Olkin Measure 
+of Sampling Adequacy  value around .888. 
+3.3 Analytical procedure 
+In order to test the Employer branding framework as shown in fi gure 2, a structural equation model (SEM) 
+analysis was carried out. SEM is  a combination of factor analys is and multiple regression and describes 
+statistical relationships between  latent and manifest (measured ) variables. As Cooley (1978) states, this approach 
+allows to establish the plausibility of a theoretical model and  to determine the degree to which the explanatory 
+variables (causes) influence the dependent variable (latent). S EM is an alternative way of testing the consistency 
+of a 'structural' theory through data; in this sense it is prim arily a 'confirmatory' rather than an 'exploratory' 
+methodology. This method is preferred by the researcher because  it estimates the multiple and interrelated 
+dependence in a single analysis. The variables represented with  ovals are latent variables, meaning that they are 
+not directly observed (the variables that have been measured on  the subjects) but are inferred from the observed 
+variables (rectangles) in order to explain their behaviour. Som e variables are independent (variables from which 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+52 
+ the arrows start) and they influence or determine other variabl es which are known as dependent (variables that 
+receive the arrows). Additionally , SEM provides numerical estim ates for each of the parameters in the model to 
+indicate the strength of the relationships. Thus, in addition t o testing the overall theory, SEM allows the 
+researcher to diagnose which observed variables are good indica tors of the latent variables as well (MacCallum 
+& Austin 2000). In the framework proposed, we analyzed second o rder SEM model, as the employer image is 
+the latent dimension of four latent variables (ie. interest, de velopment, cooperation and AI-enabled recruitment 
+f a c t o r s )  a n d  t w o  v a r i a b l e s  ( i e .  social and economic value). In order to apply SEM, we used the R package 
+Lavaan that also visually represents the relationship between v ariables. 
+4. Results 
+In order to test whether the AI-enabled recruitment process has  an impact on the perceived employer 
+attractiveness, we tested a SEM m odel as reported in Figure 3. 
+ 
+ 
+Figure 3. Structural equation modeling results 
+ 
+The overall model shows a good fit. In fact, looking at the com parative fit index (CFI), which compares the fit of 
+a target model to the fit of an independent, or null, model, ou r model reached a CFI value of 0.933, above the 
+0.900 which indicates a good model fit. Another index widely us ed to assess the quality of the model is the root 
+mean square error of approximati on (RMSEA), which represents a parsimony-adjusted index. Values closer 
+RMSEA <=0.08 represent a good fit. The study fits this value (0 .075). Note that all the p-values for the 
+parameters estimate are shown a nd are all <0.000, which means h ighly significant. The AI-enabled recruitment 
+factor is built out of the four dimensions discussed in the met hodology section, namely accuracy, velocity, 
+reliability, and unbiasedness. All these dimensions are signifi cant. The dimension contributing most to the 
+AI-enabled recruitment factor i s the accuracy (0.746***), meani ng that what respondents value most of the 
+AI-enabled recruitment process is the fact that using AI they a re confident that they will be selected and 
+positively evaluated if their curricula fit the position. The s econd dimension is the velocity (0.702***), meaning 
+that the respondents appreciate th e fact that using AI in the r ecruitment process can speed up the whole process. 
+The third dimension is the reliability (0.694***), meaning that  they perceived as more objective and reliable the 
+selection made by the AI compared to the human recruiter. Final ly, the four dimension is unbiasedness 
+(0.590***), meaning that they perceive the AI as assessing only  their performances and skills without being 
+biased by human factors or non-verbal communication that might instead affect the decision of a human recruiter. 
+The model shows also that the dimensions identified in Berthon e t  a l .  ( 2 0 0 5 ) ,  a r e  s i g n i f i c a n t l y  d e f i n i n g  t h e  
+employer image. Among the different dimensions, the most releva nt is the development value (0.999***), which 
+captures the perceived image of the employer as offering career  enhancing working opportunities. The second 
+dimension is the interest value (0.954***), which captures the perceived image of the employer as offering work 
+in a creative, innovative, and high-quality working environment . The third dimension is the cooperation value 
+(0.951***), which captures the pe rceived image of the employer as providing a working environment that is 
+
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+53 
+ oriented towards society. The la st two dimensions are the socia l (0.805***) and economic (0.781***) values, 
+which captures the perceived image of the employer as providing  a positive working environment to its 
+employees, and good economic ben efits, respectively. The two fa ctors of AI-enabled recr uitment (0.416***) and 
+employer image significantly and positively associate with the employer attractiveness (0 .265***). In particular, 
+the AI-enabled recruitment factor impacts directly on the emplo yer attractiveness, meaning that the higher the 
+recruitment process is driven by the AI, the higher the employe r attractiveness. Also, the AI-enabled recruitment 
+factor impacts indirectly through its association with the empl oyer image (0.399***), for a total effect of 0.10. In 
+fact, the usage of AI in recruitment positively associates with  an increase in employer image, which in turn 
+impacts on the employer attractiv eness. Based on these findings , we can state that our hypothesis is confirmed: 
+The use of AI in the recruitment process has a significant posi tive impact on the employ er attractiveness and on 
+the employer image. 
+5. Discussion 
+The success of a firm increasingl y depends on its ability to at tract the best talents and successfully engage its 
+employees, as this ability to engage present and future employe es is linked to a higher capability in providing 
+value to its customers and it ha s been found critical to ensure  (Colleoni et al., 2021). 
+This has implied an increased relevance of the recruitment proc ess as strategic tool for competitive advantage 
+and led organisations to introduce increasingly sophisticated t echnologies for recruiting, such as AI tools in the 
+recruitment process (Pramod & Bh a r a t h i ,  2 0 1 6 ) .  W h i l e  a  b i g  p o r t ion of the past research on recruiting and 
+selection mainly assessed the reliability and validity of the r ecruitment and selection process, activities, and 
+techniques (Newell, 2005, Van Esch et al., 2019), there is a la ck of research about the candidates’ view on 
+AI-enabled recruitment systems and in particular, whether candi dates during the recruitment make positive 
+associations with the organization. In order to shed light on w hether AI-enabled recruitment indeed is positively 
+associated with employer attractiveness, a quantitative study h as been carried out using a survey and an 
+employer branding framework has been developed and empirically validated using SEM modeling. 
+Results show that AI-enabled r ecruitment significantly impacts on the perceived employer attractiveness, directly 
+by making the employer be perceived as more accurate, fair, and  reliable in the recruitment process, and 
+indirectly, by impacting on the employer image. 
+All in all, this study presents several implications for organi zations. The present research showed a direct and 
+positive relationship between the extent to which candidates pe rceive the use of AI-enabled technologies during 
+the selection process as a positive factor and the level of org anisation’s attractiveness.  This suggests that moving 
+forward in time organisations may want to highlight, rather tha n hide, the fact that they use AI-enabled tools 
+during the recruitment process. 
+T h i s  s t u d y  s h o w s  h o w  c r i t i c a l  t h e  u s e  o f  n e w  t e c h n o l o g i e s  c a n  b e for organizations not only to improve 
+effectiveness in its processes, but also to improve their perce ption as employers of choice. It is acknowledged 
+that building effective employer branding is a time-consuming p rocess that requires consistency and coherence. 
+However, nowadays, more than ever, attracting the best talents is key for a company's success and this process 
+can be supported with the introduction of AI-enabled recruitmen t processes. Indeed, the findings of this research 
+highlight the fact that AI provides promising solutions for org anizations that aim to win the war for talents by 
+shaping the perception of candida tes appearing as employers of choice. 
+References 
+Ambler, T., & Barrow, S. (1996). The employer brand. Journal of Brand Management , 4(3), 185-206. 
+https://doi.org/10.1057/bm.1996.42 
+Backhaus, K., & Tikoo, S. (2004). Conceptualizing and Researchi ng Employer Branding. Career Development 
+International , 9(5), 490-517. https://doi.org/10.1108/13620430410550754 
+Barrow, S., & Mosley, R. (2011). The employer brand: Bringing the best of brand management to people at work . 
+John Wiley and Sons. 
+Beechler, S., & Woodward, I. C. ( 2009). The global “war for tal ent”. Journal of international management , 15(3), 
+273-285. https://doi.org/10.1016/j.intman.2009.01.002 
+Berthon, P., Ewing, M., & Hah, L.L. (2005). Captivating company : dimensions of attractiveness in employer 
+branding . International Journal of Advertising,  24, 151-172. 
+https://doi.org/10.1080/02650487.2005.11072912 
+Bilić, P. (2016). Search algorithms, hidden labour and informat ion control. Big Data & Society,  3(1). 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+54 
+ https://doi.org/10.1177/2053951716652159 
+Black, J. S., & van Esch, P. (2020). AI-enabled recruiting: Wha t is it and how should a manager use it? Business 
+Horizons , 63(2), 215-226. https://doi.org/10.1016/j.bushor.2019.12.001 
+Branham, L. (2000). Keeping the People Who Keep You in Business  (p.18). New York: AMACOM. 
+Campbell, C., Sands, S., Ferraro, C., Tsao, J., & Mavrommatis, A. (2020). From data to action: How marketers 
+can leverage AI. Business Horizons , 63(2), 227-243. https://doi.org/10.1016/j.bushor.2019.12.002 
+Campolo, A., & Crawford, K. (2020). Enchanted determinism: Powe r without responsibility in artificial 
+intelligence. Engaging Science, Technology, and Society , (6), 1-19. https://doi.org/10.17351/ests2020.277 
+Chambers, E. G., Foulon, M., Handfield-Jones, H., Hankin, S. M. , & Michaels III, E. G. (1998). The war for 
+talent. The McKinsey Quarterly , (3), 44. 
+Colleoni, E., Bonaiuto, F., Illia, L. & Bonaiuto, M. (2021) Com puter-assisted concept analysis of Customer 
+Centricity: A review of the literature on employee engagement, culture, leadership, and identity co-creation. 
+Sustainability , 13(9), 5157. https://doi.org/10.3390/su13095157 
+Collins, C. J., & Stevens, C. K. (2002). The relationship betwe en early recruitment-related activities and the 
+application decisions of new labor-market entrants: a brand equ ity approach to recruitment. Journal of 
+Applied Psychology , 87(6), 1121-1133. https://doi.org/10.1037/0021-9010.87.6.1121 
+Cooley, W. W. (1978). Explanatory observational studies. Educational Researcher , 7(9), 9-15. 
+https://doi.org/10.3102/0013189X007009009 
+Crawford, K. (2016). Can an algorithm be agonistic? Ten scenes from life in calculated publics. Science, 
+Technology & Human Values , 41(1), 77-92. https://doi.org/10.1177/0162243915589635 
+Edwards, M. R. (2010). An integra tive review of employer brandi ng and OB theory. Personnel Review , 39, 5–23. 
+https://doi.org/10.1108/00483481011012809 
+Ehrhart, K. H., & Ziegert, J. C. (2005). Why are individuals at tracted to organizations? Journal of management , 
+31(6), 901-919. https://doi.org/10.1177/0149206305279759 
+Ewing, M. T., Leyland, F. P., Nigel, M., & Pierre, B. (2002). E mployment branding in the knowledge economy. 
+International Journal of Advertising , 21, 3-22. https://doi.org/10.1080/02650487.2002.11104914 
+Feloni, R. (2017). Consumer-good giant Unilever has been hiring  e m pl oy e e s  us i n g g r a i n ga m e s  a nd  a rt i fi c i a l 
+intelligence and it’ s a huge success. Business Insider Australia.  
+Gaddam, S. (2008) Modeling Employer Branding Communication: The  S o f t e r  A s p e c t  o f  H R  M a r k e t i n g  
+Management. The Icfai Journal of Soft Skills , 2(1), 45-55. 
+Gray, E. R., & Balmer, J. M. (1 998). Managing corporate image a nd corporate reputation. Long range planning , 
+31(5), 695-702. https://doi.org/10.1016/S0024-6301(98)00074-0 
+Günther, W. A., Mehrizi, M. H. R., & Huysman, M. (2017). Debati ng Big Data: A Literature Review on 
+Realizing Value from Big Data. The Journal of Strategic Information Systems,  26(3), 191-209. 
+https://doi.org/10.1016/j.jsis.2017.07.003 
+Helbing, D. (2019 ). Towards digital enlightment . Springer, Germany. https://doi.org/10.1007/978-3-319-90869-4 
+Jenner, S., & Taylor, S. (2007), Employer branding-fad or the f uture of HR? in CIPD, London. Retrieved from 
+http://www.cipd.co.uk/NR/rdonlyres/56C8377F-256B-4556-8650-8408 B0E07576/0/empbrandlatfad.pdf 
+Johnson, B., Manyika, J., & Yee, L. (2005). The next revolution  in interactions. McKinsey Quarterly , 4, 20-33. 
+Kaplan, R. S., Kaplan, R. E., Norton, D. P., Davenport, T. H., & Norton, D. P. (2004). Strategy maps: Converting 
+intangible assets into tangible outcomes . Harvard Business Press: Boston, MA. 
+Kotler P. (1994). Marketing Management: Analysis, Planning, Implementation, and Control (8th ed.). Prentice 
+Hall: Englewood Cliffs, NJ. 
+Kotler, P. (2001). Marketing Management  (10th ed.). Praha: Grada Publishing. 
+Kucherov, D., & Zavyalova, E. (2 012). HRD practices and talent management in the companies with the 
+employer brand. European  Journal of Training and Development , 36(1), 86-104. 
+https://doi.org/10.1108/03090591211192647 
+Kuncel, N. R., Klieger, D. M., & Ones, D. S. (2014). Hiring, al gorithms beat instinct. Harvard Business Review , 
+ijbm.ccsenet.org International Jo urnal of Business and Manageme nt V ol. 17, No. 2; 2022 
+55 
+ 92(5), 32. 
+Landers, R. N. (2019). The Cambridge h andbook of technology and employee behavior . Cambridge University 
+Press: Cambridge, UK. https://doi.org/10.1017/9781108649636 
+Lievens, F., & Highhouse, S. (2003). The relation of instrument al and symbolic attributes to a company’s 
+attractiveness as an employer. Personnel Psychology , 56, 75-102. 
+https://doi.org/10.1111/j.1744-6570.2003.tb00144.x 
+Lievens, F., & Slaughter, J. (2 016). Employer Image and Employe r Branding: What We Know and What We 
+Need to Know. Annual Review of Organizational Psychology and Organizational Behavior , 3. 
+https://doi.org/10.1146/annurev-orgpsych-041015-062501 
+Luce, M. F., Bettman, J. R., & Payne, J. W. (2001). Emotional d ecisions: Tradeoff difficulty and coping in 
+consumer choice. Monographs of the Journal of Consumer Research,  (1), 1-209. 
+MacCallum, R., & Austin, J. (2000) . Applications of Structural Equation Modeling in Psy chological Research. 
+Annual Review of Psychology , 51, 201-226. https://doi.org/10.1146/annurev.psych.51.1.201 
+Michaels, E., Handfield-Jones, H., & Axelrod, B. (2001). The war for talent .  B os t o n ,  M A:  H a r va r d B us i ne s s 
+School Press.  
+Moroko, L., & Uncles, M. D. (2 008). Characteristics of successf ul employer brands. The Journal of brand 
+management , 16(3), 160-175. https://doi.org/10.1057/bm.2008.4 
+Mosley, R. W. (2007). Customer experience, organisational cultu re and the employer brand. Journal of brand 
+management , 15(2), 123-134. https://doi.org/10.1057/palgrave.bm.2550124 
+Newell, S. (2005). Recruitment and selection. Managing human resources: Personnel management in transition , 
+115-147. 
+Oracle. (2019). State of Artificial Intelligence in Talent Acqu isition. Retrieved from 
+https://www.oracle.com/a/ocom/ docs/artificial-intelligence-in-t alent-acquisition.pdf 
+Öster, H., & Jonze, J. (2013). Employer branding in human resou rce management: The importance of recruiting 
+and retaining employees. Retrieved from 
+https://www.diva-portal.org/smash/record.jsf?pid=diva2%3A603822 &dswid=-4570 
+Pramod, D., & Bharathi, S. V . (2016). Social media impact on th e recruitment and selection process in the 
+information technology industry. International Journal of Human Capital and Information Technology 
+Professionals (IJHCITP) , 7(2), 36-52. https://doi.org/10.4018/IJHCITP.2016040103 
+Sharma, A. (2018). How AI reinvented hiring practice at L’Oreal . People Matters. Retrieved from 
+https://www.peoplematters.in/article/techhr-2018/how-the-worlds largest-cosmetic-company-transformed-its
+-hiring-practicewith-ai-19006  
+Sullivan, J. (2004). Eight Eleme nts of a Successful Employment Brand, ER Daily. Retrieved from 
+http://www.ere.net/2004/02/23/th e-8-elements-of-a -successfulemp loyment- Brand 
+Sutherland, M. M., Torricelli, D. G., & Karg, R. F. (2002). Emp loyer-of-choice branding for knowledge workers. 
+South African Journal of Business Management , 33(4), 13-20. https://doi.org/10.4102/sajbm.v33i4.707 
+Van Esch, P., Black, J. S., & Arli, D. (2020). Job candidates’ reactions to AI-Enabled job application processes. 
+AI and Ethics , 1-12. https://doi.org/10.1007/s43681-020-00025-0 
+Van Esch, P., Black, J. S., & Ferolie, J. (2019). Marketing AI recruitment: The next phase in job application and 
+selection. Computers in Human Behavior , 90, 215-222. https://doi.org/10.1016/j.chb.2018.09.009 
+Williams, M. (2000). The war for talent: Getting the best from the best . London, UK: Chartered Institute of 
+Personnel and Development (CIPD). 
+Yao, M., Sohul, M., Marojevic, V ., & Reed, J. H. (2019). Artifi cial intelligence defined 5G radio access networks. 
+IEEE Communications Magazine , 57(3), 14-20. https://doi.org/10.1109/MCOM.2019.1800629 
+ Copyrights 
+Copyright for this article is re tained by the author(s), with f irst publication rights granted to the journal. 
+This is an open-access article distributed under the terms and conditions of the Creative Commons Attribution 
+license (http://creativecommons.org/licenses/by/4.0/).

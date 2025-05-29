@@ -1,0 +1,12 @@
+{
+  "CHATBOT-INTENT.txt": "summarization",
+  "CON-INTENT.txt": "intent_recognition",
+  "EXT-SUM.txt": "summarization",
+  "GLI-NER.txt": "named_entity_recognition",
+  "GPT-NER.txt": "named_entity_recognition",
+  "LLM-INTENT.txt": "intent_recognition",
+  "NER.txt": "named_entity_recognition",
+  "T-NER.txt": "named_entity_recognition",
+  "TXT-SUM.txt": "summarization",
+  "USER-INTENT.txt": "intent_recognition"
+}

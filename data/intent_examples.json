@@ -1,0 +1,6 @@
+{
+  "summarization": "This document provides a concise overview of a topic or article.",
+  "intent_recognition": "This document is used to identify user or document intent.",
+  "named_entity_recognition": "This file contains named entities like people, places, or organizations.",
+  "general_info": "General purpose info not belonging to specific categories."
+}

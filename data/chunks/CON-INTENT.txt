@@ -1,0 +1,1277 @@
+Findings of the Association for Computational Linguistics: NAACL 2024 , pages 2412–2432
+June 16-21, 2024 ©2024 Association for Computational Linguistics
+Conformal Intent Classification and Clarification for Fast and Accurate
+Intent Recognition
+Floris den Hengst
+Vrije Universiteit Amsterdam
+f.den.hengst@vu.nlRalf Wolter
+ING Group NV
+Ralf.Wolter@ing.com
+Patrick Altmeyer
+TU Delft
+P.Altmeyer@tudelft.nlArda Kaygan
+ING Group NV
+Arda.Kaygan@ing.com
+Abstract
+We present Conformal Intent Classification and
+Clarification (CICC), a framework for fast and
+accurate intent classification for task-oriented
+dialogue systems. The framework turns heuris-
+tic uncertainty scores of any intent classifier
+into a clarification question that is guaranteed
+to contain the true intent at a pre-defined con-
+fidence level. By disambiguating between a
+small number of likely intents, the user query
+can be resolved quickly and accurately. Ad-
+ditionally, we propose to augment the frame-
+work for out-of-scope detection. In a compara-
+tive evaluation using seven intent recognition
+datasets we find that CICC generates small
+clarification questions and is capable of out-of-
+scope detection. CICC can help practitioners
+and researchers substantially in improving the
+user experience of dialogue agents with specific
+clarification questions.
+1 Introduction
+Intent classification (IC) is a crucial step in the se-
+lection of actions and responses in task-oriented
+dialogue systems. To offer the best possible ex-
+perience with such systems, IC should accurately
+map user inputs to a predefined set of intents. A
+widely known challenge of language in general,
+and IC specifically, is that user utterances may be
+incomplete, erroneous, and contain linguistic ambi-
+guities.
+Although IC is inherently challenging, a key
+strength of the conversational setting is that dis-
+ambiguation or clarification questions (CQs) can
+be posed (Purver et al., 2003; Alfieri et al., 2022).
+Posing the right CQ at the right time results in a
+faster resolution of the user query, a more natu-
+ral conversation, and higher user satisfaction (van
+Zeelt et al., 2020; Keyvan and Huang, 2022; Siro
+et al., 2022). CQs have been considered in the con-
+text of information retrieval (Zamani et al., 2020)
+but have received little attention in the context of
+task-oriented dialogue.Deciding when to ask a CQ and how to pose it
+are challenging tasks (DeVault and Stone, 2007;
+Keyvan and Huang, 2022). First, it is not clear
+when the system can safely proceed under the as-
+sumption that the true intent was correctly identi-
+fied. Second, it is not clear when the model is too
+uncertain to formulate a CQ (Cavalin et al., 2020).
+Finally, it is unclear what the exact information
+content of the clarification question should be.
+We present Conformal Intent Classification and
+Clarification (CICC), a framework for deciding
+when to ask a CQ, what its information content
+should be, and how to formulate it. The framework
+uses conformal prediction to turn a models’ predic-
+tive uncertainty into prediction sets that contain the
+true intent at a predefined confidence level (Shafer
+and V ovk, 2008; Angelopoulos et al., 2023). The
+approach is agnostic to the intent classifier, does
+not require re-training of this model, guarantees
+that the true intent is in the CQ, allows for reject-
+ing the input as too ambiguous if the model is too
+uncertain, has interpretable hyperparameters, gen-
+erates clarification questions that are small and is
+amenable to the problem of detecting out-of-scope
+inputs.
+In a comparative evaluations with seven data
+sets and three IC models, we find that CICC out-
+performs heuristic approaches to predictive uncer-
+tainty quantification in all cases. The benefits of
+CICC are most prominent for ambiguous inputs,
+which arise naturally in real-world dialogue set-
+tings (Zamani et al., 2020; Larson et al., 2019).
+2 Related Work
+We discuss related work on ambiguity and uncer-
+tainty detection within IC and CP with language
+models.
+Clarification Questions Various works acknowl-
+edge the problem of handling uncertainty in intent
+classification and to address it with CQs. Dhole2412
+(2020) proposes a rule-based approach for asking
+discriminative CQs. The approach is limited to
+CQs with two intents, lacks a theoretical founda-
+tion, and provides no intuitive way of balancing
+coverage with CQ size. Keyvan and Huang (2022)
+survey ambiguous queries in the context of con-
+versational search and list sources of ambiguity.
+They mention that clarification questions should
+be short, specific, and based on system uncertainty.
+We propose a principled approach to asking short
+and specific questions based on uncertainty of any
+underlying intent classifier for the purposes of task-
+oriented dialogue.
+Alfieri et al. (2022) propose an approach for
+asking a CQ containing a fixed top- kmost likely
+intents with intent-specific uncertainty thresholds.
+This approach does not come with any theoreti-
+cal guarantees and its hyperparameters need to be
+tuned on an additional data set whereas our ap-
+proach comes with guarantees on coverage of the
+true intent and with intuitively interpretable hyper-
+parameters that can be tuned on the same calibra-
+tion set. We do not compare directly to this method
+but include top- kselection in our benchmark.
+CQs have been studied in other domains, in-
+cluding information retrieval (Zamani et al., 2020),
+product description improvement (Zhang and Zhu,
+2021), and open question-answering (Kuhn et al.,
+2023). In contrast to the task-specific domain in-
+vestigated in this work, these domains leave more
+room for asking generic questions for clarification
+and do not easily allow for incorporating model
+uncertainty. Furthermore, the proposed methods
+require ad hoc tuning of scores based on heuristic
+metrics of model uncertainty, and do not provide
+ways to directly balance model uncertainty with
+CQ size.
+Uncertainty and out-of-scope detection The
+out-of-scope detection task introduced by Larson
+et al. (2019) is a different task from the task of
+handling model uncertainty and ambiguous in-
+puts (Cavalin et al., 2020; Yilmaz and Toraman,
+2020; Zhan et al., 2021; Zhou et al., 2021). How-
+ever, predictive uncertainty is often used in address-
+ing the out-of-scope detection task. Although the
+tasks of handling ambiguous input and detecting
+out-of-scope input are different, we briefly discuss
+approaches that leverage model uncertainty for out-
+of-scope detection here.
+Various out-of-scope detection approaches train
+an intent classifier and tune a decision bound-ary based on a measure of the classifier’s confi-
+dence (Shu et al., 2017; Lin and Xu, 2019; Yan
+et al., 2020; Hendrycks et al., 2020). Samples for
+which the predictive uncertainty of the model lies
+on one side of the boundary are classified as out-of-
+scope. These approaches use the models’ heuristic
+uncertainty to decide whether an input is out-of-
+sample whereas we first turn the models’ heuristic
+uncertainty into a prediction with statistical guar-
+antees and then use this prediction to decide when
+and how to formulate a clarification question. We
+additionally propose an adaptation of the CICC
+framework for out-of-scope detection.
+Conformal Prediction on NLP tasks Confor-
+mal Prediction has been used in several NLP tasks,
+including sentiment classification by Maltoudoglou
+et al. (2020), named-entity recognition by Fisch
+et al. (2022) and paraphrase detection by Giovan-
+notti and Gammerman (2021). However, the ap-
+plication to intent classification, task-oriented di-
+alogue and the combination with CQs presented
+here is novel to our knowledge.
+3 Methodology
+We address the problem of asking CQs in task ori-
+ented dialogue systems in the following way. We
+take a user utterance and a pre-trained intent classi-
+fier, and then return an appropriate response based
+on the predictive uncertainty of the model. Algo-
+rithm 1 lists these steps, and an example input is
+presented in Figure 1. In this section we describe
+and detail the components of CICC. We start by
+providing a background on conformal prediction.
+3.1 Conformal Prediction
+Conformal Prediction is a framework for creating
+statistically rigorous prediction sets from a heuris-
+tic measure of predictive uncertainty of a classifier
+(Shafer and V ovk, 2008; Angelopoulos et al., 2023).
+We here focus on split conformal prediction as it
+does not require any retraining of the underlying
+model, and refer to it simply as conformal predic-
+tion from here on out.
+For a classification task with classes Y:
+{1, . . . , K }, a test input Xt∈ X with label Yt∈ Y,
+and a user-defined error level α∈[0,1), CP re-
+turns a set C(Xt)⊆ Y for which the following
+holds (V ovk et al., 1999) even when using a finite
+amount of samples:
+P(Yt∈ C(Xt))≥1−α (1)2413
+userspeech-to-
+textintent
+classiferconformal
+prediction
+at 1-α
+confidence
+prompt
+generationgenerative
+LMtext-to-
+speech"I may have lost my card.
+Can you see if someone
+else has been
+using it?"
+{ lost_stolen,
+  compromised }
+Formulate a
+clarification question:
+Options: {lost_stolen, compromised}
+Question: <<<<>>>>"Could your
+card have
+been compromised
+or did you only
+lose it?"
+lost_stolen
+compromised
+swallowed...Figure 1: The conformal intent classification and clarification interaction loop.
+If e.g. α= 0.01the set C(Xt)is therefore guaran-
+teed to contain the true Ytin 99% of test inputs.
+Conformal prediction uses a heuristic measure
+of uncertainty of a pretrained model and a mod-
+estly sized calibration set to generate prediction
+sets. Formally, we assume a held-out calibration
+setD:{(Xi, Yi)}of size n, a pre-trained classi-
+fierˆf:X →RK, and a nonconformity function
+s:X × Y → Rthat returns heuristic uncertainty
+scores where larger values express higher uncer-
+tainty. An example of a nonconformity function for
+a neural network classifier is one minus the softmax
+outputs of the true class:
+s(Xi) := 1 −ˆf(Xi)Yi. (2)
+This score is high when the softmax score of the
+true class is low, i.e., when the model is badly
+wrong.
+The nonconformity function sis evaluated on
+Dto generate a set of nonconformity scores S=
+{s(Xi, Yi)}. Next, the quantile ˆqof the empirical
+distribution of Sis determined so that the desired
+coverage ratio (1−α)is achieved. This can be
+done by choosing ˆq=⌈(n+ 1)(1 −α)⌉/n1where
+⌈·⌉denotes the ceiling function. Then, for a given
+test input Xt, all classes y∈ Y with high enough
+confidence are included in a prediction set C(Xt):
+C(Xt) :={y:s(Xt, y)≤ˆq}. (3)
+This simple procedure guarantees that (1) holds
+i.e. that the true Ytis in the set at the specified
+confidence 1−α. Note the lack of retraining or en-
+sembling of classifiers, that the procedure requires
+1this is essentially the ˆqquantile with a minor adjustmentlittle compute and that Dcan be relatively small
+as long as it contains a fair number of examples
+for all classes and is exchangeable2with the test
+data (Papadopoulos et al., 2002).
+There are various implementations of conformal
+prediction with different nonconformity functions
+and performance characteristics. The most sim-
+ple approach is known as marginal conformal pre-
+diction and it uses the nonconformity function in
+(2). Marginal conformal prediction owes its names
+from adhering to the guarantee (1) marginalized
+overXandY, i.e. it satisfies the coverage require-
+ment (1) on average, rather than e.g. for a particular
+input Xt. Marginal CP can be implemented follow-
+ing the steps described previously: (i) compute
+nonconformity scores Susing (2), (ii) obtain ˆqas
+described previously, and (iii) construct a predic-
+tion set using (3) at test time. A benefit of this
+approach is that it generates prediction sets with
+the smallest possible prediction set size on average.
+A limitation is that its prediction set sizes may not
+reflect hardness of the input (Sadinle et al., 2019).
+Alternatively, one can ensure conditional adher-
+ence to (1) with so-called conditional or adaptive
+conformal predictors. A benefit of conditional ap-
+proaches is that higher model uncertainty results in
+larger prediction sets. However, a downside is that
+these sets are expected to be larger on average than
+those obtained with a marginal approach.Romano
+et al. (2020) introduce a conditional CP approach
+that consists of broadly the same steps as marginal
+CP but with a different nonconformity function s
+and a different prediction set construction. First we
+define a permutation π(X)of{1. . . K}that sorts
+2distributed identically but not necessarily independently2414
+ˆf(X)in descending order. Conditional CP can de-
+fined as: (i) sum all predictor outputs ˆf(Xi)kfor
+all{k∈K|ˆf(Xi)k≥ˆf(Xi)Yi}, (ii) obtain ˆqas
+before, and (iii) include all for a test input Xt:
+C(Xt) :={π1(Xt), . . . , π k(x)}, (4)
+where
+k=sup
+
+k′:k′/summationdisplay
+j=1ˆf(Xt)πj(Xt)<ˆq
+
++ 1.(5)
+Angelopoulos et al. (2021) introduce an ap-
+proach with a term to regularize the prediction set
+size: their approach is therefore known as Reg-
+ularized Adaptive Prediction Sets (RAPS). It ef-
+fectively adds an increasing penalty to the ranked
+model outputs in the first step of conditional CP in
+order to promote smaller prediction sets where pos-
+sible. Since the second and third step are similar
+to conditional CP, its prediction sets still adhere to
+the coverage guarantee (1).
+In general, a suitable conformal prediction tech-
+nique strikes the right balance between three
+desiderata: (i) adhering to the coverage require-
+ment in (1), (ii) producing small prediction sets
+and (iii) adaptivity. Whereas the former two can
+be measured easily, metrics for adaptivity require
+some more care. Angelopoulos et al. (2021) intro-
+duce a general-purpose metric for adaptivity. It is
+based on the coverage and referred to as the size-
+stratified classification (SSC) score:
+SSC= min
+b∈{1,...,K}1
+|Ib|/summationdisplay
+i∈Ib1{Yi∈ C(Xi)}(6)
+for a classification task defined as above and Ib⊂
+{1, . . . , n }the set of inputs with prediction set size
+b, i.e.Ib:={Xi,|C(Xi)|=b}.
+Within CICC, conformal prediction is applied
+to a pre-trained intent classifier to create a set of
+intents that contains the true user intent at a prede-
+fined confidence for any user utterance. The sets
+are then used in making a decision on when to ask
+a clarification question and how to formulate it. We
+continue to discuss when and how such questions
+are asked based on Algorithm 1 in the following
+section.
+3.2 When to Ask a Clarification Question
+For a user utterance X, a pre-trained intent classi-
+fierˆfand a nonconformity function s, we generate
+a prediction set that covers the true user intent withAlgorithm 1 CICC algorithm
+Input : utterance X, classifier ˆf, chat/voice-bot c,
+calibration set D, generative LM g
+Parameters : error rate α, threshold th, ambiguity
+response a
+Output : response R
+1:set←conformal prediction/parenleftig
+ˆf(X), D, α/parenrightig
+2:if|set|== 1 then
+3:R←c(set.get() ). {bot response}
+4:else if|set|> th then
+5:R←a. {input too ambiguous}
+6:else
+7:R←g(set, X) {clarification question}
+8:end if
+confidence 1−α(Algorithm 1, ln 1). If the set
+contains a single intent, the model is confident that
+the true intent has been detected and the dialogue
+can be handled as usual (ln 2-3).
+If the set contains many intents, that is, more
+than a user-specified threshold th∈N>0, then
+there is no reasonable ground for formulating a
+clarification question. Instead, a generic request
+to rephrase the question can be asked (ln 4-5), or
+a hand-over to a human operator could be imple-
+mented here. In the remaining case, i.e. if the
+prediction set is of reasonable size, a CQ is asked
+(ln 6-7).
+CICC comes with two parameters to control
+when a CQ should be asked. Both have clear se-
+mantics and can be interpreted intuitively. The first
+is the threshold ththat controls when the input is
+too ambiguous to ask a CQ (Algorithm 1 ln 4-5).
+This parameter is set by the chatbot owner on the
+basis of best practices in, and knowledge of chat-
+and voicebot interaction patterns. In general, this
+number should remain small to reduce the cogni-
+tive load on users. We advise to set this value no
+higher than seven (Miller, 1956; Plass et al., 2010).
+The second parameter is the error rate α. It
+controls the trade-off between the prediction set
+size and how certain we want to be that the pre-
+diction set covers the true intent. As α→0, our
+confidence that the true intent is included in the
+set grows, but so does the size of the prediction
+set. Because conformal prediction is not compute
+intensive, αcan be set empirically. Thus, CICC
+provides a means of selecting between achievable
+trade-offs between prediction set sizes and error
+rates. We continue to discuss how specific CQs are2415
+formulated in CICC.
+3.3 Generating a Clarification Question
+When a CQ is in order (ln 6-7 in Alg. 1), it needs
+to be formulated. We propose to generate a CQ
+based on the original input Xand the prediction
+set, as it is guaranteed to contain the true intent at
+a typically high level of confidence. Because the
+alternatives in the CQ are the most likely intents
+according to the model, and because the number of
+alternatives in the CQ corresponds to the models’
+uncertainty, asking a CQ provides a natural way
+of communicating model uncertainty to the user
+while quickly determining the true user intent.
+CICC makes no assumptions about the approach
+for generating a CQ. Anything from hardcoded
+questions, templating, or a generative LM can be
+used. However, we recognize that the number of
+possible questions is large: it consists of the pow-
+erset of all nintents up to size thexcluding sets
+of size one and zero. Therefore, we opt to use a
+generative LM in our solution.
+We prompt the LM to formulate a clarification
+question by giving it some examples of clarifica-
+tion questions for a set of example intents to disam-
+biguate between. We additionally provide the orig-
+inal utterance Xto enable the formulation of CQ
+relative to the original utterance. See Appendix A
+for details.
+3.4 Out-of-scope Detection
+Ambiguity is a part of natural language which could
+lead to model uncertainty. Specific reasons for
+uncertainty in intent recognition are inputs that
+are very short and long, imprecise and incomplete
+inputs, etc. However, a particularly interesting
+type of uncertainty stems from inputs that repre-
+sent intent classes that are not known at training
+time (Zhan et al., 2021). These inputs are referred
+to as out-of-scope (OOS) and detecting these in-
+puts can be seen as a binary classification task for
+which data sets with known OOS samples have
+been developed.
+CICC rejects inputs about which the model is
+too uncertain (Algorithm 1, ln 5) and this naturally
+fits with the OOS detection task as follows: we can
+view a rejection of an input as a classification of
+that input as OOS. Therefore, although handling
+ambiguity in the model gracefully and detection
+OOS inputs are separate challenges, vanilla CICC
+implements a form of OOS detection.samples intents
+ACID (Acharya and Fung, 2020) 22172 175
+ATIS (Hemphill et al., 1990) 5871 26
+B77 (Casanueva et al., 2020) 13083 77
+B77-OOS 16337 78
+C150-IS (Larson et al., 2019) 18025 150
+C150-OOS (Larson et al., 2019) 19025 151
+HWU64 (Liu et al., 2021) 25716 64
+IND ∼20k 61
+MTOD (eng) (Schuster et al., 2019) 43323 12
+Table 1: Characteristics of datasets used
+Additionally, the CICC framework can be lever-
+aged for OOS detection if OOS samples are known
+at calibration time. Specifically, we can optimize
+parameters αandthto maximize predictive perfor-
+mance expressed by some suitable metric such as
+the F1-score on the calibration set. OOS samples
+can be obtained from other intent recognition data
+sets in other domains. This practice is described in
+detail by e.g. (Zhan et al., 2021) under the name
+of open-domain outliers. We refer to versions of
+CICC which have been optimized for F1-score in
+this way as CICC-OOS.
+4 Experimental Setup
+This section lists the experiments performed to
+comparatively evaluate CICC across seven data
+sets and on three IC models3.
+Data We evaluate CICC on six public intent
+recognition data sets in English and an additional
+real-life industry data set (IND) from the banking
+domain in the Dutch language. Table 1 shows the
+data sets and their main characteristics. All data
+sets were split into train-calibration-test splits of
+proportions 0.6-0.2-0.2 with stratified sampling,
+except for the ATIS data set in which stratified sam-
+pling is impossible due to the presence of intents
+with a single sample. Random sampling was used
+for this data set instead. We use an in-scope version
+(C150-IS) of the ‘unbalanced’ data set by Larson
+et al. (2019) in which all out-of-scope samples have
+been removed.
+For evaluation on out-of-scope (OOS) detection,
+we use two datasets: a version of C150 with all
+OOS samples divided over the calibration and test
+splits, and no OOS samples in the train split (C150-
+OOS), and a version of B77 with so-called open-
+domain outliers in which samples from the ATIS
+dataset make up half of the samples in the calibra-
+3https://github.com/florisdenhengst/cicc2416
+tion and test splits to represent OOS inputs (B77-
+OOS) (Zhan et al., 2021).
+Models We employ fine-tuned BERT by Devlin
+et al. (2019) for all public data sets and a custom
+model similar to BERT for the IND data set (Alfieri
+et al., 2022). We base the nonconformity scores
+on the softmax output in these settings. In order
+to test performance on a commercial offering, we
+additionally evaluate using DialogflowCX (DFCX)
+on the B77 data set.4This commercial offering out-
+puts heuristic certainty scores in the range [0,100]
+for the top five most certain recognized intents.
+These outputs were normalized to sum to 1, all
+other scores were set to 0to determine the noncon-
+formity scores.
+Baselines In practice CQs can be formulated us-
+ing heuristics (Alfieri et al., 2022). We compare
+CICC to the following baselines using the models’
+heuristic uncertainty scores:
+B1select all intents with score >1−α, select
+the top k= 5if this selection is empty.
+B2 select all intents with a score >1−α.
+B3 select the top k= 5intents.
+Metrics We evaluate the approaches on a set of
+metrics that together accurately convey the added
+benefit of asking a confirmation question. We use
+thesizeof the prediction set C(Xi)and how often
+the input is rejected as too ambiguous for the model
+(Algorithm 1, ln 5). For a test set of size n:
+Amb :=1
+nn/summationdisplay
+i=0/braceleftigg
+1if|C(Xi)| ≥th
+0otherwise .(7)
+First, we report how often the true intent is de-
+tected for the m≤ninputs that are not rejected
+(Algorithm 1, lns 3 and 5). This metric is known as
+coverage (cov) and can be seen as a generalisation
+of accuracy for set-valued predictions:
+Cov:=1
+mm/summationdisplay
+i=01C(Xi)(Yi). (8)
+Second, we report the average size of the clarifi-
+cation questions for accepted inputs (Algorithm 1,
+ln 7). This metric can be seen as an analogue to
+precision for set-valued predictions:
+|CQ|=1
+mm/summationdisplay
+i=0|C(Xi)|. (9)
+4https://cloud.google.com/dialogflow/cx/docsFinally, we report the relative number of times the
+prediction set is of size one
+Single :=1
+mm/summationdisplay
+i=0/braceleftigg
+1if|C(Xi)|= 1,
+0otherwise,(10)
+in which case the dialogue can continue as usual
+(Algorithm 1, ln 3). We additionally report the SSC
+as defined above in (6).
+For out-of-scope detection we report the stan-
+dard metrics F1-score and AUROC.
+Parameters We varied αand found the best set-
+tings empirically on the calibration set. We report
+our key results for the best αand additionally in-
+vestigate the effect of varying α.
+We set the threshold that seven to avoid exces-
+sive cognitive load for users for all experiments,
+except when using DFCX in which case we set
+thto four (Miller, 1956; Plass et al., 2010). The
+reason for this is that DFCX currently only outputs
+non-zero scores for the top five intents. Hence, the
+set contains all intents that have a non-zero confi-
+dence score with this setting.
+We include the following conformal prediction
+approaches and select an approach that produces
+the best empirical results in terms of coverage and
+CQ size: marginal, conditional (also known as
+adaptive) (Romano et al., 2020) and RAPS (An-
+gelopoulos et al., 2021). Marginal conformal pre-
+diction was selected in all experiments, details can
+be found in Figure 2.
+5 Results
+Table 2 lists the main results. The first column
+shows the coverage, i.e. the percentage of test
+samples in which the ground truth is captured in
+the prediction set. We see that only CICC and B3
+adhere to the requirement of coverage ≥1−αin
+all settings. The second column shows the fraction
+of test samples for which a single intent is detected.
+We see that CICC outperforms the baselines that
+meet the coverage requirement in five out of seven
+data sets.
+The third column lists the average size of the CQ.
+We see that CICC yields the smallest CQs and that
+the number of inputs that is deemed too ambiguous
+is relatively small for CICC. The last column de-
+notes the relative number of inputs that is rejected
+as too ambiguous. CICC rejects a relatively low
+number of inputs. Upon inspection, many of these
+inputs could be classified as different intents based2417
+Setting 1−α th Cov↑Single↑ |CQ| ↓Amb
+ACID .98 7 CICC .98 .87 3.01 .03
+B1 .98 .88 5 0
+B2 .95 1 − 0
+B3 .99 0 5 0
+ATIS .99 7 CICC .99 .98 2.54 0
+B1 .99 .73 5 0
+B2 .98 1.00 - 0
+B31.00 0 5 0
+B77/BERT .97 7 CICC .98 .73 2.84 .04
+B1 .97 .84 5 0
+B2 .93 1 − 0
+B3 .98 0 5 0
+B77/DFCX .90 4 CICC .91 .66 2.63 .02
+B1 .95 .71 5 .27
+B2 .90 .98 2.26 0
+B3 .97 0 5 1
+C150-ID .99 7 CICC .99 .97 2.66 0
+B1 .99 .82 5 0
+B2 .98 1 − 0
+B3 1 0 5 0
+HWU64 .95 7 CICC .95 .82 2.81 .01
+B1 .97 .70 5 0
+B2 .90 1 − 0
+B3 .98 0 5 0
+IND .90 7 CICC .91 .25 3.46 .11
+B1 .88 .42 5 0
+B2 .70 1 − 0
+B3 .91 0 5 0
+MTOD .99 7 CICC .99 1 − 0
+B1 1 .98 5 0
+B2 .99 1 − 0
+B3 1 0 5 0
+Table 2: Test set results where underline indicates meet-
+ing coverage requirement. Bold denotes best when
+meeting this requirement, omitted for last column due
+to missing ground truth for ambiguous.Dataset Algorithm 1- α th F1↑AUROC ↑
+C150-OOS CICC .990 7 .07 .88
+CICC-OOS .995 6 .91 .97
+B77-OOS CICC .970 7 .76 .92
+CICC-OOS .994 6 .90 .97
+Table 3: Results for the OOS detection task.
+on the textual information alone (see Appendix B).
+For the B77/DFCX setting, we see that B1 predicts
+a single output frequently, at the cost of rejecting
+inputs as too ambiguous. This contrasts with CICC,
+which rejects inputs much less frequently and in-
+stead asks a small CQ.
+We continue by looking at the results for OOS
+detection in Table 3. We find that vanilla CICC
+does not perform well on the OOS detection in
+comparison to the specialized CICC-OOS variant.
+The specialized CICC-OOS favours a relatively
+lowαas this simultaneously forces the approach
+toward large prediction sets for OOS samples and
+small prediction sets for in-sample inputs. At the
+same time, using the CICC-OOS settings for pa-
+rameters αandthin the regular CICC interaction
+loop would result in relatively many CQs of a rela-
+tively large size.
+Next, we investigate how different conformal
+prediction approaches perform for varying levels
+ofαin Figure 2. The top figures show that all con-
+formal prediction approaches enable trading off set
+size with coverage, a desirable property in practice
+of intent classification. Looking at the adaptivity
+(center figures), we see mixed results. A possi-
+ble explanation for this is in the general-purpose
+evaluation of adaptivity, which relies on the mini-
+mum coverage across classes (see Eq. 6). The data
+sets used in our experiments contain a relatively
+low number of examples for some classes and these
+rare classes may have an outsized effect on the SSC
+metric. Looking at the bottom figure for each data
+set, we see that all conformal prediction approaches
+lie at or above the x=y diagonal: conformal predic-
+tion always adheres to the coverage requirement
+with the marginal approach yielding the smallest
+average set sizes.
+6 Conclusion
+We have proposed a framework for detecting and
+addressing uncertainty in intent classification with
+conformal prediction. The framework empirically2418
+Figure 2: Test set results for varying error rate α.2419
+determines when to ask a clarification question and
+how that question should be formulated. The frame-
+work uses a moderately sized calibration set and
+comes with intuitively interpretable parameters.
+We have evaluated the framework in eight set-
+tings, and have found that the framework strictly
+outperforms baselines across all metrics in six out
+of eight cases and performs competitively in the
+other. The framework additionally handles inputs
+that are too ambiguous for intent classification natu-
+rally. We have additionally proposed and evaluated
+the usage of CICC for out-of-scope detection and
+found that it is suitable for this.
+We finally believe that the framework opens
+promising avenues for future work, including the
+usage of intent groups for better adaptivity, an ex-
+tension to Bayesian models to address data drift and
+unsupervised OOS with CICC (Fong and Holmes,
+2021), to determine conversation stopping rules
+based on subsequent questions to rephrase or clar-
+ify and to combine it with reinforcement learning
+for, e.g., personalization (Den Hengst et al., 2019,
+2020). We believe that CICC and/or conformal
+prediction may also prove useful in various other
+tasks, including entity recognition, detecting label
+errors (Ying and Thomas, 2022) and to empirically
+identify similar intents.
+Limitations
+A limitation of the framework is that it relies on
+a user determining values for the hyperparameters
+αandth. The former balances model certainty
+with CQ size. Arguably, this trade-off has to be
+made in any approach and CICC makes this an ex-
+plicit choice between achievable trade-offs. The
+threshold thmust be set not to reject too many in-
+puts as too ambiguous while avoiding information
+overload in the user. We advise setting it to no
+more than seven based on established insights from
+cognitive science (Miller, 1956). However, more re-
+search on the impact of CQ size on user satisfaction
+in various context is in order. Another limitation is
+that the approach does not include a mechanism for
+stopping the dialogue. We leave the investigation of
+stopping criteria based on e.g. the number and size
+of CQs asked during the dialogue for future work.
+Furthermore, this work did not thoroughly investi-
+gate the quality of the CQs produced by the LLM.
+However, we view the CQ production component
+as a pluggable component and therefore believe a
+full-scale evaluation on this to be out-of-scope forthis work. Additionally, using CICC for OOS de-
+tection requires the presence of OOS labels. While
+these can be obtained from other data sets using
+the practice of open-domain outliers (Zhan et al.,
+2021), fully unsupervised approaches based on e.g.
+hierarchical Bayesian modeling or with parame-
+ters that yield good performance across data sets as
+hinted at by Table 3. A final limitation is that we
+applied conformal prediction to the softmax of out-
+puts of uncalibrated neural network outputs. This
+makes results consistent across settings (including
+DFCX), but smaller CQs may be achievable by ap-
+plying Platt scaling prior to conformal prediction
+calibration (Platt et al., 1999).
+Acknowledgements
+We thank Mark Jayson Doma and Jhon Cedric Ar-
+cilla for their help in obtaining and understanding
+DialogflowCX model output. We kindly thank the
+reviewers for their time and their useful comments,
+without which this work would not have been pos-
+sible in its current form.
+References
+Shailesh Acharya and Glenn Fung. 2020. Using optimal
+embeddings to learn new intents with few examples:
+An application in the insurance domain. In KDD
+2020 Workshop on Conversational Systems Towards
+Mainstream Adoption(KDD Converse 2020) . CEUR-
+WS.org.
+Andrea Alfieri, Ralf Wolter, and Seyyed Hadi Hashemi.
+2022. Intent disambiguation for task-oriented dia-
+logue systems. In Proceedings of the 31st ACM In-
+ternational Conference on Information & Knowledge
+Management , pages 5079–5080.
+Anastasios N Angelopoulos, Stephen Bates, et al.
+2023. Conformal prediction: A gentle introduc-
+tion. Foundations and Trends ®in Machine Learning ,
+16(4):494–591.
+Anastasios Nikolas Angelopoulos, Stephen Bates,
+Michael Jordan, and Jitendra Malik. 2021. Uncer-
+tainty sets for image classifiers using conformal pre-
+diction. In International Conference on Learning
+Representations .
+Iñigo Casanueva, Tadas Tem ˇcinas, Daniela Gerz,
+Matthew Henderson, and Ivan Vuli ´c. 2020. Efficient
+intent detection with dual sentence encoders. In Pro-
+ceedings of the 2nd Workshop on Natural Language
+Processing for Conversational AI , pages 38–45.
+Paulo Cavalin, Victor Henrique Alves Ribeiro, Ana Ap-
+pel, and Claudio Pinhanez. 2020. Improving out-
+of-scope detection in intent classification by using
+embeddings of the word graph space of the classes.2420
+InProceedings of the 2020 Conference on Empirical
+Methods in Natural Language Processing (EMNLP) ,
+pages 3952–3961.
+Floris Den Hengst, Eoin Martino Grua, Ali el Hassouni,
+and Mark Hoogendoorn. 2020. Reinforcement learn-
+ing for personalization: A systematic literature re-
+view. Data Science , 3(2):107–147.
+Floris Den Hengst, Mark Hoogendoorn, Frank
+Van Harmelen, and Joost Bosman. 2019. Reinforce-
+ment learning for personalized dialogue management.
+InIEEE/WIC/ACM International Conference on Web
+Intelligence , pages 59–67.
+David DeVault and Matthew Stone. 2007. Managing
+ambiguities across utterances in dialogue. In Pro-
+ceedings of the 11th Workshop on the Semantics and
+Pragmatics of Dialogue (Decalog 2007) , pages 49–
+56.
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and
+Kristina Toutanova. 2019. BERT: Pre-training of
+deep bidirectional transformers for language under-
+standing. In Proceedings of the 2019 Conference of
+the North American Chapter of the Association for
+Computational Linguistics: Human Language Tech-
+nologies, Volume 1 (Long and Short Papers) , pages
+4171–4186, Minneapolis, Minnesota. Association for
+Computational Linguistics.
+Kaustubh D Dhole. 2020. Resolving intent ambigui-
+ties by retrieving discriminative clarifying questions.
+arXiv preprint arXiv:2008.07559 .
+Adam Fisch, Tal Schuster, Tommi Jaakkola, and Regina
+Barzilay. 2022. Conformal prediction sets with lim-
+ited false positives. In International Conference on
+Machine Learning , pages 6514–6532. PMLR.
+Edwin Fong and Chris C Holmes. 2021. Conformal
+bayesian computation. Advances in Neural Informa-
+tion Processing Systems , 34:18268–18279.
+Patrizio Giovannotti and Alex Gammerman. 2021.
+Transformer-based conformal predictors for para-
+phrase detection. In Conformal and Probabilistic
+Prediction and Applications , pages 243–265. PMLR.
+Charles T Hemphill, John J Godfrey, and George R
+Doddington. 1990. The atis spoken language sys-
+tems pilot corpus. In Speech and Natural Language:
+Proceedings of a Workshop Held at Hidden Valley,
+Pennsylvania, June 24-27, 1990 .
+Dan Hendrycks, Xiaoyuan Liu, Eric Wallace, Adam
+Dziedzic, Rishabh Krishnan, and Dawn Song. 2020.
+Pretrained transformers improve out-of-distribution
+robustness. In Proceedings of the 58th Annual Meet-
+ing of the Association for Computational Linguistics ,
+pages 2744–2751.
+Kimiya Keyvan and Jimmy Xiangji Huang. 2022. How
+to approach ambiguous queries in conversational
+search: A survey of techniques, approaches, tools,
+and challenges. ACM Computing Surveys , 55(6):1–
+40.Lorenz Kuhn, Yarin Gal, and Sebastian Farquhar. 2023.
+CLAM: Selective clarification for ambiguous ques-
+tions with large language models. In ICML Workshop
+Challenges of Deploying Generative AI .
+Stefan Larson, Anish Mahendran, Joseph J. Peper,
+Christopher Clarke, Andrew Lee, Parker Hill,
+Jonathan K. Kummerfeld, Kevin Leach, Michael A.
+Laurenzano, Lingjia Tang, and Jason Mars. 2019. An
+evaluation dataset for intent classification and out-of-
+scope prediction. In Proceedings of the 2019 Confer-
+ence on Empirical Methods in Natural Language Pro-
+cessing and the 9th International Joint Conference
+on Natural Language Processing (EMNLP-IJCNLP) ,
+pages 1311–1316, Hong Kong, China. Association
+for Computational Linguistics.
+Ting-En Lin and Hua Xu. 2019. Deep unknown intent
+detection with margin loss. In Proceedings of the
+57th Annual Meeting of the Association for Compu-
+tational Linguistics , pages 5491–5496.
+Xingkun Liu, Arash Eshghi, Pawel Swietojanski, and
+Verena Rieser. 2021. Benchmarking natural language
+understanding services for building conversational
+agents. In Increasing Naturalness and Flexibility
+in Spoken Dialogue Interaction: 10th International
+Workshop on Spoken Dialogue Systems , pages 165–
+183. Springer.
+Lysimachos Maltoudoglou, Andreas Paisios, and Harris
+Papadopoulos. 2020. Bert-based conformal predictor
+for sentiment analysis. In Conformal and Proba-
+bilistic Prediction and Applications , pages 269–284.
+PMLR.
+George A Miller. 1956. The magical number seven, plus
+or minus two: Some limits on our capacity for pro-
+cessing information. Psychological review , 63(2):81.
+Harris Papadopoulos, Kostas Proedrou, V olodya V ovk,
+and Alex Gammerman. 2002. Inductive confidence
+machines for regression. In Machine Learning:
+ECML 2002: 13th European Conference on Machine
+Learning Helsinki, Finland, August 19–23, 2002 Pro-
+ceedings 13 , pages 345–356. Springer.
+Jan L Plass, Roxana Moreno, and Roland Brünken, edi-
+tors. 2010. Cognitive load theory. Cambridge Uni-
+versity Press, New York, NY , US.
+John Platt et al. 1999. Probabilistic outputs for support
+vector machines and comparisons to regularized like-
+lihood methods. Advances in large margin classifiers ,
+10(3):61–74.
+Matthew Purver, Jonathan Ginzburg, and Patrick Healey.
+2003. On the means for clarification in dialogue.
+Current and new directions in discourse and dialogue ,
+pages 235–255.
+Yaniv Romano, Matteo Sesia, and Emmanuel Candes.
+2020. Classification with valid and adaptive coverage.
+Advances in Neural Information Processing Systems ,
+33:3581–3591.2421
+Mauricio Sadinle, Jing Lei, and Larry Wasserman. 2019.
+Least ambiguous set-valued classifiers with bounded
+error levels. Journal of the American Statistical As-
+sociation , 114(525):223–234.
+Sebastian Schuster, Sonal Gupta, Rushin Shah, and
+Mike Lewis. 2019. Cross-lingual transfer learning
+for multilingual task oriented dialog. In Proceedings
+of the 2019 Conference of the North American Chap-
+ter of the Association for Computational Linguistics:
+Human Language Technologies, Volume 1 (Long and
+Short Papers) , pages 3795–3805.
+Glenn Shafer and Vladimir V ovk. 2008. A tutorial on
+conformal prediction. Journal of Machine Learning
+Research , 9(3).
+Lei Shu, Hu Xu, and Bing Liu. 2017. Doc: Deep open
+classification of text documents. In Proceedings of
+the 2017 Conference on Empirical Methods in Natu-
+ral Language Processing , pages 2911–2916.
+Clemencia Siro, Mohammad Aliannejadi, and Maarten
+de Rijke. 2022. Understanding user satisfaction with
+task-oriented dialogue systems. In Proceedings of
+the 45th International ACM SIGIR Conference on
+Research and Development in Information Retrieval ,
+pages 2018–2023.
+Mickey van Zeelt, Floris den Hengst, and Seyyed Hadi
+Hashemi. 2020. Collecting high-quality dialogue
+user satisfaction ratings with third-party annotators.
+InProceedings of the 2020 Conference on Human
+Information Interaction and Retrieval , pages 363–
+367.
+V olodya V ovk, Alexander Gammerman, and Craig Saun-
+ders. 1999. Machine-learning applications of al-
+gorithmic randomness. In Proceedings of the Six-
+teenth International Conference on Machine Learn-
+ing, pages 444–453.
+Guangfeng Yan, Lu Fan, Qimai Li, Han Liu, Xiaotong
+Zhang, Xiao-Ming Wu, and Albert YS Lam. 2020.
+Unknown intent detection using gaussian mixture
+model with an application to zero-shot intent classifi-
+cation. In Proceedings of the 58th annual meeting of
+the association for computational linguistics , pages
+1050–1060.
+Eyup Halit Yilmaz and Cagri Toraman. 2020. Kloos:
+Kl divergence-based out-of-scope intent detection in
+human-to-machine conversations. In Proceedings
+of the 43rd international ACM SIGIR conference on
+research and development in information retrieval ,
+pages 2105–2108.
+Cecilia Ying and Stephen Thomas. 2022. Label errors
+in banking77. In Proceedings of the Third Workshop
+on Insights from Negative Results in NLP , pages 139–
+143.
+Hamed Zamani, Susan Dumais, Nick Craswell, Paul
+Bennett, and Gord Lueck. 2020. Generating clarify-
+ing questions for information retrieval. In Proceed-
+ings of the web conference 2020 , pages 418–428.Li-Ming Zhan, Haowen Liang, Bo Liu, Lu Fan, Xiao-
+Ming Wu, and Albert YS Lam. 2021. Out-of-scope
+intent detection with self-supervision and discrimi-
+native training. In Proceedings of the 59th Annual
+Meeting of the Association for Computational Lin-
+guistics and the 11th International Joint Conference
+on Natural Language Processing , pages 3521–3532.
+Zhiling Zhang and Kenny Zhu. 2021. Diverse and spe-
+cific clarification question generation with keywords.
+InProceedings of the Web Conference 2021 , pages
+3501–3511.
+Wenxuan Zhou, Fangyu Liu, and Muhao Chen. 2021.
+Contrastive out-of-distribution detection for pre-
+trained transformers. In Proceedings of the 2021
+Conference on Empirical Methods in Natural Lan-
+guage Processing (EMNLP) .2422
+A Appendix: Implementation Details
+We used python v3.10.9 with packages numpy and pandas for data manipulation and basic calcu-
+lations, matplotlib to generate illustrations, mapie for conformal prediction and reproduced these
+results in Julia and the package conformalprediction.jl . We used the huggingface API for fine
+tuning a version of bert-base-uncased using the hyperparameters below. For an anonymized version
+of the code and data see https://anonymous.4open.science/r/cicc-205A .
+l e a r n i n g _ r a t e = 4 . 0 0 e −05
+warmup_proportion = 0 . 1
+t r a i n _ b a t c h _ s i z e = 32
+e v a l _ b a t c h _ s i z e = 32
+n u m _ t r a i n _ e p o c h s = 5
+A.1 Generative Language Model
+We use the eachadea/vicuna-7b-1.1 variant of the LLAMA model using the HuggingFace API for
+the experiments presented here. We here provide an example prompt:
+Customers asked an ambiguous question. Complete each set with a disambiguation question.
+Set 1: Customer Asked: 'The terminal I paid at wouldn 't take my card. Is something wrong? '
+Option 1: 'card not working '
+Option 2: 'card swallowed '
+Disambiguation Question: 'I understand this was about you card. Was is swallowed or not working? '
+**END**
+Set 2:
+Customer Asked: 'I have a problem with a transfer. It didn 't work. Can you tell me why? '
+Option 1: 'declined transfer '
+Option 2: 'failed transfer '
+Disambiguation Question: 'I see you are having issues with your transfer. Was your transfer failed or declined? '
+**END**
+Set 3: Customer Asked: 'I transferred some money but it is not here yet '
+Option 1: 'balance not updated after bank transfer '
+Option 2: 'transfer not received by recipient '
+Disambiguation Question:
+More efforts can be spent on prompt engineering and more advanced generative LMs can be used, which
+we expect to improve the user satisfaction of CICC. Alternatively, simple text templates can be used. We
+consider the following alternatives and list some of their expected benefits and downsides:
+Templates a simple template-based can be used in which the user is asked to differentiate between the
+identified intents. Benefits of templates include full control over the chatbot output but a downside is
+that the CQs will be less varied, possibly sounding less natural and will not refer back to the users’
+original utterance,
+LM without user input when using a LM, it is possible to not incorporate the user input Xin the prompt.
+This has the benefit of blocking any prompt injection but the downside of possibly unnatural CQs
+due to the inability to refer to the user query,
+LM with user input by incorporating the user utterance into the LM prompt for CQ generation, the
+CQ can refer back to the user’s phrasing and particular question, and therefore be formulated in a
+possibly more natural way.2423
+We believe that more research is warranted to identify which of these approaches is most applicable in
+which cases, and how possible downsides of these alternatives can be mitigated in practice.
+B Appendix: Sample ambiguous inputs
+Tables 4- 5 list inputs that are considered ambiguous by CICC in the B77 and HWU64 data sets respectively.
+Some inputs could refer to multiple intents whereas some other inputs could be considered out-of-scope.
+# Utterance Label Prediction Set
+1 what is the matter? direct debit pay-
+ment not recog-
+nisedactivate my card, age limit, balance not updated after bank transfer, bal-
+ance not updated after cheque or cash deposit, beneficiary not allowed,
+cancel transfer, card arrival, card delivery estimate, card not working, card
+swallowed, cash withdrawal not recognised, change pin, compromised
+card, contactless not working, country support, declined card payment, de-
+clined transfer, direct debit payment not recognised, exchange rate, failed
+transfer, get physical card, lost or stolen card, lost or stolen phone, pending
+card payment, pending cash withdrawal, pending transfer, pin blocked,
+Refund not showing up, reverted card payment?, terminate account, top
+up failed, top up reverted, transaction charged twice, transfer not received
+by recipient, transfer timing, unable to verify identity, why verify identity,
+wrong amount of cash received,
+2Can I choose when my
+card is delivered?card delivery es-
+timateactivate my card, card about to expire, card acceptance, card arrival ,
+card delivery estimate , change pin, contactless not working, country sup-
+port, get physical card ,getting spare card , getting virtual card, lost or
+stolen card, order physical card , supported cards and currencies, top up
+by bank transfer charge, top up by card charge, visa or mastercard
+3My contanctless has
+stopped workingcontactless not
+workingactivate my card, apple pay or google pay, automatic top up, beneficiary
+not allowed, cancel transfer, card not working , card payment wrong ex-
+change rate, contactless not working , declined card payment, disposable
+card limits, failed transfer, get disposable virtual card, get physical card,
+pending top up, pin blocked, top up failed, top up reverted, topping up by
+card, virtual card not working, visa or mastercard, wrong exchange rate
+for cash withdrawal
+4I misplaced my card and I
+dont know where the last
+place is where I used the
+card last. Can you look
+at my account and tell me
+the last place I used the
+card?lost or stolen
+cardactivate my card, atm support, card acceptance, card linking,
+card swallowed, cash withdrawal not recognised, compromised card ,
+lost or stolen card , lost or stolen phone, order physical card, pin blocked
+5Is my card denied any-
+where?card acceptance atm support ,card acceptance , card not working, card payment fee charged,
+card swallowed, compromised card, contactless not working, declined
+card payment, lost or stolen card, lost or stolen phone, order physical card,
+unable to verify identity, visa or mastercard
+Table 4: A sample of prediction sets on B77 of size > th of seven with marginal conformal prediction on BERT
+outputs. Plausible labels have been highlighted with underscore .
+C Appendix: LLM results
+We here present a random sample of CQs on B77 and C150.2424
+# Utterance Label Prediction Set
+1 olly recommendation
+eventscalendar set, general quirky, lists createoradd, music likeness, music query,
+play game, play music, play radio,
+2 this song is too good music likeness audio volume mute, general affirm, general commandstop, general joke,
+general negate, lists remove, music dislikeness, music likeness
+3 do i have to go to the gym general quirky calendar query ,general quirky , lists query, recommendation events , rec-
+ommendation locations, transport traffic, weather query
+4 silently adjust audio volume
+muteaudio volume down , audio volume other , audio volume up ,
+iot hue lightchange , iot hue lightdim , iot hue lightup , music settings
+5 how many times does it
+gogeneral quirky datetime query, general quirky ,lists query , qa factoid, qa maths,
+transport query , transport traffic
+6 sports head lines please news query calendar set, general quirky, iot hue lightchange, music likeness, news
+query, qa factoid, social post, weather query
+7 read that back play audiobook email addcontact, email query, email querycontact, email sendemail, gen-
+eral quirky, lists createoradd, music likeness, play audiobook, play music,
+social post,
+8 i don’t want to hear any
+more songs of that typemusic dislikeness audio volume mute, calendar remove, general commandstop, iot wemo
+off, lists remove, music dislikeness, music likeness
+9 check celebrity wiki general quirky email query, general quirky ,lists query , news query, qa factoid , social
+post, social query
+10 Get all availables lists query email addcontact, email query, email querycontact, email sendemail, social
+post, social query, takeaway order,
+11 rating music likeness cooking recipe, general quirky, lists createoradd, lists query, music like-
+ness, music query, qa definition, qa factoid,
+12 take me to mc donalds transport query play game, play podcasts, recommendation events, recommendation loca-
+tions, recommendation movies, takeaway order, takeaway query
+13 search qa factoid email querycontact, general quirky, lists createoradd, lists query, music
+query, qa definition, qa factoid,
+14 unmute audio volume
+upaudio volume down, audio volume mute ,audio volume up , iot wemo off,
+music settings, play radio, transport query, transport traffic
+15 please unmute yourself audio volume
+mutealarm remove, audio volume down, audio volume mute ,audio volume up ,
+iot cleaning, iot wemo on, music settings, play game
+16 what’s the best day next
+week to go out for pizzadatetime query calendar query , cooking recipe, general quirky, qa factoid,
+recommendation events , recommendation locations, takeaway query
+17 i need a manger general quirky calendar set, cooking recipe, general quirky, lists createoradd, music
+likeness, play game, qa definition, qa factoid, social post,
+18 assistant shuffle entire li-
+braryplay music iot cleaning, iot hue lightchange, lists createoradd, music settings ,
+play audiobook , play game, play music
+19 put the disco lights on iot hue lighton alarm remove, iot cleaning, iot hue lightchange , iot hue lightoff,
+iot hue lighton , iot hue lightup , iot wemo on
+20 hello how are you today general greet general greet , general praise, general quirky , play radio, recommendation
+events, recommendation locations, recommendation movies
+21 where does tar work cur-
+rentlyemail querycon-
+tactcooking recipe, email querycontact , general quirky, lists query, qa defini-
+tion, recommendation locations, takeaway query
+22 can you pull up jeff email querycon-
+tactgeneral quirky, iot cleaning, news query, play game, play music, play
+radio, social post
+23 show me theatre where pi-
+rates of caribbean is play-
+ingrecommendation
+moviesgeneral quirky, play game, play music, play podcasts, recommendation
+events, recommendation locations, recommendation movies
+24 spot play podcasts calendar set, music likeness, music query, play music, play radio, qa
+factoid, weather query,
+25 anything i need to know general quirky calendar query , calendar set, email query , email querycontact,
+general quirky , lists query, news query , social query
+26 give me some good
+soundsplay music audio volume down, audio volume up , music likeness, music query , music
+settings, play music , play radio
+27 i don’t like it music dislike-
+nesscalendar remove, general commandstop, general dontcare , general joke,
+general negate , lists remove, music dislikeness , music likeness, social post
+28 what are you general quirky audio volume down, audio volume mute, audio volume up, music query,
+music settings, qa definition, recommendation locations, recommendation
+movies
+29 i don’t like this one general quirky audio volume mute , calendar remove, general joke, general negate ,
+iot wemo off , lists remove , music dislikeness , social post
+Table 5: Prediction sets on ACID of size > th of seven with marginal conformal prediction on BERT outputs.
+Plausible labels have been highlighted with underscore .2425
+Utterance Prediction Set LLM output
+I hope you can help me. My
+account has been compromised
+from a different town that I
+haven’t been to. Can you please
+place a hold on my account un-
+til I can make it to the bank?cash withdrawal not
+recognised, compro-
+mised cardI understand you are having issues with your account.
+Was your account compromised or your card not
+recognised for cash withdrawal?
+Is my card denied anywhere? card not working, de-
+clined card paymentI understand you are asking about your card. Was it
+declined or not working?
+Money that I have transferred
+hasn’t arrived yetbalance not updated
+after bank transfer,
+transfer not received
+by recipientI understand you are waiting for a transfer to be up-
+dated in your balance. Was the transfer not received
+by you or the recipient?
+How long will the transfer take? balance not updated
+after bank trans-
+fer,pending transfer,
+transfer timingI understand you are asking about transfer timing.
+Was your transfer pending, not updated or not re-
+ceived?
+What should I do with my stuck
+ATM?card swallowed,
+declined cash with-
+drawalI understand you have a stuck ATM. Was it your card
+that got stuck or was your cash withdrawal declined?
+Table 6: Sample of LLM outputs on the B77 dataset where the user input has been made part of the prompt.2426
+Utterance Prediction Set LLM output
+how many more miles can i
+drive on my current tankgas, mpg I understand you are asking about your car’s fuel.
+Are you asking about the number of miles you can
+drive on your current tank or the miles per gallon?
+can i redeem my points for
+flightsredeem rewards, re-
+wards balanceI understand you would like to redeem your points
+for flights. Are you looking to check your rewards
+balance or redeem your rewards?
+are there any meetings between
+2 and 5 pmschedule meeting,
+meeting scheduleI understand you are looking for a schedule of meet-
+ings. Are you looking for a specific time range or a
+general schedule?
+is the marathon on friday added
+to my calendarcalendar, calendar
+updateI understand you are referring to your calendar. Is it
+the marathon on friday that you are referring to or do
+you need an update on your calendar?
+why didn’t my card work expiration date, card
+declinedI understand you are having issues with your card. Is
+it because of the expiration date or was it declined?
+Table 7: Sample of LLM outputs on the C150 dataset.2427
+D Appendix: Intent distributions
+We here present the intent distributions for all public datasets across train, calibration and test splits.
+Figure 3: Intent distribution in ACID data set.
+Figure 4: Intent distribution in ATIS data set.
+Figure 5: Intent distribution in B77 data set.
+Figure 6: Intent distribution in C150-IS data set.2428
+Figure 7: Intent distribution in HWU64 data set.
+Figure 8: Intent distribution in IND data set.
+Figure 9: Intent distribution in MTOD data set.2429
+E Appendix: Unoptimized α
+This appendix contains results for an unoptimized αhyperparameter, arbitrarily set at .10and.01. We
+see that for most data sets, there is no need to ask a clarification question as the model already achieves
+the desired coverage. Much higher coverages (as in Table 2) are achievable for these data sets. For some
+more challenging data sets such as C150, HWU64 and IND, CICC yields small clarification questions
+while retaining a reasonably large number of clarification questions of size 1.
+Setting 1−α th Cov↑Single↑ |CQ| ↓Amb
+ACID .90 7 CICC .90 .92 − 0
+B1 .97 .93 5 0
+B2 .95 1 − 0
+B3 .99 0 5 0
+ATIS .90 7 CICC .88 .89 − 0
+B1 .99 .93 5 0
+B2 .98 1 − 0
+B3 1 0 5 0
+B77/BERT .90 7 CICC .98 .79 2.90 .04
+B1 .97 .90 5 0
+B2 .93 1 − 0
+B3 .99 0 5 0
+B77/DFCX .90 4 CICC .91 .66 2.63 .02
+B1 .95 .71 4.79 .27
+B2 .90 .98 2.26 0
+B3 .97 0 5 1
+C150 .90 7 CICC .99 .97 2.66 0
+B1 .99 .82 5 0
+B2 .98 1 − 0
+B3 1 0 5 0
+HWU64 .90 7 CICC .90 .97 2.00 0
+B1 .96 .79 5 0
+B2 .90 1 − 0
+B3 .98 0 5 0
+IND .90 7 CICC .91 .25 3.46 .11
+B1 .88 .42 5 0
+B2 .70 1 − 0
+B3 .91 0 5 0
+MTOD .90 7 CICC .90 .90 − 0
+B1 .99 .99 5 0
+B2 .99 1 − 0
+B3 1 0 5 0
+Table 8: Test set results for 1−α=.90where underline indicates meeting coverage requirement. Bold denotes
+best when meeting this requirement, omitted for last column due to missing ground truth for ambiguous.2430
+Setting 1−α th Cov↑Single↑ |CQ| ↓Amb
+ACID .99 7 CICC 1 .77 3.00 .10
+B1 .98 .85 5 0
+B2 .95 1 − 0
+B3 .99 0 5 0
+ATIS .99 7 CICC .99 .98 2.54 0
+B1 .99 .73 5 0
+B2 .98 1 − 0
+B3 1 0 5 0
+B77/BERT .99 7 CICC .98 .79 2.90 .04
+B1 .97 .90 5 0
+B2 .93 1 − 0
+B3 .99 0 5 0
+B77/DFCX .99 4 CICC .97 0 5 1
+B1 .97 .05 5 .95
+B2 .90 1 − 0
+B3 .97 0 5 1
+C150 .99 7 CICC .99 .97 2.66 0
+B1 .99 .82 5 0
+B2 .98 1 − 0
+B3 1 0 5 0
+HWU64 .99 7 CICC .99 .25 3.39 .28
+B1 .98 .05 5 0
+B2 .90 1 − 0
+B3 .98 0 5 0
+MTOD .99 7 CICC .99 1 − 0
+B1 1 .98 5 0
+B2 .99 1 − 0
+B3 1 0 5 0
+Table 9: Test set results for 1−α=.99where underline indicates meeting coverage requirement. Bold denotes
+best when meeting this requirement, omitted for last column due to missing ground truth for ambiguous.2431
+F Appendix: Comparison results OOS detection
+We here compare the results of OOS detection as reported by baselines. Note that these results were
+generated on different splits of the data and (where applicable), possibly using different open-domain
+samples, and that a direct comparison between results is invalid.
+Dataset Algorithm F1↑Accuracy ↑
+C150 CICC-OOS .91 .68
+Zhan et al. (2021) 25% .81 .88
+Zhan et al. (2021) 50% .87 .88
+Zhan et al. (2021) 75% .89 .88
+Cavalin et al. (2020) .76 .73
+B77 CICC-OOS .90 .89
+Zhan et al. (2021) 25% .74 .70
+Zhan et al. (2021) 50% .80 .73
+Zhan et al. (2021) 75% .87 .81
+Table 10: Results for the OOS detection task.2432

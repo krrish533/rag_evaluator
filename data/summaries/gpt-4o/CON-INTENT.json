@@ -1,0 +1,4 @@
+{
+  "filename": "CON-INTENT.txt",
+  "summary": "The paper introduces Conformal Intent Classification and Clarification (CICC), a framework designed to enhance intent recognition in task-oriented dialogue systems by generating clarification questions based on heuristic uncertainty scores. CICC ensures accurate identification of user intents at a predefined confidence level, supports out-of-scope detection, and improves user experience through quick and precise disambiguation of queries."
+}

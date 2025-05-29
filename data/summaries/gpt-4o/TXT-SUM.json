@@ -1,0 +1,4 @@
+{
+  "filename": "TXT-SUM.txt",
+  "summary": "The article introduces EXABSUM, a novel text summarization approach capable of generating both extractive and abstractive summaries. EXABSUM combines statistical, semantic scoring, and graph-based techniques to efficiently condense information, outperforming existing methods in evaluations across multi-domain benchmarks."
+}

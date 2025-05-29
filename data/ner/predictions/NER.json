@@ -1,0 +1,9285 @@
+{
+  "filename": "NER.txt",
+  "entities": [
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rho",
+      "label": "PERSON"
+    },
+    {
+      "text": "M.\nBiomedical Flat",
+      "label": "ORG"
+    },
+    {
+      "text": "Nested Named\nEntity Recognition: Methods",
+      "label": "ORG"
+    },
+    {
+      "text": "Challenges",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302",
+      "label": "DATE"
+    },
+    {
+      "text": "10.3390",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Rui Ara",
+      "label": "PERSON"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "August 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "3 October 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "October 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "October 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Licensee MDPI",
+      "label": "PERSON"
+    },
+    {
+      "text": "Basel",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "the Creative Commons\nAttribution",
+      "label": "ORG"
+    },
+    {
+      "text": "Review\nBiomedical Flat",
+      "label": "ORG"
+    },
+    {
+      "text": "Nested Named Entity Recognition",
+      "label": "ORG"
+    },
+    {
+      "text": "Challenges",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gyujin",
+      "label": "GPE"
+    },
+    {
+      "text": "Computer Science",
+      "label": "ORG"
+    },
+    {
+      "text": "Hanyang University",
+      "label": "ORG"
+    },
+    {
+      "text": "Seoul",
+      "label": "GPE"
+    },
+    {
+      "text": "04763",
+      "label": "DATE"
+    },
+    {
+      "text": "Republic of Korea",
+      "label": "GPE"
+    },
+    {
+      "text": "Artificial Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "Hanyang University",
+      "label": "ORG"
+    },
+    {
+      "text": "Seoul",
+      "label": "GPE"
+    },
+    {
+      "text": "04763",
+      "label": "DATE"
+    },
+    {
+      "text": "Republic of Korea",
+      "label": "GPE"
+    },
+    {
+      "text": "3Department",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Biomedical Informatics",
+      "label": "ORG"
+    },
+    {
+      "text": "Hanyang University",
+      "label": "ORG"
+    },
+    {
+      "text": "Seoul",
+      "label": "GPE"
+    },
+    {
+      "text": "04763",
+      "label": "DATE"
+    },
+    {
+      "text": "Republic of Korea",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "84%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "89%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NCBI Disease",
+      "label": "ORG"
+    },
+    {
+      "text": "92%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "BC4CHEM",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "80%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1,2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1,3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302",
+      "label": "DATE"
+    },
+    {
+      "text": "https://doi.org/10.3390/app14209302 https://www.mdpi.com/journal/applsci\nAppl",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 2",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "corpora",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "12,13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ML",
+      "label": "ORG"
+    },
+    {
+      "text": "14\u201316",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17\u201319",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "XLNet",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "23,24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "about 110",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "XLNet",
+      "label": "ORG"
+    },
+    {
+      "text": "about 117 million",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "Supplementary Table",
+      "label": "GPE"
+    },
+    {
+      "text": "3\u20137%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "BC4CHMED",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 3",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "corpora",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "15,28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "IO",
+      "label": "GPE"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "BIOES",
+      "label": "ORG"
+    },
+    {
+      "text": "BILOU",
+      "label": "ORG"
+    },
+    {
+      "text": "29\u201331",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "Tetracycline",
+      "label": "ORG"
+    },
+    {
+      "text": "BIOES",
+      "label": "ORG"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "REVIEW",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "corpora",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tetracycline",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "IO",
+      "label": "GPE"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "BIOES",
+      "label": "ORG"
+    },
+    {
+      "text": "BILOU",
+      "label": "ORG"
+    },
+    {
+      "text": "29\u201331",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "annotatin",
+      "label": "PERSON"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "Tetracycline",
+      "label": "ORG"
+    },
+    {
+      "text": "BIOES",
+      "label": "ORG"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "15,32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1c",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Tetracycline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Clostridium",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "15,32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1c",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Tetracycline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Clostridium",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "X={x1,x2",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1,t1\u0011",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2,stail",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2,t2\u0011",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "tm\u0011o",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "1c",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 4",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "DATE"
+    },
+    {
+      "text": "2.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TPrefers",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NE",
+      "label": "ORG"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "1.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "2.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "35,36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "OOV",
+      "label": "ORG"
+    },
+    {
+      "text": "37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "OOV",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "homonyms",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bioformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 5",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 1.",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MedMention",
+      "label": "ORG"
+    },
+    {
+      "text": "44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "51",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "56",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LocText \u2713 https://github.com/Rostlab/LocText",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "57",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2713 https://jensenlab.org/resources/s1000/",
+      "label": "DATE"
+    },
+    {
+      "text": "67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Variant\nSNP",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bacteria",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "14 December 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 22% and 11%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NE",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 6",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "90\u201393%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "BC4CHEMD",
+      "label": "PERSON"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "84.4 \u00b11.2%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "87.7 \u00b10.5%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "REVIEW",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "\u210e\u0302\ud835\udc56",
+      "label": "ORG"
+    },
+    {
+      "text": "\u210e\ud835\udc5e\ud835\udc56",
+      "label": "ORG"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sequence Labeling",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lee et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "FFNN",
+      "label": "ORG"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 7",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "xi",
+      "label": "ORG"
+    },
+    {
+      "text": "Ytask",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gene/Protein Disease Chemical Species",
+      "label": "ORG"
+    },
+    {
+      "text": "84.72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.24",
+      "label": "MONEY"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MTL-LS",
+      "label": "ORG"
+    },
+    {
+      "text": "89.25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "83.47 89.72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.20 - 93.95",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sequence Labeling",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lee et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "FFNN",
+      "label": "ORG"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "PMC",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Naseem",
+      "label": "ORG"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "2b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 8",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioBERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Sun et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CLS] Sentence",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "PLM-",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "3.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Multi-Task Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2c",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ytask 1",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Ytask",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ltotalof",
+      "label": "PERSON"
+    },
+    {
+      "text": "73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Khan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "MT-BioNER",
+      "label": "ORG"
+    },
+    {
+      "text": "BioBERT",
+      "label": "ORG"
+    },
+    {
+      "text": "73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "JNLPBA",
+      "label": "ORG"
+    },
+    {
+      "text": "Chai",
+      "label": "PERSON"
+    },
+    {
+      "text": "74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "XLNet",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MTL",
+      "label": "ORG"
+    },
+    {
+      "text": "Banerjee",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 9",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "2b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Luo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BIO",
+      "label": "ORG"
+    },
+    {
+      "text": "Moscato",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TaughtNet",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5DER",
+      "label": "ORG"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "MT-BioNER",
+      "label": "ORG"
+    },
+    {
+      "text": "MTL",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT-CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "TaughtNet",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Deep Learning Methods",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "DL",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 3",
+      "label": "LAW"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 10",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "80",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "80.8%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "ACE 05",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.2%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "86.4%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "\u00b12.1",
+      "label": "PERSON"
+    },
+    {
+      "text": "83.7%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "KBP17",
+      "label": "PERSON"
+    },
+    {
+      "text": "BB",
+      "label": "GPE"
+    },
+    {
+      "text": "SpanMB",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "81.8%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Approach Type MethodPerformance",
+      "label": "ORG"
+    },
+    {
+      "text": "83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79.19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84]Span",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PL-Marker - - 88.80",
+      "label": "ORG"
+    },
+    {
+      "text": "87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "80.54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "80.97",
+      "label": "MONEY"
+    },
+    {
+      "text": "90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "81.77 - 88.14",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "80.44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.96",
+      "label": "MONEY"
+    },
+    {
+      "text": "92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81.85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AffineBiaffine",
+      "label": "ORG"
+    },
+    {
+      "text": "80.50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81.23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "95",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Section 3",
+      "label": "LAW"
+    },
+    {
+      "text": "4.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Layer-Based Approaches",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vlachos",
+      "label": "ORG"
+    },
+    {
+      "text": "Merge",
+      "label": "PERSON"
+    },
+    {
+      "text": "Label",
+      "label": "PERSON"
+    },
+    {
+      "text": "83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 11",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "REVIEW",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24 \n \n",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Section 3",
+      "label": "LAW"
+    },
+    {
+      "text": "4.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Layer-Based Approaches",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "\ud835\udc4c\ud835\udc59\ud835\udc4e\ud835\udc66\ud835\udc52",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "\ud835\udc66(\ud835\udc56,\ud835\udc57",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "xi",
+      "label": "ORG"
+    },
+    {
+      "text": "Ylayer",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "y(i",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Labeling Approaches",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 12",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "3b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhong",
+      "label": "GPE"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zuo et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ye et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "PL-Marker",
+      "label": "ORG"
+    },
+    {
+      "text": "87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PL-marker",
+      "label": "ORG"
+    },
+    {
+      "text": "Boundary Model",
+      "label": "PERSON"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "3c",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "BENSC",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 13",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4.2.3",
+      "label": "DATE"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "2b",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "91",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "vector",
+      "label": "DATE"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 14",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PIQN",
+      "label": "ORG"
+    },
+    {
+      "text": "4.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "93",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Yu et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "biaffine",
+      "label": "NORP"
+    },
+    {
+      "text": "Dozat",
+      "label": "PERSON"
+    },
+    {
+      "text": "96",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "biaffine",
+      "label": "NORP"
+    },
+    {
+      "text": "NE",
+      "label": "GPE"
+    },
+    {
+      "text": "Yuan et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "95",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "biaffine",
+      "label": "NORP"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Entity Types",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 15",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "51",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Linnaeus",
+      "label": "GPE"
+    },
+    {
+      "text": "66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AtoBwith",
+      "label": "ORG"
+    },
+    {
+      "text": "97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DSC",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "0.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "REVIEW",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "0.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioRED",
+      "label": "GPE"
+    },
+    {
+      "text": "BC4CHEMD",
+      "label": "GPE"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "Supplementary Table S2",
+      "label": "FAC"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "PL -marker",
+      "label": "LOC"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "\ud835\udc4b={\ud835\udc651,\ud835\udc652,",
+      "label": "PERSON"
+    },
+    {
+      "text": "85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "RNA",
+      "label": "ORG"
+    },
+    {
+      "text": "0.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNA",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 16",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BioRED",
+      "label": "GPE"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "BC4CHEMD",
+      "label": "PERSON"
+    },
+    {
+      "text": "Supplementary Table S2",
+      "label": "FAC"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "X={x1,x2",
+      "label": "DATE"
+    },
+    {
+      "text": "sxn\u2212l+1,xn",
+      "label": "PERSON"
+    },
+    {
+      "text": "85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Max -pooling\u0010",
+      "label": "PERSON"
+    },
+    {
+      "text": "\u02c6hjo\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u02c6hjo\n.",
+      "label": "PERSON"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "m(s",
+      "label": "NORP"
+    },
+    {
+      "text": "87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "xj;\u02c6h(e",
+      "label": "GPE"
+    },
+    {
+      "text": "xjo\n.",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ERC",
+      "label": "ORG"
+    },
+    {
+      "text": "99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "V100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DGXS",
+      "label": "ORG"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPU",
+      "label": "PERSON"
+    },
+    {
+      "text": "NVIDIA Corporation",
+      "label": "ORG"
+    },
+    {
+      "text": "Santa Clara",
+      "label": "GPE"
+    },
+    {
+      "text": "CA",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SciERC",
+      "label": "NORP"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "GENIA",
+      "label": "GPE"
+    },
+    {
+      "text": "SciERC",
+      "label": "GPE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 17",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "SciERC",
+      "label": "NORP"
+    },
+    {
+      "text": "PL-Marker",
+      "label": "ORG"
+    },
+    {
+      "text": "SciERC",
+      "label": "NORP"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "PL-Marker",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "0.58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GENIA",
+      "label": "GPE"
+    },
+    {
+      "text": "0.88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76.96 77.47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72.63",
+      "label": "MONEY"
+    },
+    {
+      "text": "75.35 65.78 67.91",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "Max",
+      "label": "PERSON"
+    },
+    {
+      "text": "78.11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "67.52 68.48 67.98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PL-Marker",
+      "label": "ORG"
+    },
+    {
+      "text": "78.34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "67.53 70.27 68.86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "2a",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "51",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "V100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DGXS",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "between 20 and 30",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "1dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "2dCNN",
+      "label": "DATE"
+    },
+    {
+      "text": "1dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1dCNN",
+      "label": "DATE"
+    },
+    {
+      "text": "2dCNN",
+      "label": "DATE"
+    },
+    {
+      "text": "Banerjee",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "256",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "IOB",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 18",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2dCNN",
+      "label": "DATE"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "PLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "86.14 89.10 87.60 82.85",
+      "label": "MONEY"
+    },
+    {
+      "text": "83.46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.89 93.28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.44 83.81",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.29 92.86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.91",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.38 93.05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "2dCNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.75 93.29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.52 89.21",
+      "label": "MONEY"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "5.3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "up to 8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 6",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "BC2GM",
+      "label": "GPE"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CRF",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 19",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "86.14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.68 93.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "87.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.02",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.96 93.22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "around 90%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "around 80%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "only two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "type corpora",
+      "label": "PERSON"
+    },
+    {
+      "text": "100\u2013102",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Secondly",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NCBI",
+      "label": "ORG"
+    },
+    {
+      "text": "BC5CDR",
+      "label": "NORP"
+    },
+    {
+      "text": "71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "https",
+      "label": "PERSON"
+    },
+    {
+      "text": "Table S1:",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Table S2: Examples",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 20",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "M.R.",
+      "label": "GPE"
+    },
+    {
+      "text": "G.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "G.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "M.R.",
+      "label": "GPE"
+    },
+    {
+      "text": "M.R.",
+      "label": "ORG"
+    },
+    {
+      "text": "M.R.",
+      "label": "ORG"
+    },
+    {
+      "text": "Korea Institute of Marine Science & Technology\nPromotion",
+      "label": "ORG"
+    },
+    {
+      "text": "the Ministry of Oceans and Fisheries",
+      "label": "ORG"
+    },
+    {
+      "text": "Korea",
+      "label": "GPE"
+    },
+    {
+      "text": "20220517",
+      "label": "DATE"
+    },
+    {
+      "text": "Institute\nof Information & communications Technology Planning & Evaluation",
+      "label": "ORG"
+    },
+    {
+      "text": "Korea",
+      "label": "GPE"
+    },
+    {
+      "text": "MSIT",
+      "label": "ORG"
+    },
+    {
+      "text": "Artificial Intelligence Graduate School Program",
+      "label": "ORG"
+    },
+    {
+      "text": "Hanyang University",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yamada",
+      "label": "GPE"
+    },
+    {
+      "text": "Miwa",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Biomedical Relation Extraction",
+      "label": "ORG"
+    },
+    {
+      "text": "Question\nAnswering",
+      "label": "ORG"
+    },
+    {
+      "text": "Workshop on Biomedical Natural Language Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "BioNLP Shared Tasks",
+      "label": "ORG"
+    },
+    {
+      "text": "Toronto",
+      "label": "GPE"
+    },
+    {
+      "text": "ON",
+      "label": "GPE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "13\u201314 July 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "377\u2013384",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Italiani",
+      "label": "NORP"
+    },
+    {
+      "text": "Moro",
+      "label": "ORG"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bartolini",
+      "label": "PERSON"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Boschetti",
+      "label": "GPE"
+    },
+    {
+      "text": "M.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "Carbonaro",
+      "label": "GPE"
+    },
+    {
+      "text": "A. Graph-Enhanced Biomedical Abstractive",
+      "label": "PERSON"
+    },
+    {
+      "text": "Factual Evidence Extraction",
+      "label": "ORG"
+    },
+    {
+      "text": "SN Comput",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "500",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luo",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. BioREx",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "146",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "104487",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Al-Moslmi",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Oca\u00f1a",
+      "label": "GPE"
+    },
+    {
+      "text": "M.G.",
+      "label": "ORG"
+    },
+    {
+      "text": "Opdahl",
+      "label": "GPE"
+    },
+    {
+      "text": "A.L.",
+      "label": "GPE"
+    },
+    {
+      "text": "Veres",
+      "label": "GPE"
+    },
+    {
+      "text": "C. Named",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "DATE"
+    },
+    {
+      "text": "32862\u201332881",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yoo",
+      "label": "GPE"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeong",
+      "label": "PERSON"
+    },
+    {
+      "text": "O. DeNERT-KG",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "10, 6429",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Park",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Moon",
+      "label": "PERSON"
+    },
+    {
+      "text": "Choi",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Rho",
+      "label": "ORG"
+    },
+    {
+      "text": "M. Discovering",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "11, 4490",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Grishman",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Sundheim",
+      "label": "GPE"
+    },
+    {
+      "text": "B.M. Message",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "The 16th International Conference on Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "Copenhagen",
+      "label": "ORG"
+    },
+    {
+      "text": "Denmark",
+      "label": "GPE"
+    },
+    {
+      "text": "August 1996",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Knowl",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "DATE"
+    },
+    {
+      "text": "50\u201370",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Matos",
+      "label": "GPE"
+    },
+    {
+      "text": "Oliveira",
+      "label": "GPE"
+    },
+    {
+      "text": "J.L. Biomedical",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "DATE"
+    },
+    {
+      "text": "175\u2013195",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Guan",
+      "label": "GPE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "J. Mach",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "373\u2013382",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Song",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zeng",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Deep",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gaizauskas",
+      "label": "GPE"
+    },
+    {
+      "text": "R. Term",
+      "label": "PERSON"
+    },
+    {
+      "text": "Biological Applications",
+      "label": "ORG"
+    },
+    {
+      "text": "Patras",
+      "label": "GPE"
+    },
+    {
+      "text": "Greece",
+      "label": "GPE"
+    },
+    {
+      "text": "2\u20134 June 2000",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Song",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "BMC Med",
+      "label": "ORG"
+    },
+    {
+      "text": "Decis",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "15, 1\u20138",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "G. Recognizing",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.\nMed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "75",
+      "label": "DATE"
+    },
+    {
+      "text": "456\u2013467",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alex",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Haddow",
+      "label": "NORP"
+    },
+    {
+      "text": "Grover",
+      "label": "GPE"
+    },
+    {
+      "text": "C. Recognising",
+      "label": "PERSON"
+    },
+    {
+      "text": "Biological",
+      "label": "ORG"
+    },
+    {
+      "text": "Translational",
+      "label": "ORG"
+    },
+    {
+      "text": "Clinical Language Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "Prague",
+      "label": "GPE"
+    },
+    {
+      "text": "Czech Republic",
+      "label": "GPE"
+    },
+    {
+      "text": "29 June 2007",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "65\u201372",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Leaman",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Cheminform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S3",
+      "label": "ORG"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gridach",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Character",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "70",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yoon",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.H.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.; Kang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Collabonet",
+      "label": "PERSON"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "DATE"
+    },
+    {
+      "text": "55\u201365",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cho",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "H. Biomedical",
+      "label": "PERSON"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "DATE"
+    },
+    {
+      "text": "735",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Devlin",
+      "label": "ORG"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Toutanova",
+      "label": "ORG"
+    },
+    {
+      "text": "K. Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Carbonell",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.; Salakhutdinov",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.R.",
+      "label": "GPE"
+    },
+    {
+      "text": "Le",
+      "label": "GPE"
+    },
+    {
+      "text": "Q.V",
+      "label": "GPE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Brown",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mann",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ryder",
+      "label": "ORG"
+    },
+    {
+      "text": "N.",
+      "label": "ORG"
+    },
+    {
+      "text": "Subbiah",
+      "label": "GPE"
+    },
+    {
+      "text": "Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.D.",
+      "label": "GPE"
+    },
+    {
+      "text": "Dhariwal",
+      "label": "ORG"
+    },
+    {
+      "text": "Neelakantan",
+      "label": "GPE"
+    },
+    {
+      "text": "Shyam",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sastry",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Askell",
+      "label": "ORG"
+    },
+    {
+      "text": "A. Language",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "33",
+      "label": "DATE"
+    },
+    {
+      "text": "1877\u20131901",
+      "label": "DATE"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 21",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yoon",
+      "label": "GPE"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.H.",
+      "label": "ORG"
+    },
+    {
+      "text": "Kang",
+      "label": "ORG"
+    },
+    {
+      "text": "J. BioBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "36",
+      "label": "DATE"
+    },
+    {
+      "text": "1234\u20131240",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eklund",
+      "label": "ORG"
+    },
+    {
+      "text": "Prasad",
+      "label": "ORG"
+    },
+    {
+      "text": "M. Biomedical",
+      "label": "ORG"
+    },
+    {
+      "text": "biobert representa-",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "IJCNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Glasgow",
+      "label": "GPE"
+    },
+    {
+      "text": "UK",
+      "label": "GPE"
+    },
+    {
+      "text": "July 2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1\u20138",
+      "label": "DATE"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Peters",
+      "label": "GPE"
+    },
+    {
+      "text": "M.E.",
+      "label": "GPE"
+    },
+    {
+      "text": "Cohan",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Smaller, Faster,",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Nouriborji",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kouchaki",
+      "label": "GPE"
+    },
+    {
+      "text": "Clifton",
+      "label": "GPE"
+    },
+    {
+      "text": "D.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "E.F.",
+      "label": "GPE"
+    },
+    {
+      "text": "De Meulder",
+      "label": "ORG"
+    },
+    {
+      "text": "CoNLL-2003",
+      "label": "ORG"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ratinov",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roth",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Boulder",
+      "label": "PERSON"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "4\u20135 June 2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "147\u2013155",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ramshaw",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "Marcus",
+      "label": "GPE"
+    },
+    {
+      "text": "M.P",
+      "label": "GPE"
+    },
+    {
+      "text": "Natural Language Processing Using Very Large\nCorpora",
+      "label": "ORG"
+    },
+    {
+      "text": "Berlin/Heidelberg",
+      "label": "ORG"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "1999",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "157\u2013176",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G. Neural",
+      "label": "ORG"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J.R.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Manning",
+      "label": "GPE"
+    },
+    {
+      "text": "C.D. Nested",
+      "label": "ORG"
+    },
+    {
+      "text": "the 2009 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "Natural Language Processing,",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Singapore",
+      "label": "GPE"
+    },
+    {
+      "text": "August 2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "141\u2013150",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tong",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Nested",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACM Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Knowl",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "108",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Olson",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.L.",
+      "label": "GPE"
+    },
+    {
+      "text": "Delen",
+      "label": "ORG"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Advanced Data Mining Techniques",
+      "label": "ORG"
+    },
+    {
+      "text": "Springer Science & Business",
+      "label": "ORG"
+    },
+    {
+      "text": "Berlin/Heidelberg",
+      "label": "ORG"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sutskever",
+      "label": "GPE"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Corrado",
+      "label": "GPE"
+    },
+    {
+      "text": "G.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Dean",
+      "label": "PERSON"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "Lake Tahoe",
+      "label": "GPE"
+    },
+    {
+      "text": "NV",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "5\u201310 December 2013",
+      "label": "DATE"
+    },
+    {
+      "text": "36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pennington",
+      "label": "ORG"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Socher",
+      "label": "GPE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "the 2014 Conference\non Empirical Methods in Natural Language Processing (EMNLP",
+      "label": "EVENT"
+    },
+    {
+      "text": "Doha",
+      "label": "GPE"
+    },
+    {
+      "text": "Qatar",
+      "label": "GPE"
+    },
+    {
+      "text": "October 2014",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1532\u20131543",
+      "label": "DATE"
+    },
+    {
+      "text": "37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bojanowski",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mikolov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Linguist",
+      "label": "PERSON"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "135\u2013146",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "38",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luan",
+      "label": "GPE"
+    },
+    {
+      "text": "H. Joint",
+      "label": "PERSON"
+    },
+    {
+      "text": "Buenos Aires",
+      "label": "PERSON"
+    },
+    {
+      "text": "Argentina",
+      "label": "GPE"
+    },
+    {
+      "text": "25\u201331 July 2015",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Peters",
+      "label": "PERSON"
+    },
+    {
+      "text": "Neumann",
+      "label": "ORG"
+    },
+    {
+      "text": "Iyyer",
+      "label": "ORG"
+    },
+    {
+      "text": "Clark",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zettlemoyer",
+      "label": "PERSON"
+    },
+    {
+      "text": "L. Deep",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Altosaar",
+      "label": "ORG"
+    },
+    {
+      "text": "R. Clinicalbert",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "41",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tinn",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Cheng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lucas",
+      "label": "GPE"
+    },
+    {
+      "text": "Usuyama",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naumann",
+      "label": "GPE"
+    },
+    {
+      "text": "T.",
+      "label": "ORG"
+    },
+    {
+      "text": "Gao",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "H. Domain",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACM Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Healthc",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fang",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Q.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "K. Bioformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Luo",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.H.",
+      "label": "GPE"
+    },
+    {
+      "text": "Arighi",
+      "label": "GPE"
+    },
+    {
+      "text": "C.N.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. BioRED",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mohan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li, D. Medmentions",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "45",
+      "label": "DATE"
+    },
+    {
+      "text": "Bada",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eckert",
+      "label": "PERSON"
+    },
+    {
+      "text": "Evans",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Garcia",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Shipley",
+      "label": "ORG"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Sitnikov",
+      "label": "GPE"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Baumgartner",
+      "label": "GPE"
+    },
+    {
+      "text": "W.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "Cohen",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.B.",
+      "label": "GPE"
+    },
+    {
+      "text": "Verspoor",
+      "label": "ORG"
+    },
+    {
+      "text": "Blake",
+      "label": "GPE"
+    },
+    {
+      "text": "J.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "161",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "46",
+      "label": "DATE"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.-D.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ohta",
+      "label": "NORP"
+    },
+    {
+      "text": "Tsuruoka",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "GPE"
+    },
+    {
+      "text": "Tateisi",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Collier",
+      "label": "ORG"
+    },
+    {
+      "text": "JNLPBA",
+      "label": "ORG"
+    },
+    {
+      "text": "the International Joint Workshop on Natural Language Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "Biomedicine",
+      "label": "GPE"
+    },
+    {
+      "text": "Geneva",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "August 2004",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "70\u201375",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Damaschun",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kurtz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leser, U. Annotating",
+      "label": "ORG"
+    },
+    {
+      "text": "Building and Evaluation Resources for Biomedical Text Mining",
+      "label": "ORG"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "Language Resources",
+      "label": "ORG"
+    },
+    {
+      "text": "Istanbul",
+      "label": "GPE"
+    },
+    {
+      "text": "Turkey",
+      "label": "GPE"
+    },
+    {
+      "text": "May 2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "16\u201323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "Bobi",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hofmann-Apitius",
+      "label": "ORG"
+    },
+    {
+      "text": "Fluck",
+      "label": "NORP"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "205",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Nagel",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Jimeno-Yepes",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rebholz-Schuhmann",
+      "label": "GPE"
+    },
+    {
+      "text": "UniProtKb",
+      "label": "ORG"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S4",
+      "label": "PERSON"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thompson",
+      "label": "ORG"
+    },
+    {
+      "text": "Iqbal",
+      "label": "ORG"
+    },
+    {
+      "text": "S.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "McNaught",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "S. Construction",
+      "label": "ORG"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "349",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "51",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Johnson",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sciaky",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leaman",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Davis",
+      "label": "PERSON"
+    },
+    {
+      "text": "A.P",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wiegers",
+      "label": "GPE"
+    },
+    {
+      "text": "T.C.",
+      "label": "GPE"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. BioCreative V\nCDR",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 22",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Miranda",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luoma",
+      "label": "GPE"
+    },
+    {
+      "text": "Pyysalo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Valencia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krallinger, M. Overview of DrugProt",
+      "label": "ORG"
+    },
+    {
+      "text": "BioCreative VII",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Seventh",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BioCreative Challenge\nEvaluation Workshop",
+      "label": "ORG"
+    },
+    {
+      "text": "Virtual Event",
+      "label": "ORG"
+    },
+    {
+      "text": "November 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Allot",
+      "label": "ORG"
+    },
+    {
+      "text": "Riehle",
+      "label": "ORG"
+    },
+    {
+      "text": "Milosavljevic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "38",
+      "label": "DATE"
+    },
+    {
+      "text": "4449\u20134451",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "54",
+      "label": "DATE"
+    },
+    {
+      "text": "Smith",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.K.",
+      "label": "GPE"
+    },
+    {
+      "text": "Kuo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chung",
+      "label": "GPE"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Hsu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Klinger",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Friedrich",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.M.",
+      "label": "GPE"
+    },
+    {
+      "text": "Ganchev",
+      "label": "PERSON"
+    },
+    {
+      "text": "Torii",
+      "label": "GPE"
+    },
+    {
+      "text": "BioCreative II",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Genome Biol",
+      "label": "PERSON"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tsujii",
+      "label": "ORG"
+    },
+    {
+      "text": "Ananiadou, S. Disambiguating",
+      "label": "ORG"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "DATE"
+    },
+    {
+      "text": "661\u2013667",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "56",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bergman",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "Workshop on Biomedical Natural Language Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "Uppsala",
+      "label": "GPE"
+    },
+    {
+      "text": "Sweden",
+      "label": "GPE"
+    },
+    {
+      "text": "15 July 2010",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "72\u201380",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cejuela",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vinchurkar",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "Goldberg",
+      "label": "GPE"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Prabhu Shankar",
+      "label": "PERSON"
+    },
+    {
+      "text": "M.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Baghudana",
+      "label": "GPE"
+    },
+    {
+      "text": "Bojchevski",
+      "label": "PERSON"
+    },
+    {
+      "text": "Uhlig",
+      "label": "GPE"
+    },
+    {
+      "text": "Ofner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Raharja-Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jensen",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.J. LocText: Relation",
+      "label": "ORG"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "58",
+      "label": "DATE"
+    },
+    {
+      "text": "Modersohn",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lohr",
+      "label": "GPE"
+    },
+    {
+      "text": "Hahn",
+      "label": "NORP"
+    },
+    {
+      "text": "Language Resources and Evaluation Conference",
+      "label": "ORG"
+    },
+    {
+      "text": "Marseille",
+      "label": "GPE"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "May 2020",
+      "label": "DATE"
+    },
+    {
+      "text": "4585\u20134596",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cissel",
+      "label": "GPE"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Miliaras",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Printseva",
+      "label": "GPE"
+    },
+    {
+      "text": "Rodionov",
+      "label": "PERSON"
+    },
+    {
+      "text": "O.",
+      "label": "ORG"
+    },
+    {
+      "text": "Sekiya",
+      "label": "NORP"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. NLM-Gene",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "118",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Klinger",
+      "label": "LOC"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Friedrich",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.M.",
+      "label": "GPE"
+    },
+    {
+      "text": "Hofmann-Apitius",
+      "label": "ORG"
+    },
+    {
+      "text": "Fluck",
+      "label": "NORP"
+    },
+    {
+      "text": "J. Chemical",
+      "label": "ORG"
+    },
+    {
+      "text": "the Workshop on Building and Evaluating Resources for Biomedical Text Mining",
+      "label": "ORG"
+    },
+    {
+      "text": "the Language Resources and Evaluation Conference",
+      "label": "ORG"
+    },
+    {
+      "text": "Osaka",
+      "label": "GPE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "December 2008",
+      "label": "DATE"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Herrero-Zazo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Segura-Bedmar",
+      "label": "ORG"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Declerck",
+      "label": "ORG"
+    },
+    {
+      "text": "T. The",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "46",
+      "label": "DATE"
+    },
+    {
+      "text": "914\u2013920",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Krallinger",
+      "label": "GPE"
+    },
+    {
+      "text": "Rabal",
+      "label": "GPE"
+    },
+    {
+      "text": "Vazquez",
+      "label": "NORP"
+    },
+    {
+      "text": "Salgado",
+      "label": "GPE"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leaman",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ji",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lowe",
+      "label": "GPE"
+    },
+    {
+      "text": "J. Cheminform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Leaman",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Comeau",
+      "label": "GPE"
+    },
+    {
+      "text": "D.C.",
+      "label": "GPE"
+    },
+    {
+      "text": "Peng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cissel",
+      "label": "GPE"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Fisher",
+      "label": "GPE"
+    },
+    {
+      "text": "C. NLM-Chem",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci.",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "DATE"
+    },
+    {
+      "text": "91",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "64",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gurulingappa",
+      "label": "PERSON"
+    },
+    {
+      "text": "H.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Klinger",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Hofmann-Apitius",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fluck",
+      "label": "NORP"
+    },
+    {
+      "text": "J. An",
+      "label": "PERSON"
+    },
+    {
+      "text": "Workshop on Building and Evaluating Resources",
+      "label": "EVENT"
+    },
+    {
+      "text": "Biomedical Text Mining",
+      "label": "ORG"
+    },
+    {
+      "text": "7th Edition of the Language Resources and Evaluation Conference",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Valetta",
+      "label": "GPE"
+    },
+    {
+      "text": "Malta",
+      "label": "GPE"
+    },
+    {
+      "text": "18 March 2010",
+      "label": "DATE"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R.I.",
+      "label": "GPE"
+    },
+    {
+      "text": "Leaman",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. NCBI",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.\nBiomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "47",
+      "label": "DATE"
+    },
+    {
+      "text": "1\u201310",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bergman",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.M.",
+      "label": "GPE"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "DATE"
+    },
+    {
+      "text": "85",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Luoma",
+      "label": "GPE"
+    },
+    {
+      "text": "Nastou",
+      "label": "GPE"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Ohta",
+      "label": "NORP"
+    },
+    {
+      "text": "Toivonen",
+      "label": "GPE"
+    },
+    {
+      "text": "Pafilis",
+      "label": "GPE"
+    },
+    {
+      "text": "Jensen",
+      "label": "GPE"
+    },
+    {
+      "text": "L.J.",
+      "label": "GPE"
+    },
+    {
+      "text": "Pyysalo",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "DATE"
+    },
+    {
+      "text": "btad369",
+      "label": "GPE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thomas",
+      "label": "PERSON"
+    },
+    {
+      "text": "Klinger",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Furlong",
+      "label": "GPE"
+    },
+    {
+      "text": "L.I.",
+      "label": "GPE"
+    },
+    {
+      "text": "Hofmann-Apitius",
+      "label": "ORG"
+    },
+    {
+      "text": "Friedrich",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.M. Challenges",
+      "label": "PERSON"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "DATE"
+    },
+    {
+      "text": "S4",
+      "label": "PERSON"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.-D.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ohta",
+      "label": "NORP"
+    },
+    {
+      "text": "Tateisi",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "GPE"
+    },
+    {
+      "text": "Tsujii",
+      "label": "ORG"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "70",
+      "label": "DATE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Del",
+      "label": "GPE"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chaix",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Bacteria",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "5th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BioNLP Open Shared Tasks",
+      "label": "ORG"
+    },
+    {
+      "text": "Hong Kong",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "4 November 2019",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "121\u2013131",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "71",
+      "label": "DATE"
+    },
+    {
+      "text": "K\u00fchnel",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fluck",
+      "label": "NORP"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Biomedical",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "118",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "103799",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Khan",
+      "label": "PERSON"
+    },
+    {
+      "text": "M.R.",
+      "label": "GPE"
+    },
+    {
+      "text": "Ziyadi",
+      "label": "GPE"
+    },
+    {
+      "text": "M. Mt-bioner",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jin",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhan",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhuo",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Hierarchical",
+      "label": "PERSON"
+    },
+    {
+      "text": "BMC Bioinform",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K.K.",
+      "label": "ORG"
+    },
+    {
+      "text": "Devarakonda",
+      "label": "GPE"
+    },
+    {
+      "text": "Baral",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Biomedical",
+      "label": "ORG"
+    },
+    {
+      "text": "ACM Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Healthc",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "76",
+      "label": "DATE"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leaman",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. AIONER",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "Moscato",
+      "label": "PERSON"
+    },
+    {
+      "text": "Postiglione",
+      "label": "GPE"
+    },
+    {
+      "text": "Sansone",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE J. Biomed",
+      "label": "PERSON"
+    },
+    {
+      "text": "Health Inform",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "27",
+      "label": "DATE"
+    },
+    {
+      "text": "2512\u20132523",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14, 9302 23",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Moen",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "T.S.S. Distributional",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "Tokyo",
+      "label": "GPE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "12\u201313 December 2013",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "79",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dhingra",
+      "label": "ORG"
+    },
+    {
+      "text": "Cohen",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.W.",
+      "label": "GPE"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Probing",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "arXiv:1904.02181",
+      "label": "PERSON"
+    },
+    {
+      "text": "80",
+      "label": "DATE"
+    },
+    {
+      "text": "Doddington",
+      "label": "GPE"
+    },
+    {
+      "text": "G.R.",
+      "label": "GPE"
+    },
+    {
+      "text": "Mitchell",
+      "label": "PERSON"
+    },
+    {
+      "text": "Przybocki",
+      "label": "PERSON"
+    },
+    {
+      "text": "M.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "Ramshaw",
+      "label": "ORG"
+    },
+    {
+      "text": "L.A.",
+      "label": "GPE"
+    },
+    {
+      "text": "Strassel",
+      "label": "GPE"
+    },
+    {
+      "text": "S.M.",
+      "label": "GPE"
+    },
+    {
+      "text": "Weischedel",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lisbon",
+      "label": "GPE"
+    },
+    {
+      "text": "Portugal",
+      "label": "GPE"
+    },
+    {
+      "text": "May 2004",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "837\u2013840",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Consortium",
+      "label": "GPE"
+    },
+    {
+      "text": "L.D. ACE 2005",
+      "label": "ORG"
+    },
+    {
+      "text": "Linguistic Data Consortium",
+      "label": "ORG"
+    },
+    {
+      "text": "Philadelphia",
+      "label": "GPE"
+    },
+    {
+      "text": "PA",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "2005",
+      "label": "DATE"
+    },
+    {
+      "text": "82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Getman",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tracey",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.M. Overview of Linguistic Resources",
+      "label": "ORG"
+    },
+    {
+      "text": "TAC",
+      "label": "ORG"
+    },
+    {
+      "text": "Gaithersburg",
+      "label": "GPE"
+    },
+    {
+      "text": "MD",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "November 2017",
+      "label": "DATE"
+    },
+    {
+      "text": "83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J.",
+      "label": "ORG"
+    },
+    {
+      "text": "Vlachos",
+      "label": "GPE"
+    },
+    {
+      "text": "A. Merge",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "57th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "ACL 2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Florence",
+      "label": "GPE"
+    },
+    {
+      "text": "Italy",
+      "label": "GPE"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "August 2019",
+      "label": "DATE"
+    },
+    {
+      "text": "5840\u20135850",
+      "label": "DATE"
+    },
+    {
+      "text": "84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shou",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "G. Pyramid",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "5\u201310 July 2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "5918\u20135928",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhong",
+      "label": "GPE"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "the 2021 Conference",
+      "label": "EVENT"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "the Association for Computational Linguistics: Human Language Technologies",
+      "label": "ORG"
+    },
+    {
+      "text": "6\u201311",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "June 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zuo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. A",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "38",
+      "label": "DATE"
+    },
+    {
+      "text": "220\u2013227",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ye",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sun",
+      "label": "ORG"
+    },
+    {
+      "text": "60th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dublin",
+      "label": "GPE"
+    },
+    {
+      "text": "Ireland",
+      "label": "GPE"
+    },
+    {
+      "text": "22\u201327",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "May 2022",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "4904\u20134917",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.A.Q.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qiu",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "M.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "DATE"
+    },
+    {
+      "text": "9016\u20139023",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ma",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang",
+      "label": "GPE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "W. Locate",
+      "label": "PERSON"
+    },
+    {
+      "text": "Two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Identifier for Nested Named Entity\nRecognition",
+      "label": "ORG"
+    },
+    {
+      "text": "59th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "11th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Virtual Event",
+      "label": "ORG"
+    },
+    {
+      "text": "August 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "2782\u20132794",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Feng",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "58th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "5\u201310 July 2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "5849\u20135859",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "91",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xie",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "F.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuang",
+      "label": "GPE"
+    },
+    {
+      "text": "Y. Parallel Instance Query Network",
+      "label": "ORG"
+    },
+    {
+      "text": "60th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dublin",
+      "label": "GPE"
+    },
+    {
+      "text": "Ireland",
+      "label": "GPE"
+    },
+    {
+      "text": "22\u201327",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "May 2022",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "947\u2013961",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shen",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang",
+      "label": "GPE"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuang",
+      "label": "GPE"
+    },
+    {
+      "text": "Y. A",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "93",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shen",
+      "label": "GPE"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "W. Propose-and",
+      "label": "PERSON"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Poesio",
+      "label": "GPE"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "5\u201310 July 2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "6470\u20136476.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "95",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yuan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dublin",
+      "label": "GPE"
+    },
+    {
+      "text": "Ireland",
+      "label": "GPE"
+    },
+    {
+      "text": "22\u201327",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "May 2022",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "3174\u20133186",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "96",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dozat",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Manning",
+      "label": "GPE"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L.R. Measures",
+      "label": "PERSON"
+    },
+    {
+      "text": "26",
+      "label": "DATE"
+    },
+    {
+      "text": "297\u2013302",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "GPE"
+    },
+    {
+      "text": "Ma",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "H. S-NER",
+      "label": "PERSON"
+    },
+    {
+      "text": "Efficient Span-Based Model",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "22, 2852",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Luan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ostendorf",
+      "label": "NORP"
+    },
+    {
+      "text": "Hajishirzi",
+      "label": "GPE"
+    },
+    {
+      "text": "H. Multi-task",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. Few-shot",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "DATE"
+    },
+    {
+      "text": "CrossRef",
+      "label": "ORG"
+    },
+    {
+      "text": "101",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Bing",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cambria",
+      "label": "GPE"
+    },
+    {
+      "text": "Si",
+      "label": "GPE"
+    },
+    {
+      "text": "Miao",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "arXiv:2108.13655",
+      "label": "PERSON"
+    },
+    {
+      "text": "102",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ouyang",
+      "label": "GPE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang",
+      "label": "GPE"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "G. Gpt-ner",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "arXiv:2304.10428",
+      "label": "ORG"
+    },
+    {
+      "text": "Disclaimer/Publisher\u2019s Note",
+      "label": "ORG"
+    },
+    {
+      "text": "MDPI",
+      "label": "ORG"
+    },
+    {
+      "text": "MDPI",
+      "label": "ORG"
+    }
+  ]
+}

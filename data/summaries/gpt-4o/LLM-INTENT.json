@@ -1,0 +1,4 @@
+{
+  "filename": "LLM-INTENT.txt",
+  "summary": "This study evaluates the effectiveness of Large Language Models (LLMs) like GPT, BERT, LLaMA, and RoBERTa in intent detection for tourism chatbots. Using a tourism-specific dataset and performance metrics, it provides insights into optimizing Natural Language Understanding (NLU) components, enhancing chatbot responsiveness and accuracy for the tourism industry."
+}

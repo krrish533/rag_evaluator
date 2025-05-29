@@ -1,0 +1,4 @@
+{
+  "filename": "GPT-NER.txt",
+  "summary": "GPT-NER is a framework designed to enhance Named Entity Recognition (NER) performance using large language models (LLMs) by converting the sequence labeling task into a text-generation task. It incorporates a self-verification strategy to address hallucination issues and demonstrates superior performance in low-resource and few-shot scenarios, achieving comparable results to supervised baselines."
+}

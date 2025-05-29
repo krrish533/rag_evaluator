@@ -1,0 +1,2937 @@
+{
+  "filename": "LLM-INTENT.txt",
+  "entities": [
+    {
+      "text": "Charaf Ouaddia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lamya Benaddia",
+      "label": "PERSON"
+    },
+    {
+      "text": "El",
+      "label": "GPE"
+    },
+    {
+      "text": "Bouzianea",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mohamed Rahoutib",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abdeslam Jakimia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rachid Saadanec",
+      "label": "PERSON"
+    },
+    {
+      "text": "aSoftware Engineering and",
+      "label": "ORG"
+    },
+    {
+      "text": "Information Systems Engineering Team,",
+      "label": "ORG"
+    },
+    {
+      "text": "Department of Computer Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "Faculty of Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "Moulay Ismail University",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Fordham University",
+      "label": "ORG"
+    },
+    {
+      "text": "New York",
+      "label": "GPE"
+    },
+    {
+      "text": "NY 10023 USA",
+      "label": "ORG"
+    },
+    {
+      "text": "cElectrical Engineering Department",
+      "label": "ORG"
+    },
+    {
+      "text": "Hassania School of Public Works",
+      "label": "ORG"
+    },
+    {
+      "text": "Casablanca",
+      "label": "GPE"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Generative AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "years",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Natural Language Understanding",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ScienceDirect\nScientific African",
+      "label": "ORG"
+    },
+    {
+      "text": "18 September 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "February 2025",
+      "label": "DATE"
+    },
+    {
+      "text": "14 March 2025",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "15 March  2025",
+      "label": "DATE"
+    },
+    {
+      "text": "2468-2276/",
+      "label": "TIME"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "4,5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GLUE",
+      "label": "ORG"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ancillary Services",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Section 2",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 4",
+      "label": "LAW"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Section 5",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 6",
+      "label": "LAW"
+    },
+    {
+      "text": "Background",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "2,3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1.Overview",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "Chatbot Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13]).C.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "AI",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Linguistic",
+      "label": "NORP"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NL",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "ELIZA",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LFG",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Random Fields",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NL",
+      "label": "ORG"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ML",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Naive Bayes",
+      "label": "ORG"
+    },
+    {
+      "text": "KNN",
+      "label": "ORG"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.9%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "Pang et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "ANN",
+      "label": "ORG"
+    },
+    {
+      "text": "Recurrent Neural Networks",
+      "label": "ORG"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gated Recurrent Unit",
+      "label": "ORG"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Vaswani et al",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Ouaddi et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ML",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Flacon",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Generative Pre-trained",
+      "label": "PERSON"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Vaswani et al",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "117 million",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-1",
+      "label": "ORG"
+    },
+    {
+      "text": "1.5 billion",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "175 billion",
+      "label": "MONEY"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-4",
+      "label": "PERSON"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "800 million",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.5 billion",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fourth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Robustly Optimized",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT Approach",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "Meta AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "human-",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Algorithm 1outlines",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Precision",
+      "label": "GPE"
+    },
+    {
+      "text": "6A",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "2.An",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Algorithm 1 \n",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "1200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MountainAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ForestAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "CaveAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ReligiousAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ArchitecturalAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "BeachAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "HillAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "Five \nhundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GetHotels",
+      "label": "ORG"
+    },
+    {
+      "text": "GetCafe",
+      "label": "ORG"
+    },
+    {
+      "text": "GetRestaurant",
+      "label": "ORG"
+    },
+    {
+      "text": "GetCamping",
+      "label": "ORG"
+    },
+    {
+      "text": "700",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BusTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "AirplaneTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "TaxiTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "FaresTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "Six A\u201d Framework for tourist destination analysis",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1,34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Attractions Tourist",
+      "label": "ORG"
+    },
+    {
+      "text": "1200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "500",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "700",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Total 3500C. Ouaddi et al",
+      "label": "ORG"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Four hundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FindSea",
+      "label": "ORG"
+    },
+    {
+      "text": "3500",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TP",
+      "label": "ORG"
+    },
+    {
+      "text": "TN",
+      "label": "ORG"
+    },
+    {
+      "text": "FP",
+      "label": "PERSON"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2019s",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "2above",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2e-5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "4illustrates",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT 2\nTable 3presents the",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "5illustrates",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1e-5 over 30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 4provides",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "5e-6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.98 1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LR 5e-6",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GPT 2\nPrecision Recall F1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "0.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.68 0.71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.78 0.75 0.82",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.79 0.75",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "FAC"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.99\n1e-5",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "FAC"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LR 1e-4",
+      "label": "DATE"
+    },
+    {
+      "text": "1e-5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.98\n4e-5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 5",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Tables 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Figs",
+      "label": "PERSON"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1 models",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 4",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "over 30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "Table 5",
+      "label": "EVENT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-2",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "several hours",
+      "label": "TIME"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "LR 5e-6.C. Ouaddi et al",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "GPU",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "Ouaddi",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "DSL-Driven Approaches",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "0.98 0.99\n1e-5",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.76 0.78",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1e-6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.80 0.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "LR 2e-4.C. Ouaddi et al",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "the \u201cSix A\u201d criteria",
+      "label": "EVENT"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Charaf Ouaddi: Conceptualization",
+      "label": "PERSON"
+    },
+    {
+      "text": "Software",
+      "label": "ORG"
+    },
+    {
+      "text": "Writing",
+      "label": "ORG"
+    },
+    {
+      "text": "Lamya Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abdeslam Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Validation, Supervision",
+      "label": "ORG"
+    },
+    {
+      "text": "Rachid Saadane",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Ministry of Higher Education",
+      "label": "ORG"
+    },
+    {
+      "text": "Scientific Research and Innovation",
+      "label": "ORG"
+    },
+    {
+      "text": "the Digital Development Agency",
+      "label": "ORG"
+    },
+    {
+      "text": "DDA",
+      "label": "ORG"
+    },
+    {
+      "text": "the National Center for Scientific and Technical Research",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "1]L. Benaddi,",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Access",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "78 799",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78 810",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2]C.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Souha,",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Saadane",
+      "label": "PERSON"
+    },
+    {
+      "text": "7th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Intelligent Systems and Security",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Z. El Aouene",
+      "label": "PERSON"
+    },
+    {
+      "text": "V. Cavalli-Sforza",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3rd International Conference",
+      "label": "EVENT"
+    },
+    {
+      "text": "Innovative Research in Applied Science, Engineering and Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Neural Information Processing Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023 6th",
+      "label": "DATE"
+    },
+    {
+      "text": "CommNet",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "7]J. S\u02d8anchez Cuadrado",
+      "label": "ORG"
+    },
+    {
+      "text": "S. P\u02d8erez-Soler",
+      "label": "PERSON"
+    },
+    {
+      "text": "E. Guerra",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. De Lara",
+      "label": "ORG"
+    },
+    {
+      "text": "6th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "K. Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "T. Tang",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Hou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Min",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. Dong",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "9]D. Buhalis, Marketing",
+      "label": "ORG"
+    },
+    {
+      "text": "Tourism Manage",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. Sarikaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Signal Process",
+      "label": "ORG"
+    },
+    {
+      "text": "Mag",
+      "label": "PERSON"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Procedia Comput",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "231",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "293\u2013298",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Souha,",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Global Aeronautical Engineering",
+      "label": "ORG"
+    },
+    {
+      "text": "Satellite Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "GAST",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. P\u02d8erez-Soler",
+      "label": "ORG"
+    },
+    {
+      "text": "E. Guerra",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. De Lara",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "207\u2013222",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "A. Deoras",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Sarikaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Hakkani",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1067 \u20131070",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. De Mori",
+      "label": "PERSON"
+    },
+    {
+      "text": "Extracting Semantic Information",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech",
+      "label": "ORG"
+    },
+    {
+      "text": "John Wiley & Sons",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "E. Levin",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Pieraccini",
+      "label": "PERSON"
+    },
+    {
+      "text": "W. Eckert",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "11\u201323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "C.L. Clarke",
+      "label": "PERSON"
+    },
+    {
+      "text": "32nd",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "800\u2013801",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. Strohmaier",
+      "label": "PERSON"
+    },
+    {
+      "text": "22nd",
+      "label": "DATE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "629\u2013632",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Weizenbaum",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eliza",
+      "label": "ORG"
+    },
+    {
+      "text": "Commun",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACM 9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1966",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R.M. Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Bresnan",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "System For Grammatical Representation",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Massachusetts Institute Of Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "1981",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. Sekine",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lingvisticae Investigationes",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2007",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. Grishman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Emerging Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "International Summer School",
+      "label": "ORG"
+    },
+    {
+      "text": "Frascati",
+      "label": "GPE"
+    },
+    {
+      "text": "Italy",
+      "label": "GPE"
+    },
+    {
+      "text": "1997",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "July 14\u2013181997",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "W.Y.M. Kyaing",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.S. Khoo",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Foo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.-K. Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.-L. Theng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Digital Libraries",
+      "label": "ORG"
+    },
+    {
+      "text": "14th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2012 14",
+      "label": "DATE"
+    },
+    {
+      "text": "Springer",
+      "label": "GPE"
+    },
+    {
+      "text": "Taipei",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "189\u2013198",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "November 12-15",
+      "label": "DATE"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.H. Cho",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Zhai",
+      "label": "PERSON"
+    },
+    {
+      "text": "5th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Health Informatics",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "220\u2013229",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Zamora",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intelligent \nInformation and Engineering Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "285\u2013292",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K. Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "10th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Ubiquitous Robots and Ambient Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "402\u2013406",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Vaithyanathan",
+      "label": "PERSON"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G. Rizzo",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Morisio",
+      "label": "PERSON"
+    },
+    {
+      "text": "Multi",
+      "label": "GPE"
+    },
+    {
+      "text": "The Web Conference 2018,",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1075\u20131080",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "6th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NLPCC",
+      "label": "ORG"
+    },
+    {
+      "text": "2017 6",
+      "label": "DATE"
+    },
+    {
+      "text": "Springer, Dalian",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "November 8\u201312",
+      "label": "DATE"
+    },
+    {
+      "text": "2017Proceedings",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "X. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "H. Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "2993\u20132999",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Child",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Luan",
+      "label": "PERSON"
+    },
+    {
+      "text": "I. Sutskever",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "OpenAI",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "N. Ryder",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Subbiah",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Neelakantan",
+      "label": "NORP"
+    },
+    {
+      "text": "P. Shyam",
+      "label": "PERSON"
+    },
+    {
+      "text": "G. Sastry",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Askell",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Agarwal",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chatbots",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.M. Powers",
+      "label": "ORG"
+    },
+    {
+      "text": "roc",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    }
+  ]
+}

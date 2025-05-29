@@ -4,3 +4,5 @@ openai
 python-dotenv
 scikit-learn 
 sentence-transformers
+spacy
+pandas

@@ -1,0 +1,4 @@
+{
+  "filename": "CHATBOT-INTENT.txt",
+  "summary": "This study introduces a novel approach to improving chatbot intent classification by combining optimized data preparation with Active Learning. Using sentence-transformers and cosine similarity for clustering, the method iteratively refines labeled data to enhance model performance, offering a scalable solution for real-world commercial chatbot applications."
+}

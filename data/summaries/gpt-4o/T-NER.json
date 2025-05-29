@@ -1,0 +1,4 @@
+{
+  "filename": "T-NER.txt",
+  "summary": "T-NER is an open-source Python library designed for fine-tuning Transformer-based language models for Named Entity Recognition (NER) tasks. It supports cross-domain and cross-lingual analysis, offers a user-friendly web app for interactive model evaluation, and compiles multiple datasets for unified experimentation. The library also provides pretrained checkpoints via Hugging Face to facilitate future research."
+}

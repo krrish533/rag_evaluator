@@ -1,0 +1,4 @@
+{
+  "filename": "USER-INTENT.txt",
+  "summary": "This paper explores intent classification in music discovery conversations, focusing on user needs and musical attributes using pre-trained language models. By incorporating chat history for context, the proposed model significantly improves classification accuracy, outperforming zero-shot and few-shot approaches like Llama 3."
+}

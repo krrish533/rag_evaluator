@@ -1,0 +1,4 @@
+{
+  "filename": "GLI-NER.txt",
+  "summary": "GLiNER is a compact Named Entity Recognition (NER) model leveraging bidirectional transformers to identify arbitrary entity types efficiently, addressing limitations of traditional models and large language models (LLMs) like ChatGPT. It outperforms LLMs in zero-shot evaluations, offering faster and more cost-effective entity extraction suitable for resource-constrained scenarios."
+}

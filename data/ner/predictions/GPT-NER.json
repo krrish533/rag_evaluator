@@ -1,0 +1,8661 @@
+{
+  "filename": "GPT-NER.txt",
+  "entities": [
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Entity Recognition",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shuhe Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaofei Sun\u2666",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaoya Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rongbin Ouyang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fei Wu\u2666",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tianwei Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiwei Li\u2666",
+      "label": "PERSON"
+    },
+    {
+      "text": "Guoyin",
+      "label": "GPE"
+    },
+    {
+      "text": "Language Mod-",
+      "label": "PERSON"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "## marks",
+      "label": "MONEY"
+    },
+    {
+      "text": "NULL",
+      "label": "ORG"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "University,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shannon",
+      "label": "FAC"
+    },
+    {
+      "text": "Zhejiang University",
+      "label": "ORG"
+    },
+    {
+      "text": "Nanyang",
+      "label": "GPE"
+    },
+    {
+      "text": "xiaoya_li@shannonai.com",
+      "label": "ORG"
+    },
+    {
+      "text": "xiaofei_sun",
+      "label": "GPE"
+    },
+    {
+      "text": "wufei",
+      "label": "GPE"
+    },
+    {
+      "text": "2Codes",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Smith et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Du et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Rae et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Thoppilan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Hoffmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Chowdhery et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Touvron",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "MT",
+      "label": "ORG"
+    },
+    {
+      "text": "Vilar et al.",
+      "label": "LAW"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Vidal et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Moslem",
+      "label": "NORP"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "QA",
+      "label": "ORG"
+    },
+    {
+      "text": "Robinson",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Lazaridou et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "NEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "## marks",
+      "label": "MONEY"
+    },
+    {
+      "text": "Experi-arXiv:2304.10428v4  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oct 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NULL",
+      "label": "ORG"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "4,096",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-4",
+      "label": "PERSON"
+    },
+    {
+      "text": "more than 20K.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Hammerton",
+      "label": "PERSON"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "Collobert",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Chiu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nichols",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Lample et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Sarzynska",
+      "label": "GPE"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "GNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Learning\nLarge language",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Rae et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Smith et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Hegselmann",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Vilar et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Perez et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Pietrzak",
+      "label": "GPE"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Wei et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Raffel et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Gururangan",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Guu",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "ICL",
+      "label": "ORG"
+    },
+    {
+      "text": "Radford",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Brown et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "NMT",
+      "label": "ORG"
+    },
+    {
+      "text": "PaLM",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Lu et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Rubin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Ydenotes",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sequence Labeling",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Representation Extraction",
+      "label": "ORG"
+    },
+    {
+      "text": "firstly",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Xis fed",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wto",
+      "label": "PERSON"
+    },
+    {
+      "text": "Straightforward",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "4.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Location",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "N",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "4096",
+      "label": "DATE"
+    },
+    {
+      "text": "Ntimes",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "1.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "LOC O O O",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Wwhich",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LOC O O O",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "@@",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Columbus##",
+      "label": "MONEY"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "section 6.1",
+      "label": "LAW"
+    },
+    {
+      "text": "4.1.3 Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Sec",
+      "label": "GPE"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "Location",
+      "label": "ORG"
+    },
+    {
+      "text": "4.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Demonstrations Retrieval",
+      "label": "FAC"
+    },
+    {
+      "text": "4GPT-3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Obama",
+      "label": "PERSON"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Step 2 Representation Extraction",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Obama",
+      "label": "PERSON"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "4.2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "GPE"
+    },
+    {
+      "text": "Retrieval",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Sec 4.2.1",
+      "label": "GPE"
+    },
+    {
+      "text": "kNN",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vilar et al.",
+      "label": "LAW"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sentence",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gao et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "PERSON"
+    },
+    {
+      "text": "kNN",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "John",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Embedding",
+      "label": "PERSON"
+    },
+    {
+      "text": "kNN",
+      "label": "NORP"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "kNNs",
+      "label": "PERSON"
+    },
+    {
+      "text": "K\u00d7Nretrieved",
+      "label": "PERSON"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Braverman",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Jiang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NULL",
+      "label": "ORG"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Columbus##",
+      "label": "MONEY"
+    },
+    {
+      "text": "Rare Hendrix",
+      "label": "PERSON"
+    },
+    {
+      "text": "17",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "song",
+      "label": "PERSON"
+    },
+    {
+      "text": "17",
+      "label": "MONEY"
+    },
+    {
+      "text": "Hendrix",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "Britain",
+      "label": "GPE"
+    },
+    {
+      "text": "Fischler",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "3)Yes",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "fed",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Demonstration Selection",
+      "label": "ORG"
+    },
+    {
+      "text": "Sec 4.2.2",
+      "label": "GPE"
+    },
+    {
+      "text": "kNN",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "003",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "512",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "PERSON"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Miscellaneous",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "GPE"
+    },
+    {
+      "text": "Ma and Hovy",
+      "label": "ORG"
+    },
+    {
+      "text": "Pradhan",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Person",
+      "label": "ORG"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Date",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Appendix",
+      "label": "PERSON"
+    },
+    {
+      "text": "davinci-003",
+      "label": "DATE"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "\u2022BERT-Tagger",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "Hendrix",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Rare Hendrix",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "17",
+      "label": "MONEY"
+    },
+    {
+      "text": "Location",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yellow Rectangle",
+      "label": "PERSON"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "97.8 98.28 98.04",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "88.18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.08",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90.47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "95",
+      "label": "MONEY"
+    },
+    {
+      "text": "94.06 96.54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.95",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "91.77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "94.15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "96.77 95.46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90.04",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "80.14 85.09",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.92 95.45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "94.73 96.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT-MRC+DSC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "93.81 93.95 93.88",
+      "label": "MONEY"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "64.21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "65.51 64.86",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76.08",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.38 83.9 81.14",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64.94 65.90 65.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79.05 83.71 81.38",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "65.21 66.25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.64 83.22 80.43",
+      "label": "MONEY"
+    },
+    {
+      "text": "79.25 83.73 81.49",
+      "label": "MONEY"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT-Tagger",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "92.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GNN-SL",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "93.02",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.40",
+      "label": "MONEY"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "77.04",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "68.69 72.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81.04 88.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.54 91.4 89.97",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "85.71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.47 91.77 90.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69.38 73.44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.73 88.07",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "85.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.06 90.91",
+      "label": "DATE"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT-Tagger",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "90.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "88.35 89.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "92.98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "91.11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GNN-SL",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "91.48",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "91.29 91.39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC+DSC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019b",
+      "label": "DATE"
+    },
+    {
+      "text": "91.59 92.56",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "58.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64.36 61.58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.77 75.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79.17 84.29 81.73",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72.29 78.81",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79.64 84.52 82.08",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64.65 61.94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75.57",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "79.89 84.51 82.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022GNN-SL",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "GNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "PERSON"
+    },
+    {
+      "text": "Main Results",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1)kNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "kNN",
+      "label": "ORG"
+    },
+    {
+      "text": "only 72.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61.58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "84.36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "GPE"
+    },
+    {
+      "text": "84.36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "75.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81.73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "John",
+      "label": "PERSON"
+    },
+    {
+      "text": "kNN",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "89.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.97 v.s. 85.91",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "90.91",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "82.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "94.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90.91",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "92.07 v.s. 82.20",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "KNN",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-4",
+      "label": "PERSON"
+    },
+    {
+      "text": "more than 20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "API",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "Christopher et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Katiyar",
+      "label": "GPE"
+    },
+    {
+      "text": "Cardie",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8:1:1",
+      "label": "GPE"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "ACE2005",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "\u2022Triaffine+BERT (Yuan et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Yuan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "ALBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Main Results",
+      "label": "PERSON"
+    },
+    {
+      "text": "Table 3",
+      "label": "LAW"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "PERSON"
+    },
+    {
+      "text": "48.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "KNN",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "kNN",
+      "label": "GPE"
+    },
+    {
+      "text": "60.68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60.68 v.s.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62.31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60.68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62.52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "GPE",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "85.05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "87.13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.68 87.40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "88.88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "88.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "55.04",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "65.31 53.67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72.23 75.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55.44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48.83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69.64 54.98",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73.58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "74.74 74.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55.63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.49 49.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54.87 62.52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75.11 74.2\nACE2005",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "Triaffine+BERT (Yuan et al.,",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "86.70 86.94 86.82",
+      "label": "MONEY"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "87.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.59 86.88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "87.39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "89.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "89.8 89.5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "46.24 45.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58.04 58.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "71.72 74.2 72.96",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72.63 75.39 73.46",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "45.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46.73 46.11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.69 60.35 60.02",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "72.77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "73.59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model Precision Recall F1\nBaselines",
+      "label": "PERSON"
+    },
+    {
+      "text": "Triaffine+BERT (Yuan et al.,",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "80.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "82.06 81.23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT-MRC",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "85.18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.75",
+      "label": "MONEY"
+    },
+    {
+      "text": "GPT-NER\n",
+      "label": "ORG"
+    },
+    {
+      "text": "44.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38.64 41.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63.43 44.17 51.68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61.38 66.74 64.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38.79 41.55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.54 44.26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61.77 66.81",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.87 44.39 52.13",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "61.89 66.95 64.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Nested",
+      "label": "ORG"
+    },
+    {
+      "text": "ACE2005",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.063%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.788%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7.880%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.808%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "ACE",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "GPT-",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "only 8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "about 60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "KNN",
+      "label": "ORG"
+    },
+    {
+      "text": "100 and 1000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "kNN demonstration",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "kNN",
+      "label": "GPE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Varying the Format of LLM",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Sec",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Columbus",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "White House",
+      "label": "ORG"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "White House",
+      "label": "ORG"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "White House",
+      "label": "ORG"
+    },
+    {
+      "text": "\u201cWhite House",
+      "label": "ORG"
+    },
+    {
+      "text": "White House",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "##@@",
+      "label": "MONEY"
+    },
+    {
+      "text": "92.68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29.75",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38.73",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "##@@",
+      "label": "MONEY"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "House",
+      "label": "ORG"
+    },
+    {
+      "text": "toE-ORG",
+      "label": "ORG"
+    },
+    {
+      "text": "Washington",
+      "label": "GPE"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "4096",
+      "label": "DATE"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "6.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "The Number of Few-shot Demonstrations",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "4096",
+      "label": "DATE"
+    },
+    {
+      "text": "2,4,kNN",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Location",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "Australia",
+      "label": "GPE"
+    },
+    {
+      "text": "Ashes",
+      "label": "PERSON"
+    },
+    {
+      "text": "Australia",
+      "label": "GPE"
+    },
+    {
+      "text": "the Ashes\nInput",
+      "label": "FAC"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Mark Braverman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xinyi Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sham Kakade",
+      "label": "PERSON"
+    },
+    {
+      "text": "Karthik",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cyril Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yi Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "1089\u20131099",
+      "label": "DATE"
+    },
+    {
+      "text": "Tom Brown",
+      "label": "PERSON"
+    },
+    {
+      "text": "Benjamin Mann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nick Ryder",
+      "label": "PERSON"
+    },
+    {
+      "text": "Melanie",
+      "label": "PERSON"
+    },
+    {
+      "text": "Subbiah",
+      "label": "GPE"
+    },
+    {
+      "text": "Pranav Shyam",
+      "label": "PERSON"
+    },
+    {
+      "text": "Girish Sastry",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amanda",
+      "label": "ORG"
+    },
+    {
+      "text": "Askell",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "33:1877\u20131901",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Jason PC Chiu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Nichols",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Transac-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aakanksha Chowdhery",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sharan Narang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jacob Devlin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maarten Bosma",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gaurav Mishra",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "Paul Barham",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hyung Won Chung",
+      "label": "PERSON"
+    },
+    {
+      "text": "Charles Sutton",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Gehrmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "arXiv:2204.02311",
+      "label": "PERSON"
+    },
+    {
+      "text": "Walker Christopher",
+      "label": "PERSON"
+    },
+    {
+      "text": "Strassel Stephanie",
+      "label": "PERSON"
+    },
+    {
+      "text": "Medero Julie",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maeda Kazuaki",
+      "label": "LOC"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "Ace 2005",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ronan Collobert",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jason Weston",
+      "label": "PERSON"
+    },
+    {
+      "text": "L\u00e9on Bottou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael\nKarlen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Koray Kavukcuoglu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pavel Kuksa",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Jacob Devlin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "George R Doddington",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alexis Mitchell",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mark A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lance A Ramshaw",
+      "label": "ORG"
+    },
+    {
+      "text": "Stephanie M Strassel",
+      "label": "ORG"
+    },
+    {
+      "text": "Ralph M Weischedel",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "2(1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Nan Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yanping Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrew M Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Simon Tong",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dmitry Lepikhin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuanzhong Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maxim Krikun",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yanqi Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adams Wei Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Orhan Firat",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "5547\u20135569",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tianyu Gao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xingcheng Yao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Danqi Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Simcse",
+      "label": "PERSON"
+    },
+    {
+      "text": "Suchin Gururangan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Swabha Swayamdipta",
+      "label": "PERSON"
+    },
+    {
+      "text": "Omer Levy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roy Schwartz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Samuel R Bowman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Noah",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Kelvin Guu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zora Tung",
+      "label": "PERSON"
+    },
+    {
+      "text": "Panupong Pasupat",
+      "label": "GPE"
+    },
+    {
+      "text": "Mingwei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Hammerton",
+      "label": "PERSON"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "172\u2013175",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stefan Hegselmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alejandro Buendia",
+      "label": "ORG"
+    },
+    {
+      "text": "Hunter Lang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Monica Agrawal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaoyi Jiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Sontag",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "arXiv:2210.10723",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Jordan Hoffmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Borgeaud",
+      "label": "PERSON"
+    },
+    {
+      "text": "Arthur",
+      "label": "PERSON"
+    },
+    {
+      "text": "Elena Buchatskaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "Trevor Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eliza",
+      "label": "ORG"
+    },
+    {
+      "text": "ford",
+      "label": "ORG"
+    },
+    {
+      "text": "Diego de Las Casas",
+      "label": "ORG"
+    },
+    {
+      "text": "Lisa Anne Hendricks",
+      "label": "PERSON"
+    },
+    {
+      "text": "Johannes Welbl",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aidan Clark",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhengbao Jiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jun Araki",
+      "label": "PERSON"
+    },
+    {
+      "text": "Haibo Ding",
+      "label": "PERSON"
+    },
+    {
+      "text": "Graham\nNeubig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Arzoo Katiyar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Claire Cardie",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "1.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Guillaume Lample",
+      "label": "PERSON"
+    },
+    {
+      "text": "Miguel Ballesteros",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kazuya Kawakami",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chris Dyer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhenzhong Lan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mingda Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Goodman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kevin Gimpel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Radu Soricut",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Albert",
+      "label": "PERSON"
+    },
+    {
+      "text": "Angeliki Lazaridou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Elena Gribovskaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stokowiec",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nikolai Grigorev",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Junlong Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuosheng Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hai Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiaoya Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jingrong Feng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuxian Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qinghong",
+      "label": "GPE"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "Fei Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiwei Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019a",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiaoya Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaofei Sun",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuxian Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Junjun",
+      "label": "GPE"
+    },
+    {
+      "text": "Fei Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiwei Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019b",
+      "label": "DATE"
+    },
+    {
+      "text": "Jiachang Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dinghan Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yizhe Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bill Dolan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lawrence Carin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Weizhu Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "3?arXiv",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yinhan Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Myle Ott",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jingfei Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "Joshi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Danqi Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Omer Levy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mike Lewis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luke Zettlemoyer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Veselin Stoyanov",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yao Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Max Bartolo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alastair Moore",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Riedel",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Xuezhe Ma",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eduard Hovy",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Yasmin Moslem",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rejwanul Haque",
+      "label": "ORG"
+    },
+    {
+      "text": "Andy Way",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Tomoko Ohta",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuka Tateisi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jin-Dong Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hideki",
+      "label": "GPE"
+    },
+    {
+      "text": "Junichi Tsujii",
+      "label": "PERSON"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "Ethan Perez",
+      "label": "PERSON"
+    },
+    {
+      "text": "Douwe Kiela",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kyunghyun Cho",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "34:11054\u201311070",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ben Pietrzak",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ben Swanson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kory Mathewson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Monica\nDinculescu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sherol Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Sameer Pradhan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alessandro Moschitti",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nianwen Xue",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hwee Tou Ng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Olga Uryupina",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuchen Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhi Zhong",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "Alec Radford",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeffrey Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rewon Child",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Luan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dario Amodei",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "1(8):9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jack W Rae",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Borgeaud",
+      "label": "PERSON"
+    },
+    {
+      "text": "Trevor Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Katie\nMillican",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jordan Hoffmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Francis Song",
+      "label": "PERSON"
+    },
+    {
+      "text": "John\nAslanides",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sarah Henderson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roman Ring",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Colin Raffel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Noam Shazeer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "Katherine\nLee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sharan Narang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael Matena",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yanqi Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Peter J Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "The Journal of Machine Learning Research",
+      "label": "ORG"
+    },
+    {
+      "text": "21(1):5485\u20135551",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "Colin Raffel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Noam Shazeer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Joshua Robinson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Christopher Michael Rytting",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Wingate",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Ohad Rubin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jonathan Herzig",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jonathan Berant",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "F Sang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fien De Meulder",
+      "label": "ORG"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "conll-2003",
+      "label": "DATE"
+    },
+    {
+      "text": "Justyna Sarzynska-Wawer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aleksander Wawer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pawlak",
+      "label": "ORG"
+    },
+    {
+      "text": "Julia Szymanowska",
+      "label": "PERSON"
+    },
+    {
+      "text": "Izabela Stefa-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michal Jarkiewicz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lukasz Okruszek",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Psychiatry Research",
+      "label": "ORG"
+    },
+    {
+      "text": "304:114135",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shaden Smith",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mostofa Patwary",
+      "label": "ORG"
+    },
+    {
+      "text": "Brandon Norick",
+      "label": "PERSON"
+    },
+    {
+      "text": "Patrick LeGresley",
+      "label": "PERSON"
+    },
+    {
+      "text": "Samyam Rajbhandari",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhun Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shrimai Prabhumoye",
+      "label": "PERSON"
+    },
+    {
+      "text": "George\nZerveas",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vijay Korthikanti",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "megatron",
+      "label": "PERSON"
+    },
+    {
+      "text": "530b",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Romal Thoppilan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel De Freitas",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jamie Hall",
+      "label": "PERSON"
+    },
+    {
+      "text": "Apoorv Kulshreshtha",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alicia Jin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Taylor Bos",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leslie Baker",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yu Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Hugo Touvron",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gautier Izacard",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xavier",
+      "label": "GPE"
+    },
+    {
+      "text": "Marie-Anne Lachaux",
+      "label": "PERSON"
+    },
+    {
+      "text": "Timoth\u00e9e Lacroix",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baptiste Rozi\u00e8re",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Hambro",
+      "label": "PERSON"
+    },
+    {
+      "text": "Faisal Azhar",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Blanca Vidal",
+      "label": "ORG"
+    },
+    {
+      "text": "Albert Llorens",
+      "label": "PERSON"
+    },
+    {
+      "text": "Juan Alonso",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Automatic",
+      "label": "NORP"
+    },
+    {
+      "text": "84\u2013106",
+      "label": "DATE"
+    },
+    {
+      "text": "David Vilar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Markus Freitag",
+      "label": "PERSON"
+    },
+    {
+      "text": "Colin Cherry",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaming Luo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Viresh Ratnakar",
+      "label": "PERSON"
+    },
+    {
+      "text": "George Foster",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Shuhe Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuxian Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rongbin Ouyang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiwei\nLi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tianwei Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lingjuan Lyu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Guoyin Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "gnn.",
+      "label": "GPE"
+    },
+    {
+      "text": "Xinyu Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yong Jiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nguyen Bach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tao Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhongqiang Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fei Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kewei Tu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Jason Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maarten Bosma",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vincent Y Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kelvin\nGuu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adams Wei Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Brian Lester",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nan Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "M Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc V Le",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "arXiv:2109.01652",
+      "label": "ORG"
+    },
+    {
+      "text": "Zheng Yuan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chuanqi Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Songfang Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fei\nHuang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Sheng Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hao Cheng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jianfeng Gao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hoifung",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Zihao Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Wallace",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shi Feng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dan Klein",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sameer Singh",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "12697\u201312706.A",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "PERSON"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Location, Organization",
+      "label": "ORG"
+    },
+    {
+      "text": "Miscellaneous",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "OntoNotes",
+      "label": "ORG"
+    },
+    {
+      "text": "Pradhan",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 5",
+      "label": "LAW"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "Christopher et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPE",
+      "label": "ORG"
+    },
+    {
+      "text": "FAC",
+      "label": "ORG"
+    },
+    {
+      "text": "VEH",
+      "label": "ORG"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "WEA",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 8",
+      "label": "EVENT"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Format BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "CoNLL2003",
+      "label": "GPE"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "Entity Type Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "FAC Buildings",
+      "label": "ORG"
+    },
+    {
+      "text": "ORG Companies",
+      "label": "ORG"
+    },
+    {
+      "text": "GPE Countries",
+      "label": "ORG"
+    },
+    {
+      "text": "LOC Non-GPE",
+      "label": "PERSON"
+    },
+    {
+      "text": "EVENT Named",
+      "label": "ORG"
+    },
+    {
+      "text": "TIME Times",
+      "label": "ORG"
+    },
+    {
+      "text": "PERCENT Percentage",
+      "label": "FAC"
+    },
+    {
+      "text": "QUANTITY Measurements",
+      "label": "ORG"
+    },
+    {
+      "text": "ORDINAL",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Table 5: Entity",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "14,987",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23,499",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3,466 51,362 5,942",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3,684",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46,435 5,648",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "59,924",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8,528",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11,066",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8,262",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11,257",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 11",
+      "label": "EVENT"
+    },
+    {
+      "text": "6,200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22,204",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10,149 45.71%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "745",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2,514",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46.69%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "812",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1,417 45.61%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "Dataset Sentences Entities Nested Entities Nested Percentage\nTraining",
+      "label": "ORG"
+    },
+    {
+      "text": "7,194",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24,441",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38.41%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "969",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3,200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.75%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "1,047",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2,993",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1,118 37.35%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "16,692 50,509",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9,064",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.95%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "1,854",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21.78%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "ACE2005",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 11",
+      "label": "EVENT"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "Entity Type Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "GPE",
+      "label": "ORG"
+    },
+    {
+      "text": "FAC",
+      "label": "ORG"
+    },
+    {
+      "text": "VEH",
+      "label": "ORG"
+    },
+    {
+      "text": "LOC",
+      "label": "ORG"
+    },
+    {
+      "text": "WEA",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 12",
+      "label": "EVENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 13",
+      "label": "LAW"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-22",
+      "label": "DATE"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Lebanon",
+      "label": "GPE"
+    },
+    {
+      "text": "Nasr of Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Slovakia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "Panama",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BMES",
+      "label": "ORG"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean(4",
+      "label": "GPE"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean(4",
+      "label": "GPE"
+    },
+    {
+      "text": "South Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "South Korean(4",
+      "label": "GPE"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Italian",
+      "label": "NORP"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-22",
+      "label": "DATE"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "Third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Arantxa Sanchez Vicario",
+      "label": "PERSON"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "eighth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Olympic",
+      "label": "EVENT"
+    },
+    {
+      "text": "Lindsay Davenport",
+      "label": "PERSON"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Dutch",
+      "label": "NORP"
+    },
+    {
+      "text": "Ajax Amsterdam",
+      "label": "PERSON"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the season",
+      "label": "DATE"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ajax",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "South African",
+      "label": "NORP"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Uzbekistan",
+      "label": "NORP"
+    },
+    {
+      "text": "Uzbekistan(23",
+      "label": "ORG"
+    },
+    {
+      "text": "Example 4 Position Error and Entity Error\nTask Description",
+      "label": "ORG"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Lebanon",
+      "label": "GPE"
+    },
+    {
+      "text": "Nasr of Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Slovakia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "Panama",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Seattle",
+      "label": "GPE"
+    },
+    {
+      "text": "Boston",
+      "label": "GPE"
+    },
+    {
+      "text": "Seattle",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Carla Sacramento",
+      "label": "PERSON"
+    },
+    {
+      "text": "Portugal",
+      "label": "GPE"
+    },
+    {
+      "text": "4:08.96",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Carla Sacramento",
+      "label": "PERSON"
+    },
+    {
+      "text": "Portugal",
+      "label": "GPE"
+    },
+    {
+      "text": "Budge Weidman",
+      "label": "PERSON"
+    },
+    {
+      "text": "up to a decade",
+      "label": "DATE"
+    },
+    {
+      "text": "Budge Weidman",
+      "label": "PERSON"
+    },
+    {
+      "text": "up to a decade",
+      "label": "DATE"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scott Draper",
+      "label": "PERSON"
+    },
+    {
+      "text": "Australia",
+      "label": "GPE"
+    },
+    {
+      "text": "Galo Blanco",
+      "label": "PERSON"
+    },
+    {
+      "text": "Spain",
+      "label": "GPE"
+    },
+    {
+      "text": "Scott Draper",
+      "label": "PERSON"
+    },
+    {
+      "text": "Australia",
+      "label": "GPE"
+    },
+    {
+      "text": "Galo Blanco",
+      "label": "PERSON"
+    },
+    {
+      "text": "Spain",
+      "label": "GPE"
+    },
+    {
+      "text": "French",
+      "label": "NORP"
+    },
+    {
+      "text": "Pakistan",
+      "label": "GPE"
+    },
+    {
+      "text": "Pakistan",
+      "label": "GPE"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Jakob Hlasek",
+      "label": "PERSON"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "Alberto Berasategui",
+      "label": "PERSON"
+    },
+    {
+      "text": "Spain",
+      "label": "GPE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jakob Hlasek",
+      "label": "PERSON"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "Alberto Berasategui",
+      "label": "PERSON"
+    },
+    {
+      "text": "Spain",
+      "label": "GPE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15 and 18",
+      "label": "DATE"
+    },
+    {
+      "text": "10th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15 and 18",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Falkirk 1 Partick 0",
+      "label": "ORG"
+    },
+    {
+      "text": "## 1 @@Partick",
+      "label": "MONEY"
+    },
+    {
+      "text": "Williams",
+      "label": "PERSON"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ilott",
+      "label": "NORP"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gloucestershire",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "252",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the third day",
+      "label": "DATE"
+    },
+    {
+      "text": "four-day",
+      "label": "DATE"
+    },
+    {
+      "text": "Colchester",
+      "label": "ORG"
+    },
+    {
+      "text": "Williams",
+      "label": "PERSON"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ilott",
+      "label": "NORP"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "252",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the third day",
+      "label": "DATE"
+    },
+    {
+      "text": "four-day",
+      "label": "DATE"
+    },
+    {
+      "text": "Colchester",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "210 460 8",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "@@South Queensland",
+      "label": "LAW"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "210 460 8",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Macedonia",
+      "label": "GPE"
+    },
+    {
+      "text": "Kispest Honved",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Macedonia",
+      "label": "GPE"
+    },
+    {
+      "text": "Kispest Honved\nInput",
+      "label": "PERSON"
+    },
+    {
+      "text": "98.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "202.90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "98.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.47",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "202.90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "Serbian",
+      "label": "NORP"
+    },
+    {
+      "text": "Kosovo",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Kosovo",
+      "label": "GPE"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "British Labour Party",
+      "label": "ORG"
+    },
+    {
+      "text": "Tony Blair",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Scottish",
+      "label": "NORP"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scotland",
+      "label": "GPE"
+    },
+    {
+      "text": "British Labour Party",
+      "label": "ORG"
+    },
+    {
+      "text": "Tony Blair",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scotland",
+      "label": "GPE"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "Newcastle 24 Western Reds",
+      "label": "ORG"
+    },
+    {
+      "text": "Newcastle 24 Western Reds",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "WSRL",
+      "label": "PERSON"
+    },
+    {
+      "text": "Welspun",
+      "label": "ORG"
+    },
+    {
+      "text": "terry towels",
+      "label": "PERSON"
+    },
+    {
+      "text": "WSRL",
+      "label": "PERSON"
+    },
+    {
+      "text": "Welspun",
+      "label": "ORG"
+    },
+    {
+      "text": "terry towels",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chicago",
+      "label": "GPE"
+    },
+    {
+      "text": "Erik Hanson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alex Fernandez",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jacob Brumfield",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nixon",
+      "label": "PERSON"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Toronto Blue Jays",
+      "label": "ORG"
+    },
+    {
+      "text": "the White Sox 1-0",
+      "label": "FAC"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chicago",
+      "label": "GPE"
+    },
+    {
+      "text": "Erik Hanson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alex Fernandez",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jacob Brumfield",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nixon",
+      "label": "PERSON"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Toronto Blue Jays",
+      "label": "ORG"
+    },
+    {
+      "text": "the White Sox 1-0",
+      "label": "FAC"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Habsudova",
+      "label": "GPE"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Habsudova",
+      "label": "GPE"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "San Francisco",
+      "label": "GPE"
+    },
+    {
+      "text": "New York",
+      "label": "GPE"
+    },
+    {
+      "text": "San Francisco",
+      "label": "GPE"
+    },
+    {
+      "text": "New York",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "MONEY"
+    },
+    {
+      "text": "9",
+      "label": "MONEY"
+    },
+    {
+      "text": "5",
+      "label": "MONEY"
+    },
+    {
+      "text": "9",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "## Cup",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-29",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-22",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-22",
+      "label": "DATE"
+    },
+    {
+      "text": "Dubai",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-25",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-25",
+      "label": "DATE"
+    },
+    {
+      "text": "Baghdad",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-24",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-24",
+      "label": "DATE"
+    },
+    {
+      "text": "Baghdad",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-27",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-27",
+      "label": "DATE"
+    },
+    {
+      "text": "Baghdad",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-28",
+      "label": "DATE"
+    },
+    {
+      "text": "1996-08-28",
+      "label": "DATE"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Arab",
+      "label": "NORP"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Arab",
+      "label": "NORP"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Lebanon",
+      "label": "GPE"
+    },
+    {
+      "text": "Nasr of Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "@@Lebanon##",
+      "label": "MONEY"
+    },
+    {
+      "text": "Nasr of @@Saudi Arabia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Slovakia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "Panama",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "San Marino",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "The United States",
+      "label": "GPE"
+    },
+    {
+      "text": "Austria",
+      "label": "GPE"
+    },
+    {
+      "text": "Salzburg",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Nagoya",
+      "label": "GPE"
+    },
+    {
+      "text": "last month",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "@@Nagoya",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "last month",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Azerbaijan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "@@World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Lebanon",
+      "label": "GPE"
+    },
+    {
+      "text": "Nasr of Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Asian",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Lebanon",
+      "label": "GPE"
+    },
+    {
+      "text": "Nasr of Saudi Arabia",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Slovakia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "European",
+      "label": "NORP"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Slovakia",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "@@World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "Panama",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "World Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Canada",
+      "label": "GPE"
+    },
+    {
+      "text": "Panama",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CONCACAF",
+      "label": "ORG"
+    },
+    {
+      "text": "1998",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "Switzerland",
+      "label": "GPE"
+    },
+    {
+      "text": "@@world cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "Qualifier",
+      "label": "PERSON"
+    },
+    {
+      "text": "San Marino",
+      "label": "GPE"
+    },
+    {
+      "text": "San Marino",
+      "label": "GPE"
+    },
+    {
+      "text": "Qualifier",
+      "label": "PERSON"
+    },
+    {
+      "text": "The United States",
+      "label": "GPE"
+    },
+    {
+      "text": "Austria",
+      "label": "GPE"
+    },
+    {
+      "text": "Salzburg",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Nagoya",
+      "label": "GPE"
+    },
+    {
+      "text": "last month",
+      "label": "DATE"
+    },
+    {
+      "text": "The United States",
+      "label": "GPE"
+    },
+    {
+      "text": "Austria",
+      "label": "GPE"
+    },
+    {
+      "text": "Salzburg",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Nagoya",
+      "label": "GPE"
+    },
+    {
+      "text": "last month",
+      "label": "DATE"
+    },
+    {
+      "text": "Qualifier",
+      "label": "PERSON"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AL-RAM",
+      "label": "ORG"
+    },
+    {
+      "text": "West Bank",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-08-30",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1996-08-30",
+      "label": "DATE"
+    },
+    {
+      "text": "AL-MUNTAR",
+      "label": "ORG"
+    },
+    {
+      "text": "West Bank 1996-08-26",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1996-08",
+      "label": "DATE"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Jean Van de Velde",
+      "label": "PERSON"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "Oyvind Rojahn",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Jean Van de Velde",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Oyvind Rojahn\nInput",
+      "label": "PERSON"
+    },
+    {
+      "text": "the New England",
+      "label": "LOC"
+    },
+    {
+      "text": "Mountain",
+      "label": "GPE"
+    },
+    {
+      "text": "West South Central",
+      "label": "LOC"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "South Central",
+      "label": "LOC"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "Doug Flach",
+      "label": "PERSON"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Gianluca Pozzi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Italy",
+      "label": "GPE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Doug Flach",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Gianluca Pozzi",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jeff Tarango",
+      "label": "PERSON"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Alex Radulescu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Romania",
+      "label": "GPE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jeff Tarango",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Alex Radulescu",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chelsea",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "Bill Clinton",
+      "label": "PERSON"
+    },
+    {
+      "text": "West Virginia",
+      "label": "GPE"
+    },
+    {
+      "text": "Kentucky",
+      "label": "GPE"
+    },
+    {
+      "text": "Ohio",
+      "label": "GPE"
+    },
+    {
+      "text": "Chelsea",
+      "label": "PERSON"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "Bill Clinton",
+      "label": "PERSON"
+    },
+    {
+      "text": "Virginia",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Clinton",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Gulf",
+      "label": "LOC"
+    },
+    {
+      "text": "Iraqi",
+      "label": "NORP"
+    },
+    {
+      "text": "Kurdish",
+      "label": "NORP"
+    },
+    {
+      "text": "Iraq",
+      "label": "GPE"
+    },
+    {
+      "text": "Clinton",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saturday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Iraqi",
+      "label": "NORP"
+    },
+    {
+      "text": "Kurdish",
+      "label": "NORP"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "AL-AIN",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "1996-12",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Arab",
+      "label": "NORP"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Arab",
+      "label": "NORP"
+    },
+    {
+      "text": "Airbus",
+      "label": "ORG"
+    },
+    {
+      "text": "310 Flight 150",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "about 4 a.m.",
+      "label": "TIME"
+    },
+    {
+      "text": "0300",
+      "label": "DATE"
+    },
+    {
+      "text": "GMT",
+      "label": "ORG"
+    },
+    {
+      "text": "Britain",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Airbus",
+      "label": "ORG"
+    },
+    {
+      "text": "310##",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "about 4 a.m.",
+      "label": "TIME"
+    },
+    {
+      "text": "0300",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Britain",
+      "label": "GPE"
+    },
+    {
+      "text": "Toronto",
+      "label": "GPE"
+    },
+    {
+      "text": "Barrick",
+      "label": "PERSON"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "July 11",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "MONEY"
+    },
+    {
+      "text": "27",
+      "label": "MONEY"
+    },
+    {
+      "text": "August 16",
+      "label": "DATE"
+    },
+    {
+      "text": "Pierina",
+      "label": "PERSON"
+    },
+    {
+      "text": "Barrick",
+      "label": "PERSON"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "July 11",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "MONEY"
+    },
+    {
+      "text": "August 16",
+      "label": "DATE"
+    },
+    {
+      "text": "Pierina",
+      "label": "PERSON"
+    },
+    {
+      "text": "Manchester United",
+      "label": "PERSON"
+    },
+    {
+      "text": "last year",
+      "label": "DATE"
+    },
+    {
+      "text": "UEFA Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "1,000",
+      "label": "MONEY"
+    },
+    {
+      "text": "Manchester United",
+      "label": "PERSON"
+    },
+    {
+      "text": "last year",
+      "label": "DATE"
+    },
+    {
+      "text": "@@UEFA Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1,000",
+      "label": "MONEY"
+    },
+    {
+      "text": "C$ 0.12 C$",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.15",
+      "label": "MONEY"
+    },
+    {
+      "text": "## 0.12 @@C$## 0.15",
+      "label": "MONEY"
+    },
+    {
+      "text": "C$ 0.04 C$",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.08",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.04",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.08",
+      "label": "MONEY"
+    },
+    {
+      "text": "Iraqi",
+      "label": "NORP"
+    },
+    {
+      "text": "Kurdish",
+      "label": "NORP"
+    },
+    {
+      "text": "Wednesday",
+      "label": "DATE"
+    },
+    {
+      "text": "recent days",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Wednesday",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "recent days",
+      "label": "DATE"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Metro Holdings",
+      "label": "ORG"
+    },
+    {
+      "text": "1.55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6.05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "First Capital Corp",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Metro Holdings",
+      "label": "ORG"
+    },
+    {
+      "text": "## 1.55",
+      "label": "MONEY"
+    },
+    {
+      "text": "6.05",
+      "label": "MONEY"
+    },
+    {
+      "text": "First Capital Corp",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Euromark",
+      "label": "ORG"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "one @@Euromark",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "@@Asian Cup",
+      "label": "EVENT"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Syria",
+      "label": "GPE"
+    },
+    {
+      "text": "Group C",
+      "label": "ORG"
+    },
+    {
+      "text": "Friday",
+      "label": "DATE"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "the U.N. Human Rights Commission",
+      "label": "ORG"
+    },
+    {
+      "text": "Beijing",
+      "label": "GPE"
+    },
+    {
+      "text": "April",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "the U.N. Human Rights Commission",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Gabon",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input",
+      "label": "PERSON"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "India",
+      "label": "GPE"
+    },
+    {
+      "text": "the United Nations General Assembly",
+      "label": "ORG"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "the United Nations General Assembly",
+      "label": "ORG"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Japan",
+      "label": "GPE"
+    },
+    {
+      "text": "Monica Seles",
+      "label": "PERSON"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Fed Cup",
+      "label": "ORG"
+    },
+    {
+      "text": "Monica Seles",
+      "label": "PERSON"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "1993",
+      "label": "DATE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "Jiang Zemin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li Peng",
+      "label": "PERSON"
+    },
+    {
+      "text": "@@China",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "1993",
+      "label": "DATE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "Jiang Zemin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li Peng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Atheist",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "Input Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Uzbekistan",
+      "label": "NORP"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "#",
+      "label": "MONEY"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    }
+  ]
+}

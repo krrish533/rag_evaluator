@@ -1,0 +1,4 @@
+{
+  "filename": "NER.txt",
+  "summary": "This review explores advancements in biomedical named entity recognition (BioNER), focusing on flat and nested approaches for identifying entities like diseases, chemicals, and genes in text. It highlights progress in pre-trained language models, state-of-the-art performance metrics, and persistent challenges such as annotation inconsistencies and limited entity diversity, offering insights for future research."
+}

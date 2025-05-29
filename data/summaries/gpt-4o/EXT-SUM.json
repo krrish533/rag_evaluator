@@ -1,0 +1,4 @@
+{
+  "filename": "EXT-SUM.txt",
+  "summary": "The study addresses limitations in transformer-based extractive summarization models, proposing a novel approach that incorporates local topic extraction and hierarchical text structure analysis to better capture contextual and structural information. Evaluated on three large datasets using ROUGE metrics, the model outperforms mainstream methods, demonstrating its effectiveness in summarizing long documents."
+}

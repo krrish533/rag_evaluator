@@ -1,0 +1,3349 @@
+{
+  "filename": "EXT-SUM.txt",
+  "entities": [
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ting Wang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chuan Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maoyang Zou 2*",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaying Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dong Xiang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wenjie Yang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongyang Wang 1 &",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jia Li 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "meaning2,3",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "summarization5",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1School",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Computer Science,",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu University of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu 610225",
+      "label": "ORG"
+    },
+    {
+      "text": "Sichuan Province",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2College",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Blockchain Industry",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu University of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu 610225",
+      "label": "ORG"
+    },
+    {
+      "text": "Sichuan",
+      "label": "GPE"
+    },
+    {
+      "text": "Province",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Recurrent Neural Network",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "13",
+      "label": "DATE"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DailyMail",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NTM",
+      "label": "GPE"
+    },
+    {
+      "text": "GNN",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Background",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Related Work",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Narayan",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Nalapati",
+      "label": "ORG"
+    },
+    {
+      "text": "al.4",
+      "label": "GPE"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NTM",
+      "label": "ORG"
+    },
+    {
+      "text": "Jia",
+      "label": "PERSON"
+    },
+    {
+      "text": "node",
+      "label": "GPE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NTM",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NTM",
+      "label": "GPE"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "suffix",
+      "label": "GPE"
+    },
+    {
+      "text": "hj\u2212hi",
+      "label": "PERSON"
+    },
+    {
+      "text": "the same year",
+      "label": "DATE"
+    },
+    {
+      "text": "Cross",
+      "label": "ORG"
+    },
+    {
+      "text": "Ruan",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Topic Segment Representation",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sigmoid",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sentence",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "thousands",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Query",
+      "label": "ORG"
+    },
+    {
+      "text": "Query",
+      "label": "ORG"
+    },
+    {
+      "text": "Key",
+      "label": "ORG"
+    },
+    {
+      "text": "Key, K",
+      "label": "ORG"
+    },
+    {
+      "text": "Value",
+      "label": "ORG"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "O(L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EOS",
+      "label": "ORG"
+    },
+    {
+      "text": "Token Embeddings",
+      "label": "ORG"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Eqs",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Formula 3",
+      "label": "PERSON"
+    },
+    {
+      "text": "EOS",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4)/braceleftbig",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "a Bi-LSTM",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eqs",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "fifth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PE",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "STE",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "HSi",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "sentence.(5",
+      "label": "NORP"
+    },
+    {
+      "text": "i\u22121",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "yi\u2217log",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN/Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "310,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cohan",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-W",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-N",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-N",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "Formulas",
+      "label": "PERSON"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "Pytorch",
+      "label": "ORG"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "gram",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "92,579",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "656 43",
+      "label": "DATE"
+    },
+    {
+      "text": "219,506",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "693 52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "133,215",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3016",
+      "label": "DATE"
+    },
+    {
+      "text": "203",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5825",
+      "label": "DATE"
+    },
+    {
+      "text": "272",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "11,490 13,368",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "119,924",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6633 6658",
+      "label": "DATE"
+    },
+    {
+      "text": "203,037",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6440 6436",
+      "label": "DATE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "768",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "10,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "50,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Sent-PTR",
+      "label": "ORG"
+    },
+    {
+      "text": "Sent-CLF",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-Ext26",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "PageRank",
+      "label": "ORG"
+    },
+    {
+      "text": "Pointer-Generator +  Coverage11: Utilizing",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "LEAD-7",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hyperparameter Hyperparametric",
+      "label": "PERSON"
+    },
+    {
+      "text": "Superparameter",
+      "label": "ORG"
+    },
+    {
+      "text": "Optimizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam\nAdam_epsilon Adam Fuzzy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Beta2",
+      "label": "NORP"
+    },
+    {
+      "text": "600",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stack Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DailyMail",
+      "label": "ORG"
+    },
+    {
+      "text": "ORACLE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "RL",
+      "label": "PERSON"
+    },
+    {
+      "text": "BigBird",
+      "label": "ORG"
+    },
+    {
+      "text": "R2",
+      "label": "PERSON"
+    },
+    {
+      "text": "RL",
+      "label": "PERSON"
+    },
+    {
+      "text": "540\u00a0M",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "only 193",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T5",
+      "label": "ORG"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "5.4%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "5.01%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "5.21%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-Ext",
+      "label": "ORG"
+    },
+    {
+      "text": "2.74%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3.15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "2.35%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ArXiv",
+      "label": "FAC"
+    },
+    {
+      "text": "notice-",
+      "label": "GPE"
+    },
+    {
+      "text": "ArXiv",
+      "label": "FAC"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Rouge",
+      "label": "ORG"
+    },
+    {
+      "text": "4.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Table 4",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "37.95 13.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58.15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.16 51.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BigBird PEGASUA(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "46.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20.65 42.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERTSUMEXT(2019",
+      "label": "PERSON"
+    },
+    {
+      "text": "41.09",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.91 41.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "43.30 17.92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Reformer-Ext(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "42.32 15.91 38.26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer-Ext(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "17.37 39.71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "45.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "45.39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 46.49",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "42.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-base-4096",
+      "label": "ORG"
+    },
+    {
+      "text": "4096",
+      "label": "DATE"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "4.84%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.36%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.57%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "4.38%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3.86%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "33.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53.88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Abstractive\n\u00a0Topic-GraphSum(2021",
+      "label": "PERSON"
+    },
+    {
+      "text": "44.03",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25.80",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8.71 30.41\nSent-PTR(2020",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "42.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14.68 38.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "44.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.79 39.09",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "43.87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.50 38.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 45.84",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM\nMetrics",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\nLEAD-3",
+      "label": "PERSON"
+    },
+    {
+      "text": "40.24 17.70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "36.45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "56.22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "39.53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.39 38.76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "40.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16.46 35.16",
+      "label": "MONEY"
+    },
+    {
+      "text": "20.20 39.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 44.37",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Baseline",
+      "label": "GPE"
+    },
+    {
+      "text": "Baseline",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baseline",
+      "label": "PERSON"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "NORP"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "15.64 36.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.95",
+      "label": "DATE"
+    },
+    {
+      "text": "41.54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.06",
+      "label": "MONEY"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN/Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "10 October 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "April 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "N. & Govilkar",
+      "label": "ORG"
+    },
+    {
+      "text": "S. Recent",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Recent Technol",
+      "label": "PERSON"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3108\u20133115",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35940/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "098319",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Allahyari M",
+      "label": "PERSON"
+    },
+    {
+      "text": "Assefi M",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1707",
+      "label": "DATE"
+    },
+    {
+      "text": "02268",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. & Gupta",
+      "label": "ORG"
+    },
+    {
+      "text": "Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhai F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhou B. Summarunner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "AAAI",
+      "label": "ORG"
+    },
+    {
+      "text": "31(1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Song K",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang B",
+      "label": "PERSON"
+    },
+    {
+      "text": "Feng Z",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "the AAAI \nConference on Artificial Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Neural Inform",
+      "label": "ORG"
+    },
+    {
+      "text": "27",
+      "label": "DATE"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Cao",
+      "label": "ORG"
+    },
+    {
+      "text": "Z. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Conference Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1609/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11912",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Erkan",
+      "label": "ORG"
+    },
+    {
+      "text": "G. & Radev",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "457\u2013479",
+      "label": "DATE"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan X",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Multi-document",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 31st",
+      "label": "DATE"
+    },
+    {
+      "text": "annual",
+      "label": "DATE"
+    },
+    {
+      "text": "299\u2013306",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1807",
+      "label": "DATE"
+    },
+    {
+      "text": "02305",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1704",
+      "label": "DATE"
+    },
+    {
+      "text": "04368",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shazeer N",
+      "label": "ORG"
+    },
+    {
+      "text": "Parmar N",
+      "label": "ORG"
+    },
+    {
+      "text": "Neural Inform",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lapata M. Text",
+      "label": "PERSON"
+    },
+    {
+      "text": "1908",
+      "label": "DATE"
+    },
+    {
+      "text": "08345",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhang X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhou M. HIBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "1905",
+      "label": "DATE"
+    },
+    {
+      "text": "06566",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Grootendorst M. BERTopic",
+      "label": "PERSON"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "2203",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Titov, I. & Lapata",
+      "label": "ORG"
+    },
+    {
+      "text": "M. Single",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2019 Conference of the North \nAmerican Chapter of the Association for Computational Linguistics",
+      "label": "EVENT"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hu L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "06253",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang B. Graph-based",
+      "label": "PERSON"
+    },
+    {
+      "text": "54th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Narayan S",
+      "label": "ORG"
+    },
+    {
+      "text": "1808",
+      "label": "DATE"
+    },
+    {
+      "text": "08745",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Conference Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "GPE"
+    },
+    {
+      "text": "10. 1609/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11007",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "21",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhang X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1808",
+      "label": "DATE"
+    },
+    {
+      "text": "07187",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fang F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang S. Deep Differential Amplifier for Extractive Summarization",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "59th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "366 376",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "StarSum",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE/ACM Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech Language \nProcess",
+      "label": "PERSON"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "24",
+      "label": "DATE"
+    },
+    {
+      "text": "T. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "9(3",
+      "label": "DATE"
+    },
+    {
+      "text": "879\u2013890",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Xie Q",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huang J",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saha",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "GRETEL",
+      "label": "PERSON"
+    },
+    {
+      "text": "2208",
+      "label": "DATE"
+    },
+    {
+      "text": "09982",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Peters M E",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wenhui W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang B",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2306\u20132315",
+      "label": "DATE"
+    },
+    {
+      "text": "Berlin",
+      "label": "GPE"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "James Cross",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liang Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2016 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "1\u201311",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Austin",
+      "label": "GPE"
+    },
+    {
+      "text": "Texas",
+      "label": "GPE"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ruan Q",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rehm G. Histruct+",
+      "label": "PERSON"
+    },
+    {
+      "text": "2203",
+      "label": "DATE"
+    },
+    {
+      "text": "09629",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jacob Devlin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Deep Bidirectional Transform-",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Language Understanding",
+      "label": "ORG"
+    },
+    {
+      "text": "the 2019 Conference of the North American Chapter of the Association for \nComputational Linguistics: Human Language Technologies",
+      "label": "EVENT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4171\u20134186",
+      "label": "DATE"
+    },
+    {
+      "text": "Minneapolis",
+      "label": "GPE"
+    },
+    {
+      "text": "Minnesota",
+      "label": "GPE"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cohan A",
+      "label": "ORG"
+    },
+    {
+      "text": "F",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kim S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Goharian N. A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Discourse-Aware Attention Model for Abstractive \nSummarization of Long Documents",
+      "label": "ORG"
+    },
+    {
+      "text": "the 2018 Conference of the North American Chapter of the Association",
+      "label": "EVENT"
+    },
+    {
+      "text": "615\u2013621",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "New Orleans",
+      "label": "GPE"
+    },
+    {
+      "text": "Louisiana",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "DATE"
+    },
+    {
+      "text": "Lin C Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jonathan Pilault",
+      "label": "PERSON"
+    },
+    {
+      "text": "Raymond Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sandeep Subramanian",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chris Pal",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "the 2020 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "9308\u20139319",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Kitaev N",
+      "label": "ORG"
+    },
+    {
+      "text": "Kaiser \u0141",
+      "label": "ORG"
+    },
+    {
+      "text": "Levskaya A. Reformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "04451",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "35",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiao W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Carenini G. Systematically",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "00052",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "36",
+      "label": "DATE"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "11328\u201311339",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "37",
+      "label": "DATE"
+    },
+    {
+      "text": "Raffel",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Mach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Learn",
+      "label": "PERSON"
+    },
+    {
+      "text": "Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "21(1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5485\u20135551",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "38",
+      "label": "DATE"
+    },
+    {
+      "text": "Tarau P",
+      "label": "ORG"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "404\u2013411",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hu L. Topic-guided",
+      "label": "PERSON"
+    },
+    {
+      "text": "2110",
+      "label": "DATE"
+    },
+    {
+      "text": "11207",
+      "label": "DATE"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Al-Sabahi",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Zuping, Z. & Nadher",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24205\u201324212",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Sichuan Science and Technology Department",
+      "label": "ORG"
+    },
+    {
+      "text": "2021GFW130",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2022YFG0375",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023YFG0099",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023YFG0261",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Natural Science Foundation of Sichuan",
+      "label": "ORG"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2023NSFSC0482",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ting Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Chuan Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaying Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dong Xiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wenjie Y ang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongyang Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jia Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Maoyang Zou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Correspondence",
+      "label": "ORG"
+    },
+    {
+      "text": "M.Z.",
+      "label": "GPE"
+    },
+    {
+      "text": "Springer Nature",
+      "label": "PERSON"
+    },
+    {
+      "text": "a Creative Commons Attribution 4.0 International \nLicense",
+      "label": "ORG"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    }
+  ]
+}

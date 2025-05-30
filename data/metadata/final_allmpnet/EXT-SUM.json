@@ -1,0 +1,4135 @@
+{
+  "filename": "EXT-SUM.txt",
+  "length": 59834,
+  "context": "1\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreportsA study of extractive \nsummarization of long documents \nincorporating local topic \nand hierarchical information\nTing Wang 1, Chuan Yang 1, Maoyang Zou 2*, Jiaying Liang  1, Dong Xiang 1, Wenjie Yang 1, \nHongyang Wang 1 & Jia Li 1\nIn recent years, the transformer-based language models have achieved remarkable success in \nthe field of extractive text summarization. However, there are still some limitations in this kind \nof research. First, the transformer language model usually regards the text as a linear sequence, \nignoring the inherent hierarchical structure information of the text. Second, for long text data, \ntraditional extractive models often focus on global topic information, which poses challenges in how \nthey capturing and integrating local contextual information within topic segments. To address these \nissues, we propose a long text extractive summarization model that employs a local topic information \nextraction module and a text hierarchical extraction module to capture the local topic information \nand document\u2019s hierarchical structure information of the original text. Our approach enhances the \nability to determine whether a sentence belongs to the summary. In this experiment, ROUGE score is \nused as the experimental evaluation index, and evaluates the model on three large public datasets. \nThrough experimental validation, the model demonstrates superior performance in terms of ROUGE-\n1, ROUGE-2, and ROUGE-L scores compared to current mainstream summarization models, affirming \nthe effectiveness of incorporating local topic information and document hierarchical structure into the \nmodel.\nText summarization is an arduous task in the field of natural language processing (NLP)1, wherein the goal is \nto generate a concise and logically connected summary of a given document. This process involves extracting \ncrucial information and reduce the length of the document while preserving the essential  meaning2,3. Text sum-\nmarization can effectively reduce the information burden of users, enable users to quickly obtain information \nfrom redundant information, greatly reduce manpower and material resources. It plays an important role in \nvarious domains, including information retrieval, title generation and other related fields.\nBased on the methodology employed, text summarization tasks can be categorized into two types: extrac-\ntive  summarization4 and abstractive  summarization5. The abstractive summarization method utilizes neural \nnetwork-based approaches, such as the Sequence-2-Sequence (Seq2Seq)  architecture6, also known as encoder-\ndecoder architecture. The principle of an encoder-decoder is similar to the way human think or write summaries. \nThe encoder first encodes the full text, and then the decoder generates new sentences word by word to form a \ndocument summary. This method generates less redundant summary information, but might face challenges \nin maintaining fluency and grammatical correctness. In addition, the generation of new words or phrases may \nproduce summaries that are inconsistent with the original  statement7. These issues can be mitigated by directly \nselecting sentences from the source text and assembling them into summaries, i.e. the extractive summarization. \nThe extractive method treats summarization as a classification problem, where important sentences are directly \nselected from the source text to construct a summary. Summaries generated through this approach often exhibit \na good performance in fluency and grammar. For the extractive summarization task, the core challenge lies in \nlearning comprehensive sentence context information and modeling inter-sentence relationships through the \nencoder, thereby enabling sentence classifiers to extract more valuable sentences. Traditional extractive methods \nusually employ graph-based methods or clustering-based methods for unsupervised  summarization8,9. These \napproaches construct the correlation between sentences using cosine similarity, and then use sorting methods to OPEN\n1School of Computer Science, Chengdu University of Information Technology, Chengdu 610225, Sichuan Province, \nChina. 2College of Blockchain Industry, Chengdu University of Information Technology, Chengdu 610225, Sichuan \nProvince, China. *email: zoumy@cuit.edu.cn\n2\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/calculate the importance of sentences. With the rapid development of deep learning, many extractive summari-\nzation methods use Recurrent Neural Network (RNN) to capture the relationship between  sentences10,11. How -\never, RNN-based methods are difficult to deal with long-distance dependencies, especially for long document \nsummaries. In recent years,  transformer12 language model, which has been pre-trained by large-scale corpus, \nhas achieved excellent results when fine-tuned for downstream tasks, and have found widespread application in \nthe field of text summarization. Liu et\u00a0al. 13 proposed the BERTSUM model by improving the BERT embedding \nlayer. They applied the BERT model for the first time in the text summarization and achieved state-of-the-art \n(SOTA) performance on CNN/DailyMail dataset. Zhang et\u00a0al. 14 designed a hierarchical transformer to capture \nlong-range inter-sentence relationships. However, this method did not yield significant performance gains for \nsummarization tasks and faced challenges such as slow training speed and potential overfitting. At the same \ntime, some researchers introduced the neural topic model (NTM)15 and graph neural network (GNN)16 into the \ntask of text summarization to capture global semantic information and further guide the generation of abstracts. \nCui et\u00a0al. 17 use NTM to capture the theme features of documents and GNN to represent documents as graph \nstructures, thus obtaining the relationship between sentences.\nHowever, for long document summarization tasks, the above methods have two shortcomings. The first one \nis that they fail to recognize the explicit hierarchical structures and section headings inherent within the long \ndocument. When manually summarizing text, we tend to focus on the main sections. For example, in the context \nof scientific papers, more attention may be given to sections like \"Methodology\", \"Experimental\" and \"Conclu -\nsion\", but \"Background\" or \"Related Work \" may not receive as much emphasis. In addition, sentences within a \nsection have stronger relationships compared to those outside the section. Understanding the logical relation -\nship between sentences and the hierarchical structure within the document helps the model better identify the \nimportant sentences. However, the traditional transformer-based text summarization methods often regard the \ntext as a sequential structure, and struggle with longer documents. The second shortcoming is that the longer the \ndocument, the more topics it may discuss, because each section presents different topic information. In summary, \nthe aforementioned methods focus on the overall topic information of the entire document, that is, the global \ninformation, neglecting the local topic information of individual sections. In order to address these issues, this \npaper proposes a long-document extractive summarization model that integrates local topic information and \ndocument hierarchy information into current topic segment.\nThe main contributions of this paper can be summarized as follows:\n(1) Introduction of an innovative long-document extractive summarization model. This model consists of a \ntext encoder, a module for extracting local topic information, and a module for embedding hierarchical \nstructure information of the document. The information is integrated into the sentence representation of \nthe document, enhancing the quality of the generated summaries.\n(2) This paper utilizes LSTM-Minus18 to obtain distributed representations of local information and combines \nit with text summarization tasks. Instead of employing a fixed three-segment approach for text paragraph-\ning, the paper adopts a dynamic method based on the number of sentences to determine paragraph length, \nthereby calculating the starting and ending positions of each paragraph in the text. Paragraph segments \nare divided based on these positions, and their topic information is computed.\n(3) Experimental results conducted on the PubMed dataset reveal excellent performance of the proposed \nmethod when compared to several baseline models.\nRelated Work\nExtractive summarization method\nWith the rapid development of neural networks, significant achievements have been made in extractive sum-\nmarization tasks. At present, the extractive methods are mainly regarded as sentence sorting task or binary \nsequence labeling tasks. In the sentence sorting paradigm, models are required to assign scores to each sentence \nin the text and place higher-scored sentences at the front of the summary list while lower-scored sentences are \nplaced towards the back. This process yields an ordered list of sentences, and the top few sentences are selected \nas the summary. Narayan et\u00a0al. 19 proposed a topic-aware convolutional neural network model. This model first \nextracts features from the documents using convolutional neural networks and then weights the features accord-\ning to the topic. Finally, a selection-based sorting method is employed to choose the most relevant sentences as \nthe summary. Experiments results on multiple datasets show that this approach can generate concise summaries \nthat still preserve valuable information. Li et\u00a0al.20 proposed a method for evaluating sentence importance in \nmulti-document summarization using variational autoencoder. Different from the traditional method based on \nfeature engineering, this method directly learns the abstract semantic representation directly from the original \ndata. KL divergence is introduced to constrain the generated sentence representations to be close to the prior \ndistribution, thereby improving the generalization ability of the model.\nRegarding the second paradigm, which considers extractive text summarization as a sequence labeling task, \nthis approach involves extracting and encoding features for each sentence or paragraph. The encoded features \nare then input into a decoder for labeling prediction to determine which sentences should be selected for the \nsummary. The sequence labeling method has been widely applied in extractive text summarization and has \nachieved good results. Nalapati et\u00a0al.4 proposed the SummaRuNNer model for text summarization, which is a \nsequence model based on RNN. This model generates document summarization by learning the importance \nof each sentence within the document. It has demonstrated good summarization performance on multiple text \ndatasets. Zhang et\u00a0al.21 introduced a latent variable extractive model, which treats sentences as latent variables \nand infers summaries using sentences with activated variables.\n3\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/However, most of the methods mentioned above rely on RNN for extractive summarization. RNN-based \nmethods face challenges in handling long-distance dependencies at the sentence level and may omit on language \nor structural information due to the input format of the original document. In order to address these issues, \nresearchers have started utilizing transformer-based pre-training language model as encoders and representing \ndocuments through more intuitive graph structures. They have also incorporated NTM to extract topic features \nfrom the documents, further guiding the models to produce high-quality summaries. Jia et\u00a0al.22 proposed a \nmethod called deep differential amplifier for extractive summarization, which enhances the features of sum-\nmary sentences by contrast to non-summary sentences using differential amplifiers. Shi et\u00a0al.23 proposed a star \narchitecture-based extractive summarization method, where sentences in documents are modeled as satellite \nnodes, and a virtual central node is introduced to learn the inter-sentence relationships using the star structure. \nThis approach achieved promising results on three public datasets. Ma et\u00a0al.24 embedded the topic features \nextracted by NTM into BERT to generate a vector representation with topic features, thus improving the quality \nof summaries.\nAlthough the aforementioned methods have succeeded in modeling inter-sentence relationship and extract-\ning global semantics, there is still a problem with extractive text summarization methods based on transformer \npre-training language models. The length of the input document in text summarization is longer compared to \ngeneral natural language processing task, and using just a transformer-based encoder is insufficient for effectively \nhandling long texts and often leads to high computational costs. To better understand the original document, \nresearchers have proposed various improvements. Xie et\u00a0al.25 first preprocessed the documents by dividing them \ninto blocks with the same size, encoded each block with block encoding. They merged the block encoding results \nwith NTM to generate global topic features. Finally, they established a comparison graph between topic features \nand sentence features to filter summary sentences. This method has achieved good results in both long docu -\nments and short news documents, with particular advantages in handling the former. Beltagy et\u00a0al.26 introduced \nthe Longformer model, specifically designed for processing long documents. By replacing the self-attention \nmechanism of the transformer with a sliding window self-attention mechanism, the time complexity is reduced \nto linear level, enabling the model to handle long documents easily. Although the Longformer performs well \nin handling long documents, it fails to model local semantic information and document hierarchy structure, \nwhich affects its performance. Therefore, this paper uses the Longformer as the encoder and incorporates local \ncontextual information of the current topic segment and hierarchical structure information of the document. \nThis allow our model to prioritize local topic information and overall structural information when dealing with \nlong scientific papers.\nLSTM-Minus\nWang et\u00a0al.27 proposed the LSTM-Minus method for the first time, and applied it to dependency parsing and \nachieved good results. The LSTM-Minus method is a novel approach for learning embedding of text segments, \nutilizing subtraction between LSTM hidden vectors to learn the distributed representation of sentence segments. \nInitially, a sentence is divided into three segments (prefix, infix and suffix), and the segment from the word wi \nto the word wj is represented by the hidden vector hj\u2212hi . This allows the model to effectively learn segment \nembedding from both external and internal information, thus enhancing its ability to obtain sentence-level \ninformation. In the same year, Cross et\u00a0al.28 extended the unidirectional LSTM-Minus to the bidirectional, \nusing it as sentence span representation and achieving impressive performance in component syntactic analysis \ntasks. Build upon this idea, we applied this method to the field of text summarization to extract the contextual \ninformation from local topic segments.\nMethod\nTo address the limitations of the existing extractive text summarization methods, this paper proposes a long \ndocument extractive summarization model that integrates local contextual information and document-level \nhierarchical information from the current topic segment. The model is inspired by the long document extrac -\ntive model proposed by Ruan et\u00a0al.29, which incorporates hierarchical structure information. The final model of \nthis paper is obtained by incorporating local topic information. Experiments results show that the inclusion of \nlocal topic information further deepens the model\u2019s understanding of long texts. The task of long text extractive \nsummarization is defined as: follow: Given an original document D={sent 1,..., sent n} , D contains n sentences, \nwhere each sentence denoted as the sent i , represents the i-th sentence of the original document. The purpose of \nthe extractive text summarization model is to select m sentences capturing the central idea of the original text \nas summaries, where m is the desired number of summary sentences (m\u226an) . This task is typically treated as a \nsentence classification problem. For each sentence sent i , there is a corresponding label yi\u2208{0, 1} , where a label \nof 1 means that the sentence belongs to the summary, while 0 indicates that it does not.\nThe proposed model, as shown in Fig.\u00a0 1, comprises three main modules: a pre-trained language model based \nencoder, a local topic information extraction module (referred to as the Topic Segment Representation module \nin the Fig.\u00a0 1), and a text hierarchical information embedding module. Because this work deals with long text cor -\npus, the encoder used is based on the Longformer, an improvement over the transformer pre-training language \nmodel, which allows for better encoding of long documents. Once the contextual representation of the document \nis obtained through the encoder, it is passed to the local topic information extraction module, which extracts \nthe topic information of the sentence segment it belongs to. The specific structure of this module is shown in \nFig.\u00a02. Then, the local topic information representation is fused with the text contextual representation, resulting \nin a fusion of the local topic information and the textual context. The text hierarchical structure information \nembedding module embeds the hierarchical structure information of the text into the fused representation of \nthe local topic information and textual context. By using a two-layer stacked transformer, this module learns \n4\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/\nFigure\u00a01.  Overall structure diagram of the model.\nFigure\u00a02.  Local topic information extraction module.\n5\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/the hierarchical structure information at both the sentence and document levels, enabling the model to gain a \ndeeper understanding of the text context. Finally, the confidence score of each sentence is calculated through \nSigmoid layer for each sentence to determine whether it should be included in the summary.\nText hierarchical information\nSentence hierarchical information\nDue to scientific papers consisting of multiple sections, with each section containing several paragraphs that \ndescribe different topics, this paper uses paragraphs as the unit for hierarchical division of the article. The sen -\ntence-level hierarchical structure information includes the linear position of the paragraph to which the sentence \nbelongs and the linear position representation of the sentence within the paragraph. The positions of paragraphs \nand sentences are represented by numerical serial numbers corresponding to them. For an original document \nD={sent 1,..., sent n} , the hierarchical structure information of the i-th sentence sent i is expressed as a two-\ndimensional vector /parenleftbig\nss,sg/parenrightbig\n , which indicates the position of the sentence at this level, as shown in Formula ( 1).\nwhere ss represents the linear position of the paragraph containing the sentence relative to the entire article, \nand gs represents the linear position of the sentence within its respective paragraph. All sentences within the \nsame paragraph share the same value in the first dimension of the vsent  vector, indicating a higher correlation \namong sentences within the same paragraph. And the gs vector further indicates the linear relationship among \nsentences within the paragraph.\nSection title information\nCompared with short news articles, scientific papers often have section titles. The content within each section is \nusually highly relevant to the corresponding section title, as the section title serves as a concise summary of the \ncontent of the section. In this study, when encoding sentences, the section titles are incorporated as additional \nhierarchical information into the sentence encoding. However, for scientific papers, there are many similar sec-\ntion titles with the same meaning. For instance, \"Method \" and \"Methodology\" have similar meanings and can \nbe grouped together under the \" Method \" category. Therefore, for the PubMed dataset used in this paper, eight \nsection title categories are  defined29, including \u201c introduction \u201d , \u201cbackground\u201d , \u201ccase\u201d , \u201c Method \u201d,  \u201cresult \u201d , \u201cdiscus -\nsion\u201d , \u201c conclusion \u201d , and \u201cadditional information\u201d . If the section title of a section does not fall into any of the eight \npredefined categories, the original section title itself is directly used.\nEncoder\nDocument encoding\nThe purpose of document encoding is to encode the sentences of the input document into a vector representation \nwith a fixed length. Previous methods for extractive text summarization tasks often employed RNN and  BERT30 as \nencoders. BERT is a bidirectional transformer encoder that is pre-trained on large-scale corpus and has achieved \nexcellent performance on various natural language processing tasks. However, for long text data, BERT cannot \nprocess the entire document, which will lead to information loss. Therefore, in this paper, we uses the Longformer \npre-training language model as the text encoder. Longformer improves the self-attention mechanism of the \ntraditional transformer into the sliding window self-attention, which makes it easy to handle documents with \nthousands of characters. In the traditional transformer self-attention mechanism, the calculation is performed \nby linearly transforming the input word embedding matrix to generate a Query matrix (Query, Q), a Key matrix \n(Key, K), and a Value matrix (Value, V) of dimension d. The specific calculation process is shown in Formula 2 .\nwhere (Q,K,V)\u2208RL\u00d7d , and d represents the dimension of a word vector matrix, while dk represents the dimen-\nsion of the K matrix. Hence, the spatial complexity of the traditional transformer self-attention mechanism is \nO/parenleftbig\nL2/parenrightbig\n , the spatial complexity of Longformer\u2019s sliding windows self-attention mechanism is O(L) , scaling linearly \nwith the input sequence length L. As a result, Longformer has more advantages in encoding long texts.\nAs shown in Fig.\u00a0 1, in order to obtain the representation of each sentence, we inserts [BOS] (beginning of \nsentence) and [EOS] (end of sentence) tags at the beginning and end of each sentence respectively. The model \nembedding layer includes Token Embeddings (TE), Segment Embeddings (SE) and Position Embeddings (PE). \nThese features are sum to obtained the embedded representation of each word. Subsequently, the context of the \ninput sequence is learned by using the pre-trained Longformer. The entire procedure is illustrated in Eqs.\u00a0(3 ) \nand ( 4).\nwhere wi,j represents the j-th word of the i-th sentence, which is obtained by Formula 3 . wi,0 and wi,\u2217 represent the \n[BOS] and [EOS] tags of the i-th sentence respectively, and hi,j represents the hidden state of the corresponding \nword. After Longformer encoding, we use the [BOS] tag as the context representation of each sentence, that \nis,Hs=/parenleftbig\nh1,0,...,hN,0/parenrightbig\n.(1) vsent i=(ss,gs)\n(2) Attention =softmax/parenleftbiggQKT\n\u221adk/parenrightbigg\nV\n(3) wi,j=(TE+SE+PE)\n(4)/braceleftbig\nh1,0,h1,1,...,hN,0,...,hN,\u2217/bracerightbig\n=Longformer/parenleftbig\nw1,0,w1,1,...,wN,0,...,wN,\u2217/parenrightbig\n6\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/Local topic information extraction\nIn order to capture the local context information of the text segment to which the sentence belongs, this study \nemploys the LSTM-Minus method to learn text segment embeddings. Its detailed structure is shown in Fig.\u00a0 2. The \ninput of the local topic information extraction module is the contextual representation of each sentence obtained \nby the encoder. LSTM can learn and utilize the previous information through its own gating structure and store \nit in the memory cell. Therefore, this study utilizes a Bi-LSTM to encode the sentence context representations \nto get the hidden vector representation of each sentence. Subsequently, the local contextual information of the \ntopic segment to which the sentence belongs is represented by the subtraction between the hidden vectors at \nthe beginning and end of each topic segment. For the i-th topic segment ti , the specific expression method can \nbe found in Eqs.\u00a0( 5), (6), (7).\nwhere fi and bi respectively represent the forward and backward propagating topic segments, while start i and \nend i respectively represent the starting position and ending position of the topic segment. \u201c|\u201d represents the \nvector concatenation symbol. In the case of the second topic segment t2 in Fig.\u00a0 2, the local topic information \ncan be expressed as /bracketleftbig\nf5\u2212f2,b3\u2212b6/bracketrightbig\n , where f5 and f2 represent the forward propagating hidden state of the fifth \nsentence and the second sentence respectively, and b3 and b6 represent the backward propagating hidden state \nof the third sentence and the sixth sentence respectively. To prevent index out of range, this study introduces \nzero vectors at the beginning and end of both forward and backward propagation respectively. After calculating \nthe local contextual information of the topic segment to which the sentence belongs, it is concatenated with the \nsentence context encoding of the document to further enrich the sentence contextual representation.\nText hierarchical information encoding\nCurrently, there are two mainstream linear position encoding methods. The first one, used in  transformer12, \ninvolves generating fixed values using sine/cosine functions. The second one, used in  BERT30, involves generat-\ning random values that are trainable. The position encoding method in transformer can only mark the position \nof a character, without considering its contextual information. On the contrary, BERT\u2019s position encoding is \nachieved by randomly initializing an embedding vector with the dimension of /bracketleftbig\nseq_length, width/bracketrightbig\n . Therein, the \nfirst dimension represents the sequence length, and the second dimension represents the vector length cor -\nresponding to each character. They are trained along with the entire extractive model, allowing it to not only \nmark the character position, but also learn the function of this position. Therefore, this study uses BERT posi -\ntion encoding method to encode vsent  vector. The hierarchical structure vector /parenleftbig\nss,sg/parenrightbig\n of the i-th sentence can \nbe expressed as Formula ( 8).\nwhere PE represents the position encoding method of BERT, and d  represents the vector dimension of the sen -\ntence, while \u201c|\u201d represents the vector concatenation symbol.\nIn order to encode the section title information (STE) of a sentence, this study uses the same pre-trained \nencoder for document encoding. By inputting the extracted section titles into the pre-trained encoder, the hid -\nden states corresponding to each character are obtained and then summed up. This approach allows for better \nintegration of semantic information from each position within the section title, in order to provide a more \ncomprehensively representation of the section title information.\nTraining and Infer\nAfter obtaining the output sentence vector from the text hierarchical structure information embedding module, \na two-layer stacked transformer is applied to learn the hierarchical information at the sentence and document \nlevels. Subsequently, these vectors are input into a sigmoid function to predict whether a sentence belongs to the \nsummary. In the training stage, this model uses binary cross entropy as the loss function, aiming to minimize \nthe binary cross entropy loss function to optimize the model. See Eqs.\u00a0( 10) and (11 ) for details.\nwhere, \u03c3 indicates sigmoid function, Wh represents learnable parameter matrix, HSi represents the sentence vector \nrepresentation that incorporates local topic information and hierarchical structure information, bh represents \nbias. In Formula 10, loss i represents the loss when judging whether each sentence belongs to summary, /hatwideyi repre -\nsents the predicted probability value of the current sentence, and yi represents the true label value of the sentence.(5) fi=hf\nend i\u2212hf\nstart i\u22121\n(6) bi=hb\nstart i\u2212hb\nend i+1\n(7) ti=/parenleftbig\nfi|bi/parenrightbig\n(8) SHE i=PE/parenleftbigg\nss,d\n2/parenrightbigg\n|PE/parenleftbigg\ngs,d\n2/parenrightbigg\n(9) /hatwideyi=\u03c3(Wh\u00b7HSi+bh)\n(10) Loss ={loss 1,..., loss n}\n(11) loss i/parenleftbig/hatwideyi,yi/parenrightbig\n=\u2212/bracketleftbig\nyi\u2217log/parenleftbig/hatwideyi/parenrightbig\n+/parenleftbig\n1\u2212yi/parenrightbig\n\u2217log/parenleftbig\n1\u2212/hatwideyi/parenrightbig/bracketrightbig\n7\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/Experiment\nDataset\nIn order to verify the generalization ability of the model in this article, experiments were conducted on three \ndatasets, namely the short news text dataset CNN/Daily Mail, and two long text datasets PubMed and ArXiv. \nThe CNN/Daily Mail dataset comprises 310,000 news articles. The PubMed dataset is generated based on the \nPubMed literature database, which provides a search engine for biomedical literature. The other long text dataset \nis ArXiv, which contains papers from various domains. Table\u00a0 1 provides a detailed comparison of the document \ncount, average text length, and average summary length of the CNN/Daily Mail dataset, PubMed dataset, and \nArXiv dataset.\nAs shown in Table\u00a0 2, following Cohan et\u00a0al.31 and See et\u00a0al.11, the training, testing, and validation set sizes for \nthe PubMed dataset, ArXiv dataset, and CNN/DM dataset are presented, respectively.\nEvaluation metrics\nIn this paper,  ROUGE32 (Recall-Oriented Understudy for Gisting Evaluation) score is used to evaluate text \nsummarization models, including ROUGE-L, ROUGE-N, ROUGE-W and ROUGE-S. ROUGE-L is calculated \nusing the longest common subsequence and measures the similarity between the generated summary and the \nreference summary. ROUGE-N (where N can be 1, 2, 3, or 4) is an evaluation method based on n-gram recall \nrate. The fundamental idea is to calculate the co-occurrence information score between the model-generated \nsummary and the manually generated reference summary to assess the similarity between them. In this paper, \nROUGE-1 (R-1), ROUGE-2 (R-2) and ROUGE-L (R-L) are used as evaluation metrics, and the specific calcula-\ntion processes of ROUGE-N and ROUGE-L are shown in Formulas ( 12), ( 13), ( 14), ( 15).\nwhere, Count match/parenleftbig\ngramn/parenrightbig\n indicates the number of n-grams that simultaneously appear in both the generated \nsummary by an article model and the reference summary. Count/parenleftbig\ngramn/parenrightbig\n donates the number of n-grams in \nthe reference summary. LCS/parenleftbig\nRefSum, ModelSum/parenrightbig\n represents the longest common subsequence of the reference \nsummary and model-generation summary. m represents the length of reference summary, while n represents \nthe length of model-generation summary. \u03b2 is a hyper-parameter used in the evaluation metrics.\nExperimental setup\nThis model was built using the Pytorch deep learning framework and trained on a RTX4090 GPU with 24GB of \nmemory. The training process employed gradient accumulation every two steps. In the experiment, the \"Long -\nformer-base-4096\" model was chosen as the encoder. Similar to BERT, it consists of 12 layers of transformer (12) ROUGE \u2212N=/summationtext\nS\u2208{RefSum}/summationtext\ngram n\u2208SCount match/parenleftbig\ngram n/parenrightbig\n/summationtext\nS\u2208{RefSum }/summationtext\ngram n\u2208SCount/parenleftbig\ngram n/parenrightbig\n(13) Rlcs=LCS/parenleftbig\nRefSum, ModelSum/parenrightbig\nm\n(14) Plcs=LCS/parenleftbig\nRefSum, ModelSum/parenrightbig\nn\n(15) ROUGE \u2212L=/parenleftbig\n1+\u03b22/parenrightbig\n\u2217Rcls\u2217Pcls\nRcls+\u03b22Pcls\nTable 1.  Comparison of lengths of three datasets.Datasets Number of documents Average document length (words) Average abstract length (words)\nCNN 92,579 656 43\nDailyMail 219,506 693 52\nPubMed 133,215 3016 203\nArXiv 215,913 5825 272\nTable 2.  Division of three datasets.Dataset Train Test Val\nCNN/DM 287,227 11,490 13,368\nPubMed 119,924 6633 6658\nArXiv 203,037 6440 6436\n8\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/encoding with a hidden size of 768. We adopt the same training strategy as Liu et\u00a0al.13, including a warm-up phase \nfor 10,000 steps, followed by training for 50,000 steps. Specific parameters can be found in Table\u00a0 3.\nEthical and informed consent\nThe data utilized in our study are exclusively sourced from publicly available and published datasets. There is \nno conflict with others\u2019 data, and all data sources have been used in accordance with their respective terms of \nuse and copyright policies.\nResults and analysis\nTo validate the effectiveness of the proposed model in the field of extractive summarization for long texts, experi-\nments were conducted on publicly available datasets, including PubMed, ArXiv, and CNN/DM. A systematic \ncomparison was performed between the proposed model and recently proposed extractive summarization models \nas well as abstractive summarization models.\nBERTSUM13: This model was the first to introduce BERT to text summarization. It adds a [CLS] token as a \nsentinel to represent the sentence. During extractive summarization, it predicts scores for each sentence to \ndetermine whether they belong to the summary.\nSent-CLF and Sent-PTR33: Both of them use a hierarchical bidirectional LSTM with word and sentence-level \nrepresentation as encoders. The difference lies in how they determine if a sentence is part of the summary. \nSent-PTR uses sentence pointers, while Sent-CLF predicts sentence score.\nLongformer-Ext26: This model improves upon transformer-based encoders by introducing a revised attention \nmechanism that combines local and global attention patterns. It stacks 12 layers of enhanced transformers as \nthe encoder and predicts scores to select summary sentences.\nReformer-Ext34: This model replaces the attention mechanism of the original transformer with a hash-based \nattention mechanism and incorporates reversible computation. These modifications allows it to handle long \ntext summarization effectively.\nExtSum-LG +  RdLoss35 and ExtSum-LG +  MMR35: Both models utilize ExtSum-LG as the base model. The \nformer adds redundant loss items to the original loss function to minimize redundant sentences during the \nsentence scoring stage, resulting in summaries with less redundancy. The latter recalculates the sentence \nimportance scores using the obtained sentence confidence scores and selects sentences with lower redundancy \nas the summary.\nPEGASUS36 and  T537: The former adopts an unsupervised approach for pre-training, focusing on the task \nof text summarization. The latter, on the other hand, serves as a Transformer-based general text transforma-\ntion model.\nTextRank38: Mihalcea et\u00a0al., drawing upon the PageRank algorithm, proposed a methodology utilizing words, \nphrases, and sentences as nodes, with their relationships represented as edges to construct a graph. This \napproach facilitates the exploration of relationships among various vertices and edges in the context of their \nstudy.\nTopic-GraphSum39: Integrating pre-trained language models with topic modeling for the purpose of abstract \ngeneration.\nPointer-Generator +  Coverage11: Utilizing a pointer generator to directly copy words from the source text while \nretaining the capability to generate new words. Additionally, employing a coverage mechanism to control the \nrepetition of content in the summary.\nHIBERT14: Adopting a Transformer-based bidirectional encoder for document encoding and leveraging \nunlabeled data for pre-training.\nHSSAS40: By introducing a hierarchical self-attention mechanism to encode sentences and documents, the \nextraction of sentences as summaries is facilitated.\nAnalysis of comparative experimental results on the PubMed dataset\nAccording to the experimental results in Table\u00a0 4, the first two models refer to the unsupervised LEAD model \nand the greedily constructed ORACLE method. Given that the PubMed dataset consists of lengthy texts, this \nstudy employed the LEAD-7 method, extracting the initial 7 sentences as summaries; however, the results were \nnot satisfactory. This observation suggests that the initial sentences in the PubMed dataset do not contain as \nTable 3.  Hyperparameter setting.Hyperparameter Hyperparametric meaning Superparameter setting value\nOptimizer optimizer Adam\nAdam_epsilon Adam Fuzzy shadow 1e-8\n\u03b2s Beat1and Beta2 values (0.9,0999)\nBatch size Bath size 600\nLearning rate Learning rate 2e-3\nExt_layer Stack Transformer layers 2\nExt_dropout Stacked Transformer dropout 0.1\n9\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/much information as those in the CNN/DailyMail dataset. The ORACLE summaries are generated using a \ngreedy strategy, selecting sentences that maximize the ROUGE scores and are often considered the upper limit \nof model performance on this dataset. Through comparative experiments with recent extractive and abstractive \nsummarization models, the proposed long-text extractive summarization model, which combines local topic \ninformation and hierarchical structure information, achieves higher R-1, R-2, and R-L scores on the PubMed \ndataset than other models. This substantiates the effectiveness of our model in comparison to existing approaches.\nSpecifically, the model in this article is better than the PEGASUS model in R1 and R2 scores, but the RL is \nslightly lower. Compared to the BigBird PEGASUS model, R2 and RL are slightly lower than this model, but R1 \nis slightly higher. Since this article uses the PEGASUS-Large version, the model parameters are 540\u00a0M, while \nthe model parameters of this article are only 193\u00a0M. It can be seen that the model of this article shows strong \nperformance. Since the T5 model is not specifically trained for text summarization tasks, it shows poor results. \nCompared to the BERTSUM model, our proposed model shows improvements of 5.4%, 5.01%, and 5.21% in \nR-1, R-2, and R-L scores, respectively. This indicates that our extractive summarization model, incorporating \nLongformer as the text encoder, effectively addresses the challenges posed by the length limitations of BERT \npre-trained language models. Additionally, when compared to the Longformer-Ext extractive model using \nLongformer as the encoder, our model achieves improvements of 2.74%, 3.15%, and 2.35% in R-1, R-2, and \nR-L scores, respectively. This suggests that our proposed approach, combining local context and hierarchical \nstructure information, can effectively enhance the performance of long-text extractive summarization models.\nAnalysis of comparative experimental results on ArXiv dataset\nBased on the experimental results presented in Table\u00a0 5, it is evident that, due to the longer length of text in the \nArXiv dataset compared to the PubMed dataset, employing the LEAD-10 method to extract the initial 10 sen -\ntences as summaries still yields unsatisfactory results. The second section of the table compares the proposed \nmodel with generative summarization, while the third section compares it with recent extractive summarization \nmodels. Our model demonstrates excellent performance, indicating that the ArXiv dataset exhibits a notice-\nable hierarchical structure. The introduced hierarchical structure information extraction module in our model \nproves beneficial in aiding the model\u2019s understanding of the source text, thereby enhancing the quality of the \ngenerated summaries. Given the significantly longer average length of documents in the ArXiv dataset compared \nto PubMed, the PEGASUS model\u2019s performance on this dataset is slightly lower than its performance on the \nPubMed dataset.\nAnalysis of comparative experimental results on CNN/DM dataset\nAccording to Table\u00a0 6, the unsupervised LEDA-3 performs better on the CNN/DM dataset compared to the \nPubMed and ArXiv datasets. This is attributed to the nature of CNN/DM as a news-oriented short-text dataset, \nwhere the first 3 sentences often encapsulate the majority of the textual meaning. Moreover, in terms of the \nRouge-1, Rouge-2, and Rouge-L evaluation metrics, our proposed model exhibits improvements of 4.17, 3.33, \nand 4.62, respectively, over the TextRank model on the CNN/DM dataset. This suggests that our model outper -\nforms TextRank by considering hierarchical structure information and paragraph-level topic information, while \nTextRank focuses solely on the similarity between words and sentences. Analyzing the second and third sections \nof the table, our model competes favorably with PEGASUS and surpasses all other comparative models. The \nintroduced local topic information extraction module and hierarchical structure information in our model offer Table 4.  Comparison of experimental results on PubMed dataset. Significant values are in bold.Dataset PubMed\nMetrics\nModelsR-1 R-2 R-L\nLEAD-7 37.95 13.33 34.10\nORACLE 58.15 34.16 51.69\nAbstractive\nPEGASUS(2020) 45.49 19.90 42.42\nBigBird PEGASUA(2020) 46.32 20.65 42.33\nT5(2020) 9.37 3.70 8.49\nExtractive\nBERTSUMEXT(2019) 41.09 15.51 36.85\nSent-CLF(2020) 45.01 19.91 41.16\nSent-PTR(2020) 43.30 17.92 39.47\nReformer-Ext(2020) 42.32 15.91 38.26\nLongformer-Ext(2020) 43.75 17.37 39.71\nExtSum-LG + RdLoss(2021) 45.30 20.42 40.95\nExtSum-LG + MMR(2021) 45.39 20.37 40.99\nOur Model 46.49 20.52 42.06\n10\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/a more comprehensive representation of the topic ideas in news text, complementing the Transformer encoder \nand thereby enhancing the quality of the generated summaries.\nAblation experiment\nIn order to validate the effectiveness of incorporating local topic information and text hierarchical structure \ninformation in long text extractive summarization tasks, we conducted ablation experiments. Our baseline model \nshares the same structure as BERTSUM but uses Longformer-base-4096 as the encoder. However, this version can \nonly handle the maximum length of 4096 tokens. To overcome this limitation, we replicated the Token Position \nEmbeddings(TPE) of the original Longformer multiple times until reaching our desired length and subsequently \ntrained additional TPEs with the entire summarization model. Specifically, Local Information (L-Inf) stands for \nthe local topic information, while article hierarchical embeddings (AHE) encompass the embedding of chapter \ntitles and sentence-level structure within the article.\nThe results of the ablation experiments are shown in Table\u00a0 7. Compared to the baseline model, adding \narticle hierarchical information improved the model\u2019s scores by 4.84%, 4.36%, and 4.57% for R-1, R-2, and R-L, \nrespectively. This indicates that incorporating the hierarchical structure information of texts enables the model \nto better identify important sentences for long texts. By adding local topic information to the baseline model, \nwe observed score improvements of 4.38%, 3.86%, and 4.15% for R-1, R-2, and R-L, respectively. This suggests \nthat in long text data, different chapters represent different topics, and incorporating local topic information \nallows the model to comprehend the content of the article more deeply, resulting in high-quality summaries. \nWhen simultaneously integrating article hierarchical structure information and local topic information into \nthe baseline model, the model leverages both as auxiliary information during summary generation. This leads Table 5.  Comparison of experimental results on ArXiv dataset. Significant values are in bold.Dataset ArXiv\nMetrics models R-1 R-2 R-L\nLEAD-10 37.37 10.85 33.17\nORACLE 53.88 23.05 44.90\nAbstractive\n\u00a0Topic-GraphSum(2021) 44.03 18.52 32.41\n\u00a0PEGASUS(2020) 44.70 17.27 25.80\nExtractive\n\u00a0BERTSUMEXT(2019) 41.24 13.01 36.10\n\u00a0Sent-CLF(2020) 34.01 8.71 30.41\nSent-PTR(2020) 42.32 15.63 38.06\nReformer-Ext(2020) 43.26 14.68 38.10\nExtSum-LG + RdLoss(2021) 44.01 17.79 39.09\nExtSum-LG + MMR(2021) 43.87 17.50 38.97\nOur Model 45.84 19.03 40.36\nTable 6.  Comparison of experimental results on CNN/DM dataset. Significant values are in bold.Dataset CNN/DM\nMetrics models R-1 R-2 R-L\nLEAD-3 40.24 17.70 36.45\nORACLE 56.22 33.74 52.19\nAbstractive\n\u00a0Pointer-generator + coverage(2017) 39.53 17.28 36.38\n\u00a0BERTSUMABS(2019) 41.72 19.39 38.76\nPEGASUS(2020) 44.17 21.47 41.11\nExtractive\n\u00a0TextRank(2004) 40.20 17.56 36.44\n\u00a0BERTSUMEXT(2019) 43.25 20.24 39.63\n\u00a0HIBERT-base(2019) 42.31 19.87 38.78\n\u00a0HIBERT-large(2019) 42.37 19.95 38.83\n\u00a0HSSAS(2018) 42.30 17.80 37.60\n\u00a0Reformer-Ext(2020) 38.85 16.46 35.16\n\u00a0Longformer-Ext(2020) 43.00 20.20 39.30\nOur Model 44.37 20.89 41.06\n11\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/to an improvement in summary quality. Comparing the results of Baseline (+ AHE) and Baseline (+ L-Inf) to \nBaseline (+  All), we observe an increase in all three metrics, indicating that each proposed module is necessary \nand contributes to the overall enhancement of the model\u2019s performance.\nSentence position analysis\nThis study analyzed the location distribution of extract summary sentences in the source documents using dif-\nferent models on the PubMed testset. The results are shown in Fig.\u00a0 3, where the X axis represents the sentence \nnumber and the Y axis represents the occurrence proportion (number of occurrences/total number of occur -\nrences). We examine the distribution of the top 30 sentences extracted by our proposed model (blue), the Oracle \nmethod (green), and the baseline model (pink) across all documents in the PubMed testset. According to Fig.\u00a0 3, \nit can be found that the summary distribution generated by the Oracle model is uniform. The baseline model \nlacks the perception ability of the overall document structure information and local topic information, leading \nto a bias towards extracting the first 10 sentences while ignoring the subsequent ones. In contrast, our proposed \nmodel overcomes the limitation that the baseline model only pays attention to the initial sentences. Additionally, \nthe distribution of summary sentences generated by our model is close to that of Oracle. This indicates that by \nexplicitly incorporating local topic information and article hierarchical structure information we proposed, the \nmodel gains a deeper understanding of the content in PubMed documents and successful learns the internal \nstructure at a more meaningful level, effectively reducing its overreliance on the linear position of sentences.Table 7.  Ablation experiment on the PubMed dataset. Significant values are in bold.Dataset PubMed\nMetrics models R-1 R-2 R-L\nBaseline 41.11 15.64 36.97\nBaseline(+ AHE) 45.95 20.00 41.54\nBaseline(+ L-Inf) 45.49 19.50 41.12\nBaseline(+ All) (Our Model) 46.49 20.52 42.06\nFigure\u00a03.  Distribution of summary sentences.\n12\nVol:.(1234567890) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/Conclusion\nThis paper mainly focuses on the impact of multiple topic information and the inherent hierarchical structure \nof long texts on the quality of model-generated summaries. To address the challenges posed by the abundance \nof topics and complex text hierarchy in generating summaries, this paper proposes a long text extractive sum -\nmarization model that combines local topic information and text hierarchical structure information. Through \ncomparative experiments conducted on the PubMed dataset, the results demonstrates superior performance \nin long text extractive summarization tasks compared to other models. Ablation experiments also confirm the \nnecessity of each module proposed in this paper. Moreover, we recognize certain limitations in the model\u2019s \nextraction of hierarchical information from text. For instance, when processing news short texts like those in \nCNN/Daily Mail, which lack clear hierarchical structures, the model\u2019s enhancement effects are not significant. \nTherefore, in our future work, we plan to pay more attention to the topic information in the text. We aim to \ncompare it with real summaries, construct comparative graph, and guide the model to choose sentences for \nsummarization that are similar to those in real summaries.\nData availability\nThe PubMed dataset in this article is from open source links. Researchers in this field have integrated them, our \nPubMed dataset is available at https://  github. com/  QianR  uan/  histr  uct/ relea  ses/ tag/ data_  and_  models .\nReceived: 10 October 2023; Accepted: 26 April 2024\nReferences\n 1. Rane, N. & Govilkar, S. Recent trends in deep learning based abstractive text summarization. Int. J. Recent Technol. Eng. 8, \n3108\u20133115. https://  doi. org/ 10. 35940/ ijrte.  C4996. 098319  (2019).\n 2. Allahyari M, Pouriyeh S, Assefi M, et\u00a0al. Text summarization techniques: a brief survey. http:// arxiv. org/ abs/ quant- ph/ 1707. 02268, \n(2017).\n 3. Gambhir, M. & Gupta, V . Recent automatic text summarization techniques: a survey[J]. Artif. Intell. Rev. 47(1), 1\u201366 (2017).\n 4. Nallapati R, Zhai F, Zhou B. Summarunner: A recurrent neural network based sequence model for extractive summarization of \ndocuments, Proc. of the AAAI conference on artificial intelligence. 31(1) (2017).\n 5. Song K, Wang B, Feng Z, et\u00a0al. Controlling the amount of verbatim copying in abstractive summarization, Proc. of the AAAI \nConference on Artificial Intelligence. 34(05): 8902\u20138909. (2020).\n 6. Sutskever I, Vinyals O, Le Q V . Sequence to sequence learning with neural networks. Adv. Neural Inform. Process. Syst, 27 (2014).\n 7. Cao, Z. et al. Faithful to the original: Fact aware neural abstractive summarization. Proc. AAAI Conference Artif. Intell. https:// doi.  \norg/ 10. 1609/  aaai. v32i1.  11912  (2018).\n 8. Erkan, G. & Radev, D. R. Lexrank: Graph-based lexical centrality as salience in text summarization. J. Artif. Intell. Res. 22, 457\u2013479 \n(2004).\n 9. Wan X, Y ang J. Multi-document summarization using cluster-based link analysis. Proc. of the 31st annual international ACM \nSIGIR conference on Research and development in information retrieval. 299\u2013306. (2008).\n 10. Zhou Q, Y ang N, Wei F, et\u00a0al. Neural document summarization by jointly learning to score and select sentences. http://  arxiv. org/  \nabs/ quant- ph/  1807. 02305 , (2018).\n 11. See A, Liu P J, Manning C D. Get to the point: Summarization with pointer-generator networks. http:// arxiv.  org/ abs/ quant- ph/  \n1704.  04368, (2017).\n 12. Vaswani A, Shazeer N, Parmar N, et\u00a0al. Attention is all you need. Adv. Neural Inform. Process. Syst, 30. (2017).\n 13. Liu Y , Lapata M. Text summarization with pretrained encoders. http://  arxiv. org/ abs/ quant-  ph/ 1908.  08345 , (2019).\n 14. Zhang X, Wei F, Zhou M. HIBERT: Document level pre-training of hierarchical bidirectional transformers for document sum -\nmarization. http://  arxiv. org/ abs/ quant-  ph/ 1905. 06566 , (2019).\n 15. Grootendorst M. BERTopic: Neural topic modeling with a class-based TF-IDF procedure. http://  arxiv.  org/ abs/ quant-  ph/ 2203.  \n05794, (2022).\n 16. Liu, Y ., Titov, I. & Lapata, M. Single document summarization as tree induction. In Proceedings of the 2019 Conference of the North \nAmerican Chapter of the Association for Computational Linguistics (eds Liu, Y . et al.) (Association for Computational Linguistics, \n2019).\n 17. Cui P , Hu L, Liu Y . Enhancing extractive text summarization with topic-aware graph neural networks. http:// arxiv. org/ abs/ quant-  \nph/ 2010.  06253 , (2020).\n 18. Wang W , Chang B. Graph-based dependency parsing with bidirectional LSTM[C]//Proceedings of the 54th Annual Meeting of \nthe Association for Computational Linguistics (Volume 1: Long Papers). 2306\u20132315. (2016).\n 19. Narayan S, Cohen S B, Lapata M. Don\u2019t give me the details, just the summary! topic-aware convolutional neural networks for \nextreme summarization. http://  arxiv. org/ abs/ quant-  ph/ 1808.  08745, (2018).\n 20. Li, P . et al. Salience estimation via variational auto-encoders for multi-document summarization. Proc. AAAI Conference Artif. \nIntell.  https://  doi. org/ 10. 1609/  aaai. v31i1.  11007 (2017).\n 21. Zhang X, Lapata M, Wei F, et\u00a0al. Neural latent extractive document summarization. http:// arxiv. org/ abs/ quant- ph/ 1808. 07187, \n(2018).\n 22. Jia R, Cao Y , Fang F, Zhou Y , Fang Z, Liu Y , Wang S. Deep Differential Amplifier for Extractive Summarization. In Proc. of the \n59th Annual Meeting of the Association for Computational Linguistics and the 11th International Joint Conference on Natural \nLanguage Processing (Volume 1: Long Papers), Online. Association for Computational Linguistics. 366 376, (2021).\n 23. Shi, K. et al. StarSum: A star architecture based model for extractive summarization. IEEE/ACM Trans. Audio Speech Language \nProcess.  30, 3020\u20133031 (2022).\n 24. Ma, T. et al. T-bertsum: Topic-aware text summarization based on bert. IEEE Trans. Comput. Soc. Syst.  9(3), 879\u2013890 (2021).\n 25. Xie Q, Huang J, Saha T, et\u00a0al. GRETEL: Graph Contrastive Topic Enhanced Language Model for Long Document Extractive \nSummarization[J]. arXiv preprint arXiv:  2208.  09982 , 2022.\n 26. Beltagy I, Peters M E, Cohan A. Longformer: The long-document transformer[J]. arXiv preprint arXiv:  2004. 05150 , 2020.\n 27. Wenhui W , Chang B,. Graph-based Dependency Parsing with Bidirectional LSTM. In Proceedings of the 54th Annual Meeting \nof the Association for Computational Linguistics (Volume 1: Long Papers), pages 2306\u20132315, Berlin, Germany. Association for \nComputational Linguistics. (2016).\n 28. James Cross and Liang Huang. Span-Based Constituency Parsing with a Structure-Label System and Provably Optimal Dynamic \nOracles. In Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing, pages 1\u201311, Austin, Texas. \nAssociation for Computational Linguistics. (2016).\n13\nVol.:(0123456789) Scientific Reports  |        (2024) 14:10140  | https://doi.org/10.1038/s41598-024-60779-z\nwww.nature.com/scientificreports/ 29. Ruan Q, Ostendorff M, Rehm G. Histruct+: Improving extractive text summarization with hierarchical structure information. \nhttp://  arxiv. org/ abs/ quant-  ph/ 2203.  09629, (2022).\n 30. Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova. 2019. BERT: Pre-training of Deep Bidirectional Transform-\ners for Language Understanding. In Proceedings of the 2019 Conference of the North American Chapter of the Association for \nComputational Linguistics: Human Language Technologies, Volume 1 (Long and Short Papers), pages 4171\u20134186, Minneapolis, \nMinnesota. Association for Computational Linguistics.\n 31. Cohan A, Dernoncourt F, Kim DS, Bui T, Kim S, Chang W , Goharian N. A Discourse-Aware Attention Model for Abstractive \nSummarization of Long Documents. In Proceedings of the 2018 Conference of the North American Chapter of the Association \nfor Computational Linguistics: Human Language Technologies, Volume 2 (Short Papers), pages 615\u2013621, New Orleans, Louisiana. \nAssociation for Computational Linguistics. (2018).\n 32. Lin C Y . Rouge: A package for automatic evaluation of summaries[C]//Text summarization branches out. 74\u201381. (2004).\n 33. Jonathan Pilault, Raymond Li, Sandeep Subramanian, and Chris Pal. 2020. On Extractive and Abstractive Neural Document \nSummarization with Transformer Language Models. In Proc. of the 2020 Conference on Empirical Methods in Natural Language \nProcessing (EMNLP), pages 9308\u20139319, Online. Association for Computational Linguistics. (2020).\n 34. Kitaev N, Kaiser \u0141, Levskaya A. Reformer: The efficient transformer. http://  arxiv. org/ abs/ quant-  ph/ 2001. 04451 , (2020).\n 35. Xiao W , Carenini G. Systematically exploring redundancy reduction in summarizing long documents. http:// arxiv. org/ abs/ quant-  \nph/ 2012.  00052 , (2020).\n 36. Zhang J, Zhao Y , Saleh M, et\u00a0al. Pegasus: Pre-training with extracted gap-sentences for abstractive summarization[C]//International \nConference on Machine Learning. PMLR, 11328\u201311339. (2020).\n 37. Raffel, C. et al. Exploring the limits of transfer learning with a unified text-to-text transformer. J. Mach. Learn. Res. 21(1), 5485\u20135551 \n(2020).\n 38. Mihalcea R, Tarau P . Textrank: Bringing order into text[C]//Proc. of the 2004 conference on empirical methods in natural language \nprocessing. 404\u2013411. (2004).\n 39. Cui P , Hu L. Topic-guided abstractive multi-document summarization. http:// arxiv.  org/ abs/ quant- ph/  2110. 11207 , (2021).\n 40. Al-Sabahi, K., Zuping, Z. & Nadher, M. A hierarchical structured self-attentive model for extractive document summarization \n(HSSAS). IEEE Access 6, 24205\u201324212 (2018).\nAcknowledgements\nThanks for the key research and development projects of Sichuan Science and Technology Department project \n(2021GFW130, 2022YFG0375, 2023YFG0099, 2023YFG0261)\u00a0and Natural Science Foundation of Sichuan Prov-\nince of China (2023NSFSC0482).\nAuthor contributions\nTing Wang: experimental design, PubMed data analysis, results interpretation, manuscript drafting, manuscript \nrevision. Chuan Y ang: PubMed data analysis, manuscript drafting, results interpretation, grammatical error \ncorrection. Jiaying Liang, Dong Xiang, Wenjie Y ang, Hongyang Wang and Jia Li: data acquisition and PubMed \ndata analysis. Maoyang Zou: conception and design of the study, result interpretation, manuscript revision; All \nauthors read and approved the final manuscript.\nCompeting interests  \nThe authors declare no competing interests.\nAdditional information\nCorrespondence and requests for materials should be addressed to M.Z.\nReprints and permissions information is available at www.nature.com/reprints.\nPublisher\u2019s note Springer Nature remains neutral with regard to jurisdictional claims in published maps and \ninstitutional affiliations.\nOpen Access  This article is licensed under a Creative Commons Attribution 4.0 International \nLicense, which permits use, sharing, adaptation, distribution and reproduction in any medium or \nformat, as long as you give appropriate credit to the original author(s) and the source, provide a link to the \nCreative Commons licence, and indicate if changes were made. The images or other third party material in this \narticle are included in the article\u2019s Creative Commons licence, unless indicated otherwise in a credit line to the \nmaterial. If material is not included in the article\u2019s Creative Commons licence and your intended use is not \npermitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from \nthe copyright holder. To view a copy of this licence, visit http:// creat  iveco  mmons. org/ licen  ses/ by/4. 0/.\n\u00a9 The Author(s) 2024",
+  "keywords": [
+    "summarizationcinternational",
+    "summarization",
+    "summarizationj",
+    "summarizing",
+    "summariesctext",
+    "textrank",
+    "summarization4",
+    "summarization5",
+    "summarization89",
+    "summaries"
+  ],
+  "intent_category": "summarization",
+  "named_entities": [
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ting Wang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chuan Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maoyang Zou 2*",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaying Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dong Xiang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wenjie Yang 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongyang Wang 1 &",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jia Li 1",
+      "label": "PERSON"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "meaning2,3",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "summarization5",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1School",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Computer Science,",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu University of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu 610225",
+      "label": "ORG"
+    },
+    {
+      "text": "Sichuan Province",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2College",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Blockchain Industry",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu University of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "Chengdu 610225",
+      "label": "ORG"
+    },
+    {
+      "text": "Sichuan",
+      "label": "GPE"
+    },
+    {
+      "text": "Province",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Recurrent Neural Network",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "13",
+      "label": "DATE"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DailyMail",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NTM",
+      "label": "GPE"
+    },
+    {
+      "text": "GNN",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Background",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Related Work",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Narayan",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Nalapati",
+      "label": "ORG"
+    },
+    {
+      "text": "al.4",
+      "label": "GPE"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "NTM",
+      "label": "ORG"
+    },
+    {
+      "text": "Jia",
+      "label": "PERSON"
+    },
+    {
+      "text": "node",
+      "label": "GPE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NTM",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NTM",
+      "label": "GPE"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "suffix",
+      "label": "GPE"
+    },
+    {
+      "text": "hj\u2212hi",
+      "label": "PERSON"
+    },
+    {
+      "text": "the same year",
+      "label": "DATE"
+    },
+    {
+      "text": "Cross",
+      "label": "ORG"
+    },
+    {
+      "text": "Ruan",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Topic Segment Representation",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sigmoid",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sentence",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RNN",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "thousands",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Query",
+      "label": "ORG"
+    },
+    {
+      "text": "Query",
+      "label": "ORG"
+    },
+    {
+      "text": "Key",
+      "label": "ORG"
+    },
+    {
+      "text": "Key, K",
+      "label": "ORG"
+    },
+    {
+      "text": "Value",
+      "label": "ORG"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "O(L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EOS",
+      "label": "ORG"
+    },
+    {
+      "text": "Token Embeddings",
+      "label": "ORG"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Eqs",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Formula 3",
+      "label": "PERSON"
+    },
+    {
+      "text": "EOS",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4)/braceleftbig",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "a Bi-LSTM",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eqs",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "fifth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "sixth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PE",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "STE",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "HSi",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Formula",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "sentence.(5",
+      "label": "NORP"
+    },
+    {
+      "text": "i\u22121",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "yi\u2217log",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN/Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "310,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cohan",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-W",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-N",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-N",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "Formulas",
+      "label": "PERSON"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "Pytorch",
+      "label": "ORG"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "gram",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RefSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ModelSum",
+      "label": "ORG"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "92,579",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "656 43",
+      "label": "DATE"
+    },
+    {
+      "text": "219,506",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "693 52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "133,215",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3016",
+      "label": "DATE"
+    },
+    {
+      "text": "203",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5825",
+      "label": "DATE"
+    },
+    {
+      "text": "272",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "11,490 13,368",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "119,924",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6633 6658",
+      "label": "DATE"
+    },
+    {
+      "text": "203,037",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6440 6436",
+      "label": "DATE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "768",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "10,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "50,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Sent-PTR",
+      "label": "ORG"
+    },
+    {
+      "text": "Sent-CLF",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-Ext26",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "PageRank",
+      "label": "ORG"
+    },
+    {
+      "text": "Pointer-Generator +  Coverage11: Utilizing",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "LEAD-7",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hyperparameter Hyperparametric",
+      "label": "PERSON"
+    },
+    {
+      "text": "Superparameter",
+      "label": "ORG"
+    },
+    {
+      "text": "Optimizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam\nAdam_epsilon Adam Fuzzy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Beta2",
+      "label": "NORP"
+    },
+    {
+      "text": "600",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stack Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DailyMail",
+      "label": "ORG"
+    },
+    {
+      "text": "ORACLE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "RL",
+      "label": "PERSON"
+    },
+    {
+      "text": "BigBird",
+      "label": "ORG"
+    },
+    {
+      "text": "R2",
+      "label": "PERSON"
+    },
+    {
+      "text": "RL",
+      "label": "PERSON"
+    },
+    {
+      "text": "540\u00a0M",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "only 193",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T5",
+      "label": "ORG"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "5.4%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "5.01%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "5.21%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "Longformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-Ext",
+      "label": "ORG"
+    },
+    {
+      "text": "2.74%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3.15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "2.35%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ArXiv",
+      "label": "FAC"
+    },
+    {
+      "text": "notice-",
+      "label": "GPE"
+    },
+    {
+      "text": "ArXiv",
+      "label": "FAC"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Rouge",
+      "label": "ORG"
+    },
+    {
+      "text": "4.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Table 4",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "37.95 13.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58.15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.16 51.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.42",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BigBird PEGASUA(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "46.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20.65 42.33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8.49",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERTSUMEXT(2019",
+      "label": "PERSON"
+    },
+    {
+      "text": "41.09",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.91 41.16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "43.30 17.92",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Reformer-Ext(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "42.32 15.91 38.26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Longformer-Ext(2020",
+      "label": "ORG"
+    },
+    {
+      "text": "17.37 39.71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "45.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "45.39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 46.49",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "42.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "BERTSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Longformer-base-4096",
+      "label": "ORG"
+    },
+    {
+      "text": "4096",
+      "label": "DATE"
+    },
+    {
+      "text": "Longformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "4.84%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.36%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.57%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "4.38%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3.86%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "4.15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "R-1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "33.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53.88",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Abstractive\n\u00a0Topic-GraphSum(2021",
+      "label": "PERSON"
+    },
+    {
+      "text": "44.03",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25.80",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8.71 30.41\nSent-PTR(2020",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "42.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14.68 38.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "44.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.79 39.09",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ExtSum",
+      "label": "ORG"
+    },
+    {
+      "text": "43.87",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.50 38.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 45.84",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DM\nMetrics",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\nLEAD-3",
+      "label": "PERSON"
+    },
+    {
+      "text": "40.24 17.70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "36.45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "56.22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "39.53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.72",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.39 38.76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "40.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16.46 35.16",
+      "label": "MONEY"
+    },
+    {
+      "text": "20.20 39.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Model 44.37",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Baseline",
+      "label": "GPE"
+    },
+    {
+      "text": "Baseline",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baseline",
+      "label": "PERSON"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Oracle",
+      "label": "NORP"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "R-1 R-2 R-L\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "15.64 36.97",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.95",
+      "label": "DATE"
+    },
+    {
+      "text": "41.54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.06",
+      "label": "MONEY"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN/Daily Mail",
+      "label": "ORG"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "10 October 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "April 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "N. & Govilkar",
+      "label": "ORG"
+    },
+    {
+      "text": "S. Recent",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Recent Technol",
+      "label": "PERSON"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3108\u20133115",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35940/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "098319",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Allahyari M",
+      "label": "PERSON"
+    },
+    {
+      "text": "Assefi M",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1707",
+      "label": "DATE"
+    },
+    {
+      "text": "02268",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. & Gupta",
+      "label": "ORG"
+    },
+    {
+      "text": "Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhai F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhou B. Summarunner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "AAAI",
+      "label": "ORG"
+    },
+    {
+      "text": "31(1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Song K",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang B",
+      "label": "PERSON"
+    },
+    {
+      "text": "Feng Z",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "the AAAI \nConference on Artificial Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Neural Inform",
+      "label": "ORG"
+    },
+    {
+      "text": "27",
+      "label": "DATE"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Cao",
+      "label": "ORG"
+    },
+    {
+      "text": "Z. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Conference Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1609/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11912",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Erkan",
+      "label": "ORG"
+    },
+    {
+      "text": "G. & Radev",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "PERSON"
+    },
+    {
+      "text": "Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "457\u2013479",
+      "label": "DATE"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan X",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Multi-document",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 31st",
+      "label": "DATE"
+    },
+    {
+      "text": "annual",
+      "label": "DATE"
+    },
+    {
+      "text": "299\u2013306",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1807",
+      "label": "DATE"
+    },
+    {
+      "text": "02305",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1704",
+      "label": "DATE"
+    },
+    {
+      "text": "04368",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shazeer N",
+      "label": "ORG"
+    },
+    {
+      "text": "Parmar N",
+      "label": "ORG"
+    },
+    {
+      "text": "Neural Inform",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lapata M. Text",
+      "label": "PERSON"
+    },
+    {
+      "text": "1908",
+      "label": "DATE"
+    },
+    {
+      "text": "08345",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "14",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhang X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhou M. HIBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "1905",
+      "label": "DATE"
+    },
+    {
+      "text": "06566",
+      "label": "DATE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Grootendorst M. BERTopic",
+      "label": "PERSON"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "2203",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Titov, I. & Lapata",
+      "label": "ORG"
+    },
+    {
+      "text": "M. Single",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2019 Conference of the North \nAmerican Chapter of the Association for Computational Linguistics",
+      "label": "EVENT"
+    },
+    {
+      "text": "Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hu L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "06253",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wang W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang B. Graph-based",
+      "label": "PERSON"
+    },
+    {
+      "text": "54th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Narayan S",
+      "label": "ORG"
+    },
+    {
+      "text": "1808",
+      "label": "DATE"
+    },
+    {
+      "text": "08745",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Conference Artif",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell",
+      "label": "GPE"
+    },
+    {
+      "text": "10. 1609/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11007",
+      "label": "DATE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "21",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhang X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "1808",
+      "label": "DATE"
+    },
+    {
+      "text": "07187",
+      "label": "DATE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fang F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wang S. Deep Differential Amplifier for Extractive Summarization",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "59th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "366 376",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "StarSum",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE/ACM Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech Language \nProcess",
+      "label": "PERSON"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "24",
+      "label": "DATE"
+    },
+    {
+      "text": "T. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "9(3",
+      "label": "DATE"
+    },
+    {
+      "text": "879\u2013890",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Xie Q",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huang J",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saha",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "GRETEL",
+      "label": "PERSON"
+    },
+    {
+      "text": "2208",
+      "label": "DATE"
+    },
+    {
+      "text": "09982",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Peters M E",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wenhui W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang B",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Association for Computational Linguistics (",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2306\u20132315",
+      "label": "DATE"
+    },
+    {
+      "text": "Berlin",
+      "label": "GPE"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "James Cross",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liang Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2016 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "1\u201311",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Austin",
+      "label": "GPE"
+    },
+    {
+      "text": "Texas",
+      "label": "GPE"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "14:10140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ruan Q",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rehm G. Histruct+",
+      "label": "PERSON"
+    },
+    {
+      "text": "2203",
+      "label": "DATE"
+    },
+    {
+      "text": "09629",
+      "label": "DATE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jacob Devlin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Deep Bidirectional Transform-",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Language Understanding",
+      "label": "ORG"
+    },
+    {
+      "text": "the 2019 Conference of the North American Chapter of the Association for \nComputational Linguistics: Human Language Technologies",
+      "label": "EVENT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4171\u20134186",
+      "label": "DATE"
+    },
+    {
+      "text": "Minneapolis",
+      "label": "GPE"
+    },
+    {
+      "text": "Minnesota",
+      "label": "GPE"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cohan A",
+      "label": "ORG"
+    },
+    {
+      "text": "F",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kim S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chang W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Goharian N. A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Discourse-Aware Attention Model for Abstractive \nSummarization of Long Documents",
+      "label": "ORG"
+    },
+    {
+      "text": "the 2018 Conference of the North American Chapter of the Association",
+      "label": "EVENT"
+    },
+    {
+      "text": "615\u2013621",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "New Orleans",
+      "label": "GPE"
+    },
+    {
+      "text": "Louisiana",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "DATE"
+    },
+    {
+      "text": "Lin C Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jonathan Pilault",
+      "label": "PERSON"
+    },
+    {
+      "text": "Raymond Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sandeep Subramanian",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chris Pal",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "the 2020 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "9308\u20139319",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Kitaev N",
+      "label": "ORG"
+    },
+    {
+      "text": "Kaiser \u0141",
+      "label": "ORG"
+    },
+    {
+      "text": "Levskaya A. Reformer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "04451",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "35",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiao W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Carenini G. Systematically",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "00052",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "36",
+      "label": "DATE"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "11328\u201311339",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "37",
+      "label": "DATE"
+    },
+    {
+      "text": "Raffel",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Mach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Learn",
+      "label": "PERSON"
+    },
+    {
+      "text": "Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "21(1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5485\u20135551",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "38",
+      "label": "DATE"
+    },
+    {
+      "text": "Tarau P",
+      "label": "ORG"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "404\u2013411",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hu L. Topic-guided",
+      "label": "PERSON"
+    },
+    {
+      "text": "2110",
+      "label": "DATE"
+    },
+    {
+      "text": "11207",
+      "label": "DATE"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Al-Sabahi",
+      "label": "PERSON"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Zuping, Z. & Nadher",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24205\u201324212",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Sichuan Science and Technology Department",
+      "label": "ORG"
+    },
+    {
+      "text": "2021GFW130",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2022YFG0375",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023YFG0099",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023YFG0261",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Natural Science Foundation of Sichuan",
+      "label": "ORG"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2023NSFSC0482",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ting Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Chuan Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaying Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dong Xiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wenjie Y ang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongyang Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jia Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "PubMed",
+      "label": "ORG"
+    },
+    {
+      "text": "Maoyang Zou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Correspondence",
+      "label": "ORG"
+    },
+    {
+      "text": "M.Z.",
+      "label": "GPE"
+    },
+    {
+      "text": "Springer Nature",
+      "label": "PERSON"
+    },
+    {
+      "text": "a Creative Commons Attribution 4.0 International \nLicense",
+      "label": "ORG"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    }
+  ],
+  "summary": "The study addresses limitations in transformer-based extractive summarization models for long documents, proposing a novel approach that incorporates local topic extraction and hierarchical structure analysis to improve summary accuracy. Experimental results show superior performance using ROUGE metrics across three public datasets, highlighting the model's effectiveness in capturing essential information.",
+  "embedding": [
+    0.052492063492536545,
+    0.018300801515579224,
+    0.008763624355196953,
+    0.01726103387773037,
+    -0.06138034909963608,
+    0.01899576373398304,
+    -0.04147139936685562,
+    -0.0031460407190024853,
+    -0.0301266610622406,
+    -0.0544341579079628,
+    0.014447529800236225,
+    0.004482721909880638,
+    0.04746266081929207,
+    0.01520184800028801,
+    -0.02368283085525036,
+    -0.10855355858802795,
+    -0.003420338500291109,
+    -0.017796460539102554,
+    0.012068578973412514,
+    0.02186598628759384,
+    0.030988682061433792,
+    -0.014609737321734428,
+    0.05037146434187889,
+    0.005900196265429258,
+    0.03493094444274902,
+    -0.004380560014396906,
+    0.0041739447042346,
+    0.0010878550820052624,
+    0.04406588897109032,
+    -0.017701076343655586,
+    0.02299116738140583,
+    -0.0017098780954256654,
+    0.014085366390645504,
+    0.0008888848242349923,
+    1.993558726098854e-06,
+    -0.0577886663377285,
+    -0.07211892306804657,
+    -0.004355765879154205,
+    0.04774035885930061,
+    -0.004842107649892569,
+    0.06260796636343002,
+    -0.07475792616605759,
+    0.004193210508674383,
+    0.008527958765625954,
+    0.007894221693277359,
+    0.02202015556395054,
+    -0.03611434996128082,
+    0.09397375583648682,
+    0.0355890728533268,
+    0.04430532827973366,
+    -0.03010856918990612,
+    -0.07284123450517654,
+    0.06557924300432205,
+    0.009859049692749977,
+    -0.019673433154821396,
+    -0.018212376162409782,
+    0.021766383200883865,
+    0.058667972683906555,
+    0.00033954757964238524,
+    0.027124809101223946,
+    -0.01433270052075386,
+    0.022473931312561035,
+    0.005837981589138508,
+    -0.03275531902909279,
+    0.008710614405572414,
+    0.019765540957450867,
+    -0.02525458298623562,
+    -0.01708807609975338,
+    0.016343658789992332,
+    0.052006203681230545,
+    -0.0056543610990047455,
+    0.0005517905228771269,
+    0.07085592299699783,
+    0.024832265451550484,
+    -0.0038664082530885935,
+    0.007714943494647741,
+    -0.09851458668708801,
+    0.07292881608009338,
+    -0.03232600912451744,
+    0.014843123964965343,
+    0.05655278265476227,
+    0.03626037389039993,
+    -0.03712025284767151,
+    0.014740926213562489,
+    -0.04669550433754921,
+    0.05245383456349373,
+    0.004215630702674389,
+    -0.03641495108604431,
+    -0.03629380837082863,
+    -0.017512880265712738,
+    0.0037202537059783936,
+    -0.05032488703727722,
+    0.04381173849105835,
+    0.0225778017193079,
+    0.030619028955698013,
+    -0.023667164146900177,
+    -0.012602575123310089,
+    -0.07141578197479248,
+    0.012172832153737545,
+    -0.028039196506142616,
+    -0.025156866759061813,
+    -0.012030390091240406,
+    0.008496246300637722,
+    0.04622102528810501,
+    0.0068309311755001545,
+    0.013990580104291439,
+    0.01611136645078659,
+    -0.011560268700122833,
+    -0.05976542457938194,
+    -0.02307729795575142,
+    -0.020762033760547638,
+    0.009463452734053135,
+    -0.012178903445601463,
+    0.021903667598962784,
+    -0.05322343856096268,
+    -0.028403300791978836,
+    -0.009355912916362286,
+    0.004420289304107428,
+    0.04312136396765709,
+    -0.026504317298531532,
+    -0.01484068762511015,
+    -0.008523756638169289,
+    -0.008998407982289791,
+    -0.001259339158423245,
+    0.018442045897245407,
+    0.04722778871655464,
+    -0.0004070753639098257,
+    -0.006013037171214819,
+    0.02489602193236351,
+    0.027856837958097458,
+    -0.00241675297729671,
+    0.05673648789525032,
+    0.05218980833888054,
+    0.03336174786090851,
+    0.02038753405213356,
+    0.014391043223440647,
+    -0.013173661194741726,
+    -0.05337967723608017,
+    0.004910948686301708,
+    -0.006011497229337692,
+    -0.02177073061466217,
+    -0.035717595368623734,
+    0.031278546899557114,
+    -0.07800839841365814,
+    -0.00977956410497427,
+    0.003758324310183525,
+    -0.011507567018270493,
+    0.035259418189525604,
+    0.015347355976700783,
+    0.014922557398676872,
+    -0.06820939481258392,
+    -0.007610590197145939,
+    -0.03335755318403244,
+    0.009944961406290531,
+    0.06744398176670074,
+    0.02896108478307724,
+    0.03543603792786598,
+    0.033482372760772705,
+    0.057091113179922104,
+    0.0751921534538269,
+    0.07545564323663712,
+    -0.002884048968553543,
+    -0.0034365039318799973,
+    0.01520075835287571,
+    -0.03280371427536011,
+    -0.009749596938490868,
+    0.012245281599462032,
+    -0.004081906750798225,
+    -0.04369381070137024,
+    -0.05846467241644859,
+    0.0262838713824749,
+    0.06167469918727875,
+    -0.02804574742913246,
+    0.05352502316236496,
+    0.054882388561964035,
+    0.07139410823583603,
+    0.0037642072420567274,
+    -0.009676305577158928,
+    -0.004741342272609472,
+    0.05064473673701286,
+    0.02950383350253105,
+    0.03286192938685417,
+    0.019425487145781517,
+    -0.008944445289671421,
+    -0.04208599403500557,
+    0.05690554529428482,
+    0.06862162053585052,
+    0.03769025579094887,
+    -0.002156942617148161,
+    -0.05592900142073631,
+    -0.00030586562934331596,
+    0.004796668887138367,
+    0.02712373249232769,
+    -0.019307412207126617,
+    0.05096704140305519,
+    0.026725497096776962,
+    -0.024286571890115738,
+    0.010026882402598858,
+    0.016244636848568916,
+    -0.052223771810531616,
+    0.03759061172604561,
+    0.014435243792831898,
+    0.002877839608117938,
+    0.011667643673717976,
+    0.03521498292684555,
+    -0.03359854221343994,
+    0.010426853783428669,
+    -0.01604689098894596,
+    -0.021296435967087746,
+    0.023295201361179352,
+    -0.033219531178474426,
+    -0.02014826610684395,
+    -0.03246622905135155,
+    -0.03252904862165451,
+    -0.02384740114212036,
+    0.014210591092705727,
+    0.004964296240359545,
+    -0.04485069960355759,
+    -0.02026263065636158,
+    -0.04588877037167549,
+    0.0309749785810709,
+    -0.022563232108950615,
+    -0.022198084741830826,
+    0.029248986393213272,
+    -0.013577030040323734,
+    0.005635139066725969,
+    -0.013179796747863293,
+    -0.04801081866025925,
+    0.029422007501125336,
+    0.013863010331988335,
+    -0.016303028911352158,
+    0.00890215765684843,
+    0.050139863044023514,
+    -0.02172320894896984,
+    -0.032489974051713943,
+    -0.015246555209159851,
+    -0.008278929628431797,
+    -0.04641004279255867,
+    0.01419760286808014,
+    -0.06952721625566483,
+    0.025660868734121323,
+    0.020020101219415665,
+    -0.0020641451701521873,
+    -0.025630826130509377,
+    -0.0149634825065732,
+    -0.03935737907886505,
+    -0.025810305029153824,
+    -0.018536822870373726,
+    0.05030789226293564,
+    -0.0036366297863423824,
+    0.008717342279851437,
+    -0.047225214540958405,
+    0.0907093957066536,
+    -0.0009636658942326903,
+    -0.006429880391806364,
+    0.03138439357280731,
+    -0.03921577334403992,
+    -0.013562473468482494,
+    -0.03873539716005325,
+    -0.019158726558089256,
+    0.013052493333816528,
+    -0.019769858568906784,
+    -0.01738595962524414,
+    0.08919285237789154,
+    0.011499246582388878,
+    -0.026242731139063835,
+    -0.03883463144302368,
+    -0.10677264630794525,
+    0.023819919675588608,
+    -0.020677316933870316,
+    0.03669282793998718,
+    0.054200153797864914,
+    0.01428451482206583,
+    -0.023726936429739,
+    -0.003230281174182892,
+    -0.03072397969663143,
+    -0.028956469148397446,
+    0.009190634824335575,
+    -0.0031390683725476265,
+    0.05349859222769737,
+    -0.027574297040700912,
+    0.015991436317563057,
+    -0.060959771275520325,
+    -0.017185339704155922,
+    -0.015139279887080193,
+    0.05604046210646629,
+    0.00779971806332469,
+    -0.05193216726183891,
+    0.0030889275949448347,
+    0.026157433167099953,
+    0.012637087143957615,
+    -0.0479230172932148,
+    -0.008186881430447102,
+    0.015855498611927032,
+    -0.040605805814266205,
+    0.00036468220059759915,
+    0.10579967498779297,
+    0.033872559666633606,
+    0.058492351323366165,
+    0.005184420850127935,
+    0.027241012081503868,
+    -0.02316465601325035,
+    0.0064427475444972515,
+    -0.02857554890215397,
+    -0.05421265959739685,
+    0.05136067792773247,
+    0.0024625149089843035,
+    -0.04604561626911163,
+    0.06170670688152313,
+    0.08741478621959686,
+    0.038792792707681656,
+    0.03201617673039436,
+    0.023473354056477547,
+    -0.014593292027711868,
+    -0.040779054164886475,
+    0.026682566851377487,
+    -0.03323274478316307,
+    0.004433276131749153,
+    -0.0054749371483922005,
+    0.022184787318110466,
+    -0.030762040987610817,
+    -0.0072257788851857185,
+    0.03212752565741539,
+    -0.019355135038495064,
+    0.015428945422172546,
+    -0.06828898191452026,
+    -0.012130917981266975,
+    -0.08793840557336807,
+    0.06752979755401611,
+    0.03213109076023102,
+    0.002972566755488515,
+    0.013076729141175747,
+    -0.012375651858747005,
+    0.008710434660315514,
+    -0.003019440220668912,
+    0.015819072723388672,
+    -0.022750727832317352,
+    0.06995243579149246,
+    -0.029456619173288345,
+    0.005988414399325848,
+    -0.04812818020582199,
+    0.018765278160572052,
+    0.018433935940265656,
+    -0.030186695978045464,
+    0.012445040978491306,
+    0.02014913596212864,
+    0.03291505202651024,
+    -0.005566236563026905,
+    -0.02965482510626316,
+    0.03424658253788948,
+    0.07535424083471298,
+    0.07352439314126968,
+    -0.0452939011156559,
+    -0.02901468425989151,
+    -0.012051325291395187,
+    0.09892955422401428,
+    0.06394407153129578,
+    -0.03141508996486664,
+    0.03179692104458809,
+    -0.01975145936012268,
+    0.040612079203128815,
+    0.055333543568849564,
+    0.013181815855205059,
+    -0.007389977108687162,
+    0.03379294276237488,
+    -0.01999981515109539,
+    -0.012244214303791523,
+    -0.07032912224531174,
+    0.0008119732956402004,
+    -0.004165406338870525,
+    0.03579489141702652,
+    -0.049518853425979614,
+    0.0021155690774321556,
+    0.08831071853637695,
+    0.03709214925765991,
+    -0.012917245738208294,
+    -0.02264842391014099,
+    -0.003728290554136038,
+    0.01106591708958149,
+    -0.024098066613078117,
+    -0.029428616166114807,
+    -0.044564370065927505,
+    0.018648555502295494,
+    0.020101342350244522,
+    -0.0014377052430063486,
+    0.0101467315107584,
+    -0.023920441046357155,
+    0.02960110828280449,
+    -0.03157908841967583,
+    0.025600969791412354,
+    -0.004505518823862076,
+    -0.04559613764286041,
+    -0.029950469732284546,
+    -0.03144647553563118,
+    0.010433368384838104,
+    -0.013763192109763622,
+    -0.00415934668853879,
+    0.03549393266439438,
+    -0.05744422599673271,
+    -0.010054444894194603,
+    0.0031337784603238106,
+    -0.10090465843677521,
+    0.003848996479064226,
+    -0.007936451584100723,
+    -0.017901362851262093,
+    -0.062180060893297195,
+    0.022768661379814148,
+    0.04392861947417259,
+    -0.01323879323899746,
+    0.06110012158751488,
+    0.010579252615571022,
+    -0.03911947086453438,
+    -0.03536546975374222,
+    0.0016684876754879951,
+    0.03401494026184082,
+    0.003636447712779045,
+    0.032583724707365036,
+    -0.031425055116415024,
+    0.037555992603302,
+    -0.007385642267763615,
+    -0.010467536747455597,
+    0.040733758360147476,
+    0.04063429683446884,
+    0.0017796754837036133,
+    -0.03512825444340706,
+    -0.06477644294500351,
+    0.024204911664128304,
+    -0.0664934292435646,
+    0.05694151669740677,
+    0.012327123433351517,
+    0.0020329332910478115,
+    -0.031786829233169556,
+    -0.04223307967185974,
+    -0.02474861964583397,
+    -0.01977314054965973,
+    -0.04871988296508789,
+    0.016582166776061058,
+    -0.03274877741932869,
+    -0.052633050829172134,
+    -0.08216734230518341,
+    -0.054854866117239,
+    0.004617275670170784,
+    -0.045343171805143356,
+    -0.01411344762891531,
+    0.008465541526675224,
+    -0.005209869705140591,
+    0.0019230606267228723,
+    -0.04111437126994133,
+    0.005772158969193697,
+    -0.014685858972370625,
+    -0.030824994668364525,
+    -0.027202177792787552,
+    -0.0020387768745422363,
+    0.06789447367191315,
+    -0.0005740703199990094,
+    -0.03205975517630577,
+    -0.014895335771143436,
+    -0.055364206433296204,
+    -0.019801001995801926,
+    -0.012876602821052074,
+    0.009642090648412704,
+    0.011057846248149872,
+    0.0026885387487709522,
+    0.007571162190288305,
+    -0.002531598322093487,
+    0.05362807959318161,
+    0.020986463874578476,
+    -0.021428359672427177,
+    0.01013528648763895,
+    0.005123469512909651,
+    0.02066652476787567,
+    -0.017453989014029503,
+    -0.005389974918216467,
+    -0.07240566611289978,
+    0.07047444581985474,
+    -0.03993535786867142,
+    0.05409564450383186,
+    -0.0363149493932724,
+    -0.05166817829012871,
+    0.005795255769044161,
+    0.02577359415590763,
+    0.03485896810889244,
+    -0.014969294890761375,
+    -0.03399340808391571,
+    -0.008903730660676956,
+    -0.027076803147792816,
+    -0.041659388691186905,
+    -0.024959197267889977,
+    -0.02248063124716282,
+    0.036393653601408005,
+    -0.0008097542449831963,
+    0.0439111590385437,
+    0.006652800366282463,
+    0.07404130697250366,
+    0.009558902122080326,
+    -0.013151182793080807,
+    -0.029538961127400398,
+    0.0296007227152586,
+    -0.010108237154781818,
+    -0.009916434995830059,
+    -0.060483600944280624,
+    -0.01580738089978695,
+    -0.03140553832054138,
+    -0.043560534715652466,
+    -0.03358479216694832,
+    -0.009355088695883751,
+    -0.017732512205839157,
+    0.02851836010813713,
+    0.013437295332551003,
+    -0.015658855438232422,
+    -0.019090689718723297,
+    0.04008714482188225,
+    -0.09380471706390381,
+    0.07189785689115524,
+    -0.047582127153873444,
+    -0.02677931636571884,
+    0.05339740961790085,
+    -0.035867996513843536,
+    0.04972481727600098,
+    -0.002244273666292429,
+    -0.003659074194729328,
+    -0.037853091955184937,
+    0.051475897431373596,
+    0.03648125007748604,
+    -0.02939797192811966,
+    -0.040652770549058914,
+    0.004496515262871981,
+    -0.014882332645356655,
+    0.0007878270698711276,
+    0.07047124952077866,
+    0.0164630226790905,
+    -0.03731982037425041,
+    0.03814277797937393,
+    0.0024872897192835808,
+    -0.038089219480752945,
+    -0.005269418936222792,
+    0.005406072363257408,
+    -0.0013972833985462785,
+    -0.003501961240544915,
+    -0.03403797000646591,
+    -0.05455075576901436,
+    0.03490903601050377,
+    0.06488750129938126,
+    0.006639211904257536,
+    0.023177722468972206,
+    -0.023606564849615097,
+    0.01239674724638462,
+    0.03905506059527397,
+    -0.008697226643562317,
+    -0.024969613179564476,
+    -0.07322617620229721,
+    0.016110381111502647,
+    0.01090030837804079,
+    0.01361052505671978,
+    -0.013269814662635326,
+    -6.240175678845439e-33,
+    -0.025094671174883842,
+    -0.04044778272509575,
+    -0.036495234817266464,
+    0.049471545964479446,
+    -0.03183630108833313,
+    0.027014166116714478,
+    -0.0801510438323021,
+    -0.03283340111374855,
+    0.020974012091755867,
+    -0.00914365891367197,
+    -0.024954013526439667,
+    0.0015096979914233088,
+    0.008709876798093319,
+    0.0318150520324707,
+    0.02246304228901863,
+    0.03493180125951767,
+    0.02379605360329151,
+    0.016876516863703728,
+    -0.034884292632341385,
+    0.029503749683499336,
+    0.04512236639857292,
+    0.020207256078720093,
+    0.03511606901884079,
+    -0.045821890234947205,
+    0.03190199285745621,
+    -0.043670881539583206,
+    -0.00924360565841198,
+    -0.028827739879488945,
+    0.07777741551399231,
+    0.031946223229169846,
+    -0.007867668755352497,
+    -0.015645097941160202,
+    0.05364809185266495,
+    -0.052505236119031906,
+    -0.016923323273658752,
+    0.04711749032139778,
+    -0.09107693284749985,
+    -0.011080944910645485,
+    -0.017243407666683197,
+    -0.05877620354294777,
+    -0.045638229697942734,
+    -0.03657638654112816,
+    0.04511447250843048,
+    -0.0121768144890666,
+    0.006287072319537401,
+    -0.06244222819805145,
+    0.07468320429325104,
+    -0.05449367314577103,
+    -0.03544943779706955,
+    -0.09182407706975937,
+    -0.05957777798175812,
+    0.04865313321352005,
+    -0.015299026854336262,
+    0.016454748809337616,
+    0.023002922534942627,
+    0.030933203175663948,
+    0.01018145214766264,
+    0.03800368681550026,
+    -0.012133859097957611,
+    0.044021107256412506,
+    0.027991602197289467,
+    0.048508815467357635,
+    0.030518336221575737,
+    0.005904152523726225,
+    0.020201649516820908,
+    0.042424578219652176,
+    -0.02447761595249176,
+    0.019439896568655968,
+    -0.020859787240624428,
+    0.007582079153507948,
+    0.01085144467651844,
+    0.0006022248999215662,
+    0.018846875056624413,
+    -0.007141295354813337,
+    0.03436052054166794,
+    0.05121511593461037,
+    -0.04558727517724037,
+    0.09289990365505219,
+    -0.01633591391146183,
+    0.029297921806573868,
+    0.004414753522723913,
+    0.017635250464081764,
+    -0.0016019698232412338,
+    -0.0029038451611995697,
+    -0.016424357891082764,
+    0.006647580303251743,
+    0.018229564651846886,
+    0.0014989686897024512,
+    -0.015605981461703777,
+    0.035020824521780014,
+    -0.03979365900158882,
+    0.0036443991120904684,
+    0.03687972202897072,
+    -0.03168458119034767,
+    0.03240348771214485,
+    0.02208317629992962,
+    -0.012857525609433651,
+    0.05497072637081146,
+    -0.011225034482777119,
+    -0.01081426627933979,
+    -0.05839676409959793,
+    -0.0056110164150595665,
+    0.027218524366617203,
+    -0.007893978618085384,
+    -0.01523340679705143,
+    -0.006931032054126263,
+    0.019081799313426018,
+    -0.010486197657883167,
+    -0.028477594256401062,
+    -0.01379549503326416,
+    0.029685016721487045,
+    -0.03886235132813454,
+    -0.04316989704966545,
+    0.06068143993616104,
+    -0.02398424781858921,
+    0.00035049390862695873,
+    0.004641183651983738,
+    0.0628005862236023,
+    0.03039015829563141,
+    0.022948186844587326,
+    -0.029984846711158752,
+    0.009844138287007809,
+    -0.006271499674767256,
+    0.02138676866889,
+    0.007765885908156633,
+    0.03791769966483116,
+    -0.021450100466609,
+    0.02887345850467682,
+    0.014428217895328999,
+    -0.02847454883158207,
+    -0.004164299927651882,
+    0.004322603344917297,
+    2.567971648659295e-07,
+    0.04825277626514435,
+    0.057847339659929276,
+    0.06381872296333313,
+    -0.04260769486427307,
+    0.0004852699930779636,
+    0.012925795279443264,
+    -0.021296577528119087,
+    0.028411084786057472,
+    0.014317951165139675,
+    0.0024037149269133806,
+    0.024756472557783127,
+    -0.004220467992126942,
+    0.03524986654520035,
+    0.028378715738654137,
+    -0.09586881101131439,
+    -0.007347353268414736,
+    -0.07395203411579132,
+    -0.08414414525032043,
+    -0.03023494780063629,
+    0.02315010130405426,
+    0.034997981041669846,
+    0.07156773656606674,
+    -0.02841895818710327,
+    0.018421562388539314,
+    -0.037887539714574814,
+    -0.027646031230688095,
+    0.023500949144363403,
+    -0.013231992721557617,
+    -0.06122272461652756,
+    0.05860379710793495,
+    0.03216489776968956,
+    -0.002499346388503909,
+    -0.013362472876906395,
+    -0.03520936146378517,
+    0.0013028905959799886,
+    0.03485606238245964,
+    0.06528130918741226,
+    0.06749388575553894,
+    -0.0053368560038506985,
+    0.03958137333393097,
+    0.014347268268465996,
+    -0.03152373433113098,
+    0.022071141749620438,
+    -0.009777933359146118,
+    0.043494950979948044,
+    -0.04885029420256615,
+    -0.0119217773899436,
+    -0.03995348513126373,
+    -0.03852279856801033,
+    0.0428006574511528,
+    -0.04154753312468529,
+    0.015357970260083675,
+    -0.03821671009063721,
+    0.05599112808704376,
+    -0.011608844622969627,
+    -0.003378984984010458,
+    -0.00847709272056818,
+    -0.07321486622095108,
+    -0.01357797347009182,
+    0.03734064847230911,
+    0.0002484420547261834,
+    -0.02534325420856476,
+    -0.003171884221956134,
+    0.004728800151497126,
+    -0.007104299496859312,
+    -0.035215459764003754,
+    -0.009669583290815353,
+    2.8111855564418848e-34,
+    0.06439909338951111,
+    -0.031205082312226295,
+    -0.09196481108665466,
+    0.005055907182395458,
+    0.03208468481898308,
+    -0.042445361614227295,
+    -0.022412247955799103,
+    0.0028990067075937986,
+    -0.022730186581611633,
+    -0.10527560114860535,
+    0.019207803532481194
+  ]
+}

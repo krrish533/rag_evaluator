@@ -1,0 +1,2386 @@
+{
+  "filename": "CHATBOT-INTENT.txt",
+  "keywords": [
+    "chatbots",
+    "chatbot",
+    "economic",
+    "productivity",
+    "classification",
+    "categorization",
+    "information",
+    "intent",
+    "keywords",
+    "ai"
+  ],
+  "predicted_intent": {
+    "intent": "summarization",
+    "confidence_score": 0.3328
+  },
+  "named_entities": [
+    {
+      "text": "317",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Journal of Applied Economic  Sciences  \n",
+      "label": "ORG"
+    },
+    {
+      "text": "Optimized Data Preparation",
+      "label": "ORG"
+    },
+    {
+      "text": "Faculty of Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "University of Warsaw",
+      "label": "ORG"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "o.o.",
+      "label": "GPE"
+    },
+    {
+      "text": "Szczecin",
+      "label": "GPE"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "Article\u2019s h istory:  \nReceived  ",
+      "label": "LAW"
+    },
+    {
+      "text": "19th of July, 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "9th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "27th of August , 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "1st",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "September , 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "the Volume XIX",
+      "label": "LOC"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "202 4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CC",
+      "label": "ORG"
+    },
+    {
+      "text": "4.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "3(85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "317",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "325",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Sca le AI",
+      "label": "ORG"
+    },
+    {
+      "text": "C45",
+      "label": "ORG"
+    },
+    {
+      "text": "C88",
+      "label": "ORG"
+    },
+    {
+      "text": "Cohn et al.",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Lewis & Gale",
+      "label": "ORG"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Druck",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "Dligach & Palmer",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Grouin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Wissler",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Pawlik",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Chandrakala",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "318",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "hundreds",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "Section 1",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 2",
+      "label": "LAW"
+    },
+    {
+      "text": "section 3",
+      "label": "LAW"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "Hakkani",
+      "label": "NORP"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "Setiaji  & Wibowo",
+      "label": "ORG"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "several hundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shafi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Vasquez -Correa",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Ouyang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Finch",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "this evening",
+      "label": "TIME"
+    },
+    {
+      "text": "Paris",
+      "label": "GPE"
+    },
+    {
+      "text": "Xiao et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Chandrakala",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Suryanto",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "thousands",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Druck",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Dligach & Palmer \n(",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "319",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "689",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "832",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "December 2020 to January 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 1",
+      "label": "LAW"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Initial EDA",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "at least two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "at least two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Initial EDA",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "TF",
+      "label": "GPE"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Steegh",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Reimers & Gurevych",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Huggingface",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Uniform Manifold \nApproximation",
+      "label": "PERSON"
+    },
+    {
+      "text": "UMAP",
+      "label": "ORG"
+    },
+    {
+      "text": "Hierarchical Density -Based Spatial \nClustering of Applications",
+      "label": "ORG"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "up to 15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "approximately 10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "about 125",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RAM",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "976",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "more than one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "321",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "155",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Reimers",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "0.897",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.752",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mitchell",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "225",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "June , 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "the month",
+      "label": "DATE"
+    },
+    {
+      "text": "summer",
+      "label": "DATE"
+    },
+    {
+      "text": "December",
+      "label": "DATE"
+    },
+    {
+      "text": "January",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "langua ge detection",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "LSTM_langid",
+      "label": "NORP"
+    },
+    {
+      "text": "Google",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "70%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "0.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "literatu re",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Meer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "322",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "128",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Figur",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Grouin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 70%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "The Active Learning \nPipeline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Credit Authorship Contribution Statement  \n",
+      "label": "ORG"
+    },
+    {
+      "text": "the National Centre for Research and Development (NCBR",
+      "label": "ORG"
+    },
+    {
+      "text": "POIR.01.01.01 -00-0455/19",
+      "label": "PERSON"
+    },
+    {
+      "text": "2.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tidio Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "o.o.",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "C.  B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bhardwaj",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "International \nJournal of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "731",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Atlas",
+      "label": "PERSON"
+    },
+    {
+      "text": "L. & Ladner",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Machine Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "15(2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "201",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "221",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "the Need for Double Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "Pradhan",
+      "label": "GPE"
+    },
+    {
+      "text": "S., & \nTomanek",
+      "label": "ORG"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "the 5th Linguistic Annotation Workshop",
+      "label": "ORG"
+    },
+    {
+      "text": "SIGANN",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "324",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "B.",
+      "label": "NORP"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Empirical Methods",
+      "label": "ORG"
+    },
+    {
+      "text": "'09",
+      "label": "DATE"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "Singapore",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ein-Dor",
+      "label": "ORG"
+    },
+    {
+      "text": "Halfon",
+      "label": "PERSON"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gera",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Choshen",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aharonov",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Katz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "NORP"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2020 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "Natural Lan guage Processing (EMNLP",
+      "label": "ORG"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "7949 -7962",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "-main.638",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. E.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Paek",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "S. Stoyanchev",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Joty",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Schlangen",
+      "label": "PERSON"
+    },
+    {
+      "text": "O. Dusek",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Kennington",
+      "label": "PERSON"
+    },
+    {
+      "text": "24th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "the Special Interest Group on Discourse and Dialogue",
+      "label": "ORG"
+    },
+    {
+      "text": "202",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Grouin",
+      "label": "GPE"
+    },
+    {
+      "text": "Lavergne",
+      "label": "GPE"
+    },
+    {
+      "text": "T., & N\u00e9v\u00e9ol",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Levin L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stede M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "8th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "SIGANN",
+      "label": "GPE"
+    },
+    {
+      "text": "Ireland",
+      "label": "GPE"
+    },
+    {
+      "text": "54\u201358",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Ju",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. -C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zweig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "Semantic Parsing",
+      "label": "ORG"
+    },
+    {
+      "text": "Interspeech",
+      "label": "GPE"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "1854",
+      "label": "DATE"
+    },
+    {
+      "text": "https://doi.org/10.21437/Interspeech.2015 -70",
+      "label": "PERSON"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Huggingface",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "08.2024",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Gale",
+      "label": "PERSON"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Sequential Algorithm",
+      "label": "FAC"
+    },
+    {
+      "text": "Training Text Classifiers",
+      "label": "ORG"
+    },
+    {
+      "text": "Croft",
+      "label": "GPE"
+    },
+    {
+      "text": "B.W.",
+      "label": "GPE"
+    },
+    {
+      "text": "van Rijsbergen",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "International ACM -SIGIR Conference on Research",
+      "label": "ORG"
+    },
+    {
+      "text": "London",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "https://doi.org/10.1007/978 -1-4471",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. van der",
+      "label": "PERSON"
+    },
+    {
+      "text": "Falk",
+      "label": "ORG"
+    },
+    {
+      "text": "Murukannaiah",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cohen",
+      "label": "GPE"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hruschka",
+      "label": "GPE"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Betteridge",
+      "label": "GPE"
+    },
+    {
+      "text": "J., Carlson, A.",
+      "label": "ORG"
+    },
+    {
+      "text": "Dalvi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gardner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kisiel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krishnamurthy",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "NORP"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Mohamed",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nakashole",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "N.",
+      "label": "NORP"
+    },
+    {
+      "text": "Platanios",
+      "label": "NORP"
+    },
+    {
+      "text": "Samadi",
+      "label": "GPE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Gupta",
+      "label": "GPE"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saparov",
+      "label": "GPE"
+    },
+    {
+      "text": "Greaves",
+      "label": "GPE"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "103",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "115",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D. H. M.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "the American Medical Informatics Association",
+      "label": "ORG"
+    },
+    {
+      "text": "21(5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "893",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "002516",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ouyang L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wu J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiang X.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Almeida D.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wainwright C. L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mishkin P.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Slama K.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ray A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hilton J.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kelton F.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Miller L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Welinder P.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leike J., & Lowe R.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Trainin",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pawlik",
+      "label": "GPE"
+    },
+    {
+      "text": "\u0141.",
+      "label": "NORP"
+    },
+    {
+      "text": "P\u0142aza",
+      "label": "GPE"
+    },
+    {
+      "text": "Deniziak",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Speech Communication",
+      "label": "ORG"
+    },
+    {
+      "text": "143",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Siamese BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Setiaji B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wibowo F. W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Chatbot",
+      "label": "PERSON"
+    },
+    {
+      "text": "7th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Modelling and Simulation",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Computer Sciences Technical Report",
+      "label": "ORG"
+    },
+    {
+      "text": "1648",
+      "label": "DATE"
+    },
+    {
+      "text": "Wisconsin",
+      "label": "GPE"
+    },
+    {
+      "text": "Madison",
+      "label": "PERSON"
+    },
+    {
+      "text": "1-44",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Theories to Queries: Active Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "Guyon",
+      "label": "PERSON"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Lemaire",
+      "label": "PERSON"
+    },
+    {
+      "text": "V., & Statnikov",
+      "label": "ORG"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Active Learning and Experimental Design Workshop",
+      "label": "ORG"
+    },
+    {
+      "text": "AISTATS 2010",
+      "label": "DATE"
+    },
+    {
+      "text": "Machine  Learning Research",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "1 -18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "B.",
+      "label": "NORP"
+    },
+    {
+      "text": "Craven",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "the NIPS Workshop on",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cost -Sensitive Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Volume XIX",
+      "label": "PERSON"
+    },
+    {
+      "text": "325",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jawalkar",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.  S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kadam",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "S.  V.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Multiple Products",
+      "label": "ORG"
+    },
+    {
+      "text": ":] Dey",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mahalle",
+      "label": "GPE"
+    },
+    {
+      "text": "Smart Computing and Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "266",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57-80",
+      "label": "DATE"
+    },
+    {
+      "text": "https://doi.org/10.1007/978",
+      "label": "ORG"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Steegh",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "19th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Law",
+      "label": "PERSON"
+    },
+    {
+      "text": "ICAIL",
+      "label": "ORG"
+    },
+    {
+      "text": "'23",
+      "label": "DATE"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "Portugal",
+      "label": "GPE"
+    },
+    {
+      "text": "277",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Suryanto",
+      "label": "GPE"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Wibawa",
+      "label": "GPE"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hariyono",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "International Journal of Robotics",
+      "label": "ORG"
+    },
+    {
+      "text": "Control Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "3(4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "955",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vasquez -Correa",
+      "label": "ORG"
+    },
+    {
+      "text": "J. C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pemberty -Tamayo",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jaramillo",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Universal Intent Recognition System",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wissler",
+      "label": "ORG"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Almashraee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Monett Diaz",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "& Paschke",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Corpus Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "the 5th IEEE Student Conference,",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Debut",
+      "label": "GPE"
+    },
+    {
+      "text": "Chaumond",
+      "label": "GPE"
+    },
+    {
+      "text": "J., Delangue",
+      "label": "ORG"
+    },
+    {
+      "text": "C.",
+      "label": "NORP"
+    },
+    {
+      "text": "Rault",
+      "label": "PERSON"
+    },
+    {
+      "text": "Louf",
+      "label": "GPE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Funtowicz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Davison",
+      "label": "PERSON"
+    },
+    {
+      "text": "J., Shleifer",
+      "label": "ORG"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lhoest",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Empirical Methods in Natural Language Processing: System Demonstrations",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "38\u201345",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "the CHI Conference on Human Factors",
+      "label": "ORG"
+    },
+    {
+      "text": "Computing Systems",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "CHI",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ACM USA",
+      "label": "ORG"
+    },
+    {
+      "text": "1 -14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Strubell",
+      "label": "GPE"
+    },
+    {
+      "text": "E., & Hovy",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "1 -26",
+      "label": "CARDINAL"
+    }
+  ],
+  "summary": "The study introduces a novel approach to improving chatbot intent classification by combining optimized data preparation with Active Learning. Using sentence-transformers for clustering and iterative fine-tuning with labeled data, the method enhances model performance, offering scalable solutions for real-world commercial chatbot applications."
+}

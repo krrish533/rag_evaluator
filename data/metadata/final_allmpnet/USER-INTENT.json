@@ -1,0 +1,2491 @@
+{
+  "filename": "USER-INTENT.txt",
+  "length": 28876,
+  "context": "Predicting User Intents and Musical Attributes\nfrom Music Discovery Conversations\nDaeyong Kwon\nejmj63@kaist.ac.krSeungHeon Doh\nseungheondoh@kaist.ac.kr\nGraduate School of Culture Technology, KAIST, South KoreaJuhan Nam\njuhan.nam@kaist.ac.kr\nAbstract\nIntent classification is a text understanding\ntask that identifies user needs from input text\nqueries. While intent classification has been ex-\ntensively studied in various domains, it has not\nreceived much attention in the music domain.\nIn this paper, we investigate intent classification\nmodels for music discovery conversation , fo-\ncusing on pre-trained language models. Rather\nthan only predicting functional needs: intent\nclassification , we also include a task for classi-\nfying musical needs: musical attribute classifi-\ncation . Additionally, we propose a method of\nconcatenating previous chat history with just\nsingle-turn user queries in the input text, allow-\ning the model to understand the overall con-\nversation context better. Our proposed model\nsignificantly improves the F1 score for both\nuser intent and musical attribute classification,\nand surpasses the zero-shot and few-shot per-\nformance of the pretrained Llama 3 model.\n1 Introduction\nIntent classification is a Natural Language Process-\ning (NLP) task that identifies the purpose of user\ninput in conversational systems [ 18] and virtual\nassistants [ 20]. It determines what the user wants\nto achieve, enabling the system to respond appro-\npriately and enhance user interaction. Textual user\nqueries are classified into predefined intent cate-\ngories, typically through the use of discriminative\nmodels. For example, in the input \"I want jazz\nsongs to listen to with my dad,\" the system should\npredict an initial playlist request and apply rele-\nvant filters. Additionally, the conversational system\nshould identify that the genre and user are related\nmusical attributes (Figure 1).\nThe intent classification task has been actively\nresearched alongside advancements in pre-trained\nlanguage models [ 20]. Early models focused on\ntask-specific approaches using various features, in-\ncluding sparse representations [ 13], word embed-\ndings [ 15,1], and BERT-style models [ 8]. More\nFigure 1: Examples of intent classification for music\nconversation. Using the given user query as input, the\nuser intents andmusical attributes of each conversa-\ntion are predicted.\nrecently, large language models (LLMs) [ 19,7],\nwhich are decoder-only transformer models with\nbillions of parameters, have demonstrated strong\nperformance in intent classification through in-\ncontext few-shot learning [12].\nThanks to these advancements in the NLP do-\nmain, research on intent classification has been\nconducted in various fields such as banking [ 11],\ntravel scheduling [ 17], and movie recommenda-\ntion [ 2] to achieve better user query understanding.\nHowever, intent classification has received very lit-\ntle attention in the music domain. While research\non general domain intent classification [ 4] partially\ncovers aspects of musical intent, it only considers\ntwo intents (i.e., PlayMusic andAddToPlaylist ) and\nis limited to single-turn user queries. Accurately\nidentifying the user\u2019s intent and musical needs in\nmusic discovery dialogues plays a critical role in\nenhancing the usability of the chat interface and\noverall user satisfaction.\nTo address this issue, we propose, for the first\ntime, an intent classification task within the con-\ntext of conversational music retrieval. Our main\ncontributions are as follows: 1) Following prior\nresearch [ 6] that conducted a qualitative analysis\n1arXiv:2411.12254v2  [cs.CL]  20 Nov 2024\nof music conversations, we introduce two music-\nspecific intent classification tasks: predicting 8 in-\nterface control labels and 15 music attribute labels.\n2) We apply and conduct a comparative analysis\nof various intent classification methodologies from\nthe existing NLP domain. Our findings highlight\nthat current open-source LLMs (e.g., LLaMa3)\nexhibit more weaknesses than task-specific fine-\ntuning models in the music conversation domain.\n3) Additionally, we identify the optimal use of\nchat history to improve intent classification per-\nformance.\n2 Intent Classification Frameworks\nIn our study, intent classification refers to the task\nof categorizing user input queries into user intent\nand musical attributes. We used sparse representa-\ntion, word embedding, DistilBERT, and Llama for\nthe intent classification task.\n2.1 Sparse Representation\nWe utilize two types of sparse representations:\nBag-of-Words (BoW) and Term Frequency-Inverse\nDocument Frequency (TF-IDF). BoW represents a\ndocument by counting word frequencies ignoring\ngrammar and word order, and creates a vector based\non a predefined vocabulary. TF-IDF improves on\nBoW by weighting words based on their frequency\nin the document relative to their frequency across\nall documents, giving higher scores to more unique\nwords.\n2.2 Word Embedding\nFor dense representation, we used the skip-gram\nversion of Word2Vec [ 14], which was trained on\nthe 100B word Google News Corpus and consists\nof 300-dimensional word vectors for 3M vocabu-\nlaries. The input sentence is split into words using\na whitespace tokenizer, and each word is trans-\nformed into a sequence of features through word\nembedding lookup. The sequence of features is ag-\ngregated into a global sentence feature via average\npooling.\n2.3 DistilBERT\nCompared to sparse representation and word em-\nbedding, BERT [ 5] has the advantage of capturing\nthe context of words through bidirectional training,\nallowing it to understand meaning based on sur-\nrounding text. We use DistilBERT [ 16], a smaller\nversion of BERT, to reduce the size of the model\nand increase its speed. It reduces the size of themodel by 40% while retaining 97% of its language\nunderstanding capabilities and being 60% faster.\nThe texts are lowercased and tokenized using the\nWordPiece tokenizer [ 21]. After tokenization, the\ntoken embeddings are processed through 6 trans-\nformer blocks to extract 768-dimensional features.\nFor pooling, we use the output from the first posi-\ntion (SOS token) of the feature embeddings as the\nglobal sentence feature. It is then utilized for intent\nclassification through MLP layers. We compare\na probing model that freezes the DistilBERT and\nonly trains the classifier with a fine-tuning model\nthat adjusts all parameters of the DistilBERT.\n2.4 Llama\nLlama [ 19] is a generative model that excels at text\ngeneration and performs effectively on large-scale\nlanguage tasks. We measured the zero-shot and\nfew-shot performance of Llama-3.2 (1B-Instruct\nand 3B-Instruct) and Llama-3.1 (8B-Instruct) [ 7],\nwhich are small-scale models suitable for real-\ntime conversational scenarios, to compare how pre-\ntrained general-purpose LLMs perform in the mu-\nsic domain. The input to the Llama model consists\nof a list of selectable labels and an instruction for\nclassification, and the output is a list of classified\nlabels. In zero-shot tasks, the model makes pre-\ndictions without any task-specific examples, while\nfew-shot tasks provide 5 examples to guide the\nmodel\u2019s predictions. Below is an example of refer-\nences for user intents and musical attributes.\nInput: \"I want to create a playlist of classical music\"\nOutput: [\u2019initial_query\u2019, \u2019add_filter\u2019]\nInput: \"Hello, can I get some pop music for\na hangout later today?\"\nOutput: [\u2019genre\u2019, \u2019theme\u2019]\n2.5 Dataset\nWe utilized user intent and musical attribute anno-\ntations proposed by Doh et al. [ 6] For the music\ndiscovery conversation taxonomy, Doh et al. [ 6]\nemployed a grounded theory approach [ 9] to ana-\nlyze the existing human-to-human music dialogue\ndataset (CPCD [ 3]). As a result, they proposed\na taxonomy of 8 user intents and 15 musical at-\ntributes, with three annotators annotating 888 dia-\nlogues in a multi-label format for user intents and\nmusical attributes.\n2\nTagLlama Sparse Representation Word Embedding DistilBERT\n1B_0 1B_5 3B_0 3B_5 8B_0 8B_5 TF-IDF BoW Word2Vec Probing Finetune\nInitial Query 0.00 0.04 0.41 0.79 0.46 0.41 0.87 0.91 0.93 0.90 0.97\nGreeting 0.10 0.17 0.32 0.73 0.72 0.62 0.89 0.96 0.80 0.95 0.99\nAdd Filter 0.85 0.72 0.49 0.80 0.75 0.91 0.93 0.92 0.90 0.94 0.96\nRemove Filter 0.14 0.00 0.30 0.13 0.39 0.61 0.00 0.50 0.36 0.38 0.76\nContinue 0.12 0.00 0.18 0.15 0.21 0.24 0.61 0.46 0.32 0.62 0.80\nAccept Response 0.62 0.02 0.60 0.58 0.72 0.82 0.87 0.88 0.81 0.88 0.95\nReject Response 0.08 0.00 0.00 0.17 0.36 0.62 0.17 0.36 0.50 0.65 0.82\nMacro Avg 0.27 0.14 0.33 0.48 0.52 0.61 0.62 0.71 0.66 0.76 0.89\nTable 1: F1 scores for user intents: \"0\" indicates zero-shot, and \"5\" refers to few-shot (5-shot) performance.\nTagLlama Sparse Representation Word Embedding DistilBERT\n1B_0 1B_5 3B_0 3B_5 8B_0 8B_5 TF-IDF BoW Word2Vec Probing Finetune\nTrack 0.13 0.16 0.07 0.16 0.19 0.19 0.10 0.35 0.31 0.39 0.73\nArtist 0.52 0.52 0.62 0.57 0.69 0.76 0.82 0.82 0.72 0.89 0.94\nYear 0.09 0.10 0.11 0.19 0.17 0.32 0.44 0.67 0.31 0.75 0.89\nPopularity 0.01 0.02 0.02 0.03 0.02 0.04 0.00 0.29 0.05 0.10 0.62\nCulture 0.02 0.02 0.02 0.03 0.02 0.05 0.00 0.00 0.00 0.36 0.40\nSimilar Track 0.02 0.01 0.01 0.01 0.08 0.04 0.00 0.33 0.04 0.33 0.80\nSimilar Artist 0.05 0.05 0.05 0.10 0.20 0.15 0.14 0.34 0.25 0.52 0.74\nUser 0.00 0.03 0.04 0.03 0.01 0.04 0.00 0.47 0.20 0.25 0.71\nTheme 0.15 0.18 0.19 0.30 0.23 0.35 0.70 0.76 0.63 0.74 0.89\nMood 0.06 0.11 0.09 0.17 0.11 0.20 0.24 0.57 0.55 0.47 0.75\nGenre 0.21 0.26 0.24 0.36 0.32 0.47 0.71 0.83 0.67 0.80 0.93\nInstrument 0.00 0.01 0.01 0.02 0.04 0.04 0.00 0.44 0.00 0.22 0.71\nV ocal 0.00 0.02 0.02 0.04 0.02 0.05 0.00 0.40 0.13 0.25 0.35\nTempo 0.02 0.02 0.02 0.05 0.03 0.06 0.00 0.17 0.10 0.20 0.63\nMacro Avg 0.09 0.11 0.11 0.15 0.15 0.20 0.23 0.46 0.28 0.45 0.72\nTable 2: F1 scores for musical attributes: \"0\" indicates zero-shot, and \"5\" refers to few-shot (5-shot) performance.\n2.6 Evaluation Metric\nFor our multi-label classification task, we used the\nmacro-averaged F1 score to give equal weight to\neach label, ensuring a comprehensive evaluation\nacross all labels. The best performance threshold\nfor each class label was determined on the valida-\ntion set (ranging from 0 to 1 with 0.01 increments)\nand applied to the test set. Values above the thresh-\nold were labeled as 1, and those below as 0.\n2.7 Training Setup Details\nThe dataset was split into train, validation, and test\nsets in an 8:1:1 ratio, preserving the proportion of\neach label. We used the following hyperparameter\nsettings: a batch size of 64, 15 epochs, the Adam\noptimizer [ 10], and a step learning rate scheduler\nthat decreases the learning rate of the optimizer\nby a factor of 0.9 at the end of each epoch. The\nlearning rate was set to 2e-4. For the concatenated\nsetting, model was fine-tuned using concatenated\nsentence inputs.2.8 Concatenate Previous Dialogue History\nThe music discovery conversation dataset is char-\nacterized as a multi-turn chat dataset between the\nrecommender and the music seeker. Through turn-\ntaking, we can perform intent classification that\nconsiders the previous context. In the movie in-\ntent classification, Cai et al. [ 2] reported that the\nclassification performance of user intent and sat-\nisfaction significantly improves by incorporating\ncontext features into the classification model. Fol-\nlowing previous study [ 2], we also compare the\nperformance of intent classification using concate-\nnated text sentences from previous dialogue turns\nwith the case where only the current query is used.\n3 Result\n3.1 Performance Comparison\nTables 1 and 2 show the performances of intent clas-\nsification frameworks. The fine-tuned DistilBERT\noutperforms all the other models for both user in-\ntent and musical attribute classification. While\nother models had difficulty understanding musi-\n3\ncal attributes compared to user intents, fine-tuned\nmodel handled both tasks effectively. The signifi-\ncant improvement in musical attribute classification\n(0.46\u21920.72) shows that our model has effectively\nacquired musical knowledge.\nSparse representation, word embedding, and\nprobing models struggled with classifying less fre-\nquent labels, such as remove_filter ,continue , and\nreject_response for user intent, and popularity ,cul-\nture,similar_track ,instrument ,vocal , and tempo\nfor musical attributes. The fine-tuned model sig-\nnificantly improved performance on these labels,\ndemonstrating that it can achieve high performance\neven with fine-tuning on a small amount of data.\nAlso, musical attributes exhibited different re-\nsults depending on the complexity of the words\nused. For instance, popularity saw a signifi-\ncant performance improvement after fine-tuning\n(0.10\u2212 \u21920.62) due to the high repitition of words\nlike\u2019popular\u2019 and\u2019hits\u2019 . In contrast, culture faced\nmore difficulty (0.36 \u2212 \u21920.40) as it includes a wide\nrange of words related to different cultures and\ncountries.\nThe general-purpose Llama models demon-\nstrated lower performance compared to our model\nfine-tuned on music-domain-specific data, indicat-\ning that they lacks sufficient knowledge of the mu-\nsic domain. The Llama models demonstrated im-\nproved performance as its size increased; however,\nusing very large models such as 70B and 405B\npresents challenges in conversational situations that\nrequire real-time feedback due to the computational\nconstraints. While Llama-3.1-8B-Instruct model\nachieved a few-shot performance of 0.61 for user\nintents, it only showed a few-shot performance of\n0.20 for musical attributes, highlighting its diffi-\nculty in understanding musical attributes.\n3.2 Concatenating Previous Dialogue History\nFigure 2 shows the F1 score by varying the con-\nsideration of the previous dialogue turns, using\nfine-tuned model. For user intents, the best per-\nformance was achieved when considering only the\nprevious query, which is an X-value of 0.5. In-\ncluding more context beyond this point decreases\nperformance. User intents exhibit local character-\nistics, where considering only the previous query\nis often sufficient. For instance, initial_query and\ngreeting can be determined based on the current\nquery alone, while add_filter andcontinue can be\ninferred by reviewing only the previous query.\nFor musical attributes, incorporating context led\nFigure 2: F1 score comparison by varying context\nlength. The X-axis value 0 represents considering only\nthe current query, 0.5 represents considering the previ-\nous query, and 1 to 4 represents the number of consid-\nered previous turns.\nto worse performance compared to using only the\ncurrent query (X-value of 0). This is because mu-\nsical attributes were primarily determined by the\npresence of musical terms in the current query, re-\ngardless of the prior context.\n4 Conclusion\nWe proposed a user intent and musical attribute\nclassification model for music discovery conversa-\ntions. By fine-tuning a pre-trained language model,\nour model shows significantly enhanced perfor-\nmance in both user intent and musical attribute clas-\nsification, especially for labels with a small amount\nof data. This suggests potential applications in\nfields where well-annotated large-scale data are not\navailable, such as intent classification tasks in mu-\nsic discovery conversations and the development\nof conversational music recommendation systems.\nWe also introduced a method of concatenating\nthe previous context, which helps the model better\nunderstand user intents throughout the conversa-\ntion. The context length is crucial for effectively\ncapturing relevant information, and we found that\nfor user intent, considering only the most recent\nquery provides the best results.\nAdditionally, we evaluated the zero-shot and\nfew-shot classification performance of the Llama 3\nmodels, which performed lower than the domain-\nspecific fine-tuned DistilBERT model. This sug-\ngests that general-purpose LLMs like Llama lack\nsufficient music domain knowledge, making them\nless effective for intent classification. The dataset1,\ncode2, and models are publicly available.\n1Dataset Huggingface\n2Github Repository\n4\n5 Limitations\n5.1 Failure Cases\nIn this section, we will discuss some representative\nfailure cases, which can serve as reference points\nfor future fine-tuning or further developments.\nThe model usually predicted the correct label\nbut often made unnecessary additional predictions.\nThe concatenated previous query is in blue. The\ncorrectly predicted intent is in green, and the\nincorrectly predicted intent is in red.\nQuery :\u201c[MUSIC]That\u2019s a classic. I have added a\nfew more rock anthems for your choice. Any other\nsong, or artist? Great hits too! Could we move\naway from the rock genre? Give me some hits that\nare classics that everyone knows and would love to\nhear!\u201d\nGround Truth : [\u2019add_filter\u2019, \u2019remove_filter\u2019,\n\u2019accept_response\u2019]\nPrediction : [\u2019add_filter\u2019, \u2019remove_filter\u2019, \u2019con-\ntinue\u2019, \u2019accept_response\u2019, \u2019reject_response\u2019]\nSometimes, the model incorrectly predicted\na label or failed to include a necessary label.\nQuery :\u201c[MUSIC]These are the results that\npopulated. Nothing directly by Handel. Are these\nokay? please can you add a little bit of Katherin\njenkins\u201d\nGround Truth : [\u2019add_filter\u2019, \u2018accept_response\u2019]\nPrediction : [\u2019add_filter\u2019, \u2018continue\u2019]\nFor musical attributes, the model also pre-\ndicted many unnecessary labels, similar to what\nwas observed with user intent.\nQuery :\u201cIs it the Corssroads Album?\u201d\nGround Truth : [\u2019track\u2019]\nPrediction : [\u2019track\u2019, \u2018artist\u2019, \u2018year\u2019, \u2018genre\u2019,\n\u2018instrument\u2019]\nIt also occasionally failed to include the necessary\nmusical attributes, as shown below.\nQuery :\u201cI would like to create a 90s Hip Hop/Rap\nplaylist to listen while I clean my house. \u201d\nGround Truth : [\u2019year\u2019, \u2019genre\u2019, \u2019theme\u2019]\nPrediction : [\u2019genre\u2019, \u2019theme\u2019, \u2018mood\u2019, \u2018instru-\nment\u2019]\n5.2 Wrong Inference\nFor user intent, 3 wrong inferences occurred across\nthe entire test dataset, and in each case, the pre-\ndicted intents were present in the query but had not\nbeen provided. Below is one example.Query :\u201ccan you add some 80 \u2019reggae\u201d\nPrediction : [\u2019reggae\u2019, ...]\nFor musical attributes, 6 wrong inferences oc-\ncurred, where the model predicted gender , which\nwas not a given. In some cases, there was no con-\ntent related to gender in the provided query.\nQuery :\u201cBest Friend is my favorite\u201d\nPrediction : [\u2019gender\u2019, ...]\n5.3 Model\nThe DistilBERT is not a state-of-the-art model. Bet-\nter performance could be achieved by fine-tuning\nlarger models (e.g., RoBERTa, Llama) on more\nadvanced computing resources.\n5.4 Dataset\nThe CPCD dataset has an imbalanced distribu-\ntion of user intents and musical attributes. For\ninstance, user intents such as remove_filter andre-\nject_response , as well as musical attributes like cul-\nture,popularity , and vocal , are underrepresented in\nthe dataset, making fine-tuning difficult. Therefore,\na larger dataset with more balanced labels is needed.\nIt is expected that training on an additional dataset,\nsuch as the LP-MusicDialog [ 6] dataset, could mit-\nigate this issue to some extent. Moreover, using\ngenerative LLMs for data augmentation could be a\ngood approach to address the data imbalance.\n5.5 Concatenating Previous Dialogue History\nUser intents and musical attributes in our dataset\nexhibit local characteristics, meaning they require\nvery little previous dialogue history for classifica-\ntion. If a dataset with more organically connected\nqueries within the dialogue were used, future re-\nsearch could explore utilizing dialogue history to\nimprove classification performance.\n6 Ethical Considerations\nWhile user intent and musical attribute classifica-\ntion tasks themselves may not directly introduce\nethical risks, the training data used can contain\nbiases that affect outcomes. If the training data\nreflects demographic biases, the model may rein-\nforce these biases, leading to unfair or harmful\nrecommendations. Therefore, it is crucial to im-\nplement ethical oversight throughout the model\ndevelopment process, including regular audits of\nthe training data for biases and considerations of\nthe implications of the model\u2019s outputs on different\nuser groups. Continuous monitoring and adjust-\nments are necessary to mitigate potential risks.\n5\nReferences\n[1]Anmol Bhasin, Bharatram Natarajan, Gaurav Mathur,\nand Himanshu Mangla. 2020. Parallel intent and slot\nprediction using mlb fusion. In 2020 IEEE 14th\nInternational Conference on Semantic Computing\n(ICSC) .\n[2]Wanling Cai and Li Chen. 2020. Predicting user\nintents and satisfaction with dialogue-based conver-\nsational recommendations. In Proceedings of the\n28th ACM Conference on User Modeling, Adaptation\nand Personalization , pages 33\u201342.\n[3]Arun Tejasvi Chaganty, Megan Leszczynski, Shu\nZhang, Ravi Ganti, Krisztian Balog, and Filip Radlin-\nski. 2023. Beyond single items: Exploring user pref-\nerences in item sets with the conversational playlist\ncuration dataset. In Proceedings of the 46th Inter-\nnational ACM SIGIR Conference on Research and\nDevelopment in Information Retrieval , pages 2754\u2013\n2764.\n[4]Alice Coucke, Alaa Saade, Adrien Ball, Th\u00e9odore\nBluche, Alexandre Caulier, David Leroy, Cl\u00e9ment\nDoumouro, Thibault Gisselbrecht, Francesco Calta-\ngirone, Thibaut Lavril, et al. 2018. Snips voice plat-\nform: an embedded spoken language understanding\nsystem for private-by-design voice interfaces. arXiv\npreprint arXiv:1805.10190 .\n[5]Jacob Devlin, Ming-Wei Chang, Kenton Lee, and\nKristina Toutanova. 2018. Bert: Pre-training of deep\nbidirectional transformers for language understand-\ning. arXiv preprint arXiv:1810.04805 .\n[6]Seungheon Doh, Keunwoo Choi, Daeyong Kwon,\nTaesu Kim, and Juhan Nam. 2024. Music discov-\nery dialogue generation using human intent analysis\nand large language models. In Proceedings of the In-\nternational Society for Music Information Retrieval\nConference (ISMIR) .\n[7]Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey,\nAbhishek Kadian, Ahmad Al-Dahle, Aiesha Letman,\nAkhil Mathur, Alan Schelten, Amy Yang, Angela\nFan, et al. 2024. The llama 3 herd of models. arXiv\npreprint arXiv:2407.21783 .\n[8]Soyeon Caren Han, Siqu Long, Huichun Li, Henry\nWeld, and Josiah Poon. 2022. Bi-directional joint\nneural networks for intent classification and slot fill-\ning. arXiv preprint arXiv:2202.13079 .\n[9]Shahid N Khan. 2014. Qualitative research method:\nGrounded theory. International journal of business\nand management , 9(11):224\u2013233.\n[10] Diederik P Kingma and Jimmy Ba. 2014. Adam: A\nmethod for stochastic optimization. 3rd International\nConference for Learning Representations (ICLR) .\n[11] Stefan Larson, Anish Mahendran, Joseph J Peper,\nChristopher Clarke, Andrew Lee, Parker Hill,\nJonathan K Kummerfeld, Kevin Leach, Michael ALaurenzano, Lingjia Tang, et al. 2019. An evalua-\ntion dataset for intent classification and out-of-scope\nprediction. arXiv preprint arXiv:1909.02027 .\n[12] Lefteris Loukas, Ilias Stogiannidis, Odysseas Dia-\nmantopoulos, Prodromos Malakasiotis, and Stavros\nVassos. 2023. Making llms worth every penny:\nResource-limited text classification in banking. In\nProceedings of the Fourth ACM International Con-\nference on AI in Finance , pages 392\u2013400.\n[13] Fran\u00e7ois Mairesse, Milica Gasic, Filip Jurcicek, Si-\nmon Keizer, Blaise Thomson, Kai Yu, and Steve\nYoung. 2009. Spoken language understanding from\nunaligned data using discriminative classification\nmodels. In 2009 IEEE International Conference\non Acoustics, Speech and Signal Processing , pages\n4749\u20134752. IEEE.\n[14] Tomas Mikolov, Kai Chen, Greg Corrado, and\nJeffrey Dean. 2013. Efficient estimation of word\nrepresentations in vector space. arXiv preprint\narXiv:1301.3781 .\n[15] Lingfeng Pan, Yi Zhang, Feiliang Ren, Yining Hou,\nYan Li, Xiaobo Liang, and Yongkang Liu. 2018. A\nmultiple utterances based neural network model for\njoint intent detection and slot filling. In CCKS Tasks .\n[16] Victor Sanh, Lysandre Debut, Julien Chaumond,\nand Thomas Wolf. 2019. Distilbert, a distilled ver-\nsion of bert: smaller, faster, cheaper and lighter. 5th\nWorkshop on Energy Efficient Machine Learning and\nCognitive Computing - NeurIPS .\n[17] Jetze Schuurmans and Flavius Frasincar. 2019. In-\ntent classification for dialogue utterances. IEEE In-\ntelligent Systems , 35(1):82\u201388.\n[18] Andreas Stolcke, Klaus Ries, Noah Coccaro, Eliza-\nbeth Shriberg, Rebecca Bates, Daniel Jurafsky, Paul\nTaylor, Rachel Martin, Carol Van Ess-Dykema, and\nMarie Meteer. 2000. Dialogue act modeling for au-\ntomatic tagging and recognition of conversational\nspeech. Computational linguistics .\n[19] Hugo Touvron, Thibaut Lavril, Gautier Izacard,\nXavier Martinet, Marie-Anne Lachaux, Timoth\u00e9e\nLacroix, Baptiste Rozi\u00e8re, Naman Goyal, Eric Ham-\nbro, Faisal Azhar, et al. 2023. Llama: Open and\nefficient foundation language models. arXiv preprint\narXiv:2302.13971 .\n[20] Henry Weld, Xiaoqi Huang, Siqu Long, Josiah\nPoon, and Soyeon Caren Han. 2022. A survey of\njoint intent detection and slot filling models in natural\nlanguage understanding. ACM Computing Surveys ,\n55(8):1\u201338.\n[21] Thomas Wolf, Lysandre Debut, Victor Sanh, Julien\nChaumond, Clement Delangue, Anthony Moi, Pierric\nCistac, Tim Rault, R\u00e9mi Louf, Morgan Funtowicz,\net al. 2020. Transformers: State-of-the-art natural\nlanguage processing. In Proceedings of the 2020\nconference on empirical methods in natural language\nprocessing: system demonstrations , pages 38\u201345.\n6\nA Appendix\nA.1 Data Vocabulary Size\nAs seen in Tables 1 and 2, the Bag of Words model\noutperformed both TF-IDF and word embeddings.\nNotably, in the context of musical attribute clas-\nsification, it even surpassed the performance of\nDistilBERT\u2019s probing model. This can likely be\nattributed to a significant overlap in vocabulary be-\ntween the training and test datasets.\nTrain Test Overlap (Ratio)\n4,835 1,184 908 (76.7%)\nTable 3: V ocabulary size of Train and Test datasets, with\nthe ratio of Test vocabulary overlapping with Train.\nA.2 Uset Intent, Musical Attribute Frequency\nOverall, the models struggled to classify less fre-\nquent labels. To facilitate understanding of the\nresults for each label, we present the average num-\nber of each user intent and musical attribute per\ndialogue.\nFigure 3: Comparison of Average Counts per Dialog for\nUser Intents and Musical Attributes\nA.3 Prompts\nA.3.1 Zero-shot Prompt for User Intent\n\"From the following list of user intents: [ini-\ntial_query, greeting, add_filter, remove_filter,continue, accept_response, reject_response].\nReturn only the intents that directly and accurately\ndescribe the input text. Ignore any loosely related\nor vaguely connected intents. Provide the result\nstrictly in a list format. Do not generate any\nadditional text or explanation.\nInput: \"input text\" Output: [\"\nA.3.2 Few-shot Prompt for User Intent\n\"From the following list of user intents: [ini-\ntial_query, greeting, add_filter, remove_filter,\ncontinue, accept_response, reject_response].\nReturn only the intents that directly and accurately\ndescribe the input text. Ignore any loosely related\nor vaguely connected intents. Provide the result\nstrictly in a list format. Do not generate any\nadditional text or explanation.\nExample:\nInput: \"I want to listen recent famous songs.\"\nOutput: [add_filter]\nInput: \"Hello, can you suggest calm music\nto listen while sleeping?\"\nOutput: [initial_query, greeting, add_filter]\nInput: \"Wow, I love the vide of these songs!\"\nOutput: [accept_response]\nInput: \"I think these songs are too fast and\nloud for me.\"\nOutput: [remove_filter, reject_response]\nInput: \"Can you suggest more like these?\"\nOutput: [continue]\nInput: \"input text\" Output: [\"\nA.3.3 Zero-shot Prompt for Musical Attribute\n\"From the following list of musical attributes:\n[track, artist, year, popularity, culture, simi-\nlar_track, similar_artist, user, theme, mood,\ngenre, instrument, vocal, tempo]. Return only the\nattributes that directly and accurately describe the\ninput text. Ignore any loosely related or vaguely\nconnected attributes. Provide the result strictly in\na list format. Do not generate any additional text\nor explanation.\nInput: \"input text\" Output: [\"\n7\nA.3.4 Few-shot Prompt for Musical Attribute\n\"From the following list of musical attributes:\n[track, artist, year, popularity, culture, simi-\nlar_track, similar_artist, user, theme, mood,\ngenre, instrument, vocal, tempo]. Return only the\nattributes that directly and accurately describe the\ninput text. Ignore any loosely related or vaguely\nconnected attributes. Provide the result strictly in\na list format. Do not generate any additional text\nor explanation.\nExample:\nInput: \"I want to listen recent famous songs.\"\nOutput: [year, popularity]\nInput: \"Show me faster songs than Ed Sheeran -\nShape of You.\"\nOutput: [tempo, artist, track]\nInput: \"Please recommend me some female\nartists like Rihanna.\"\nOutput: [similar_artist, vocal]\nInput: \"I need exciting hiphop playlist to\nlisten while I exercise.\"\nOutput: [mood, genre, theme]\nInput: \"African songs to listen with my friends.\"\nOutput: [culture, user]\nInput: \"input text\" Output: [\"\n8",
+  "keywords": [
+    "musicdialog",
+    "intents",
+    "music",
+    "andmusical",
+    "intent",
+    "musical",
+    "playmusic",
+    "utterances",
+    "musicthats",
+    "classifying"
+  ],
+  "intent_category": "intent_recognition",
+  "named_entities": [
+    {
+      "text": "Musical",
+      "label": "ORG"
+    },
+    {
+      "text": "Music Discovery Conversations",
+      "label": "ORG"
+    },
+    {
+      "text": "Daeyong Kwon",
+      "label": "PERSON"
+    },
+    {
+      "text": "Graduate School of Culture Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "KAIST",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "billions",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PlayMusic",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1arXiv:2411.12254v2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMa3",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Google News Corpus",
+      "label": "ORG"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3M",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "40%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "97%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "60%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "WordPiece",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "768",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "SOS",
+      "label": "ORG"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "2.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "later today",
+      "label": "TIME"
+    },
+    {
+      "text": "2.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "Doh et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Doh et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "888",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TagLlama Sparse Representation Word Embedding",
+      "label": "ORG"
+    },
+    {
+      "text": "1B_0 1B_5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8B_0",
+      "label": "ORG"
+    },
+    {
+      "text": "Finetune\nInitial Query",
+      "label": "ORG"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04 0.41 0.79",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.46",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.41 0.87 0.91 0.93",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.90 0.97",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.10 0.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.95 0.99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.85 0.72 0.49 0.80 0.75 0.91 0.93",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.92 0.90 0.94 0.96\n",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Remove Filter",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Macro Avg 0.27",
+      "label": "ORG"
+    },
+    {
+      "text": "0.76 0.89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TagLlama Sparse Representation Word Embedding",
+      "label": "ORG"
+    },
+    {
+      "text": "1B_0 1B_5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8B_0",
+      "label": "ORG"
+    },
+    {
+      "text": "0.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.31 0.39 0.73",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.19 0.17 0.32 0.44 0.67 0.31 0.75 0.89",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.10 0.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.02 0.02 0.02",
+      "label": "EVENT"
+    },
+    {
+      "text": "0.36 0.40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.33 0.80",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.05 0.05 0.05",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.52 0.74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04 0.03 0.01 0.04 0.00 0.47 0.20 0.25 0.71",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.19",
+      "label": "DATE"
+    },
+    {
+      "text": "0.23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.71 0.83 0.67",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.80 0.93",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.22 0.71",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.04 0.02 0.05",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8:1:1",
+      "label": "GPE"
+    },
+    {
+      "text": "64",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Adam",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Concatenate Previous Dialogue",
+      "label": "ORG"
+    },
+    {
+      "text": "Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3 Result",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "0.36 \u2212 \u21920.40",
+      "label": "MONEY"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "70B",
+      "label": "DATE"
+    },
+    {
+      "text": "405B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huggingface\n2Github Repository",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Katherin",
+      "label": "GPE"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "5.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1]Anmol",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bhasin",
+      "label": "GPE"
+    },
+    {
+      "text": "Bharatram Natarajan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gaurav Mathur",
+      "label": "PERSON"
+    },
+    {
+      "text": "Himanshu Mangla",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "14th",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "International Conference on Semantic Computing",
+      "label": "ORG"
+    },
+    {
+      "text": "ICSC",
+      "label": "ORG"
+    },
+    {
+      "text": "2]Wanling",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "28th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Personalization",
+      "label": "NORP"
+    },
+    {
+      "text": "33\u201342",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Megan Leszczynski",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shu\nZhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ravi Ganti",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krisztian Balog",
+      "label": "ORG"
+    },
+    {
+      "text": "Filip Radlin-",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "46th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ACM SIGIR Conference on Research",
+      "label": "ORG"
+    },
+    {
+      "text": "2754",
+      "label": "DATE"
+    },
+    {
+      "text": "2764",
+      "label": "DATE"
+    },
+    {
+      "text": "4]Alice",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Coucke",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alaa Saade",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adrien Ball",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alexandre Caulier",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Leroy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibault Gisselbrecht",
+      "label": "PERSON"
+    },
+    {
+      "text": "Francesco Calta-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Snips",
+      "label": "ORG"
+    },
+    {
+      "text": "5]Jacob",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Devlin",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "6]Seungheon",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Keunwoo Choi",
+      "label": "ORG"
+    },
+    {
+      "text": "Daeyong Kwon",
+      "label": "PERSON"
+    },
+    {
+      "text": "Taesu Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Juhan Nam",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Society for Music Information Retrieval\nConference",
+      "label": "ORG"
+    },
+    {
+      "text": "Abhinav Jauhri",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abhinav Pandey",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abhishek Kadian",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ahmad Al-Dahle",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aiesha Letman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Akhil Mathur",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alan Schelten",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amy Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Angela\nFan",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8]Soyeon",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Caren Han",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siqu Long",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huichun Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Henry\nWeld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Josiah Poon",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "International",
+      "label": "ORG"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jimmy Ba",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "3rd International\nConference for Learning Representations",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stefan Larson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anish Mahendran",
+      "label": "NORP"
+    },
+    {
+      "text": "Joseph J Peper",
+      "label": "PERSON"
+    },
+    {
+      "text": "Christopher Clarke",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrew Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Parker Hill",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jonathan K Kummerfeld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kevin Leach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael ALaurenzano",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lingjia Tang",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lefteris Loukas",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ilias Stogiannidis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Odysseas",
+      "label": "GPE"
+    },
+    {
+      "text": "Prodromos Malakasiotis",
+      "label": "ORG"
+    },
+    {
+      "text": "Stavros\nVassos",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "every penny",
+      "label": "MONEY"
+    },
+    {
+      "text": "the Fourth ACM International",
+      "label": "FAC"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "392\u2013400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fran\u00e7ois Mairesse",
+      "label": "PERSON"
+    },
+    {
+      "text": "Milica Gasic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Filip Jurcicek",
+      "label": "PERSON"
+    },
+    {
+      "text": "mon Keizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Blaise Thomson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kai Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Steve\nYoung",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Acoustics",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech",
+      "label": "ORG"
+    },
+    {
+      "text": "Signal Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "4749\u20134752",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tomas Mikolov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kai Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Greg Corrado",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeffrey Dean",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "vector",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lingfeng Pan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yi Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Feiliang Ren",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yining Hou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yan Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaobo Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yongkang Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "CCKS Tasks",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Victor Sanh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lysandre Debut",
+      "label": "PERSON"
+    },
+    {
+      "text": "Julien Chaumond",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thomas Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Distilbert",
+      "label": "PERSON"
+    },
+    {
+      "text": "5th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Cognitive Computing - NeurIPS",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jetze Schuurmans",
+      "label": "PERSON"
+    },
+    {
+      "text": "Flavius Frasincar",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Klaus Ries",
+      "label": "ORG"
+    },
+    {
+      "text": "Noah Coccaro",
+      "label": "ORG"
+    },
+    {
+      "text": "beth Shriberg",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rebecca Bates",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel Jurafsky",
+      "label": "PERSON"
+    },
+    {
+      "text": "Paul\nTaylor",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rachel Martin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Carol Van Ess-Dykema",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marie Meteer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gautier Izacard",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xavier Martinet",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marie-Anne Lachaux",
+      "label": "PERSON"
+    },
+    {
+      "text": "Timoth\u00e9e\nLacroix",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baptiste Rozi\u00e8re",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Ham-\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "Faisal Azhar",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Henry Weld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaoqi Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siqu Long",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Computing Surveys",
+      "label": "PERSON"
+    },
+    {
+      "text": "55(8):1\u201338",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thomas Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lysandre Debut",
+      "label": "PERSON"
+    },
+    {
+      "text": "Victor Sanh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Julien\nChaumond",
+      "label": "PERSON"
+    },
+    {
+      "text": "Clement Delangue",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anthony Moi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cistac",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tim Rault",
+      "label": "PERSON"
+    },
+    {
+      "text": "R\u00e9mi Louf",
+      "label": "PERSON"
+    },
+    {
+      "text": "Morgan Funtowicz",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "38\u201345",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tables 1",
+      "label": "EVENT"
+    },
+    {
+      "text": "the Bag of Words",
+      "label": "ORG"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Train Test Overlap (Ratio",
+      "label": "ORG"
+    },
+    {
+      "text": "4,835",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "908",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76.7%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Train and Test",
+      "label": "ORG"
+    },
+    {
+      "text": "Train",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "User Intents",
+      "label": "PERSON"
+    },
+    {
+      "text": "Musical",
+      "label": "ORG"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ed Sheeran",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rihanna",
+      "label": "GPE"
+    },
+    {
+      "text": "African",
+      "label": "NORP"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    }
+  ],
+  "summary": "This study explores intent classification in music discovery conversations, focusing on user intents and musical attributes using pre-trained language models. It introduces a method to incorporate chat history for better context understanding, achieving improved accuracy compared to existing models like Llama 3 in both user intent and musical attribute classification tasks.",
+  "embedding": [
+    0.057230401784181595,
+    -0.024917153641581535,
+    -0.024455664679408073,
+    0.055463481694459915,
+    -0.019774464890360832,
+    -0.02380845881998539,
+    0.012711672112345695,
+    -0.041605640202760696,
+    0.019155170768499374,
+    -0.015081784687936306,
+    -0.09406687319278717,
+    -0.0034693172201514244,
+    -0.0016649606404826045,
+    0.002420803764835,
+    -0.004923619795590639,
+    -0.023457225412130356,
+    0.042094092816114426,
+    -0.012330415658652782,
+    0.05645417422056198,
+    0.047969356179237366,
+    -0.015941234305500984,
+    0.019575664773583412,
+    0.0012077366700395942,
+    0.037218909710645676,
+    -0.011201141402125359,
+    -0.009250643663108349,
+    -0.04614904895424843,
+    0.018609635531902313,
+    -0.052192121744155884,
+    -0.0077004265040159225,
+    -0.015276924706995487,
+    0.0686136856675148,
+    -0.016414225101470947,
+    0.0025288909673690796,
+    1.6069164985310636e-06,
+    -0.031278129667043686,
+    -0.004795967135578394,
+    -0.05342705175280571,
+    -0.0074597373604774475,
+    -0.05874725803732872,
+    0.01928103156387806,
+    0.07840019464492798,
+    -0.00716090714558959,
+    0.046299271285533905,
+    -0.03387194871902466,
+    0.01297368761152029,
+    0.0019073779694736004,
+    0.02286379598081112,
+    0.038057271391153336,
+    0.09174340218305588,
+    0.0006443212041631341,
+    -0.03663434460759163,
+    0.0026044235564768314,
+    -0.01735682226717472,
+    0.07468010485172272,
+    -0.043795663863420486,
+    0.01310228742659092,
+    -0.0012449892237782478,
+    0.04683666303753853,
+    0.039928313344717026,
+    0.012823447585105896,
+    0.031277239322662354,
+    -0.02288859710097313,
+    -0.018332481384277344,
+    0.06895118206739426,
+    0.027587099000811577,
+    -0.02983228676021099,
+    -0.033084236085414886,
+    0.008809130638837814,
+    0.04701211303472519,
+    0.039611708372831345,
+    -0.04092978313565254,
+    0.020416760817170143,
+    0.027654636651277542,
+    0.021547621116042137,
+    -0.05604641139507294,
+    -0.049979135394096375,
+    -0.04198121652007103,
+    -0.013609365560114384,
+    -0.004271476063877344,
+    0.015668340027332306,
+    0.013375743292272091,
+    0.05073603242635727,
+    0.03403172641992569,
+    0.03254769742488861,
+    0.03542087972164154,
+    -0.003552941605448723,
+    -0.06524916738271713,
+    0.01582522690296173,
+    -0.04249641299247742,
+    0.02283821813762188,
+    -0.09788817167282104,
+    0.03245661035180092,
+    0.003231350565329194,
+    -0.050632771104574203,
+    0.028347425162792206,
+    -0.04065362736582756,
+    0.009042850695550442,
+    0.008100816048681736,
+    -0.014955218881368637,
+    0.004502706695348024,
+    0.00916243251413107,
+    0.011082814075052738,
+    0.06575754284858704,
+    0.0424976609647274,
+    -0.044012121856212616,
+    0.014167380519211292,
+    -0.005126537289470434,
+    -0.03960248455405235,
+    -0.0030116639100015163,
+    -0.04267942160367966,
+    -0.031828802078962326,
+    -0.028097085654735565,
+    0.028755616396665573,
+    0.0453738309442997,
+    -0.04711102321743965,
+    -0.016922082751989365,
+    0.010786962695419788,
+    0.010508425533771515,
+    -0.009087804704904556,
+    0.03185613080859184,
+    -0.03397485613822937,
+    -0.022440776228904724,
+    0.03215405344963074,
+    -0.002866025548428297,
+    0.012080724351108074,
+    -0.03445170819759369,
+    0.06323487311601639,
+    0.01418842189013958,
+    -0.0019405832281336188,
+    0.026881523430347443,
+    -0.0072319237515330315,
+    0.029200002551078796,
+    -0.013869095593690872,
+    0.04765479639172554,
+    0.0003926704521290958,
+    0.026361236348748207,
+    -0.09260904043912888,
+    -0.019462950527668,
+    -0.04807852953672409,
+    -0.013684048317372799,
+    -0.044873032718896866,
+    -0.04732027277350426,
+    -0.030205849558115005,
+    0.05091572180390358,
+    -0.014628767035901546,
+    -0.01874273084104061,
+    -0.002570086857303977,
+    -0.013407042250037193,
+    0.03156828507781029,
+    -0.02931812033057213,
+    0.08016247302293777,
+    0.02221720665693283,
+    0.05008149892091751,
+    0.04157889261841774,
+    0.017874926328659058,
+    -0.01888008415699005,
+    0.022403936833143234,
+    0.03028436005115509,
+    0.04537482187151909,
+    0.09164397418498993,
+    -0.010117225348949432,
+    0.01161428727209568,
+    0.04020413011312485,
+    -0.008733311668038368,
+    -0.06727979332208633,
+    0.03375021368265152,
+    0.016779743134975433,
+    -0.03594789654016495,
+    0.0766264870762825,
+    -0.014494302682578564,
+    0.038529977202415466,
+    0.0039301179349422455,
+    -0.017056234180927277,
+    0.030606983229517937,
+    0.05333779379725456,
+    0.036883555352687836,
+    0.011731740087270737,
+    0.027516599744558334,
+    0.03759366646409035,
+    0.010502067394554615,
+    -0.006362222135066986,
+    0.0010639606043696404,
+    0.023771269246935844,
+    -0.011753801256418228,
+    -0.02780122309923172,
+    0.08242760598659515,
+    -0.029425224289298058,
+    -0.024963244795799255,
+    -0.018108246847987175,
+    -0.014975802041590214,
+    -0.03310476988554001,
+    0.008588539436459541,
+    -0.0010847225785255432,
+    -0.0060561951249837875,
+    0.005446457304060459,
+    -0.014523285441100597,
+    0.002729153959080577,
+    -0.006048463750630617,
+    -0.03872703015804291,
+    0.0057691247202456,
+    -0.057718124240636826,
+    0.06210896745324135,
+    0.09784302115440369,
+    0.06301437318325043,
+    -0.05008004233241081,
+    0.0330069363117218,
+    -0.016553334891796112,
+    -0.004954532254487276,
+    -0.008940620347857475,
+    0.033102791756391525,
+    -0.03352705389261246,
+    0.011132600717246532,
+    0.015233929269015789,
+    -0.019469354301691055,
+    -0.005696977488696575,
+    -0.0059369513764977455,
+    -0.0030147195793688297,
+    -0.03988179564476013,
+    -0.018625523895025253,
+    0.009755278006196022,
+    -0.006816496141254902,
+    0.013973542489111423,
+    -0.0044686514884233475,
+    0.007274013012647629,
+    -0.055557943880558014,
+    0.05720893666148186,
+    0.040377177298069,
+    0.03193938359618187,
+    0.07870160788297653,
+    0.025776585564017296,
+    0.036350447684526443,
+    0.023996084928512573,
+    0.029087351635098457,
+    0.027831774204969406,
+    0.019796794280409813,
+    -0.00926939770579338,
+    -0.01173977367579937,
+    0.044625088572502136,
+    0.0397714339196682,
+    0.02670501545071602,
+    0.017475496977567673,
+    0.028775671496987343,
+    -0.06033194065093994,
+    0.01924152486026287,
+    -0.011611728928983212,
+    0.040800027549266815,
+    -0.0036084887105971575,
+    0.027516953647136688,
+    -0.005292052403092384,
+    -0.010977750644087791,
+    0.03060072660446167,
+    0.031133761629462242,
+    0.053243789821863174,
+    0.0005597650306299329,
+    -0.012567173689603806,
+    -0.043176185339689255,
+    0.0504445880651474,
+    -0.02775392308831215,
+    -0.02691814675927162,
+    0.026069696992635727,
+    0.00868226494640112,
+    0.013275371864438057,
+    -0.0023994131479412317,
+    -0.03412298113107681,
+    -0.05561326444149017,
+    -0.0033752901945263147,
+    -0.10835723578929901,
+    0.054741255939006805,
+    -0.02746562659740448,
+    -0.0005913007771596313,
+    -0.004044253844767809,
+    0.021782901138067245,
+    0.002402788959443569,
+    -0.05102407932281494,
+    -0.016665304079651833,
+    0.014061902649700642,
+    0.006217417307198048,
+    0.039569538086652756,
+    -0.037044115364551544,
+    0.02715318091213703,
+    -0.04398871585726738,
+    -0.02787092514336109,
+    -0.013422242365777493,
+    -0.02657272294163704,
+    -0.01789705827832222,
+    0.018672870472073555,
+    -0.02807513065636158,
+    0.011254258453845978,
+    -0.005866884253919125,
+    -0.06433513760566711,
+    -0.010554363019764423,
+    -0.01232397835701704,
+    -0.008621270768344402,
+    0.0062434677965939045,
+    -0.04235416650772095,
+    -0.005529735237360001,
+    0.052309997379779816,
+    0.004879125859588385,
+    0.02015084959566593,
+    0.05943122133612633,
+    0.021930357441306114,
+    -0.012111405842006207,
+    0.015158344991505146,
+    -0.012927252799272537,
+    0.016731424257159233,
+    -0.012833407148718834,
+    -0.008565163239836693,
+    0.04208996146917343,
+    0.03829137608408928,
+    0.04304796829819679,
+    0.0028672651387751102,
+    -0.012510377913713455,
+    -0.02784259244799614,
+    -0.00859424751251936,
+    0.009157477878034115,
+    -0.033041998744010925,
+    -0.010703000240027905,
+    -0.036709100008010864,
+    0.055649854242801666,
+    0.018232272937893867,
+    -0.007929378189146519,
+    0.07896565645933151,
+    0.008191300556063652,
+    -0.026155471801757812,
+    -0.06695865094661713,
+    -0.07185688614845276,
+    -0.027111077681183815,
+    0.03511354327201843,
+    -0.06084161996841431,
+    0.018585864454507828,
+    0.03258798271417618,
+    -0.05582780763506889,
+    -0.016385698691010475,
+    0.008537011221051216,
+    0.04694673418998718,
+    -0.07865497469902039,
+    0.0032640162389725447,
+    -0.008597033098340034,
+    -0.0025039734318852425,
+    0.046250417828559875,
+    -0.028349773958325386,
+    -0.009138059802353382,
+    -0.07926958799362183,
+    -0.016075950115919113,
+    -0.01586630754172802,
+    -0.05403092876076698,
+    -0.003440751461312175,
+    -0.013875914737582207,
+    -0.009886705316603184,
+    -0.0027827078010886908,
+    0.010257239453494549,
+    -0.014217967167496681,
+    -0.009632534347474575,
+    -0.004686624743044376,
+    0.03554641827940941,
+    0.004523020703345537,
+    -0.04055117443203926,
+    -0.05059543997049332,
+    0.011696645990014076,
+    0.05217166990041733,
+    -0.008045320399105549,
+    -0.008531791158020496,
+    -0.04140684753656387,
+    0.018696743994951248,
+    -0.014843338169157505,
+    0.04147067293524742,
+    -0.007851934991776943,
+    -0.04999539628624916,
+    0.07173702120780945,
+    -0.0013903540093451738,
+    -0.008504712954163551,
+    -0.009810333140194416,
+    0.11821669340133667,
+    0.07509481906890869,
+    -0.051953863352537155,
+    -0.01731371507048607,
+    0.03154300898313522,
+    -0.016682010143995285,
+    0.014362422749400139,
+    0.014017005451023579,
+    -0.022320061922073364,
+    -0.030419642105698586,
+    0.027547357603907585,
+    0.04709460213780403,
+    0.03293131664395332,
+    0.002579138847067952,
+    -0.015060927718877792,
+    -0.04610257223248482,
+    0.010566110722720623,
+    -0.007388491183519363,
+    -0.01142116542905569,
+    -0.0055373236536979675,
+    -0.06292668730020523,
+    -0.004394415766000748,
+    -0.026907678693532944,
+    -0.007631082087755203,
+    -0.044067900627851486,
+    -0.02167472429573536,
+    0.011377879418432713,
+    -0.008520756848156452,
+    -0.02997942641377449,
+    -0.05303232744336128,
+    0.057727374136447906,
+    -0.0377594456076622,
+    0.050740618258714676,
+    0.042357075959444046,
+    0.08523261547088623,
+    0.007993210107088089,
+    -0.03997728228569031,
+    -0.014668785966932774,
+    -0.004816084168851376,
+    -0.010195227339863777,
+    0.007711504120379686,
+    0.0411723256111145,
+    -0.0034934356808662415,
+    0.04479045048356056,
+    0.019132211804389954,
+    0.007802469190210104,
+    -0.03175277262926102,
+    -0.023323671892285347,
+    0.038275789469480515,
+    0.05145229026675224,
+    -0.02706417441368103,
+    0.0039011361077427864,
+    -0.010113979689776897,
+    0.034949615597724915,
+    0.050794944167137146,
+    0.0920948013663292,
+    0.032174091786146164,
+    -0.031911853700876236,
+    0.039105046540498734,
+    -0.012427184730768204,
+    0.018002036958932877,
+    -0.011040166020393372,
+    -0.03893483430147171,
+    -0.03521355986595154,
+    -0.011462518945336342,
+    -0.02628527767956257,
+    -0.03706002235412598,
+    -0.04078157991170883,
+    -0.00613262876868248,
+    0.0011758962646126747,
+    0.004178221337497234,
+    0.05056336522102356,
+    -0.01126653328537941,
+    -0.009464399889111519,
+    -0.055097997188568115,
+    0.010249800980091095,
+    0.024630766361951828,
+    0.06830427050590515,
+    -0.04908619076013565,
+    -0.06469182670116425,
+    0.016237502917647362,
+    -0.03504263982176781,
+    -0.0011907025473192334,
+    -0.06780929118394852,
+    -0.06963919848203659,
+    -0.024722767993807793,
+    -0.02239721454679966,
+    0.007433395367115736,
+    0.022257912904024124,
+    0.03130826726555824,
+    -0.047877442091703415,
+    -0.06348411738872528,
+    -0.05715937167406082,
+    0.0002567118208389729,
+    -0.02747926115989685,
+    -0.015734856948256493,
+    0.04279104992747307,
+    0.025043364614248276,
+    0.0054243262857198715,
+    0.02522006817162037,
+    -0.06590820848941803,
+    0.023363512009382248,
+    -0.013527628034353256,
+    0.006377712357789278,
+    -0.030035145580768585,
+    -0.08249407261610031,
+    0.02240191027522087,
+    0.00642617791891098,
+    0.05059340223670006,
+    -0.006288284435868263,
+    -0.013339030556380749,
+    -0.02443692833185196,
+    -0.00971433985978365,
+    -0.014661322347819805,
+    -0.02428906410932541,
+    -0.023191561922430992,
+    -0.03011060692369938,
+    0.05336522310972214,
+    0.020127493888139725,
+    -0.05251573026180267,
+    -0.011280912905931473,
+    -0.030612342059612274,
+    -0.05271025747060776,
+    -0.051985133439302444,
+    0.0006450257496908307,
+    0.04075010493397713,
+    -0.05582385137677193,
+    0.003950887359678745,
+    -0.01024428941309452,
+    0.012964872643351555,
+    0.007744897156953812,
+    0.08166798949241638,
+    -0.004909364506602287,
+    0.0068495990708470345,
+    0.03739015758037567,
+    -0.020365485921502113,
+    -0.03234315663576126,
+    -0.02068415842950344,
+    0.039496950805187225,
+    -0.053587574511766434,
+    -0.014277724549174309,
+    -0.0008926810696721077,
+    0.02576938457787037,
+    0.043376948684453964,
+    -0.02412995509803295,
+    -0.022425541654229164,
+    0.006699273828417063,
+    0.01838974468410015,
+    -0.01532244123518467,
+    0.09717966616153717,
+    -0.01794601045548916,
+    -0.07776060700416565,
+    0.0330694243311882,
+    0.030712753534317017,
+    -0.012409639544785023,
+    0.0009042626479640603,
+    0.04101395979523659,
+    -0.07710088044404984,
+    -0.0034766572061926126,
+    -0.008249777369201183,
+    -0.038654740899801254,
+    -0.014893068000674248,
+    0.026378372684121132,
+    -0.017609786242246628,
+    0.029982278123497963,
+    -0.020115036517381668,
+    0.03189295530319214,
+    -0.03230004012584686,
+    -0.05565912649035454,
+    0.01978915184736252,
+    -0.04518299549818039,
+    0.005091832485049963,
+    -0.011201498098671436,
+    0.0461919866502285,
+    0.0791991576552391,
+    0.007058462593704462,
+    0.009493130259215832,
+    -0.019968900829553604,
+    -0.07819849997758865,
+    -0.05249493196606636,
+    -0.008525388315320015,
+    -0.03138243407011032,
+    -4.892259081960569e-33,
+    -0.013967279344797134,
+    -0.016605140641331673,
+    -0.015229502692818642,
+    0.04670090973377228,
+    -0.020065875723958015,
+    -0.022286206483840942,
+    -0.06711497902870178,
+    -0.019173981621861458,
+    -0.004702778533101082,
+    -0.03776706010103226,
+    -0.02076479233801365,
+    0.0439814068377018,
+    0.006761515978723764,
+    -0.013326143845915794,
+    0.019568046554923058,
+    -0.028348183259367943,
+    0.06408212333917618,
+    -0.03057611733675003,
+    -0.009930700995028019,
+    0.03704116865992546,
+    0.04224396124482155,
+    0.045502305030822754,
+    -0.025980209931731224,
+    -0.06902684271335602,
+    0.010072185657918453,
+    -0.02376183308660984,
+    -0.01600397750735283,
+    0.03906519338488579,
+    0.01993250474333763,
+    0.06337477266788483,
+    -0.02069847099483013,
+    0.02425440400838852,
+    0.007232400588691235,
+    -0.0084877610206604,
+    0.00975412130355835,
+    0.03085424192249775,
+    -0.0650288462638855,
+    -0.03993229195475578,
+    0.01609727367758751,
+    0.027742180973291397,
+    0.014882124960422516,
+    0.008006250485777855,
+    0.01312558725476265,
+    0.009617216885089874,
+    -0.0043783471919596195,
+    0.035161904990673065,
+    0.06059371680021286,
+    0.008130358532071114,
+    -0.022302113473415375,
+    -0.03404216468334198,
+    -0.027595864608883858,
+    -0.02476140297949314,
+    -0.03551910072565079,
+    -0.059234555810689926,
+    0.06275550276041031,
+    0.04370439797639847,
+    0.011719145812094212,
+    0.006248100195080042,
+    -0.028167415410280228,
+    0.038373202085494995,
+    -0.04242594540119171,
+    -0.0019646601285785437,
+    0.0049147536046803,
+    0.01555852685123682,
+    -0.03859824314713478,
+    0.030694417655467987,
+    0.004002457484602928,
+    -0.02225087210536003,
+    -0.005761885549873114,
+    0.027013301849365234,
+    -0.01976354420185089,
+    0.048496995121240616,
+    -0.023375853896141052,
+    0.019902240484952927,
+    0.03380187228322029,
+    -0.01593289151787758,
+    0.00816960446536541,
+    0.051959022879600525,
+    0.04770185053348541,
+    -0.0078387800604105,
+    -0.023003501817584038,
+    0.04584108665585518,
+    -0.06291553378105164,
+    -0.006677919998764992,
+    0.006634732708334923,
+    -0.015950128436088562,
+    -0.050763800740242004,
+    -0.022966813296079636,
+    0.013703607022762299,
+    0.01045148354023695,
+    0.016361068934202194,
+    -0.03608058765530586,
+    -0.024829179048538208,
+    -0.03510516509413719,
+    -0.054139912128448486,
+    0.026406023651361465,
+    -0.026341279968619347,
+    0.010970898903906345,
+    -0.022834839299321175,
+    -0.006797278765588999,
+    -0.042583804577589035,
+    -0.005792711861431599,
+    0.07365009933710098,
+    -0.018940690904855728,
+    0.021145271137356758,
+    0.0028784184250980616,
+    -8.92017997102812e-05,
+    0.061742667108774185,
+    -0.015323653817176819,
+    -0.014421610161662102,
+    0.0072980900295078754,
+    -0.02555791661143303,
+    -0.007972334511578083,
+    0.03565606102347374,
+    0.053827378898859024,
+    0.06229034811258316,
+    -0.04268300533294678,
+    0.06325515359640121,
+    0.021476048976182938,
+    0.04690497741103172,
+    -0.054377175867557526,
+    -0.08597010374069214,
+    -0.0019267854513600469,
+    -0.008921487256884575,
+    -0.006161978933960199,
+    -0.020631220191717148,
+    -0.006204620469361544,
+    -0.004615021403878927,
+    0.01255720853805542,
+    -0.043582528829574585,
+    -0.012097109109163284,
+    -0.018517665565013885,
+    2.5736815700838633e-07,
+    0.023672157898545265,
+    -0.006279238499701023,
+    -0.03612959012389183,
+    0.030780889093875885,
+    0.0024626830127090216,
+    0.05142278969287872,
+    -0.07470451295375824,
+    0.019127072766423225,
+    0.028813771903514862,
+    0.012123964726924896,
+    0.08729594200849533,
+    -0.028599131852388382,
+    0.08510872721672058,
+    0.03592493385076523,
+    -0.1352405697107315,
+    -0.012111573480069637,
+    -0.0668216347694397,
+    0.016999874264001846,
+    -0.08622533082962036,
+    -0.017511587589979172,
+    0.0738675445318222,
+    0.10011526942253113,
+    0.06672849506139755,
+    0.00543581135571003,
+    -0.034664351493120193,
+    -0.005466387141495943,
+    0.0016013745917007327,
+    -0.03186139836907387,
+    0.018445216119289398,
+    -0.03223724290728569,
+    0.0852353423833847,
+    -0.02793002314865589,
+    -0.025574196130037308,
+    0.0056198593229055405,
+    -0.09045431017875671,
+    0.05241885036230087,
+    0.04077102616429329,
+    0.04047014191746712,
+    0.003283293219283223,
+    -0.024886479601264,
+    -0.020567284896969795,
+    0.03530378267168999,
+    0.011303720995783806,
+    -0.012622312642633915,
+    0.07035640627145767,
+    0.006477016024291515,
+    -0.04199919477105141,
+    0.014109007082879543,
+    -0.010334703139960766,
+    -0.0038982771802693605,
+    0.004367445595562458,
+    0.0026268428191542625,
+    -0.029761338606476784,
+    -0.030303187668323517,
+    -0.011988963931798935,
+    -0.01796436682343483,
+    0.02862367406487465,
+    -0.10565190762281418,
+    0.02449331432580948,
+    0.0015250795986503363,
+    -0.04525658115744591,
+    0.00013547278649639338,
+    -0.031564660370349884,
+    0.0015000258572399616,
+    0.020547691732645035,
+    -0.054337278008461,
+    0.03006856143474579,
+    1.9454319007626065e-34,
+    0.03063615970313549,
+    -0.032274842262268066,
+    0.0006732065812684596,
+    0.014329873956739902,
+    0.017704159021377563,
+    -0.01166624017059803,
+    0.028853807598352432,
+    -0.0018887899350374937,
+    0.045268189162015915,
+    -0.05268280953168869,
+    -0.01797478087246418
+  ]
+}

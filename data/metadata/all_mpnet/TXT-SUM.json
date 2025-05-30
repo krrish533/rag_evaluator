@@ -1,0 +1,6150 @@
+{
+  "filename": "TXT-SUM.txt",
+  "keywords": [
+    "summarizers",
+    "summarizations",
+    "summarizationa",
+    "summarization",
+    "summarizer",
+    "summarizing",
+    "summaries",
+    "summariesextractive",
+    "summariza",
+    "textrank"
+  ],
+  "predicted_intent": {
+    "intent": "summarization",
+    "confidence_score": 0.3537
+  },
+  "named_entities": [
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "a Creative Commons Attribution 4.0 International License",
+      "label": "ORG"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Creative Commons",
+      "label": "ORG"
+    },
+    {
+      "text": "by/4",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Merrouni",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Big Data\nEXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Zakariae Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bouchra",
+      "label": "GPE"
+    },
+    {
+      "text": "Brahim",
+      "label": "ORG"
+    },
+    {
+      "text": "Automatic Text Summarization",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Keyphrase",
+      "label": "ORG"
+    },
+    {
+      "text": "the 1950s",
+      "label": "DATE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "National School",
+      "label": "ORG"
+    },
+    {
+      "text": "Applied Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "Sidi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mohamed Ben Abdellah University",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.P",
+      "label": "ORG"
+    },
+    {
+      "text": "72",
+      "label": "DATE"
+    },
+    {
+      "text": "Route d\u2019imouzer",
+      "label": "ORG"
+    },
+    {
+      "text": "Fez",
+      "label": "PERSON"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Computer Laboratory",
+      "label": "ORG"
+    },
+    {
+      "text": "LM2I",
+      "label": "ORG"
+    },
+    {
+      "text": "National Higher School of Arts",
+      "label": "ORG"
+    },
+    {
+      "text": "Crafts",
+      "label": "ORG"
+    },
+    {
+      "text": "ENSAM",
+      "label": "ORG"
+    },
+    {
+      "text": "Moulay Ismail \nUniversity",
+      "label": "PERSON"
+    },
+    {
+      "text": "UMI",
+      "label": "ORG"
+    },
+    {
+      "text": "Marjane II",
+      "label": "EVENT"
+    },
+    {
+      "text": "B.P",
+      "label": "GPE"
+    },
+    {
+      "text": "4024",
+      "label": "DATE"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022 Subsequently",
+      "label": "ORG"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Automatic Text Summarization",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Firstly",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "\u2022 Unlike",
+      "label": "ORG"
+    },
+    {
+      "text": "Semantic",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ATS",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "7\u201310",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "QCS",
+      "label": "ORG"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Markov",
+      "label": "PERSON"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ko",
+      "label": "PERSON"
+    },
+    {
+      "text": "Seo",
+      "label": "PERSON"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GRAPHSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Baralis",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Parveen",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "integer linear",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ATS",
+      "label": "ORG"
+    },
+    {
+      "text": "SummGraph",
+      "label": "ORG"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Natural Language Genera",
+      "label": "FAC"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mohammad",
+      "label": "PERSON"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Erera",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Science Summarizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Computer Science",
+      "label": "ORG"
+    },
+    {
+      "text": "Machine Translation",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "ATS",
+      "label": "ORG"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova",
+      "label": "PERSON"
+    },
+    {
+      "text": "Strube",
+      "label": "GPE"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova",
+      "label": "PERSON"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Boudin",
+      "label": "ORG"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova",
+      "label": "PERSON"
+    },
+    {
+      "text": "Multi-Sentence Compression",
+      "label": "ORG"
+    },
+    {
+      "text": "MSC",
+      "label": "ORG"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Integer Linear Programming",
+      "label": "ORG"
+    },
+    {
+      "text": "ILP",
+      "label": "ORG"
+    },
+    {
+      "text": "ILP",
+      "label": "ORG"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shang",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Di Fabbrizio",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "37",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "and/or nega -\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROM",
+      "label": "ORG"
+    },
+    {
+      "text": "38",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PENDIUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "COMPENDIUM",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lesk algorithm",
+      "label": "PERSON"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ATS",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "Subse -\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163 \n \n",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022 Tokenization",
+      "label": "ORG"
+    },
+    {
+      "text": "Bion;,;:,appR;aochAs",
+      "label": "PERSON"
+    },
+    {
+      "text": "NL",
+      "label": "ORG"
+    },
+    {
+      "text": "P a*nd I2r s",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "IR",
+      "label": "ORG"
+    },
+    {
+      "text": "Stanford",
+      "label": "ORG"
+    },
+    {
+      "text": "Stanford Core NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "41",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "42\u201344",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "46",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TE",
+      "label": "ORG"
+    },
+    {
+      "text": "WordNet",
+      "label": "ORG"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "doc",
+      "label": "ORG"
+    },
+    {
+      "text": "47\u201351",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "a. Term Relevance-Inverse",
+      "label": "PERSON"
+    },
+    {
+      "text": "TR-ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "Informa",
+      "label": "NORP"
+    },
+    {
+      "text": "Retrieval IR",
+      "label": "PERSON"
+    },
+    {
+      "text": "ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "a Hybrid Feature Selection Model",
+      "label": "ORG"
+    },
+    {
+      "text": "the TR-ISF Equation",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Rw",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u03c72\nw",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rw",
+      "label": "PERSON"
+    },
+    {
+      "text": "larger than 1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Rw",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eqs",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CHIR",
+      "label": "ORG"
+    },
+    {
+      "text": "\u03c72\nw",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rw",
+      "label": "PERSON"
+    },
+    {
+      "text": "\u03c72\nw",
+      "label": "PERSON"
+    },
+    {
+      "text": "\u03c72\nw",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Mutual Information",
+      "label": "ORG"
+    },
+    {
+      "text": "SIM",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SIM",
+      "label": "ORG"
+    },
+    {
+      "text": "Mutual Information",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "P(zi",
+      "label": "GPE"
+    },
+    {
+      "text": "53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "doc",
+      "label": "ORG"
+    },
+    {
+      "text": "N",
+      "label": "ORG"
+    },
+    {
+      "text": "documents.(5",
+      "label": "GPE"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "I(w1,zi),I(w2,zi",
+      "label": "NORP"
+    },
+    {
+      "text": "max",
+      "label": "PERSON"
+    },
+    {
+      "text": "I(w1,zi),I(w2,zi",
+      "label": "NORP"
+    },
+    {
+      "text": "6) I(zi",
+      "label": "DATE"
+    },
+    {
+      "text": "1)/parenrightbigg",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SIM",
+      "label": "ORG"
+    },
+    {
+      "text": "d)=/summationtextx\nj=1sim(w",
+      "label": "PERSON"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "w)=k/summationdisplay\nj=1P",
+      "label": "ORG"
+    },
+    {
+      "text": "SIM",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "dcen j)\u2248 P(w",
+      "label": "PERSON"
+    },
+    {
+      "text": "dcen j)\u2248",
+      "label": "PERSON"
+    },
+    {
+      "text": "SIM(w",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "term(word",
+      "label": "GPE"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022 S",
+      "label": "ORG"
+    },
+    {
+      "text": "dcen j)=P(w",
+      "label": "PERSON"
+    },
+    {
+      "text": "j)log",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "wi\u2208TTR\u2212ISF",
+      "label": "PERSON"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sentence",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "fewer than ten",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "more than 50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022 Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "|wt|",
+      "label": "NORP"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SentenceLen",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2022 S",
+      "label": "ORG"
+    },
+    {
+      "text": "48",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "N",
+      "label": "ORG"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SentPosition",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Page 14",
+      "label": "ORG"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "U.S.",
+      "label": "GPE"
+    },
+    {
+      "text": "Donald Trump",
+      "label": "PERSON"
+    },
+    {
+      "text": "Venezuela",
+      "label": "GPE"
+    },
+    {
+      "text": "last Thursday",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Donald Trump",
+      "label": "PERSON"
+    },
+    {
+      "text": "the People Republic of Venezuela",
+      "label": "GPE"
+    },
+    {
+      "text": "Thursday",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Last week",
+      "label": "DATE"
+    },
+    {
+      "text": "State",
+      "label": "ORG"
+    },
+    {
+      "text": "M. Trump",
+      "label": "PERSON"
+    },
+    {
+      "text": "Venezuela",
+      "label": "GPE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Donald Trump",
+      "label": "PERSON"
+    },
+    {
+      "text": "Venezuela",
+      "label": "GPE"
+    },
+    {
+      "text": "last month",
+      "label": "DATE"
+    },
+    {
+      "text": "Thursday",
+      "label": "DATE"
+    },
+    {
+      "text": "last week",
+      "label": "DATE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1\u20134",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "node",
+      "label": "GPE"
+    },
+    {
+      "text": "NLTK",
+      "label": "ORG"
+    },
+    {
+      "text": "Thursday",
+      "label": "DATE"
+    },
+    {
+      "text": "Filippova",
+      "label": "PERSON"
+    },
+    {
+      "text": "Boudin and Morin",
+      "label": "ORG"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "fourth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "i)+freq",
+      "label": "PERSON"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "d(s",
+      "label": "PERSON"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "less than eight",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "at least one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "at least three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova",
+      "label": "ORG"
+    },
+    {
+      "text": "48 to 60%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiao",
+      "label": "PERSON"
+    },
+    {
+      "text": "56",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TextRank",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "57",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vi",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NNS",
+      "label": "ORG"
+    },
+    {
+      "text": "NNP",
+      "label": "ORG"
+    },
+    {
+      "text": "NNPS",
+      "label": "ORG"
+    },
+    {
+      "text": "VBN",
+      "label": "ORG"
+    },
+    {
+      "text": "NNS",
+      "label": "ORG"
+    },
+    {
+      "text": "NNP",
+      "label": "ORG"
+    },
+    {
+      "text": "NNPS",
+      "label": "ORG"
+    },
+    {
+      "text": "VBG",
+      "label": "ORG"
+    },
+    {
+      "text": "VBG",
+      "label": "ORG"
+    },
+    {
+      "text": "VBG",
+      "label": "ORG"
+    },
+    {
+      "text": "informa",
+      "label": "NORP"
+    },
+    {
+      "text": "20)(Vi)=1\u2212d",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vj\u2208adj(Vi)Wji",
+      "label": "GPE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "keyphrase k",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "21",
+      "label": "DATE"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "18",
+      "label": "DATE"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "2.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "k)=/summationtext",
+      "label": "PERSON"
+    },
+    {
+      "text": "w\u2208kTextRank",
+      "label": "PERSON"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "the Document Understanding Collection",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "Text Analytics \nConferences",
+      "label": "ORG"
+    },
+    {
+      "text": "TAC",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "309",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "NORP"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "567",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "approximately 100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC 2002",
+      "label": "ORG"
+    },
+    {
+      "text": "about 60%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN Corpus",
+      "label": "PERSON"
+    },
+    {
+      "text": "58",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "cnn",
+      "label": "ORG"
+    },
+    {
+      "text": "3,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "twelve",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Business, Opinion, Politics",
+      "label": "ORG"
+    },
+    {
+      "text": "Living, Sports",
+      "label": "ORG"
+    },
+    {
+      "text": "World News, Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "United States",
+      "label": "GPE"
+    },
+    {
+      "text": "Travel",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "90 to 100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "approximately 10,754",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "around 10%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "58",
+      "label": "DATE"
+    },
+    {
+      "text": "59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-SU4",
+      "label": "ORG"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61].(24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "309",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "567 348,012",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Multi-Domain",
+      "label": "ORG"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "90",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ten",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Likert",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "Business, Opinion, Politics",
+      "label": "ORG"
+    },
+    {
+      "text": "Living, Sports",
+      "label": "ORG"
+    },
+    {
+      "text": "Eq",
+      "label": "GPE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "SIM",
+      "label": "ORG"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.2",
+      "label": "DATE"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "0.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "NORP"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-SU4",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC02",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Figs",
+      "label": "PERSON"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC02",
+      "label": "GPE"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TR",
+      "label": "GPE"
+    },
+    {
+      "text": "ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 2 ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "Feature Analysis",
+      "label": "ORG"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "Comb Represents the Combination of Selected Scoring Approaches",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "0.402 0.143",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TR\u2212ISF + Sentence Position + Sentence Length",
+      "label": "ORG"
+    },
+    {
+      "text": "0.453 0.192",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "TR\u2212ISF + Sentence Position + Sentence \nLength + Sentence",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMAbstractive Graphs + Reranking",
+      "label": "PERSON"
+    },
+    {
+      "text": "ONLY 0.319 0.151\n",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC2002",
+      "label": "ORG"
+    },
+    {
+      "text": "Summary Type Scoring Techniques",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE\u2011 SU4 ROUGE\u2011L",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.189 0.207 0.401",
+      "label": "EVENT"
+    },
+    {
+      "text": "0.236",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.251 0.442",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "TR\u2212ISF",
+      "label": "GPE"
+    },
+    {
+      "text": "0.288 0.472",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMAbstractive Graphs + Reranking",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.134",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.322",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "Comb",
+      "label": "PERSON"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "TR\u2212ISF + Sentence Position + Sentence Length",
+      "label": "ORG"
+    },
+    {
+      "text": "0.592 0.434",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "TR\u2212ISF + Sentence Position + Sentence \nLength + Sentence",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMAbstractive Graphs + Reranking",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.501",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.332",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.0000.1000.2000.3000.4000.5000.600",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comb 1C",
+      "label": "ORG"
+    },
+    {
+      "text": "Graphs +\nRerankingComb 3Results",
+      "label": "PERSON"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2\nFig",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-2 Results",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "0.0000.1000.2000.3000.4000.5000.600",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ONLY COMB1C",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2 ROUGE-SU4",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-SU4",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Eq",
+      "label": "PERSON"
+    },
+    {
+      "text": "13",
+      "label": "DATE"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "comb3",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "NORP"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13.44%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "Combination 2",
+      "label": "ORG"
+    },
+    {
+      "text": "11.85%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "TR-ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "TR-ISF",
+      "label": "ORG"
+    },
+    {
+      "text": "The Textual Entailment (TE",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2\nFig",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6 illustrates",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "Table 5 Results",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Q1 Q2 Q3\n1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "8.76 17.25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0 1.21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19.01 30.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18.41 27.61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21.39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22.83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22.83",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48.06 42.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13.78",
+      "label": "MONEY"
+    },
+    {
+      "text": "22.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8.55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Comparison",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC01",
+      "label": "GPE"
+    },
+    {
+      "text": "DUC02",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "ORG"
+    },
+    {
+      "text": "Strube",
+      "label": "GPE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "DUC 2002 Corpus",
+      "label": "ORG"
+    },
+    {
+      "text": "Cluster d062j",
+      "label": "PERSON"
+    },
+    {
+      "text": "50%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "The White House",
+      "label": "ORG"
+    },
+    {
+      "text": "Bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "yesterday",
+      "label": "DATE"
+    },
+    {
+      "text": "morning",
+      "label": "TIME"
+    },
+    {
+      "text": "Bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Exxon Valdez",
+      "label": "EVENT"
+    },
+    {
+      "text": "Alaskan",
+      "label": "NORP"
+    },
+    {
+      "text": "Hurricane Hugo",
+      "label": "EVENT"
+    },
+    {
+      "text": "Carolina",
+      "label": "LOC"
+    },
+    {
+      "text": "Bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the day",
+      "label": "DATE"
+    },
+    {
+      "text": "6:30",
+      "label": "TIME"
+    },
+    {
+      "text": "Bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hurricane Hugo",
+      "label": "EVENT"
+    },
+    {
+      "text": "bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "california",
+      "label": "GPE"
+    },
+    {
+      "text": "this weekend",
+      "label": "DATE"
+    },
+    {
+      "text": "bush",
+      "label": "PERSON"
+    },
+    {
+      "text": "yesterday",
+      "label": "DATE"
+    },
+    {
+      "text": "morning",
+      "label": "TIME"
+    },
+    {
+      "text": "white house",
+      "label": "ORG"
+    },
+    {
+      "text": "the exxon valdez",
+      "label": "EVENT"
+    },
+    {
+      "text": "alaskan",
+      "label": "NORP"
+    },
+    {
+      "text": "hurricane hugo",
+      "label": "EVENT"
+    },
+    {
+      "text": "the carolina coast",
+      "label": "GPE"
+    },
+    {
+      "text": "fema",
+      "label": "ORG"
+    },
+    {
+      "text": "the white house",
+      "label": "ORG"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Differential Evolution",
+      "label": "PERSON"
+    },
+    {
+      "text": "The Fuzzy Evolutionary Optimization Model (FEOM",
+      "label": "ORG"
+    },
+    {
+      "text": "68",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RankNet",
+      "label": "ORG"
+    },
+    {
+      "text": "38",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PENDIUME",
+      "label": "ORG"
+    },
+    {
+      "text": "COMPENDIUME",
+      "label": "ORG"
+    },
+    {
+      "text": "COMPENDIUME",
+      "label": "ORG"
+    },
+    {
+      "text": "HP-UFPE FS",
+      "label": "ORG"
+    },
+    {
+      "text": "70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "seventeen",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "70",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "NORP"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "DUC",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "DUC 2002",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "respec",
+      "label": "GPE"
+    },
+    {
+      "text": "DUC",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "DE",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "PERSON"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DE",
+      "label": "ORG"
+    },
+    {
+      "text": "FEOM",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "DE",
+      "label": "ORG"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 7 F-measure",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "0.478 0.185\nFEOM Extractive 0.477 0.185\nNetSum",
+      "label": "EVENT"
+    },
+    {
+      "text": "0.176",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.453 0.176",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "0.202",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.444 0.198",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "HP-UFPE FS Extractive",
+      "label": "ORG"
+    },
+    {
+      "text": "0.359 0.117",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 8 Comparison of F-measure",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "DUC 2002",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "0.341 0.104",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Parveen",
+      "label": "GPE"
+    },
+    {
+      "text": "Strube",
+      "label": "GPE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.485 0.230",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "0.228",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.470 0.221",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.466 0.123",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.456 0.202",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NetSum",
+      "label": "ORG"
+    },
+    {
+      "text": "0.449 0.111",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Autosummarizer Extractive",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.437 0.191",
+      "label": "DATE"
+    },
+    {
+      "text": "Fast Abstractive Summarization Abstractive",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "0.394 0.173",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.157",
+      "label": "MONEY"
+    },
+    {
+      "text": "HP-UFPE FS Extractive",
+      "label": "ORG"
+    },
+    {
+      "text": "0.359 0.117",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 9 F-measure",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.601 0.451",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.501",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.332",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "HP-UFPE FS Extractive",
+      "label": "ORG"
+    },
+    {
+      "text": "0.507 0.345",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Autosummarizer Extractive",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.488 0.327",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.466 0.321",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC 2002",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "Parveen",
+      "label": "GPE"
+    },
+    {
+      "text": "Strube",
+      "label": "GPE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Parveen",
+      "label": "DATE"
+    },
+    {
+      "text": "Strube",
+      "label": "GPE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DUC2001",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC2002",
+      "label": "ORG"
+    },
+    {
+      "text": "a decade",
+      "label": "DATE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2 Results",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "DUC 2002",
+      "label": "ORG"
+    },
+    {
+      "text": "0.0000.1000.2000.3000.4000.5000.6000.700",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "UFPE FSA",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-1 ROUGE-2\nFig",
+      "label": "PERSON"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE-2",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34.12%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "ROUGE-1",
+      "label": "ORG"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "F-measure",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ROUGE",
+      "label": "ORG"
+    },
+    {
+      "text": "Tables",
+      "label": "GPE"
+    },
+    {
+      "text": "8",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUMExtractive",
+      "label": "NORP"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "ATS",
+      "label": "FAC"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "EXABSUM",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "Automatic",
+      "label": "GPE"
+    },
+    {
+      "text": "ZAM",
+      "label": "PERSON"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "BO",
+      "label": "ORG"
+    },
+    {
+      "text": "DUC",
+      "label": "ORG"
+    },
+    {
+      "text": "html",
+      "label": "PERSON"
+    },
+    {
+      "text": "CNN",
+      "label": "ORG"
+    },
+    {
+      "text": "google",
+      "label": "ORG"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "August 2022",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "October 2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Marcu D. Automated",
+      "label": "PERSON"
+    },
+    {
+      "text": "Oxford",
+      "label": "ORG"
+    },
+    {
+      "text": "2005",
+      "label": "DATE"
+    },
+    {
+      "text": "pp.",
+      "label": "GPE"
+    },
+    {
+      "text": "583\u2013598",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mani",
+      "label": "PERSON"
+    },
+    {
+      "text": "The MIT Press",
+      "label": "ORG"
+    },
+    {
+      "text": "1999",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Huang L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li W. Modeling",
+      "label": "PERSON"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "382\u2013386",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gupta S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019;121:49\u201365",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Nenkova A, & McKeown K.",
+      "label": "ORG"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp.",
+      "label": "GPE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "IBM",
+      "label": "ORG"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Barrios F,",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Argerich L",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015-44",
+      "label": "DATE"
+    },
+    {
+      "text": "JAIIO",
+      "label": "ORG"
+    },
+    {
+      "text": "44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "JAIIO-ASAI 2015-ISSN",
+      "label": "ORG"
+    },
+    {
+      "text": "2451\u20137585, 2016",
+      "label": "DATE"
+    },
+    {
+      "text": "65\u201372",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Marcus S",
+      "label": "ORG"
+    },
+    {
+      "text": "Markovitch S. Contextual",
+      "label": "ORG"
+    },
+    {
+      "text": "31st",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "annual",
+      "label": "DATE"
+    },
+    {
+      "text": "Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "164\u2013171",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1993",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Aliguliyev RM",
+      "label": "ORG"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009;36(4):7764\u201372",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alc\u00f3n O",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lloret E. SEMPCA-Summarizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Comput Informs",
+      "label": "ORG"
+    },
+    {
+      "text": "2018;37:1126\u201348",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Erkan G",
+      "label": "PERSON"
+    },
+    {
+      "text": "Artif Intell Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004;22:457\u201379",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Allison",
+      "label": "PERSON"
+    },
+    {
+      "text": "Blair-Goldensohn S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Drabek",
+      "label": "PERSON"
+    },
+    {
+      "text": "Liu D",
+      "label": "PERSON"
+    },
+    {
+      "text": "Teufel S",
+      "label": "ORG"
+    },
+    {
+      "text": "Zhang Z.",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 4th International Conference on Language Resources and Evaluation",
+      "label": "ORG"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "699\u2013702",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dunlavy DM",
+      "label": "PERSON"
+    },
+    {
+      "text": "QCS",
+      "label": "ORG"
+    },
+    {
+      "text": "Info \nProcess Manag",
+      "label": "PERSON"
+    },
+    {
+      "text": "2007;43(6):1588\u2013605",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Poibeau T. Automatic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Berlin",
+      "label": "GPE"
+    },
+    {
+      "text": "Heidelberg",
+      "label": "GPE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "3\u201321",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Liu X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Webster JJ",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kit C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "22nd",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "168\u2013178",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tonelli S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pianta E. Matching",
+      "label": "PERSON"
+    },
+    {
+      "text": "French",
+      "label": "NORP"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ko Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Seo J. An",
+      "label": "PERSON"
+    },
+    {
+      "text": "2008;29:1366\u201371",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10. 1016",
+      "label": "DATE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "02",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "008",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cagliero L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fiori A. GRAPHSUM",
+      "label": "PERSON"
+    },
+    {
+      "text": "Inf Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013;249:96\u2013109",
+      "label": "DATE"
+    },
+    {
+      "text": "10. 1016",
+      "label": "DATE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "046",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "AAAIPress",
+      "label": "ORG"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "1298\u20131304",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Durrett G",
+      "label": "PERSON"
+    },
+    {
+      "text": "Berg",
+      "label": "PERSON"
+    },
+    {
+      "text": "Klein D. Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "54th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "annual",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "21",
+      "label": "DATE"
+    },
+    {
+      "text": "Alguliev RM",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aliguliyev RM",
+      "label": "ORG"
+    },
+    {
+      "text": "Hajirahimova MS",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mehdiyev CA",
+      "label": "PERSON"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011;38:14514\u201322",
+      "label": "DATE"
+    },
+    {
+      "text": "10. 1016",
+      "label": "DATE"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "05",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "033",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lin H",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bilmes J. Multi-document",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "annual",
+      "label": "DATE"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "912\u2013920",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiao J. Phrase",
+      "label": "PERSON"
+    },
+    {
+      "text": "compressive cross-language",
+      "label": "ORG"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "118\u2013127",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Plaza L. Uso de Grafos Sem\u00e1nticos",
+      "label": "PERSON"
+    },
+    {
+      "text": "Generaci\u00f3n Autom\u00e1tica de Res\u00famenes",
+      "label": "PERSON"
+    },
+    {
+      "text": "Estudio de su Aplicaci\u00f3n",
+      "label": "ORG"
+    },
+    {
+      "text": "PhD",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Belz A. Automatic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nat Lang Eng",
+      "label": "PERSON"
+    },
+    {
+      "text": "2008;14(4):431\u201355",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mohammad S",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dorr B",
+      "label": "PERSON"
+    },
+    {
+      "text": "Egan M",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hassan A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Muthukrishan P",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qazvinian V",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zajic D. Using",
+      "label": "PERSON"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "the Association of Computational \nLinguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "584\u2013592",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Erera S",
+      "label": "ORG"
+    },
+    {
+      "text": "Shmueli-Scheuer M",
+      "label": "ORG"
+    },
+    {
+      "text": "Roitman H",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2019 Conference on Empirical Methods in Natural Language Processing",
+      "label": "EVENT"
+    },
+    {
+      "text": "Page 33",
+      "label": "LAW"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "System Demonstrations",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "211\u2013216",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2005;31(3):297\u2013328",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova K",
+      "label": "PERSON"
+    },
+    {
+      "text": "Strube M. Sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Honolulu",
+      "label": "GPE"
+    },
+    {
+      "text": "Hawaii",
+      "label": "GPE"
+    },
+    {
+      "text": "October",
+      "label": "DATE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Computa-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Linguistics",
+      "label": "GPE"
+    },
+    {
+      "text": "177\u2013185",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Filippova K. Multi-sentence",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "322\u2013330",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mahajani A",
+      "label": "ORG"
+    },
+    {
+      "text": "Maria I",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sharma D.",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Ambient Communications and Computer Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "Singapore",
+      "label": "GPE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "DATE"
+    },
+    {
+      "text": "Boudin F",
+      "label": "PERSON"
+    },
+    {
+      "text": "Morin E. Keyphrase",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "Atlanta",
+      "label": "GPE"
+    },
+    {
+      "text": "Georgia",
+      "label": "GPE"
+    },
+    {
+      "text": "June",
+      "label": "DATE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "298\u2013305",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Banerjee S",
+      "label": "ORG"
+    },
+    {
+      "text": "Mitra P",
+      "label": "ORG"
+    },
+    {
+      "text": "Sugiyama K. Multi-document",
+      "label": "PERSON"
+    },
+    {
+      "text": "24th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "1208\u20131214",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AAAI Press",
+      "label": "ORG"
+    },
+    {
+      "text": "34",
+      "label": "DATE"
+    },
+    {
+      "text": "Nayeem MT",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fuad TA",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chali Y. Abstractive",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "1191\u20131204",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35",
+      "label": "DATE"
+    },
+    {
+      "text": "Shang G",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ding W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang Z",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tixier AJP",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vazirgiannis M",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lorr\u00e9 JP",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chen YC",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bansal M. Fast",
+      "label": "PERSON"
+    },
+    {
+      "text": "56th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "Vol",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "675\u2013686",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "37",
+      "label": "DATE"
+    },
+    {
+      "text": "Di Fabbrizio G",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stent A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gaizauskas R.",
+      "label": "PERSON"
+    },
+    {
+      "text": "8th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "International Natural Language Generation Conference (INLG",
+      "label": "EVENT"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "54\u201363",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "38",
+      "label": "DATE"
+    },
+    {
+      "text": "Lloret E",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rom\u00e1-Ferri MT",
+      "label": "PERSON"
+    },
+    {
+      "text": "Palomar M. COMPENDIUM",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013;88:164\u201375",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "39",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Hashmy R. SumItUp",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pant M",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ray K",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rawat S",
+      "label": "ORG"
+    },
+    {
+      "text": "SoCTA 2016",
+      "label": "DATE"
+    },
+    {
+      "text": "1.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Singapore",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "619\u2013634",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "De Marneffe MC",
+      "label": "ORG"
+    },
+    {
+      "text": "MacCartney",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lrec",
+      "label": "PERSON"
+    },
+    {
+      "text": "41",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Glickman O. Applied",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bar Ilan University",
+      "label": "ORG"
+    },
+    {
+      "text": "2005",
+      "label": "DATE"
+    },
+    {
+      "text": "42",
+      "label": "DATE"
+    },
+    {
+      "text": "Mihis AD",
+      "label": "DATE"
+    },
+    {
+      "text": "Lupsa D. Text",
+      "label": "PERSON"
+    },
+    {
+      "text": "Computer \nScience",
+      "label": "ORG"
+    },
+    {
+      "text": "5039",
+      "label": "DATE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "233\u2013244",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "43",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "2249\u20132255",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "44",
+      "label": "DATE"
+    },
+    {
+      "text": "Pasunuru",
+      "label": "ORG"
+    },
+    {
+      "text": "Bansal M. Multi-reward",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "Vol",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "646\u2013653",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Palomar M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "12th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Speech",
+      "label": "ORG"
+    },
+    {
+      "text": "Berlin",
+      "label": "GPE"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "16\u201323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46",
+      "label": "DATE"
+    },
+    {
+      "text": "Ferr\u00e1ndez \u00b4O. Textual",
+      "label": "PERSON"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "University of Alicante",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "47",
+      "label": "DATE"
+    },
+    {
+      "text": "Edmundson HP",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "1969;16(2):264\u201385",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48",
+      "label": "DATE"
+    },
+    {
+      "text": "Ferreira R, de Souza Cabral L",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pereira",
+      "label": "GPE"
+    },
+    {
+      "text": "Cavalcanti GD",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013;40(14):5755\u201364",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "49",
+      "label": "DATE"
+    },
+    {
+      "text": "Ouyang Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lu Q",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang R.",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stroudsburg",
+      "label": "GPE"
+    },
+    {
+      "text": "PA",
+      "label": "GPE"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "919\u2013927",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Osman AH",
+      "label": "LAW"
+    },
+    {
+      "text": "Kumar YJ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "PERSON"
+    },
+    {
+      "text": "193\u2013197",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "51",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fattah MA",
+      "label": "PERSON"
+    },
+    {
+      "text": "MR",
+      "label": "GPE"
+    },
+    {
+      "text": "FFNN",
+      "label": "ORG"
+    },
+    {
+      "text": "PNN",
+      "label": "ORG"
+    },
+    {
+      "text": "GMM",
+      "label": "ORG"
+    },
+    {
+      "text": "Comput Speech \nLang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009;23(1):126\u201344",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "52",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Li Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luo C",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans Knowl Data Eng",
+      "label": "ORG"
+    },
+    {
+      "text": "2008;20(5):641\u201351",
+      "label": "DATE"
+    },
+    {
+      "text": "53",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Benghabrit A",
+      "label": "ORG"
+    },
+    {
+      "text": "Ouhbi B",
+      "label": "PERSON"
+    },
+    {
+      "text": "Behja H. Text",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "World Congress on Computer and Information Technologies",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "1\u20136",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "DATE"
+    },
+    {
+      "text": "Oliveira H",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ferreira",
+      "label": "GPE"
+    },
+    {
+      "text": "Lima",
+      "label": "GPE"
+    },
+    {
+      "text": "Lins RD",
+      "label": "ORG"
+    },
+    {
+      "text": "Freitas",
+      "label": "ORG"
+    },
+    {
+      "text": "Simske SJ",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016;65:68\u201386",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55",
+      "label": "DATE"
+    },
+    {
+      "text": "Ouhbi B. Automatic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intell Inf Syst",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "1\u201334",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "56",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan X",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiao J. Collabrank",
+      "label": "PERSON"
+    },
+    {
+      "text": "969\u2013976",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Manchester",
+      "label": "PERSON"
+    },
+    {
+      "text": "UK",
+      "label": "GPE"
+    },
+    {
+      "text": "August",
+      "label": "DATE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Organizing Committee",
+      "label": "ORG"
+    },
+    {
+      "text": "57",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tarau P",
+      "label": "ORG"
+    },
+    {
+      "text": "Dekang Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proceedings of EMNLP \n",
+      "label": "ORG"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "404\u2013411",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Barcelona",
+      "label": "GPE"
+    },
+    {
+      "text": "Spain",
+      "label": "GPE"
+    },
+    {
+      "text": "July",
+      "label": "DATE"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alami",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "10:163",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58",
+      "label": "DATE"
+    },
+    {
+      "text": "Lins RD",
+      "label": "ORG"
+    },
+    {
+      "text": "Oliveira H",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cabral L",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "cnn",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "59",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lins RD",
+      "label": "GPE"
+    },
+    {
+      "text": "Ferreira",
+      "label": "GPE"
+    },
+    {
+      "text": "Simske SJ",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "DocEng",
+      "label": "ORG"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "New York",
+      "label": "GPE"
+    },
+    {
+      "text": "NY",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "216\u2013217",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1145/",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33518",
+      "label": "DATE"
+    },
+    {
+      "text": "60",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lin CY",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lin C-Y",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hovy E. Automatic",
+      "label": "PERSON"
+    },
+    {
+      "text": "n-gram",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "Human Language Technology Conference of",
+      "label": "ORG"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "2003",
+      "label": "DATE"
+    },
+    {
+      "text": "150\u2013157",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ferr\u00e1ndez O,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mu\u00f1oz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Palomar M. A",
+      "label": "PERSON"
+    },
+    {
+      "text": "Textual Entailment and Paraphrasing",
+      "label": "ORG"
+    },
+    {
+      "text": "2007",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "66\u201371",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cao Z",
+      "label": "ORG"
+    },
+    {
+      "text": "Li W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei F. Improving multi-document",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thirty-First",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Artificial Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "64",
+      "label": "DATE"
+    },
+    {
+      "text": "Autosummarizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "65",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Batista",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tomaz H",
+      "label": "ORG"
+    },
+    {
+      "text": "Ferreira",
+      "label": "GPE"
+    },
+    {
+      "text": "Dueire Lins",
+      "label": "PERSON"
+    },
+    {
+      "text": "Simske S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "66",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Classifier4J. 2005",
+      "label": "DATE"
+    },
+    {
+      "text": "4j",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "sourc",
+      "label": "PERSON"
+    },
+    {
+      "text": "67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wan X. Towards",
+      "label": "PERSON"
+    },
+    {
+      "text": "2010",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1137\u20131145",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Song W",
+      "label": "PERSON"
+    },
+    {
+      "text": "Choi LC",
+      "label": "ORG"
+    },
+    {
+      "text": "Park SC",
+      "label": "ORG"
+    },
+    {
+      "text": "Ding XF",
+      "label": "PERSON"
+    },
+    {
+      "text": "Syst Appl",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011;38(8):9112\u201321",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Svore K",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vanderwende L",
+      "label": "ORG"
+    },
+    {
+      "text": "Burges C. Enhancing",
+      "label": "ORG"
+    },
+    {
+      "text": "RankNet",
+      "label": "ORG"
+    },
+    {
+      "text": "2007",
+      "label": "DATE"
+    },
+    {
+      "text": "EMNLP-CoNLL",
+      "label": "ORG"
+    },
+    {
+      "text": "2007",
+      "label": "DATE"
+    },
+    {
+      "text": "448\u2013457",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "70",
+      "label": "DATE"
+    },
+    {
+      "text": "Ferreira R, de Freitas FLG",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lins RD",
+      "label": "GPE"
+    },
+    {
+      "text": "Lima",
+      "label": "GPE"
+    },
+    {
+      "text": "de Fran\u00e7a Pereira",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "11th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "66\u201370",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "71",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu PJ",
+      "label": "PERSON"
+    },
+    {
+      "text": "55th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "Vol",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "PERSON"
+    },
+    {
+      "text": "1073\u20131083",
+      "label": "DATE"
+    }
+  ],
+  "summary": "The paper introduces \"EXABSUM,\" a novel Automatic Text Summarization (ATS) approach capable of generating both extractive and abstractive summaries. It combines statistical and semantic methods for extractive summarization and a graph-based approach for abstractive summarization, demonstrating strong performance on multi-domain benchmarks."
+}

@@ -1,0 +1,3723 @@
+{
+  "filename": "LLM-INTENT.txt",
+  "length": 47615,
+  "context": "Assessing the effectiveness of large language models for intent \ndetection in tourism chatbots: A comparative analysis and \nperformance evaluation\nCharaf Ouaddia,*, Lamya Benaddia, El mahi Bouzianea, Lahbib Naimia, \nMohamed Rahoutib, Abdeslam Jakimia, Rachid Saadanec\naSoftware Engineering and Information Systems Engineering Team, Department of Computer Sciences, Faculty of Sciences and Techniques \nErrachidia, Moulay Ismail University, Morocco\nbCIS Dept. Fordham University New York, NY 10023 USA\ncElectrical Engineering Department, Hassania School of Public Works, Casablanca, Morocco\nARTICLE INFO\nEditor DR B Gyampoh\nKeywords:\nIntent Detection\nTourism\nChatbot\nDeep learning\nGenerative AI\nLLMABSTRACT\nIn recent years, the tourism industry has observed a significant transformation by integrating \nchatbots, which enable tourists to interact with various services using natural language. At the \nheart of each chatbot is a Natural Language Understanding (NLU) component, which processes \nnatural language inputs through intent classification. This paper evaluates the performance of \nLarge Language Models (LLMs) such as GPT, BERT, LLaMA, and RoBERTa in the intent classifi -\ncation task for tourism chatbots. Our study conducts a comparative analysis of various LLMs to \ndetermine their effectiveness in classifying user intents in tourism related interactions. We assess \nthe models \u2019 capabilities using a tourism-specific dataset labeled according to the \u201cSix A\u201d criteria \nfor tourist destination analysis. The models are evaluated using performance metrics such as \naccuracy, precision, recall, and F1-score. The findings provide practical insights into developing \nefficient NLU components for tourism chatbots, enhancing their ability to understand and assist \nusers effectively. This paper contributes to the field by offering a comprehensive performance \nevaluation of LLMs for NLU in tourism, guiding researchers and practitioners in building more \nresponsive and accurate chatbots for the tourism industry.\nIntroduction\nIn years, the tourism industry has observed a significant transformation by integrating chatbots, which enable tourists to interact \nwith various services using natural language [1]. At the heart of each chatbot lies the Natural Language Understanding (NLU) \ncomponent, which processes natural language inputs by performing tasks such as intent detection. However, the challenge lies in \nselecting the optimal Large Language Model (LLM) for building an effective NLU system for tourism chatbots.\nThis paper aims to address this challenge by evaluating the performance of several LLMs in classifying intents. The LLMs considered \ninclude GPT, BERT, LLaMA, and RoBERTa. The motivation behind this study stems from the increasing demand for more responsive, \naccurate, and intelligent tourism chatbots capable of understanding user intents and providing relevant and contextual responses [2,\n*Corresponding author.\nE-mail address: c.ouaddi@edu.umi.ac.ma (C. Ouaddi). \nContents lists available at ScienceDirect\nScientific African\nu{\ufffd~zkw! s{yo|kro>! \u00d0\u00d0\u00d01ow\ufffdo\ufffdt o~1m{y2w{m k\ufffdo2\ufffdmtkq\nhttps://doi.org/10.1016/j.sciaf.2025.e02649\nReceived 18 September 2024; Received in revised form 7 February 2025; Accepted 14 March 2025  Scienti\u03e7c  African  28 (2025)  e02649  \nAvailable  online  15 March  2025  \n2468-2276/\u00a9  2025  The Authors.  Published  by Elsevier  B.V. This is an open access  article  under  the CC BY-NC-ND  license  \n( http://creativecommons.org/licenses/by-nc-nd/4.0/  ). \n3],. As tourists increasingly rely on digital tools for planning and navigating their journeys, the ability of chatbots to comprehend and \ninterpret diverse and often complex natural language queries becomes crucial [6]. While there are several LLMs available that excel in \nvarious natural language processing tasks, their effectiveness in intent detection for domain-specific applications like tourism is not \nwell understood. This necessitates a comprehensive evaluation to identify which models are most suitable for intent detection tasks, \nensuring that tourism chatbots can deliver a high-quality user experience.\nCurrent state-of-the-art LLMs such as GPT, BERT, LLaMA, and RoBERTa have demonstrated impressive performance in general- \npurpose natural language understanding tasks [4,5],; however, there are notable gaps when these models are applied to \ndomain-specific tasks such as intent detection in tourism [6]. Existing research often focuses on general benchmarks like SQuAD or \nGLUE, which may not fully capture the intricacies involved in tourism-related interactions. Furthermore, the need for models that \nbalance accuracy with computational efficiency remains a significant challenge, particularly in real-world applications where re-\nsources are limited [7,8],. This paper aims to bridge these gaps by providing a comparative analysis of these models within the context \nof tourism chatbots, identifying their strengths and weaknesses, and recommending the most effective LLMs for practical \nimplementation.\nOur study conducts a comprehensive comparative analysis using a tourism-specific dataset labeled according to the \u201cSix A\u201d criteria \n[9]: Attractions, Activities, Accessibility, Available packages, Amenities, and Ancillary Services. We employ accuracy, precision, recall, \nand F1-score metrics to evaluate the models \u2019 performance. The key contributions of this work are outlined as follows: \n\u2261Curate a diverse dataset specific to the tourism sector, ensuring robust training, validation, and testing processes: We utilize a \ntourism-specific dataset labeled according to the \u201cSix A\u201d criteria. This dataset provides a focused and relevant context for assessing \nthe performance of the algorithms and LLMs.\n\u2261Assessment of LLMs: Our study extends the evaluation to include LLMs such as GPT, BERT, LLaMA, and RoBERTa, analyzing their \neffectiveness in classifying user intents within the context of tourism services.\n\u2261Recommendation of the most effective LLMs and insights for practical implementation: We identify the most effective LLM for \nintent detection in tourism chatbots based on the comparative analysis.\nThe rest of this paper is organized as follows. Section 2 provides a comprehensive background on intent detection in chatbots and \nreviews related work, discussing linguistic rule-based, machine learning, and deep learning approaches. Section 3 presents the adopted \nmethodology, describing the LLMs evaluated, the tourism-specific dataset used, and the evaluation metrics employed. Section 4 \ndiscusses the experimental results and provides a detailed performance evaluation of the BERT, GPT-2, RoBERTa, and LLaMA models \non the intent classification task. Section 5 provides a discussion of the results, including interpretations, time complexity consider -\nations, and practical applications and limitations of the models in tourism chatbots. Finally, Section 6 concludes the study by sum-\nmarizing the main findings and suggesting directions for future research.\nBackground and state-of-the-art\nIntent detection in chatbots\nChatbots are intelligent computer programs designed to simulate human conversation and interact with users [10]. They can be \nbroadly categorized into rule-based and AI-based chatbots [2,3],. Rule-based chatbots operate on predefined rules and scripts, limiting \nthem to specific responses. In contrast, AI-based chatbots use advanced algorithms and machine learning to understand and respond to \na broader range of queries. The core of AI-based chatbots is the NLU component [11], which classifies user intents to generate \nappropriate responses. This classification task is crucial, as it determines how accurately the chatbot understands and processes user \ninput, making it essential for effective communication and user satisfaction (Fig. 1).\nFig. 1.Overview of NLU component in Chatbot Systems (adopted from [12] and [13]).C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n2 \nOverview of LLMs\nLLMs are advanced AI models designed to comprehend and generate human language. These models, predominantly based on the \nTransformer architecture [4], are trained on extensive text corpora, which enables them to execute a wide array of natural language \nprocessing (NLP) tasks such as text generation, translation, summarization, and question answering. LLMs are pivotal in the pro-\ngression of AI and NLP as they empower machines to understand and produce human language with remarkable precision. Their \ndiverse applications range from chatbots and virtual assistants to automated content creation and language translation. Furthermore, \nthe capability to fine-tune these models for specific tasks enhances their versatility, rendering them indispensable tools in various \nindustry applications [7,8],.\nRelated work\nIn the literature, there are three main approaches to realizing an NLU component: the first is the linguistic rule-based approach [14,\n15], the second is the machine learning approach [14,16], and the third is the deep learning approach.\nLinguistic rule-based approach\nHistorically, rule-based systems have been employed for NLU. This method depends on expertise in a specific field to recognize \nimportant terms or words in the user\u2019s statement, which helps determine their intention [17,18],.\nIn addition, this approach also relies on predefined grammatical and syntactical rules to parse and understand NL. It was widely \nused in the early stages of NLU development due to its simplicity and the availability of linguistic expertise. Systems like ELIZA, one of \nthe first chatbots, used rule-based methods to simulate conversation by pattern matching [19]. Another example is the LFG (Lexical \nFunctional Grammar) Parser, which employs deep linguistic analysis to interpret user inputs [20]. Conditional Random Fields (CRFs) \nare commonly employed for the task of entity extraction or name-entity recognition (NER) and are widely utilized in many applications \n[21]. The approach is limited in adaptability and less scalable due to the requirement of a laborious feature extraction process.\nHowever, despite their early success, rule-based systems have inherent limitations [22]. They are often brittle, struggling to adapt \nto the variability of NL as it is used in different contexts. For instance, as new linguistic expressions and colloquial phrases emerge, \nrule-based systems require extensive manual updates to remain effective. This lack of flexibility has been noted as a significant \ndrawback in various studies [23], which ultimately led to the exploration of more adaptive approaches (discussed in the next sections \n2.3.2 and 2.3.3), such as ML and deep learning, for both intent classification and entity extraction tasks.\nMachine learning approaches for intent classification and named entity extraction in NLU\nThis approach, based on machining learning techniques, defines NLU through two tasks: intent classification and named entity \nextraction [14,16],. Intent classification is typically treated as a classification task, where the model identifies the intent from a \npredefined list based on a given user message. Named entity extraction involves identifying key elements within a sentence to utilize \nthem for subsequent actions. Both tasks involve training models on large datasets to learn patterns and make predictions. This \napproach improves the system\u2019s ability to generalize from examples rather than relying on manually crafted rules.\nMost intent classification techniques have used supervised machine learning algorithms, including SVM [24] and decision trees \n[25]. Furthermore, Naive Bayes and KNN are among the prevalent algorithms employed in this methodology. For example, [26] \nemploys a Support Vector Machine (SVM) approach for intent categorization, attaining a 78.9% success rate. This method demon -\nstrates substantial enhancements compared to rule-based methods. Furthermore, Pang et al. [27] have successfully utilized Naive \nBayes in sentiment analysis applications.\nDeep learning techniques for NLU\nThe deep learning approach utilizes artificial neural networks (ANN) to represent complex patterns in language data. Methods such \nas Recurrent Neural Networks (RNNs) [28], Long Short-Term Memory (LSTM) networks [29], Gated Recurrent Unit (GRU) [23], \nbidirectional LSTM with an attention mechanism [30], and LLMs [6] based on the Transformers have significantly transformed NLU by \nallowing the efficient analysis of extensive amounts of unorganized textual data with exceptional precision.\nThe Transformer model developed by Vaswani et al. [4], which incorporates the attention mechanism, is the foundation for \nnumerous cutting-edge NLU systems, such as BERT (Bidirectional Encoder Representations from Transformers). The BERT model, \ncreated by Devlin et al. [5], significantly improves NLU by training on extensive text collections and then fine-tuning for particular \ntasks. This approach leads to exceptional performance in many NLU evaluations.\nMethodology\nTo achieve the primary objective of this paper, which is to evaluate the performance of various LLMs in the tourism sector, we need \nto carefully select the candidate LLMs for examination and the dataset for training and testing these models. This section provides a \ndetailed account of our selection process for the different LLMs, the tourism functionalities used in the evaluation, and the design of our \nexperiments.C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n3 \nExperimental methodology\nThis study evaluates the performance of diverse ML techniques for intent classification (IC) in tourism chatbots. The methodology \ncomprises steps 1, 2, 3, 4, and 5 depicted in Fig. 2.\nOverview of evaluated LLMs\nSeveral widely used LLMs can be easily fine-tuned for specific tasks. To make our study comprehensive, we examined the per-\nformance of five LLMs: GPT-2, LLaMA 3.1, BERT, Flacon, and RoBERTa. These LLMs were selected because they are popular and \nextensively used by researchers. In the following sections, we describe these LLMs.\nGPT: The GPT (Generative Pre-trained Transformer) model follows the evolutionary path of language models. Like its predecessors, \nGPT is trained unsupervised on many documents to produce a general language model upon which more specific natural language \nprocessing tasks can be conducted. The encoding architecture also adopts the \u201ctransformers\u201d solution introduced by Vaswani et al. [4], \nfeaturing a multi-layer structure of attention modules. The model has been developed in six successive versions: GPT-1 (Radford et al., \n2018 in [31]), GPT-2 (Radford et al., 2019 in [32]), and GPT-3 (Brown et al., 2020 in [33]), each progressively improving the model\u2019s \nperformance by increasing both the size of the training datasets and, more importantly, the model\u2019s complexity (117 million pa-\nrameters for GPT-1, 1.5 billion for GPT-2, 175 billion for GPT-3, GPT-3.5, GPT-4, and GPT-4o).\nLike other language models, GPT has been made available in a library allowing word encoding from a text.1\nBERT: The BERT model (Bidirectional Encoder Representations from Transformers) offers a pre-trained network layer (itself \ncomposed of several sub-layers) that dynamically produces word embeddings adapted to the context of the document being analyzed. \nThe model exhibits several similarities with embeddings. First, it translates a set of linguistic information into a vector form, allowing \nthe word to be integrated into the processing chain of neural networks. Second, it is trained on huge document corpora (800 million \nwords and 2.5 billion words [5]), ensuring good representativeness of the contexts in which words are used. Third, the model comes in \nmultiple versions, varying the number of parameters used. As with embeddings, the larger the dimensions, the more accurate the \nmodel and the more demanding it is in terms of computational time [5]. Fourth, the trained model is made available in libraries that \ncan be directly used as a starting point for solving natural language processing tasks.2\nAdditionally, the model adopts the encoder-decoder architecture used in unsupervised approaches or sequence generation tasks \n(for example, translation tasks where an input sequence must produce an output sequence). Encoder-decoder networks operate in two \nstages: the encoder part generates an encoding of the input sequence in the form of a vector representation, which is then used by the \ndecoder part to generate the output sequence. Both parts are composed of neural networks consisting of recursive, recurrent, or \nconvolutional modules for processing sequential data, with auxiliary modules, such as attention modules, attached for data syn-\nchronization. An attention module can also be used at the junction between the encoder and decoder parts.\nThe BERT model is unique because it relies on an encoder-decoder architecture composed exclusively of attention modules, known \nas the \u201cTransformer\u201d [4]. It is trained unsupervised on two natural language processing tasks: predicting a word in a sequence and \ndetecting the continuity of two sequences [5]. The decoding module is specifically adapted to solve a particular task and is only helpful \nfor the BERT model within the context of its training. Therefore, only the encoder part is utilized in the context of transfer learning and \nis made available in public libraries. BERT serves as the encoding layer of a network, positioned upstream of a decoding layer tailored \nto the task at hand, which can vary from one study to another.\nRoBERTa: RoBERTa, aka Robustly Optimized BERT Approach, is an advanced variant of the BERT model, developed by Facebook \nAI, designed for NLP tasks. It enhances BERT by training with more data, larger mini-batches, and removing the next-sentence pre-\ndiction objective, improving performance on various NLP benchmarks.\nLLaMA: LLaMA is an advanced language model developed by Meta AI, designed to push the boundaries of NLP. It offers capabilities \nthat can be fine-tuned for a wide range of tasks, from text generation and summarization to sentiment analysis, translation, and others. \nIn our study, we will focus on fine-tuning LLaMA 3.1, the latest iteration of this model, which has been further optimized for per-\nformance and efficiency. LLaMA 3.1 boasts improved architecture, making it more effective in understanding and generating human- \nlike text. This version of LLaMA is particularly suited for tasks that require a deep understanding of context.\nAlgorithm 1outlines a comprehensive procedure for evaluating the performance of various LLMs in intent detection for tourism \nchatbots. The process begins by taking a labeled dataset, a set of LLMs, and a range of learning rates as input. The dataset is split into \ntraining, validation, and test sets for each LLM, and the model is initialized with each specified learning rate. The model is then trained \non the training set and evaluated on the validation and test sets to compute performance metrics, including Precision, Recall, and F1- \nscore. These metrics are stored for each model and learning rate combination to determine the optimal configuration for intent \ndetection tasks.\nDescription of dataset\nTo prepare the dataset used in intent classification, we adopted an approach based on the 6A or the \u201cSix A\u201d Framework for tourist \ndestination analysis [9]: attractions, accessibility, amenities, activities, available packages, and ancillary services (Fig. 3). The key \n1https://huggingface.co/docs/transformers/index\n2https://huggingface.co/docs/transformers/model doc/bertC. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n4 \nFig. 2.An overview of the methodology.\nAlgorithm 1 \nThe proposed LLMs model for intent detection in tourism chatbots procedure.\nC. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n5 \nfeatures of the datasets are summarized in Table 1and detailed as follows. \n\u2261Attractions : Information on tourist attractions, historical sites, and natural wonders was meticulously gathered through extensive \nresearch from tourism websites, travel guides, and official destination sources. This effort resulted in 1200 training examples \ncomprising 12 intents: GetArtificialAttractions, GetNaturalAttractions, MountainAttractions, ForestAttractions, CaveAttractions, \nReligiousAttractions, ArchitecturalAttractions, Museum, Monument, BeachAttractions, Waterfalls, and HillAttractions to cover a \ndiverse range of attractions.\n\u2261Amenities : We identified available amenities and services for tourists, such as accommodations, dining options, and hotels. Five \nhundred training examples, distributed across five intents: GetHotels, GetCafe, GetRestaurant, GetCamping, and Public -\nTransportationOptions, were collected to provide comprehensive information about amenities in the Draa-Tafilalet region.\n\u2261Accessibility : Information on transportation options, routes, and accessibility features was compiled to facilitate tourists \u2019 travel \nplans. This included details about airports, train stations, bus services, and car rentals. We prepared 700 training examples with \nseven intents: PublicTransportationOptions, AskForTaxiTransportation, BusTransportation, AirplaneTransportation, Mini-\nTaxiTransportation, GetInformationAccessibilityFeatures, and FaresTransportation to address various accessibility-related \ninquiries.\n\u2261Activities : A list of leisure activities available to tourists, including adventures, cultural experiences, and entertainment options, \nwas assembled. This resulted in 400 training examples, categorized into four intents: GetLocationActivities, GetLocationEvents, \nGetSportActivities, and AskAdventureSports, covering various activities and experiences offered in the destinations.\n\u2261Ancillary services : Ancillary services that complement tourists \u2019 experiences, such as tour guides, translators, travel insurance, and \nlocal assistance services, were identified. We prepared 300 training examples, distributed over three intents: GetLocationServices, \nGetTravelAgencies, and AskBankLocation to address inquiries related to ancillary services and support tourists \u2019 needs during their \ntravels.\nFig. 3.The \u201cSix A\u201d Framework for tourist destination analysis (adopted from [1,34],).\nTable 1 \nSummary of dataset features for Draa-Tafilalet tourism.\nFeature Description Training examples\nAttractions Tourist attractions, historical landmarks, and natural wonders. 1200\nAmenities Amenities for tourists, including accommodations, dining options, and hotels 500\nAccessibility Transportation options, routes, and accessibility features 700\nActivities Leisure activities for tourists, including adventures, cultural experiences, and entertainment options 400\nAncillary services Tour guides, translators, travel insurance, and local assistance services 300\nAvailable packages Travel deals, itineraries, pricing, inclusions, bookings 400\nTotal 3500C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n6 \n\u2261Available packages : We collected detailed information about travel deals, including itineraries, pricing, inclusions, and booking \ndetails. Four hundred training examples, each intent comprising 100 utterances, were collected to provide insights into the \navailable packages and assist users in making informed decisions. The four intents covered are: GetAvailablePackages, FindSea -\nsonalPackages, FindSportsPackages, and FindFamilyFriendlyPackages.\nOverall, the dataset comprises 3500 utterances, including 35 intents, ensuring a comprehensive and diverse representation of the \ntourism-related information for the Draa-Tafilalet region. The dataset is available at this link: https://github.com/charaf83/Dataset .\nEvaluation metrics\nThe effectiveness of the models is assessed using several evaluation metrics derived from the test dataset, specifically accuracy, \nprecision, recall, and F1-score [35]. Accuracy, which quantifies the ratio of correctly identified instances, is calculated as (TP\u0087TN)/ \n(TP\u0087TN\u0087FP\u0087FN), where TP (true positives), TN (true negatives), FP (false positives), and FN (false negatives) denote the respective \ncounts of each outcome. Precision, given by TP/ (TP\u0087FP), indicates the proportion of true positive predictions among all positive \npredictions, while recall, defined as TP/(TP\u0087FN), reflects the model \u2019s capability to detect all actual positive instances. The F1-score, \nformulated as (2 \u00d7Precision \u00d7Recall)/ (Precision\u0087Recall), serves as the harmonic mean of precision and recall, providing a balanced \nmeasure of both metrics.\nAlthough we evaluate each model \u2019s accuracy, precision, and recall, our focus in this paper is on presenting the weighted F1-score, \nas it provides a balanced measure of model performance across different classes without detailing each metric for individual intents.\nExperimental results\nIn this section, a comparative analysis of the performance of various LLMs is presented. It is intended to classify one task intent from \ntraining examples. A dataset focused on tourism intents specific to the Draa-Tafilalet region in Morocco is used to implement this task.\nPerformance evaluation of BERT\nTable 2above presents the BERT model \u2019s precision, recall, and F1-score metrics across different learning rates, evaluated on the \ntraining, validation, and test sets. The comparison between the two learning rates (2e-5 and 5e-6) allows us to assess the impact of \nlearning rate adjustments on the model \u2019s performance. As demonstrated, the model maintains high precision, recall, and F1-score \nacross all sets, with slight validation and test performance variations. These results highlight the effectiveness of fine-tuning BERT \nfor the intent classification task within the tourism domain, explicitly focusing on intents related to the Draa-Tafilalet region in \nMorocco.\nFig. 4illustrates the training and validation accuracy of the BERT model for the learning rate 5e-6 during the intent classification \ntask.\nPerformance evaluation of GPT 2\nTable 3presents the results of the performance evaluation of the GPT-2 model in the intent classification task across different \nlearning rates. The metrics reported include precision, recall, and F1-score for the training, validation, and test datasets. Additionally, \nFig. 5illustrates the training and validation accuracy for the GPT-2 model with learning rates of 1e-4 and 1e-5 over 30 epochs. These \nresults provide a comprehensive view of the model \u2019s performance and ability to generalize across different data splits.\nPerformance evaluation of RoBERTa\nTable 4provides a detailed summary of the performance evaluation of the RoBERTa model in the intent classification task, \nmeasured across different learning rates. The metrics reported include precision, recall, and F1-score for the training, validation, and \ntest datasets. Additionally, Fig. 6presents the training and validation accuracy of the RoBERTa model when fine-tuned with a learning \nrate of 5e-6, illustrating the model \u2019s learning progression over 30 epochs. These results are essential for understanding how well the \nRoBERTa model generalizes and performs under different training conditions in the context of intent classification.\nTable 2 \nResults of performance evaluation of BERT model in intent classification Task.\nLearning rate BERT\nPrecision Recall F1-score\nTraining Validation Testing Training Validation Testing Training Validation Testing\n2e-5 1.00 0.97 0.99 1.00 0.95 0.98 1.00 0.95 0.98\n4e-5 1.00 0.95 0.99 1.00 0.94 0.99 1.00 0.94 0.99\n3e-6 1.00 0.96 0.99 1.00 0.94 0.98 1.00 0.94 0.98\n5e-6 1.00 0.97 0.99 1.00 0.95 0.98 1.00 0.95 0.98C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n7 \nFig. 4.Training and validation accuracy for BERT model with LR 5e-6.\nTable 3 \nResults of performance evaluation of GPT 2 model in intent classification Task.\nLearning rate GPT 2\nPrecision Recall F1-score\nTraining Validation Testing Training validation Testing Training validation Testing\n1e-2 0.73 0.74 0.75 0.73 0.69 0.71 0.73 0.68 0.71\n1e-3 0.82 0.84 0.77 0.82 0.78 0.75 0.82 0.79 0.75\n1e-4 1.00 0.97 0.99 1.00 0.96 0.99 1.00 0.96 0.99\n1e-5 1.00 0.97 0.99 1.00 0.96 0.99 1.00 0.96 0.99\nFig. 5.Training and validation accuracy for GPT 2 model with LR 1e-4 and 1e-5.\nTable 4 \nResults of performance evaluation of Roberta model in intent classification Task.\nLearning rate ROBERTA\nPrecision Recall F1-score\nTraining Validation Testing Training Validation Testing Training Validation Testing\n2e-5 1.00 0.98 0.99 1.00 0.96 0.98 1.00 0.96 0.98\n4e-5 1.00 0.94 0.99 1.00 0.93 0.98 1.00 0.93 0.98\n3e-6 1.00 0.97 0.99 1.00 0.95 0.99 1.00 0.95 0.99\n5e-6 1.00 0.98 0.99 1.00 0.96 0.99 1.00 0.96 0.99C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n8 \nPerformance evaluation of LLaMA\nThe following section presents the performance evaluation of the LLaMA 3.1 model in the intent classification task. The model \u2019s \nprecision, recall, and F1-score were evaluated across different learning rates, as shown in Table 5. Additionally, Fig. 7visually rep-\nresents the training and validation accuracy trends for the LLaMA model with a learning rate of 2e-4.\nDiscussion\nInterpretation of results\nThe results presented in Tables 2, 3, 4, and 5, alongside Figs. 4, 5, 6, and 7, offer valuable insights into the performance of BERT, \nGPT-2, RoBERTa, and LLaMA 3.1 models in the context of intent classification within the tourism domain. The analysis of these results \nallows us to draw several key interpretations.\nFirst, all four models (BERT, GPT-2, RoBERTa, and LLaMA) present strong performance across the evaluated metrics (precision, \nrecall, and F1-score) and datasets (training, validation, and test). This indicates that these models can capture the input data and \ncorrectly classify intents.\nRoBERTa notably shows consistently high performance across different learning rates, particularly with the learning rate 5e-6, as \nseen in Table 4. The validation accuracy remains stable throughout the training process, as depicted in Fig. 6.\nAs shown in Table 2, the BERT model also performs exceptionally well, with near-perfect precision, recall, and F1-scores, especially \nat lower learning rates. The results demonstrate that BERT is particularly well-suited for intent classification tasks, with minimal \ndifferences between the training and validation performances, highlighting its robustness in this domain. Similarly, GPT-2, as pre-\nsented in Table 3, achieves high performance, particularly at learning rates of 1e-4 and 1e-5. The model \u2019s precision, recall, and F1- \nscores indicate that it can effectively handle intent classification tasks, and Fig. 5further supports this with consistent validation \naccuracy over 30 epochs.\nThe LLaMA 3.1 model, as outlined in Table 5, also demonstrates outstanding performance, particularly at the learning rate of 2e-4. \nThe model maintains near-perfect precision, recall, and F1-scores across training, validation, and test sets, highlighting its ability to \nhandle complex intent classification tasks accurately. The training and validation accuracy trends, shown in Fig. 7, confirm that LLaMA \ngeneralizes effectively across different data splits, making it a robust choice for such applications.\nThe comparison across the models indicates that while all four models perform well, RoBERTa and LLaMA 3.1 slightly outperform \nBERT and GPT-2 regarding validation metrics. This suggests that RoBERTa and LLaMA may have a slight edge in generalization for this \nspecific task, remarkably when fine-tuned with optimal learning rates.\nComputational complexity and resource overhead\nThe time complexity and computational overhead of training and fine-tuning LLMs such as BERT, GPT-2, RoBERTa, and LLaMA 3.1 \nare critical considerations, especially when deploying these models in resource-constrained environments like real-time tourism \nchatbots. The complexity primarily depends on each model \u2019s architecture, the dataset \u2019s size, and the specific hyperparameters used \nduring training.\nFor instance, the BERT and RoBERTa models, built on the Transformer architecture, involve time complexities that scale \napproximately as O(n2d), where n is the sequence length and d is the dimensionality of the embeddings. This quadratic complexity \narises from the self-attention mechanism that requires each token to attend to every other token in the input sequence. The compu -\ntational overhead for BERT and RoBERTa can be substantial, particularly with longer input sequences, resulting in higher training \ntimes and memory consumption. The fine-tuning process for these models, even on modern GPUs, can take several hours to days \nFig. 6.Training and validation accuracy for Roberta model with LR 5e-6.C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n9 \ndepending on the dataset size and model configuration, leading to significant overhead when frequent updates or retraining are \nrequired.\nGPT-2, also based on the Transformer architecture, shares similar time complexity concerns. However, its autoregressive nature, \nwhere predictions are generated one token at a time, can introduce additional latency during inference. This characteristic can impact \nthe responsiveness of real-time chatbots, making GPT-2 less ideal for applications requiring instantaneous responses.\nOn the other hand, LLaMA 3.1, a more recent model optimized for efficiency, presents a relatively lower computational overhead \nthan its predecessors. The architectural improvements in LLaMA reduce training and inference time, making it more suitable for \ndeployment in environments where computational resources are limited, or low latency is crucial. However, like all LLMs, fine-tuning \nstill requires considerable GPU memory and computational power.\nOverall, the choice of LLM for a tourism chatbot should consider the trade-off between model performance and computational \noverhead. While models like RoBERTa and LLaMA 3.1 offer robust performance, their time complexity and resource requirements \nnecessitate careful planning regarding the deployment infrastructure and potential optimizations, such as model pruning, distillation, \nor quantization, to reduce overhead and improve efficiency.\nPractical applications and limitations\nThe findings and models discussed in this study have several practical applications, particularly in smart tourism and AI-based \nchatbots [Ouaddi, 2024, DSL-Driven Approaches and Metamodels for Chatbot Development: A Systematic Literature Review]. \nUsing advanced language models like BERT, GPT-2, and RoBERTa can significantly enhance the performance and capabilities of \nchatbots. Below are some key practical applications: \n\u2261Tourism chatbots: The models can be deployed in intelligent tourism applications to improve user interaction. Chatbots powered by \nthese models can assist tourists by providing information and answering queries about attractions, amenities, activities, etc.\n\u2261Intent classification: These models are beneficial in intent classification tasks, enabling businesses to understand better and respond \nto customer needs. For instance, e-commerce platforms can use these models to identify purchase intents and offer relevant product \ninformation.\nIn addition to the study \u2019s positive results, it is important to know several limitations. Below are two key limitations of the study: \n\u2261Domain-specific dataset: The study is based on a dataset specific to the tourism industry, mainly focusing on intents related to the \nDraa-Tafilalet region in Morocco. While the models perform strongly in this context, the findings may not be generalizable to other \ndomains or areas.Table 5 \nResults of performance evaluation of Llama 3.1 model in intent classification Task.\nLearning rate Llama 3.1\nPrecision Recall F1-score\nTraining Validation Testing Training Validation Testing Training Validation Testing\n2e-4 1.00 0.99 0.99 1.00 0.98 0.99 1.00 0.98 0.99\n1e-5 0.82 0.82 0.80 0.82 0.76 0.78 0.82 0.76 0.78\n1e-6 0.87 0.83 0.90 0.87 0.79 0.83 0.87 0.80 0.84\nFig. 7.Training and validation accuracy for Llama 3.1 model with LR 2e-4.C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n10 \n\u2261Computational resource requirements: The fine-tuning of LLMs like BERT, GPT-2, and RoBERTa demands significant computa -\ntional resources. This limitation may restrict the accessibility of these models for researchers or organizations with limited \ncomputational infrastructure.\nConclusion\nThis study evaluated the performance of several Large Language Models (LLMs) \u2014 BERT, GPT-2, RoBERTa, and LLaMA 3.1 \u2014 for \nintent detection in tourism chatbots using a dataset specific to the tourism domain, categorized by the \u201cSix A\u201d criteria. The results show \nthat all models perform well, with RoBERTa and LLaMA 3.1 slightly outperforming BERT and GPT-2 in validation accuracy and F1- \nscore, demonstrating their robustness and generalization capabilities. BERT also performed strongly with near-perfect precision and \nrecall, while GPT-2 showed solid results at optimal learning rates. While the findings indicate that these LLMs are effective for intent \nclassification in tourism chatbots, the study is limited by its use of a domain-specific dataset and the significant computational re-\nsources required for fine-tuning. Future research could explore more diverse datasets, hybrid model approaches, and alternative \nevaluation metrics to enhance further the performance and applicability of LLMs in real-world scenarios, such as incorporating \nmultimodal inputs for more personalized and context-aware chatbot experiences.\nCRediT authorship contribution statement\nCharaf Ouaddi: Conceptualization, Methodology, Investigation, Software, Data curation, Formal analysis, Resources, Writing \u2013 \nreview & editing, Writing \u2013 original draft. Lamya Benaddi: Conceptualization, Methodology, Investigation, Data curation, Formal \nanalysis, Resources. El mahi Bouziane: Conceptualization, Resources. Lahbib Naimi: Conceptualization, Resources. Mohamed \nRahouti: Validation, Writing \u2013 review & editing. Abdeslam Jakimi: Methodology, Validation, Supervision, Writing \u2013 review & \nediting. Rachid Saadane: Validation, Writing \u2013 review & editing.\nDeclaration of competing interest\nThe authors declare that they have no known competing financial interests or personal relationships that could have appeared to \ninfluence the work reported in this paper.\nAcknowledgment\nThis work was supported by the Ministry of Higher Education, Scientific Research and Innovation, the Digital Development Agency \n(DDA), and the National Center for Scientific and Technical Research (CNRST) of Morocco (Alkhawarizmi/2020/32).\nReferences\n[1]L. Benaddi, C. Ouaddi, A. Jakimi, B. Ouchao, A systematic review of chatbots: classification, development, and their impact on tourism, IEEE Access 12 (2024) \n78 799. \u201378 810.\n[2]C. Ouaddi, L. Benaddi, A. Souha, A. Jakimi, B. Ouchao, R. Saadane, Exploring and analyzing the impact of chatbots in tourism industry, in: Proceedings of the \n7th International Conference on Networking, Intelligent Systems and Security, 2024, pp. 1\u20136.\n[3]H. El Alaoui, Z. El Aouene, V. Cavalli-Sforza, Building intelligent chatbots: tools, technologies, and approaches, in: 2023 3rd International Conference on \nInnovative Research in Applied Science, Engineering and Technology (IRASET), IEEE, 2023, pp. 1\u201312.\n[4]A. Vaswani, Attention is all you need. Advances in Neural Information Processing Systems, 2017 .\n[5]J. Devlin, Bert: pre-training of deep bidirectional transformers for language understanding, arXiv preprint arXiv:1810.04805 (2018) .\n[6]A. Souha, C. Ouaddi, L. Benaddi, A. Jakimi, Pre-trained models for intent classification in chatbot: comparative study and critical analysis, in: 2023 6th \nInternational Conference on Advanced Communication Technologies and Networking (CommNet), IEEE, 2023, pp. 1\u20136.\n[7]J. S\u02d8anchez Cuadrado, S. P\u02d8erez-Soler, E. Guerra, J. De Lara, Automating the development of task-oriented llm-based chatbots, in: Proceedings of the 6th ACM \nConference on Conversational User Interfaces, 2024, pp. 1\u201310.\n[8]W.X. Zhao, K. Zhou, J. Li, T. Tang, X. Wang, Y. Hou, Y. Min, B. Zhang, J. Zhang, Z. Dong, et al., A survey of large language models, arXiv preprint arXiv: \n2303.18223 (2023) .\n[9]D. Buhalis, Marketing the competitive destination of the future, Tourism Manage. 21 (1) (2000) 97\u2013116.\n[10] R. Sarikaya, The technology behind personal digital assistants: an overview of the system architecture and key components, IEEE Signal Process. Mag. 34 (1) \n(2017) 67\u201381.\n[11] C. Ouaddi, L. Benaddi, A. Jakimi, Architecture, tools, and dsls for developing conversational agents: an overview, Procedia Comput. Sci. 231 (2024) 293\u2013298.\n[12] C. Ouaddi, L. Benaddi, A. Souha, A. Jakimi, A comparative and analysis study for recommending a chatbot development tool, in: 2024 International Conference \non Global Aeronautical Engineering and Satellite Technology (GAST), IEEE, 2024, pp. 1\u20136.\n[13] S. P\u02d8erez-Soler, E. Guerra, J. De Lara, Model-driven chatbot development, in: International Conference on Conceptual Modeling, Springer, 2020, pp. 207\u2013222.\n[14] A. Deoras, R. Sarikaya, G. T\u007fur, and D. Hakkani-T \u007fur, \u201cJoint decoding for speech recognition and semantic tagging. \u201d in INTERSPEECH, 2012, pp. 1067 \u20131070.\n[15] G. Tur, R. De Mori, Spoken Language understanding: Systems for Extracting Semantic Information from Speech, John Wiley & Sons, 2011 .\n[16] E. Levin, R. Pieraccini, W. Eckert, A stochastic model of human-machine interaction for learning dialog strategies, IEEE Trans. Speech Audio Process. 8 (1) \n(2000) 11\u201323.\n[17] A. Ashkan, C.L. Clarke, Term-based commercial intent analysis, in: Proceedings of the 32nd international ACM SIGIR conference on Research and development \nin information retrieval, 2009, pp. 800\u2013801.\n[18] B. Hollerit, M. Kr\u007foll, M. Strohmaier, Towards linking buyers and sellers: detecting commercial intent on twitter, in: Proceedings of the 22nd international \nconference on world wide web, 2013, pp. 629\u2013632.\n[19] J. Weizenbaum, Eliza \u2014A computer program for the study of natural language communication between man and machine, Commun. ACM 9 (1) (1966) 36\u201345.\n[20] R.M. Kaplan, J. Bresnan, et al., Lexical-functional grammar: A formal System For Grammatical Representation, Massachusetts Institute Of Technology, Center \nFor Cognitive Science, 1981 .C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n11 \n[21] D. Nadeau, S. Sekine, A survey of named entity recognition and classification, Lingvisticae Investigationes 30 (1) (2007) 3\u201326.\n[22] R. Grishman, Information extraction: techniques and challenges. Information Extraction A Multidisciplinary Approach to an Emerging Information Technology: \nInternational Summer School, SCIE-97, Springer, Frascati, Italy, 1997, pp. 10\u201327. July 14\u2013181997 .\n[23] J.-C. Na, W.Y.M. Kyaing, C.S. Khoo, S. Foo, Y.-K. Chang, Y.-L. Theng, Sentiment classification of drug reviews using a rule-based linguistic approach, in: The \nOutreach of Digital Libraries: A Globalized Resource Network: 14th International Conference on Asia-Pacific Digital Libraries, ICADL 2012 14, Springer, Taipei, \nTaiwan, 2012, pp. 189\u2013198. November 12-15, 2012Proceedings .\n[24] T. Zhang, J.H. Cho, C. Zhai, Understanding user intents in online health forums, in: Proceedings of the 5th ACM Conference on Bioinformatics, Computational \nBiology, and Health Informatics, 2014, pp. 220\u2013229 .\n[25] M. Mendoza, J. Zamora, Building decision trees to identify the intent of a user query, in: International Conference on Knowledge-Based and Intelligent \nInformation and Engineering Systems, Springer, 2009, pp. 285\u2013292 .\n[26] K. Li, X. Zhang, Y. Du, A svm based classification of eeg for predicting the movement intent of human body, in: 2013 10th International Conference on \nUbiquitous Robots and Ambient Intelligence (URAI), IEEE, 2013, pp. 402\u2013406 .\n[27] B. Pang, L. Lee, and S. Vaithyanathan, \u201cThumbs up? Sentiment classification using machine learning techniques,\u201d arXiv preprint cs/0205070, 2002.\n[28] M. Mensio, G. Rizzo, M. Morisio, Multi-turn qa: A rnn contextual approach to intent classification for goal-oriented systems, in: Companion Proceedings of the \nThe Web Conference 2018, 2018, pp. 1075\u20131080 .\n[29] L. Meng, M. Huang, Dialogue intent classification with long short-term memory networks, in: Natural Language Processing and Chinese Computing: 6th CCF \nInternational Conference, NLPCC 2017 6, Springer, Dalian, China, 2018, pp. 42\u201350. November 8\u201312, 2017Proceedings .\n[30] X. Zhang, H. Wang, A joint model of intent determination and slot filling for spoken language understanding, IJCAI 16 (2016) (2016) 2993\u20132999 .\n[31] A. Radford, \u201cImproving language understanding by generative pre-training,\u201d 2018.\n[32] A. Radford, J. Wu, R. Child, D. Luan, D. Amodei, I. Sutskever, et al., Language models are unsupervised multitask learners, OpenAI blog 1 (8) (2019) 9.\n[33] B. Mann, N. Ryder, M. Subbiah, J. Kaplan, P. Dhariwal, A. Neelakantan, P. Shyam, G. Sastry, A. Askell, S. Agarwal, et al., Language models are few-shot learners, \narXiv preprint arXiv:2005.14165 1 (2020) .\n[34] L. Benaddi, C. Ouaddi, A. Souha, A. Jakimi, B. Ouchao, Chatbots in tourism sector: classification, evolution, and functionalities, Proc. IEEE (2024) .\n[35] D.M. Powers, Evaluation: from precision, recall and f-measure to roc, informedness, markedness and correlation, arXiv preprint (2020) .C. Ouaddi et al.                                                                                                                                                                                                        Scienti\u03e7c  African  28 (2025)  e02649  \n12",
+  "keywords": [
+    "chatbots",
+    "chatbot",
+    "intents",
+    "intent",
+    "conversational",
+    "tourism",
+    "utterances",
+    "semantic",
+    "tourists",
+    "tourist"
+  ],
+  "intent_category": "intent_recognition",
+  "named_entities": [
+    {
+      "text": "Charaf Ouaddia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lamya Benaddia",
+      "label": "PERSON"
+    },
+    {
+      "text": "El",
+      "label": "GPE"
+    },
+    {
+      "text": "Bouzianea",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mohamed Rahoutib",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abdeslam Jakimia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rachid Saadanec",
+      "label": "PERSON"
+    },
+    {
+      "text": "aSoftware Engineering and",
+      "label": "ORG"
+    },
+    {
+      "text": "Information Systems Engineering Team,",
+      "label": "ORG"
+    },
+    {
+      "text": "Department of Computer Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "Faculty of Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "Moulay Ismail University",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Fordham University",
+      "label": "ORG"
+    },
+    {
+      "text": "New York",
+      "label": "GPE"
+    },
+    {
+      "text": "NY 10023 USA",
+      "label": "ORG"
+    },
+    {
+      "text": "cElectrical Engineering Department",
+      "label": "ORG"
+    },
+    {
+      "text": "Hassania School of Public Works",
+      "label": "ORG"
+    },
+    {
+      "text": "Casablanca",
+      "label": "GPE"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Generative AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "recent years",
+      "label": "DATE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "years",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Natural Language Understanding",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ScienceDirect\nScientific African",
+      "label": "ORG"
+    },
+    {
+      "text": "18 September 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "February 2025",
+      "label": "DATE"
+    },
+    {
+      "text": "14 March 2025",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "15 March  2025",
+      "label": "DATE"
+    },
+    {
+      "text": "2468-2276/",
+      "label": "TIME"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "4,5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GLUE",
+      "label": "ORG"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ancillary Services",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Section 2",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 4",
+      "label": "LAW"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Section 5",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 6",
+      "label": "LAW"
+    },
+    {
+      "text": "Background",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "2,3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "1.Overview",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "Chatbot Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13]).C.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "AI",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Linguistic",
+      "label": "NORP"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NL",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "ELIZA",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LFG",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Random Fields",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NL",
+      "label": "ORG"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ML",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Naive Bayes",
+      "label": "ORG"
+    },
+    {
+      "text": "KNN",
+      "label": "ORG"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.9%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "Pang et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "ANN",
+      "label": "ORG"
+    },
+    {
+      "text": "Recurrent Neural Networks",
+      "label": "ORG"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Gated Recurrent Unit",
+      "label": "ORG"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "Vaswani et al",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "NLU",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Ouaddi et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ML",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Flacon",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Generative Pre-trained",
+      "label": "PERSON"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "Vaswani et al",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "six",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "117 million",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT-1",
+      "label": "ORG"
+    },
+    {
+      "text": "1.5 billion",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "175 billion",
+      "label": "MONEY"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-4",
+      "label": "PERSON"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "800 million",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.5 billion",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fourth",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Robustly Optimized",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT Approach",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "Meta AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "human-",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Algorithm 1outlines",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "Precision",
+      "label": "GPE"
+    },
+    {
+      "text": "6A",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "2.An",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Algorithm 1 \n",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "1200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MountainAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ForestAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "CaveAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ReligiousAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "ArchitecturalAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "BeachAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "HillAttractions",
+      "label": "ORG"
+    },
+    {
+      "text": "Five \nhundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "five",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GetHotels",
+      "label": "ORG"
+    },
+    {
+      "text": "GetCafe",
+      "label": "ORG"
+    },
+    {
+      "text": "GetRestaurant",
+      "label": "ORG"
+    },
+    {
+      "text": "GetCamping",
+      "label": "ORG"
+    },
+    {
+      "text": "700",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BusTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "AirplaneTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "TaxiTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "FaresTransportation",
+      "label": "ORG"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "Six A\u201d Framework for tourist destination analysis",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1,34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Attractions Tourist",
+      "label": "ORG"
+    },
+    {
+      "text": "1200",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "500",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "700",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Total 3500C. Ouaddi et al",
+      "label": "ORG"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Four hundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FindSea",
+      "label": "ORG"
+    },
+    {
+      "text": "3500",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TP",
+      "label": "ORG"
+    },
+    {
+      "text": "TN",
+      "label": "ORG"
+    },
+    {
+      "text": "FP",
+      "label": "PERSON"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u2019s",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "2above",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2e-5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "4illustrates",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT 2\nTable 3presents the",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "5illustrates",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1e-5 over 30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 4provides",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "5e-6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.98 1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LR 5e-6",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GPT 2\nPrecision Recall F1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "0.69",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.68 0.71",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.78 0.75 0.82",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.79 0.75",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "FAC"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.99\n1e-5",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "FAC"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LR 1e-4",
+      "label": "DATE"
+    },
+    {
+      "text": "1e-5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96 0.98\n4e-5",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1.00",
+      "label": "MONEY"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "ORG"
+    },
+    {
+      "text": "1.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.96",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 5",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "Tables 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "3",
+      "label": "DATE"
+    },
+    {
+      "text": "4",
+      "label": "DATE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Figs",
+      "label": "PERSON"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "DATE"
+    },
+    {
+      "text": "6",
+      "label": "DATE"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1 models",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Table 4",
+      "label": "LAW"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "over 30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "Table 5",
+      "label": "EVENT"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "four",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT-2",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA",
+      "label": "DATE"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "several hours",
+      "label": "TIME"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "LR 5e-6.C. Ouaddi et al",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Transformer",
+      "label": "ORG"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "GPU",
+      "label": "ORG"
+    },
+    {
+      "text": "LLM",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "Ouaddi",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "DSL-Driven Approaches",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Task",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PERSON"
+    },
+    {
+      "text": "Training Validation Testing Training Validation Testing Training Validation Testing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "0.98 0.99\n1e-5",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.76 0.78",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1e-6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.80 0.84",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama 3.1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "LR 2e-4.C. Ouaddi et al",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "DATE"
+    },
+    {
+      "text": "the \u201cSix A\u201d criteria",
+      "label": "EVENT"
+    },
+    {
+      "text": "LLaMA 3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Charaf Ouaddi: Conceptualization",
+      "label": "PERSON"
+    },
+    {
+      "text": "Software",
+      "label": "ORG"
+    },
+    {
+      "text": "Writing",
+      "label": "ORG"
+    },
+    {
+      "text": "Lamya Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abdeslam Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Validation, Supervision",
+      "label": "ORG"
+    },
+    {
+      "text": "Rachid Saadane",
+      "label": "PERSON"
+    },
+    {
+      "text": "the Ministry of Higher Education",
+      "label": "ORG"
+    },
+    {
+      "text": "Scientific Research and Innovation",
+      "label": "ORG"
+    },
+    {
+      "text": "the Digital Development Agency",
+      "label": "ORG"
+    },
+    {
+      "text": "DDA",
+      "label": "ORG"
+    },
+    {
+      "text": "the National Center for Scientific and Technical Research",
+      "label": "ORG"
+    },
+    {
+      "text": "Morocco",
+      "label": "GPE"
+    },
+    {
+      "text": "1]L. Benaddi,",
+      "label": "ORG"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Access",
+      "label": "ORG"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "78 799",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78 810",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2]C.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Souha,",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Saadane",
+      "label": "PERSON"
+    },
+    {
+      "text": "7th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Intelligent Systems and Security",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Z. El Aouene",
+      "label": "PERSON"
+    },
+    {
+      "text": "V. Cavalli-Sforza",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3rd International Conference",
+      "label": "EVENT"
+    },
+    {
+      "text": "Innovative Research in Applied Science, Engineering and Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Neural Information Processing Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023 6th",
+      "label": "DATE"
+    },
+    {
+      "text": "CommNet",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "7]J. S\u02d8anchez Cuadrado",
+      "label": "ORG"
+    },
+    {
+      "text": "S. P\u02d8erez-Soler",
+      "label": "PERSON"
+    },
+    {
+      "text": "E. Guerra",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. De Lara",
+      "label": "ORG"
+    },
+    {
+      "text": "6th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "K. Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "T. Tang",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Hou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Min",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Z. Dong",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "9]D. Buhalis, Marketing",
+      "label": "ORG"
+    },
+    {
+      "text": "Tourism Manage",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. Sarikaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Signal Process",
+      "label": "ORG"
+    },
+    {
+      "text": "Mag",
+      "label": "PERSON"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Procedia Comput",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sci",
+      "label": "PERSON"
+    },
+    {
+      "text": "231",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "293\u2013298",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Souha,",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Global Aeronautical Engineering",
+      "label": "ORG"
+    },
+    {
+      "text": "Satellite Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "GAST",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. P\u02d8erez-Soler",
+      "label": "ORG"
+    },
+    {
+      "text": "E. Guerra",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. De Lara",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "207\u2013222",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "A. Deoras",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Sarikaya",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Hakkani",
+      "label": "PERSON"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1067 \u20131070",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. De Mori",
+      "label": "PERSON"
+    },
+    {
+      "text": "Extracting Semantic Information",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech",
+      "label": "ORG"
+    },
+    {
+      "text": "John Wiley & Sons",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "E. Levin",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Pieraccini",
+      "label": "PERSON"
+    },
+    {
+      "text": "W. Eckert",
+      "label": "PERSON"
+    },
+    {
+      "text": "IEEE Trans",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "11\u201323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "C.L. Clarke",
+      "label": "PERSON"
+    },
+    {
+      "text": "32nd",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "800\u2013801",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. Strohmaier",
+      "label": "PERSON"
+    },
+    {
+      "text": "22nd",
+      "label": "DATE"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "629\u2013632",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Weizenbaum",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eliza",
+      "label": "ORG"
+    },
+    {
+      "text": "Commun",
+      "label": "PERSON"
+    },
+    {
+      "text": "ACM 9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1966",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R.M. Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Bresnan",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "System For Grammatical Representation",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Massachusetts Institute Of Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "1981",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. Sekine",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lingvisticae Investigationes",
+      "label": "ORG"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2007",
+      "label": "DATE"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "R. Grishman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Emerging Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "International Summer School",
+      "label": "ORG"
+    },
+    {
+      "text": "Frascati",
+      "label": "GPE"
+    },
+    {
+      "text": "Italy",
+      "label": "GPE"
+    },
+    {
+      "text": "1997",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "July 14\u2013181997",
+      "label": "DATE"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "W.Y.M. Kyaing",
+      "label": "PERSON"
+    },
+    {
+      "text": "C.S. Khoo",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Foo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.-K. Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.-L. Theng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Digital Libraries",
+      "label": "ORG"
+    },
+    {
+      "text": "14th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2012 14",
+      "label": "DATE"
+    },
+    {
+      "text": "Springer",
+      "label": "GPE"
+    },
+    {
+      "text": "Taipei",
+      "label": "GPE"
+    },
+    {
+      "text": "Taiwan",
+      "label": "GPE"
+    },
+    {
+      "text": "2012",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "189\u2013198",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "November 12-15",
+      "label": "DATE"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.H. Cho",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Zhai",
+      "label": "PERSON"
+    },
+    {
+      "text": "5th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Health Informatics",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "220\u2013229",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Zamora",
+      "label": "PERSON"
+    },
+    {
+      "text": "Intelligent \nInformation and Engineering Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "285\u2013292",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K. Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "X. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "10th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Ubiquitous Robots and Ambient Intelligence",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "402\u2013406",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Vaithyanathan",
+      "label": "PERSON"
+    },
+    {
+      "text": "2002",
+      "label": "DATE"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G. Rizzo",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Morisio",
+      "label": "PERSON"
+    },
+    {
+      "text": "Multi",
+      "label": "GPE"
+    },
+    {
+      "text": "The Web Conference 2018,",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "1075\u20131080",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "29",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "6th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NLPCC",
+      "label": "ORG"
+    },
+    {
+      "text": "2017 6",
+      "label": "DATE"
+    },
+    {
+      "text": "Springer, Dalian",
+      "label": "GPE"
+    },
+    {
+      "text": "China",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "pp",
+      "label": "GPE"
+    },
+    {
+      "text": "November 8\u201312",
+      "label": "DATE"
+    },
+    {
+      "text": "2017Proceedings",
+      "label": "DATE"
+    },
+    {
+      "text": "30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "X. Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "H. Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "2993\u20132999",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "32",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "J. Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "R. Child",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Luan",
+      "label": "PERSON"
+    },
+    {
+      "text": "I. Sutskever",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "OpenAI",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8)",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "N. Ryder",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Subbiah",
+      "label": "ORG"
+    },
+    {
+      "text": "J. Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Neelakantan",
+      "label": "NORP"
+    },
+    {
+      "text": "P. Shyam",
+      "label": "PERSON"
+    },
+    {
+      "text": "G. Sastry",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Askell",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Agarwal",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "34",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "L. Benaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Ouaddi",
+      "label": "PERSON"
+    },
+    {
+      "text": "A. Jakimi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B. Ouchao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chatbots",
+      "label": "PERSON"
+    },
+    {
+      "text": "Proc",
+      "label": "GPE"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "35",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.M. Powers",
+      "label": "ORG"
+    },
+    {
+      "text": "roc",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Scienti\u03e7c  African  ",
+      "label": "PERSON"
+    },
+    {
+      "text": "2025",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    }
+  ],
+  "summary": "This study evaluates the effectiveness of large language models (LLMs) like GPT, BERT, LLaMA, and RoBERTa for intent detection in tourism chatbots using a tourism-specific dataset. Through comparative analysis and performance metrics, it provides insights to enhance Natural Language Understanding components, aiding the development of more accurate and responsive chatbots for the tourism industry.",
+  "embedding": [
+    0.08292387425899506,
+    0.02708570286631584,
+    -0.02287224493920803,
+    0.04122517257928848,
+    -0.039246249943971634,
+    0.005085553042590618,
+    0.028140205889940262,
+    0.012358173727989197,
+    0.07233566790819168,
+    -0.07052577286958694,
+    -0.04338942840695381,
+    -0.06387379765510559,
+    -0.019390547648072243,
+    0.03650646656751633,
+    -0.012074164114892483,
+    -0.018773790448904037,
+    0.030684856697916985,
+    -0.028263136744499207,
+    -0.009869921021163464,
+    0.03566305339336395,
+    -0.023357050493359566,
+    0.034673213958740234,
+    -0.02197021245956421,
+    0.09340590983629227,
+    0.0041154357604682446,
+    -0.012205583043396473,
+    -0.04085230827331543,
+    0.008906913921236992,
+    0.0336652472615242,
+    -0.03634583577513695,
+    0.0017232269747182727,
+    0.026885630562901497,
+    0.03953227028250694,
+    0.022968502715229988,
+    2.2311094198812498e-06,
+    -0.035001251846551895,
+    -0.018332425504922867,
+    -0.034718889743089676,
+    -0.03722569718956947,
+    -0.017008382827043533,
+    0.02383768931031227,
+    0.06191381439566612,
+    0.025899888947606087,
+    0.06029870733618736,
+    -0.0005795291508547962,
+    0.020524658262729645,
+    0.02492440678179264,
+    0.05606739595532417,
+    0.023899562656879425,
+    0.05796462297439575,
+    -0.002168015344068408,
+    -0.04692676290869713,
+    -0.007720676250755787,
+    -0.009247188456356525,
+    0.02948068454861641,
+    -0.05295200273394585,
+    0.03459750488400459,
+    -0.00010352017125114799,
+    -0.03802104666829109,
+    2.136221155524254e-05,
+    0.005310394801199436,
+    0.002230494050309062,
+    -0.008684799075126648,
+    -0.009678510017693043,
+    0.02147972770035267,
+    0.021160464733839035,
+    -0.02651374414563179,
+    -0.04543997719883919,
+    -0.02269938215613365,
+    0.06989247351884842,
+    0.0020235113333910704,
+    0.02313988283276558,
+    -0.006414275150746107,
+    0.0036749180871993303,
+    -0.008560946211218834,
+    -0.009169312193989754,
+    -0.017348915338516235,
+    0.01082397811114788,
+    -0.014542747288942337,
+    0.022391483187675476,
+    0.014363020658493042,
+    0.03012171760201454,
+    0.03117014281451702,
+    0.04132424667477608,
+    -0.044486768543720245,
+    0.021987345069646835,
+    0.010686219669878483,
+    -0.026542209088802338,
+    -0.013309938833117485,
+    0.008884762413799763,
+    0.015305099077522755,
+    -0.049106352031230927,
+    0.024925118312239647,
+    0.03753940761089325,
+    -0.019841428846120834,
+    0.018464913591742516,
+    0.05455711856484413,
+    0.01669330708682537,
+    0.028824225068092346,
+    -0.06015486270189285,
+    -0.010342007502913475,
+    0.07026965171098709,
+    -0.04644596204161644,
+    0.0552629679441452,
+    0.01708429679274559,
+    0.04681793227791786,
+    0.0011394416214898229,
+    0.02980487234890461,
+    -0.035780169069767,
+    0.01654757559299469,
+    -0.08538220822811127,
+    0.01336335577070713,
+    -0.029283560812473297,
+    0.020885834470391273,
+    -0.026603596284985542,
+    -0.002291447715833783,
+    -0.047663867473602295,
+    0.03951678052544594,
+    0.030975619331002235,
+    0.006357734091579914,
+    -0.012125074863433838,
+    0.011798092164099216,
+    -0.01831972971558571,
+    -0.007536205928772688,
+    -0.0524955615401268,
+    0.03744298964738846,
+    -0.011778357438743114,
+    0.029227498918771744,
+    -0.02164948545396328,
+    -0.053326815366744995,
+    0.04343137517571449,
+    0.035421136766672134,
+    0.03358902037143707,
+    0.0039197891019284725,
+    -0.012410088442265987,
+    0.03910673409700394,
+    0.01344531774520874,
+    -0.07197315990924835,
+    -0.05076644942164421,
+    -0.03394072502851486,
+    -0.013939962722361088,
+    -0.07812070846557617,
+    -0.0161427054554224,
+    -0.04125064238905907,
+    0.037488069385290146,
+    -0.014241972006857395,
+    -0.024171879515051842,
+    -0.011429991573095322,
+    0.01599208451807499,
+    0.0034629434812813997,
+    -0.01630210503935814,
+    0.0527740977704525,
+    -0.0028193036559969187,
+    0.02140764333307743,
+    0.041829634457826614,
+    0.021139074116945267,
+    0.021381229162216187,
+    0.04072817787528038,
+    -0.010037570260465145,
+    0.1052350252866745,
+    0.020086804404854774,
+    0.0025242792908102274,
+    0.009463954716920853,
+    0.018005041405558586,
+    -0.02070441097021103,
+    -0.011013185605406761,
+    0.03169356659054756,
+    0.017467107623815536,
+    -0.013890981674194336,
+    0.022646963596343994,
+    -0.024229608476161957,
+    0.0586387999355793,
+    -0.03349112346768379,
+    0.04715706408023834,
+    0.06802674382925034,
+    0.03565885126590729,
+    -0.031148122623562813,
+    0.05396255850791931,
+    0.07790601253509521,
+    0.028235167264938354,
+    -0.007727927062660456,
+    -0.04357164725661278,
+    -0.003058108501136303,
+    -0.02893969789147377,
+    0.00406112102791667,
+    -0.021429462358355522,
+    0.05118526518344879,
+    0.029020391404628754,
+    -0.027041297405958176,
+    -0.07068528980016708,
+    -0.02257063053548336,
+    -0.044872358441352844,
+    0.06593424081802368,
+    0.0015062708407640457,
+    0.04848772659897804,
+    -0.03295586258172989,
+    -0.06388627737760544,
+    -0.00705913919955492,
+    -0.019833462312817574,
+    -0.02444637008011341,
+    -0.01707964949309826,
+    -0.06338348984718323,
+    0.03355702757835388,
+    0.10622981935739517,
+    0.01074830163270235,
+    0.017635228112339973,
+    -0.003930887673050165,
+    -0.06909043341875076,
+    -0.049261674284935,
+    0.02513078972697258,
+    0.05219421908259392,
+    0.01910303346812725,
+    0.020225374028086662,
+    -0.04965657740831375,
+    -0.006750071421265602,
+    0.0005248857196420431,
+    0.011021789163351059,
+    0.013172060251235962,
+    -0.023692108690738678,
+    0.0350014828145504,
+    0.022675979882478714,
+    0.0010671303607523441,
+    0.006678441539406776,
+    0.009399954229593277,
+    0.04779428243637085,
+    -0.03366876766085625,
+    -0.04328728839755058,
+    0.027667395770549774,
+    0.05662861838936806,
+    0.0525696836411953,
+    0.005827038083225489,
+    -0.047652482986450195,
+    0.017389895394444466,
+    -0.01901352033019066,
+    -0.013145777396857738,
+    0.04320078343153,
+    0.003731335513293743,
+    -0.06298627704381943,
+    0.029135676100850105,
+    0.010690945200622082,
+    -0.06172752007842064,
+    0.05647105351090431,
+    -0.021929003298282623,
+    -0.004749754909425974,
+    -0.008907446637749672,
+    -0.02530868723988533,
+    0.07423067092895508,
+    -0.054905977100133896,
+    0.021761946380138397,
+    -0.004549679346382618,
+    0.0330936424434185,
+    -0.021005956456065178,
+    0.0840112492442131,
+    0.0029931452590972185,
+    -0.01976926438510418,
+    0.032468121498823166,
+    -0.0035020317882299423,
+    0.050364311784505844,
+    -0.015843143686652184,
+    -0.03578469157218933,
+    -0.009922954253852367,
+    -0.026516161859035492,
+    0.015215919353067875,
+    0.0240084957331419,
+    0.07556664943695068,
+    -0.03829692676663399,
+    0.018407722935080528,
+    -0.1430031657218933,
+    0.0018118121661245823,
+    -0.03170764073729515,
+    0.009391640312969685,
+    0.010354149155318737,
+    0.02516511268913746,
+    -0.01218650583177805,
+    0.021185966208577156,
+    -0.011258414946496487,
+    0.005795452743768692,
+    -0.03834575042128563,
+    -0.01001744531095028,
+    0.04631652683019638,
+    -0.0043653929606080055,
+    -0.0884859561920166,
+    -0.021976977586746216,
+    0.04607526957988739,
+    -0.014522647485136986,
+    0.004191400948911905,
+    0.05335630476474762,
+    -0.006448034662753344,
+    -0.031196748837828636,
+    -0.014456518925726414,
+    -0.04029311612248421,
+    -0.02181907184422016,
+    -0.002914618467912078,
+    -0.09927627444267273,
+    -0.005520588718354702,
+    -0.00010187488078372553,
+    0.009485650807619095,
+    0.01158090028911829,
+    0.037900641560554504,
+    0.025697072967886925,
+    0.018108854070305824,
+    0.0266242828220129,
+    -0.075755774974823,
+    0.026261210441589355,
+    -0.022730760276317596,
+    -0.018994446843862534,
+    -0.053072910755872726,
+    -0.07259422540664673,
+    0.012127643451094627,
+    0.03948548436164856,
+    0.008192447014153004,
+    0.03458862379193306,
+    -0.044668640941381454,
+    -0.029718363657593727,
+    0.004786025732755661,
+    -0.022955946624279022,
+    -0.01820342242717743,
+    0.024384310469031334,
+    -0.0403718464076519,
+    0.05437293276190758,
+    0.03602050244808197,
+    -0.03630019351840019,
+    0.026181025430560112,
+    -0.013679790310561657,
+    -0.0268666073679924,
+    -0.06653352826833725,
+    -0.026272917166352272,
+    -0.03117970936000347,
+    0.04433970898389816,
+    -0.019866524264216423,
+    0.07250882685184479,
+    -0.00044416068703867495,
+    -0.043024834245443344,
+    0.01688615046441555,
+    -0.014171678572893143,
+    -0.03963180631399155,
+    -0.048593901097774506,
+    0.01933322660624981,
+    0.013052880764007568,
+    0.023971257731318474,
+    0.013753528706729412,
+    -0.02494254894554615,
+    -0.06192439794540405,
+    -0.053299661725759506,
+    -0.04454499110579491,
+    -0.021000603213906288,
+    0.05168180540204048,
+    -0.0005750232376158237,
+    -0.0019969118293374777,
+    0.055351171642541885,
+    -0.015056758187711239,
+    0.014405357651412487,
+    0.025537343695759773,
+    -0.03749852254986763,
+    -0.01554170623421669,
+    -0.004638471640646458,
+    0.019755564630031586,
+    0.03205180913209915,
+    -0.028478408232331276,
+    0.025388076901435852,
+    -0.008981806226074696,
+    -0.0159876998513937,
+    -0.05657641217112541,
+    -0.005451129749417305,
+    -0.031083159148693085,
+    0.012653421610593796,
+    0.03297451138496399,
+    -0.01583492010831833,
+    -0.020936405286192894,
+    0.024904360994696617,
+    0.05210770294070244,
+    -0.029905444011092186,
+    -0.004269677679985762,
+    0.09258155524730682,
+    0.03661893680691719,
+    -0.06358090043067932,
+    -0.008926186710596085,
+    -0.022427985444664955,
+    -0.006283815484493971,
+    -0.014240078628063202,
+    0.018228041008114815,
+    -0.04676872864365578,
+    -0.04629882797598839,
+    -0.008289958350360394,
+    -0.008774008601903915,
+    -0.03175867721438408,
+    0.015495780855417252,
+    -0.005276464857161045,
+    -0.0898398831486702,
+    0.041214995086193085,
+    -0.02735273912549019,
+    -0.018106041476130486,
+    -0.03550774231553078,
+    -0.037521135061979294,
+    -0.0039829290471971035,
+    -0.007725892588496208,
+    0.01855543814599514,
+    -0.034713249653577805,
+    -0.006262144073843956,
+    -0.045343901962041855,
+    0.014527284540235996,
+    -0.05392266809940338,
+    -0.05411091074347496,
+    0.01854555867612362,
+    -0.053222183138132095,
+    0.07485175132751465,
+    0.05356381833553314,
+    0.0723264291882515,
+    -0.0009548846865072846,
+    -0.04300078749656677,
+    0.00551640335470438,
+    0.024592522531747818,
+    0.013014329597353935,
+    -0.02736487239599228,
+    0.009646555408835411,
+    -0.004725591279566288,
+    0.004476296715438366,
+    0.006621523294597864,
+    -0.004848815035074949,
+    -0.05067300796508789,
+    0.016889655962586403,
+    -0.008215280249714851,
+    0.04726036638021469,
+    -0.04066093638539314,
+    0.04023502394556999,
+    -0.03030550479888916,
+    0.053559623658657074,
+    0.03717181086540222,
+    0.07856904715299606,
+    0.01110540796071291,
+    -0.04492286220192909,
+    -0.0277814082801342,
+    -0.05444012209773064,
+    -0.013874256983399391,
+    -0.009309571236371994,
+    0.001091223442927003,
+    -0.006386773660778999,
+    -0.007298242766410112,
+    -0.03875669464468956,
+    -0.05800300091505051,
+    -0.05065980926156044,
+    0.02586217038333416,
+    -0.00045981991570442915,
+    0.019785329699516296,
+    0.03662363067269325,
+    0.0012134528951719403,
+    0.0472385548055172,
+    0.03416997939348221,
+    0.014773756265640259,
+    -0.04331926628947258,
+    0.013403921388089657,
+    -0.04966720566153526,
+    0.001785570289939642,
+    0.022459659725427628,
+    -0.0805404931306839,
+    -0.013255109079182148,
+    -0.005239887163043022,
+    -0.0714174211025238,
+    -0.020496129989624023,
+    0.008252221159636974,
+    0.031362421810626984,
+    0.017962297424674034,
+    0.007078849710524082,
+    -0.015918614342808723,
+    -0.012119906954467297,
+    -0.054225023835897446,
+    0.022165529429912567,
+    -0.014015443623065948,
+    -0.05546732246875763,
+    0.03589027374982834,
+    0.1002345085144043,
+    -0.01729549467563629,
+    0.010571669787168503,
+    -0.03609895333647728,
+    -0.0025841942988336086,
+    -0.022714313119649887,
+    0.03401215374469757,
+    -0.06337366998195648,
+    -0.06165269762277603,
+    0.0350923053920269,
+    0.03236151859164238,
+    0.013889255933463573,
+    -0.0037959348410367966,
+    -0.015851015225052834,
+    -0.04122044891119003,
+    0.008334928192198277,
+    0.024522878229618073,
+    0.014034977182745934,
+    -0.044164691120386124,
+    -0.018114877864718437,
+    0.044674549251794815,
+    0.009547742083668709,
+    -0.013817251659929752,
+    -0.019985545426607132,
+    -0.04188218712806702,
+    -0.04008465260267258,
+    -0.003989198245108128,
+    0.005938325542956591,
+    0.015156629495322704,
+    -0.0072641982696950436,
+    -0.016239970922470093,
+    -0.006883601658046246,
+    -0.04554125666618347,
+    0.014517055824398994,
+    0.006832494866102934,
+    -0.010477970354259014,
+    -0.016633260995149612,
+    0.071322500705719,
+    0.003855051239952445,
+    -0.010971490293741226,
+    -0.013233874924480915,
+    0.041348859667778015,
+    0.01562308706343174,
+    -0.08519110083580017,
+    0.005197364836931229,
+    0.06018862500786781,
+    0.07792393118143082,
+    0.005109910387545824,
+    0.006076520774513483,
+    -0.05185845121741295,
+    0.008901597000658512,
+    -0.005531782750040293,
+    0.032358430325984955,
+    -0.013487637042999268,
+    -0.03700195997953415,
+    0.04865773767232895,
+    -0.014331217855215073,
+    -0.02640431560575962,
+    -0.00715186633169651,
+    0.0021015398669987917,
+    0.00029613528749905527,
+    0.025284359231591225,
+    0.005800890736281872,
+    -0.042787257581949234,
+    -0.041252464056015015,
+    0.03517480939626694,
+    0.04197392985224724,
+    0.02085590921342373,
+    -0.031178589910268784,
+    0.0009525066125206649,
+    -0.04140948876738548,
+    -0.041282135993242264,
+    -0.016090380027890205,
+    -0.02812112309038639,
+    -0.012425566092133522,
+    -0.03944207727909088,
+    0.05105997249484062,
+    0.04912593588232994,
+    -0.022690333425998688,
+    -0.060398150235414505,
+    -0.061329420655965805,
+    -0.03343677520751953,
+    -0.010779925622045994,
+    0.0019982128869742155,
+    -0.06345994770526886,
+    -6.607196606582836e-33,
+    0.0022372170351445675,
+    -0.008390682749450207,
+    0.041325643658638,
+    -0.0006600444321520627,
+    -0.038297273218631744,
+    -0.02508619986474514,
+    -0.015406825579702854,
+    -0.015103744342923164,
+    -0.04183683916926384,
+    -0.02291996031999588,
+    -0.022576116025447845,
+    -0.001479000085964799,
+    0.010201365686953068,
+    0.012573899701237679,
+    -0.014681975357234478,
+    -0.04344653710722923,
+    0.06991149485111237,
+    -0.0017352724680677056,
+    -0.015086130239069462,
+    0.032298360019922256,
+    0.029306352138519287,
+    0.016084574162960052,
+    0.04438946396112442,
+    -0.10182756185531616,
+    -0.004021447151899338,
+    -0.029022904112935066,
+    -0.04028180241584778,
+    0.013220258057117462,
+    0.02999071590602398,
+    0.034515224397182465,
+    -0.03649202361702919,
+    0.030362823978066444,
+    0.02826238051056862,
+    -0.03796786069869995,
+    0.04806441813707352,
+    0.0028450682293623686,
+    -0.023751946166157722,
+    -0.029340507462620735,
+    0.037475526332855225,
+    0.03090185672044754,
+    -0.016114551573991776,
+    -0.021174626424908638,
+    0.02174905315041542,
+    -0.01043170876801014,
+    -0.011406450532376766,
+    0.056617796421051025,
+    0.03333767503499985,
+    -0.0028653412591665983,
+    0.013344518840312958,
+    0.020012496039271355,
+    -0.0783509761095047,
+    -0.0001490583090344444,
+    -0.03813143074512482,
+    -0.03630165010690689,
+    0.024577582255005836,
+    0.05204910412430763,
+    -0.0035346923395991325,
+    0.029139041900634766,
+    -0.05664826184511185,
+    0.03295722231268883,
+    0.008856402710080147,
+    -0.03268500044941902,
+    0.044359538704156876,
+    -0.009198617190122604,
+    -0.014151685871183872,
+    0.06529501080513,
+    0.013339661993086338,
+    0.007713967934250832,
+    -0.028884079307317734,
+    -0.039193179458379745,
+    -0.005438422318547964,
+    0.05971953272819519,
+    -0.030586468055844307,
+    0.06002829596400261,
+    0.013104833662509918,
+    -0.029469875618815422,
+    -0.06308040022850037,
+    0.030031882226467133,
+    0.07652834802865982,
+    0.002027445239946246,
+    0.04612036794424057,
+    0.008455249480903149,
+    -0.051502857357263565,
+    0.01612497679889202,
+    -0.013987567275762558,
+    0.029889410361647606,
+    0.002046497305855155,
+    -0.03909146785736084,
+    0.04955559968948364,
+    0.0406721830368042,
+    -0.00713467737659812,
+    0.01070699654519558,
+    0.07010310143232346,
+    -0.05066290125250816,
+    -0.006545796059072018,
+    0.02124745212495327,
+    0.000516166677698493,
+    -0.002934439107775688,
+    0.013569037429988384,
+    0.02724621258676052,
+    -0.08196935802698135,
+    -0.044127438217401505,
+    -0.024233011528849602,
+    -0.000570329837501049,
+    0.0327836312353611,
+    0.005893451161682606,
+    -0.04006434604525566,
+    -0.00759301008656621,
+    -0.004606159869581461,
+    0.02301417849957943,
+    -0.020009541884064674,
+    -0.02029314823448658,
+    -0.0625741183757782,
+    0.04779379814863205,
+    0.028135476633906364,
+    -0.024757472798228264,
+    -0.02488502860069275,
+    0.060716401785612106,
+    0.044284675270318985,
+    0.03800441697239876,
+    -0.026525763794779778,
+    -0.06574921309947968,
+    0.0043752482160925865,
+    0.00900582130998373,
+    -0.024459104984998703,
+    0.010675566270947456,
+    -0.00739134568721056,
+    -0.0019602212123572826,
+    -0.004762951284646988,
+    -0.061477381736040115,
+    -0.01985919289290905,
+    0.0011467504082247615,
+    3.035429188003036e-07,
+    0.012353800237178802,
+    0.04525071382522583,
+    -0.05878062546253204,
+    0.047207605093717575,
+    -0.020256297662854195,
+    0.06286180019378662,
+    0.02135346084833145,
+    0.009742734022438526,
+    0.009695158340036869,
+    0.03280314803123474,
+    0.025556150823831558,
+    -0.0003283923724666238,
+    0.011835898272693157,
+    0.017265381291508675,
+    -0.061590198427438736,
+    0.02689203806221485,
+    -0.03541593253612518,
+    -0.020537372678518295,
+    -0.08017194271087646,
+    0.010124821215867996,
+    0.06945425271987915,
+    0.11291541159152985,
+    0.004414963070303202,
+    -0.022874414920806885,
+    0.028162136673927307,
+    -0.05807562917470932,
+    0.0202882569283247,
+    -0.05576847866177559,
+    -0.02911306545138359,
+    0.05577578768134117,
+    0.06438888609409332,
+    0.08315765112638474,
+    0.001403017551638186,
+    -0.004272123333066702,
+    0.012707618996500969,
+    0.005858179181814194,
+    0.02378201298415661,
+    0.03575171157717705,
+    0.008177520707249641,
+    -0.002414058893918991,
+    0.013309352099895477,
+    -0.016716664656996727,
+    0.0036436868831515312,
+    -0.10853330045938492,
+    0.04562992602586746,
+    -0.010428798384964466,
+    0.004979596473276615,
+    0.009699576534330845,
+    0.005238556768745184,
+    0.0028105019591748714,
+    0.05299302563071251,
+    -0.010011040605604649,
+    0.0022603636607527733,
+    0.00273218285292387,
+    0.012257047928869724,
+    -0.02728191576898098,
+    -0.014302154071629047,
+    -0.06056961417198181,
+    0.061311785131692886,
+    -0.007852631621062756,
+    -0.029630545526742935,
+    0.00042940181447193027,
+    -0.04775907099246979,
+    -0.002555503975600004,
+    0.022340677678585052,
+    -0.06907098740339279,
+    0.019435564056038857,
+    2.610847110339448e-34,
+    0.015799999237060547,
+    -0.041962385177612305,
+    -0.02584129571914673,
+    0.03850964829325676,
+    0.05700353905558586,
+    0.023401230573654175,
+    0.032652705907821655,
+    -0.007521315943449736,
+    -0.0012325485004112124,
+    -0.022003859281539917,
+    0.033700063824653625
+  ]
+}

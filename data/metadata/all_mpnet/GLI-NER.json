@@ -1,0 +1,4698 @@
+{
+  "filename": "GLI-NER.txt",
+  "keywords": [
+    "entities",
+    "entity",
+    "encoder",
+    "ner1",
+    "ner",
+    "encoders",
+    "corpus",
+    "encode",
+    "tokenized",
+    "nlp"
+  ],
+  "predicted_intent": {
+    "intent": "named_entity_recognition",
+    "confidence_score": 0.3236
+  },
+  "named_entities": [
+    {
+      "text": "Generalist Model",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bidirectional Transformer\nUrchade Zaratiana1,2",
+      "label": "ORG"
+    },
+    {
+      "text": "Nadi",
+      "label": "GPE"
+    },
+    {
+      "text": "Pierre Holat1,2",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thierry",
+      "label": "PERSON"
+    },
+    {
+      "text": "1FI",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "UMR 7030",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "France",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Natural Language Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Large Language Models",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "GPT",
+      "label": "ORG"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Recognition",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Large Language\nModels",
+      "label": "PERSON"
+    },
+    {
+      "text": "GPT-3",
+      "label": "ORG"
+    },
+    {
+      "text": "Brown et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "billions",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "OpenAI",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "\\n Text: Alain Farley",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "McGill University",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "SEP",
+      "label": "ORG"
+    },
+    {
+      "text": "Alain Farley",
+      "label": "ORG"
+    },
+    {
+      "text": "McGill Universitya",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Fig",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMa",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Touvron",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "Raffel et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Chung",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GoLLIE",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sainz",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Uni-\nversalNER",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "01245",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.30.20.10.20.30.10.80.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "0,0)(0,1)(1,1)(1,2)(2,2)(4,4)(4,5)(5,5)(Dot",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Token",
+      "label": "ORG"
+    },
+    {
+      "text": "EmbeddingsSpan",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BiLM",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "BiLM",
+      "label": "PERSON"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Alain Farley",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "several billion",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Bidirectional Language Models",
+      "label": "ORG"
+    },
+    {
+      "text": "BiLM",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "thousands",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Method",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Language Models",
+      "label": "ORG"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BiLM",
+      "label": "NORP"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "ken embeddings",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\\n Text: Alain Farley",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "McGill University",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "SEP",
+      "label": "ORG"
+    },
+    {
+      "text": "Alain Farley",
+      "label": "ORG"
+    },
+    {
+      "text": "McGill Universitya",
+      "label": "PERSON"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "SEP",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "SEP",
+      "label": "ORG"
+    },
+    {
+      "text": "Letp={pi}M\u22121",
+      "label": "GPE"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Zaratiana",
+      "label": "GPE"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Entity and Span Representation",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0\u2208RM\u00d7D.",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FFNdenotes",
+      "label": "ORG"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u03d5(i",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "sec",
+      "label": "ORG"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "\u03d5(i",
+      "label": "PERSON"
+    },
+    {
+      "text": "type t.\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sand",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zaratiana",
+      "label": "GPE"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "\u03d5(i",
+      "label": "DATE"
+    },
+    {
+      "text": "Algorithm Efficiency",
+      "label": "ORG"
+    },
+    {
+      "text": "Model Params Movie",
+      "label": "PERSON"
+    },
+    {
+      "text": "20.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13.0 13.0",
+      "label": "TIME"
+    },
+    {
+      "text": "13B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "27.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22.0 17.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "37.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17.7 28.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "56.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "36.1 44.0 37.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "52.4 39.8",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "66.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "68.5 67.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63.0 21.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "49.0 47.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "49.2 47.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "31.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.3 67.0",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "60.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "61.1 53.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "48.7 36.2 54.2 60.9 64.5 61.4 63.5 55.6\nGoLLIE",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "7B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "63.0 43.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "67.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55.5 58.0",
+      "label": "PERCENT"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "60.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55.6 52.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "51.8 59.7",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "69.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "68.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58.1 55.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "62.6 60.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 1: Zero-Shot Scores",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "USM",
+      "label": "ORG"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "GoLLIE",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sainz",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Experimental Setting",
+      "label": "ORG"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Pile-NER1",
+      "label": "ORG"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "Gao et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "50,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "ENT",
+      "label": "ORG"
+    },
+    {
+      "text": "SEP",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "44889",
+      "label": "DATE"
+    },
+    {
+      "text": "240k",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13k",
+      "label": "DATE"
+    },
+    {
+      "text": "1https://huggingface.co/datasets/Universal-NER/Pile-",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "768",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Loshchilov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hutter",
+      "label": "GPE"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "1e-5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FFN",
+      "label": "ORG"
+    },
+    {
+      "text": "30k",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "Sainz",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5 hours",
+      "label": "TIME"
+    },
+    {
+      "text": "3.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "GPT andVicuna",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Ye et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Large Language\nModels",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "11B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "LLaMa",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "GoLLIE",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sainz",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "USM",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lou et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "3.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Wang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "seven",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "CrossNER",
+      "label": "ORG"
+    },
+    {
+      "text": "MIT",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Malmasi",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4.1 Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Table",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "30.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "40.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46.2 47.9\nbc4chemd",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "35.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "47.9 43.1",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "52.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "68.0 66.4",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Broad Tweeter",
+      "label": "ORG"
+    },
+    {
+      "text": "61.8 67.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "52.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24.8 23.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FindVehicle",
+      "label": "ORG"
+    },
+    {
+      "text": "22.2 41.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "41.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11.6 18.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MIT",
+      "label": "ORG"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.4 57.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MIT",
+      "label": "ORG"
+    },
+    {
+      "text": "31.7 42.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MultiNERD",
+      "label": "GPE"
+    },
+    {
+      "text": "58.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "59.3 59.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "OntoNotes",
+      "label": "ORG"
+    },
+    {
+      "text": "29.7",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "40.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "52.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "55.4 58.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "69.2 71.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "45.7 47.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Zhou et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "only 50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vicuna",
+      "label": "PERSON"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "UniNER",
+      "label": "ORG"
+    },
+    {
+      "text": "UniNER-13B",
+      "label": "GPE"
+    },
+    {
+      "text": "55",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "140",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "GoLLIE",
+      "label": "PERSON"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Language Sup",
+      "label": "ORG"
+    },
+    {
+      "text": "64.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35.6 39.5",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "62.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "42.4 41.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "58.7 34.7",
+      "label": "MONEY"
+    },
+    {
+      "text": "38.7 42.1",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "62.6 35.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "35.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.89 25.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Persian",
+      "label": "NORP"
+    },
+    {
+      "text": "25.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "47.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "11.3 27.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Korean",
+      "label": "NORP"
+    },
+    {
+      "text": "55.8 30.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20.5 28.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Russian",
+      "label": "NORP"
+    },
+    {
+      "text": "33.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "46.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "22.0 30.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Chinese",
+      "label": "NORP"
+    },
+    {
+      "text": "53.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6.59 24.3",
+      "label": "EVENT"
+    },
+    {
+      "text": "54.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23.6 32.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Sup",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Malmasi",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Lai et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Multi",
+      "label": "ORG"
+    },
+    {
+      "text": "mdeBERTa",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "4.2 Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Multiconel",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Multi",
+      "label": "GPE"
+    },
+    {
+      "text": "mdeBERTa-v3",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "Spanish",
+      "label": "NORP"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "LatinDatasetInstructUIE",
+      "label": "GPE"
+    },
+    {
+      "text": "79.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "86.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "82.8",
+      "label": "DATE"
+    },
+    {
+      "text": "81.3",
+      "label": "DATE"
+    },
+    {
+      "text": "88.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "80.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "82.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "83.7 82.0\nbc4chemd 87.6 89.2 87.9 86.7",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "89.0 89.3 88.7 88.7",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "80.3 81.2 82.5 82.7",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "91.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "92.6 92.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "78.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "77.8 74.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "FindVehicle",
+      "label": "ORG"
+    },
+    {
+      "text": "98.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "95.7 95.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "75.7 77.5 78.9 77.4",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "68.6 67.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MIT",
+      "label": "ORG"
+    },
+    {
+      "text": "89.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "90.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MIT",
+      "label": "ORG"
+    },
+    {
+      "text": "83.6 83.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "MultiNERD",
+      "label": "GPE"
+    },
+    {
+      "text": "90.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "93.8 93.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.0",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "87.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "87.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "OntoNotes",
+      "label": "ORG"
+    },
+    {
+      "text": "88.6 89.9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "89.0 88.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PolyglotNER",
+      "label": "ORG"
+    },
+    {
+      "text": "65.7 61.5 60.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "65.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "51.4 50.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "64.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "84.9",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "83.7 82.8",
+      "label": "EVENT"
+    },
+    {
+      "text": "88.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "91.3 91.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "81.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "82.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "Spanish",
+      "label": "NORP"
+    },
+    {
+      "text": "German",
+      "label": "NORP"
+    },
+    {
+      "text": "Latin",
+      "label": "NORP"
+    },
+    {
+      "text": "Bengali",
+      "label": "NORP"
+    },
+    {
+      "text": "only 0.89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "4.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "UniNER",
+      "label": "ORG"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "10,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "10,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54 55",
+      "label": "DATE"
+    },
+    {
+      "text": "Avg",
+      "label": "PERSON"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Table 3",
+      "label": "LAW"
+    },
+    {
+      "text": "Firstly",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Pile-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "0.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "almost 3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Setup Specifically",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "Devlin et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Liu et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "AlBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Clark et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "XLNet",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AlBERT",
+      "label": "PERSON"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "49",
+      "label": "DATE"
+    },
+    {
+      "text": "2 F1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "InstructUIE",
+      "label": "ORG"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10,000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pile-NER",
+      "label": "ORG"
+    },
+    {
+      "text": "5.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "49.3 58.1 53.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "50%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "62.3 59.7 60.9",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "75%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "61.1 56.5 58.6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ablations\nNegative Entity Sampling",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "50%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "75%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "75%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "50%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "1.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Weischedel et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "1996",
+      "label": "DATE"
+    },
+    {
+      "text": "Mikheev",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1999",
+      "label": "DATE"
+    },
+    {
+      "text": "Nadeau",
+      "label": "PERSON"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "Zamin",
+      "label": "ORG"
+    },
+    {
+      "text": "Oxley",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Lafferty et al.",
+      "label": "LOC"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "54",
+      "label": "DATE"
+    },
+    {
+      "text": "56",
+      "label": "DATE"
+    },
+    {
+      "text": "58",
+      "label": "DATE"
+    },
+    {
+      "text": "60 62",
+      "label": "DATE"
+    },
+    {
+      "text": "Avg",
+      "label": "PERSON"
+    },
+    {
+      "text": "Neg",
+      "label": "PERSON"
+    },
+    {
+      "text": "59.50",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "53.30",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Huang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "Lample et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Akbik",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Ratinov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roth",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Sarawagi",
+      "label": "NORP"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "Fu et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zaratiana",
+      "label": "GPE"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Yan et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Qin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "NER",
+      "label": "ORG"
+    },
+    {
+      "text": "Li et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Ashok",
+      "label": "ORG"
+    },
+    {
+      "text": "Lipton",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Agrawal et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Lou et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Sainz",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Mishra et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Longpre et al.",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Monica Agrawal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stefan Hegselmann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hunter Lang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yoon Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "David A. Sontag",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Natural Language Processing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Alan Akbik",
+      "label": "PERSON"
+    },
+    {
+      "text": "Duncan Blythe",
+      "label": "PERSON"
+    },
+    {
+      "text": "Roland",
+      "label": "GPE"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "1638",
+      "label": "DATE"
+    },
+    {
+      "text": "1649",
+      "label": "DATE"
+    },
+    {
+      "text": "Santa Fe",
+      "label": "ORG"
+    },
+    {
+      "text": "New Mexico",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dhananjay Ashok",
+      "label": "ORG"
+    },
+    {
+      "text": "Zachary Chase Lipton",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "ArXiv",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Tom B. Brown",
+      "label": "PERSON"
+    },
+    {
+      "text": "Benjamin Mann",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nick Ryder",
+      "label": "PERSON"
+    },
+    {
+      "text": "Melanie",
+      "label": "PERSON"
+    },
+    {
+      "text": "Subbiah",
+      "label": "GPE"
+    },
+    {
+      "text": "Jared Kaplan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pranav Shyam",
+      "label": "PERSON"
+    },
+    {
+      "text": "Girish Sastry",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amanda",
+      "label": "ORG"
+    },
+    {
+      "text": "Askell, Sandhini Agarwal",
+      "label": "ORG"
+    },
+    {
+      "text": "Ariel Herbert-V",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gretchen Krueger",
+      "label": "PERSON"
+    },
+    {
+      "text": "T. J. Henighan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rewon Child",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aditya Ramesh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel M. Ziegler",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeff Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Clemens\nWinter",
+      "label": "DATE"
+    },
+    {
+      "text": "Christopher Hesse",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mark Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Sigler",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mateusz Litwin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Scott Gray",
+      "label": "PERSON"
+    },
+    {
+      "text": "Benjamin Chess",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jack\nClark",
+      "label": "PERSON"
+    },
+    {
+      "text": "Christopher Berner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sam McCandlish",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alec\nRadford",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dario Amodei",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Wei-Lin Chiang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuohan Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zi Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ying Sheng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhanghao Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hao Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lianmin Zheng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siyuan\nZhuang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yonghao Zhuang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Joseph E. Gonzalez",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ion\nStoica",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric P. Xing",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "90%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "Hyung Won Chung",
+      "label": "PERSON"
+    },
+    {
+      "text": "Le Hou",
+      "label": "ORG"
+    },
+    {
+      "text": "Shayne Longpre",
+      "label": "PERSON"
+    },
+    {
+      "text": "Barret\nZoph",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yi Tay",
+      "label": "PERSON"
+    },
+    {
+      "text": "William Fedus",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yunxuan Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xuezhi\nWang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mostafa Dehghani",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siddhartha Brahma",
+      "label": "PERSON"
+    },
+    {
+      "text": "bert Webson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shixiang Shane Gu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuyun Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mirac Suzgun",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xinyun Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aakanksha Chowdh-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alex Castro-Ros",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marie Pellat",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kevin Robinson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dasha Valter",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sharan Narang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gaurav Mishra",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adams\nYu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Vincent Zhao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yanping Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrew Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongkun Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Slav Petrov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ed H. Chi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeff Dean",
+      "label": "PERSON"
+    },
+    {
+      "text": "Devlin",
+      "label": "ORG"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "Denny Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc V .",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jason Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Kevin Clark",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thang Luong",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc V .",
+      "label": "ORG"
+    },
+    {
+      "text": "Christopher D. Manning",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Alexis Conneau",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kartikay Khandelwal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "ORG"
+    },
+    {
+      "text": "Vishrav Chaudhary",
+      "label": "PERSON"
+    },
+    {
+      "text": "Guillaume Wenzek",
+      "label": "PERSON"
+    },
+    {
+      "text": "Francisco\nGuzm\u00e1n",
+      "label": "PERSON"
+    },
+    {
+      "text": "Edouard Grave",
+      "label": "PERSON"
+    },
+    {
+      "text": "Myle Ott",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luke Zettle-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Veselin Stoyanov",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "the Association for Computational\nLinguistics .Leyang",
+      "label": "ORG"
+    },
+    {
+      "text": "Yu Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jian Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sen Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yue Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "bart",
+      "label": "ORG"
+    },
+    {
+      "text": "Findings",
+      "label": "GPE"
+    },
+    {
+      "text": "Jacob Devlin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "North American",
+      "label": "NORP"
+    },
+    {
+      "text": "Association",
+      "label": "ORG"
+    },
+    {
+      "text": "Jinlan Fu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xuanjing Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pengfei Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "59th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "the Association for Computational Linguistics",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7183\u20137195",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Computa-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leo Gao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stella Rose Biderman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sid Black",
+      "label": "PERSON"
+    },
+    {
+      "text": "Travis Hoppe",
+      "label": "PERSON"
+    },
+    {
+      "text": "Charles Foster",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jason Phang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Horace",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anish Thite",
+      "label": "PERSON"
+    },
+    {
+      "text": "Noa Nabeshima",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shawn\nPresser",
+      "label": "PERSON"
+    },
+    {
+      "text": "Connor Leahy",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Pengcheng He",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jianfeng Gao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Weizhu Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhiheng Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kai Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "John D. Lafferty",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrew McCallum",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fernando\nPereira",
+      "label": "PERSON"
+    },
+    {
+      "text": "2001",
+      "label": "DATE"
+    },
+    {
+      "text": "InInternational Conference on Machine Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "Viet Dac Lai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amir Pouran Ben\nVeyseh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hieu Man",
+      "label": "PERSON"
+    },
+    {
+      "text": "Franck Dernoncourt",
+      "label": "ORG"
+    },
+    {
+      "text": "Trung Bui",
+      "label": "GPE"
+    },
+    {
+      "text": "Thien Huu Nguyen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Chatgpt",
+      "label": "ORG"
+    },
+    {
+      "text": "abs/2304.05613",
+      "label": "GPE"
+    },
+    {
+      "text": "Guillaume Lample",
+      "label": "PERSON"
+    },
+    {
+      "text": "Miguel Ballesteros",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kazuya Kawakami",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chris Dyer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "InNorth American",
+      "label": "NORP"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhenzhong Lan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mingda Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sebastian Goodman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kevin Gimpel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Radu Soricut",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Albert",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dongfang Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baotian Hu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qingcai Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiaoya Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jingrong Feng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuxian Meng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qinghong",
+      "label": "GPE"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "Fei Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiwei Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Yangming Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "lemao liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shuming Shi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Learning Representations",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Yinhan Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Myle Ott",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jingfei Du",
+      "label": "PERSON"
+    },
+    {
+      "text": "Joshi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Danqi Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Omer Levy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mike Lewis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Luke Zettlemoyer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Veselin Stoyanov",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Roberta",
+      "label": "PERSON"
+    },
+    {
+      "text": "abs/1907.11692",
+      "label": "GPE"
+    },
+    {
+      "text": "S. Longpre",
+      "label": "PERSON"
+    },
+    {
+      "text": "Le Hou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Albert Webson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hyung Won\nChung",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yi Tay",
+      "label": "PERSON"
+    },
+    {
+      "text": "Denny Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc V .",
+      "label": "PERSON"
+    },
+    {
+      "text": "Barret\nZoph",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jason Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Machine Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ilya Loshchilov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Frank Hutter",
+      "label": "PERSON"
+    },
+    {
+      "text": "2017",
+      "label": "DATE"
+    },
+    {
+      "text": "Learning Representations",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Jie Lou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yaojie Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dai Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei Jia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hongyu Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xi-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "Le Sun",
+      "label": "ORG"
+    },
+    {
+      "text": "Hua Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Yaojie Lu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qing Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dai Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xinyan Xiao",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xianpei Han",
+      "label": "PERSON"
+    },
+    {
+      "text": "Le Sun",
+      "label": "ORG"
+    },
+    {
+      "text": "Hua Wu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shervin Malmasi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anjie Fang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Besnik Fetahu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sudipta\nKar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Oleg Rokhlenko",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrei Mikheev",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marc Moens",
+      "label": "PERSON"
+    },
+    {
+      "text": "Claire Grover",
+      "label": "PERSON"
+    },
+    {
+      "text": "1999",
+      "label": "DATE"
+    },
+    {
+      "text": "the European Chapter of the Association",
+      "label": "ORG"
+    },
+    {
+      "text": "Xinxi Lyu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ari Holtzman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mikel Artetxe",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mike Lewis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hannaneh",
+      "label": "GPE"
+    },
+    {
+      "text": "Luke Zettle-",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Swaroop Mishra",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel Khashabi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chitta Baral",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hannaneh Hajishirzi",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Nadeau",
+      "label": "PERSON"
+    },
+    {
+      "text": "Peter D. Turney",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stan Matwin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2006",
+      "label": "DATE"
+    },
+    {
+      "text": "Canadian",
+      "label": "NORP"
+    },
+    {
+      "text": "OpenAI",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Chengwei Qin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aston Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhuosheng Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiaao\nChen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michihiro Yasunaga",
+      "label": "PERSON"
+    },
+    {
+      "text": "Diyi Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "abs/2302.06476.Colin Raffel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Noam M. Shazeer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adam Roberts",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kather-",
+      "label": "PERSON"
+    },
+    {
+      "text": "ine Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sharan Narang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael Matena",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yanqi",
+      "label": "GPE"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Peter J. Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "J. Mach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Learn",
+      "label": "PERSON"
+    },
+    {
+      "text": "Res",
+      "label": "PERSON"
+    },
+    {
+      "text": "21:140:1\u2013140:67",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lev-Arie Ratinov",
+      "label": "ORG"
+    },
+    {
+      "text": "Dan Roth",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Baptiste Rozi\u00e8re",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jonas Gehring",
+      "label": "PERSON"
+    },
+    {
+      "text": "Fabian Gloeckle",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sten Sootla",
+      "label": "PERSON"
+    },
+    {
+      "text": "Itai Gat",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaoqing Tan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yossi Adi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jingyu Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tal Remez",
+      "label": "GPE"
+    },
+    {
+      "text": "J\u00e9r\u00e9my Rapin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Artyom",
+      "label": "PERSON"
+    },
+    {
+      "text": "I. Evtimov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Joanna Bitton",
+      "label": "PERSON"
+    },
+    {
+      "text": "Manish P\nBhatt",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cant\u00f3n Ferrer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aaron Grattafiori",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alexandre",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jade Copet",
+      "label": "PERSON"
+    },
+    {
+      "text": "Faisal\nAzhar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hugo Touvron",
+      "label": "PERSON"
+    },
+    {
+      "text": "Louis Martin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nicolas Usunier",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thomas Scialom",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gabriel Synnaeve",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Oscar Sainz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Iker Garc\u00eda-Ferrero",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rodrigo Agerri",
+      "label": "PERSON"
+    },
+    {
+      "text": "Oier Lopez de Lacalle",
+      "label": "ORG"
+    },
+    {
+      "text": "German",
+      "label": "NORP"
+    },
+    {
+      "text": "Eneko\nAgirre",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Gollie",
+      "label": "PERSON"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "abs/2310.03668",
+      "label": "GPE"
+    },
+    {
+      "text": "Sunita Sarawagi",
+      "label": "PERSON"
+    },
+    {
+      "text": "William W. Cohen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2004",
+      "label": "DATE"
+    },
+    {
+      "text": "Neural Information Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "Hugo Touvron",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gautier Izacard",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xavier",
+      "label": "GPE"
+    },
+    {
+      "text": "Marie-Anne Lachaux",
+      "label": "PERSON"
+    },
+    {
+      "text": "Timoth\u00e9e Lacroix",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baptiste Rozi\u00e8re",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Hambro",
+      "label": "PERSON"
+    },
+    {
+      "text": "Faisal\nAzhar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Armand Joulin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Guillaume Lample",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Xiao Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wei Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han Xia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tianze Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuan Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rui Zheng",
+      "label": "PERSON"
+    },
+    {
+      "text": "Junjie Ye",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qi Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tao\nGui",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jihua Kang",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siyuan Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Du",
+      "label": "ORG"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "abs/2304.08085",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Yizhong Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Swaroop Mishra",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pegah",
+      "label": "ORG"
+    },
+    {
+      "text": "Yeganeh Kordi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amirreza Mirzaei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anjana Arunkumar",
+      "label": "PERSON"
+    },
+    {
+      "text": "Arjun Ashok",
+      "label": "PERSON"
+    },
+    {
+      "text": "Arut Selvan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Atharva Naik",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Stap",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eshaan\nPathak",
+      "label": "PERSON"
+    },
+    {
+      "text": "Giannis Karamanolakis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gary Lai",
+      "label": "PERSON"
+    },
+    {
+      "text": "han Purohit",
+      "label": "ORG"
+    },
+    {
+      "text": "Ishani Mondal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jacob Anderson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kirby\nKuznia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krima Doshi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Maitreya Patel",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. Moradshahi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mirali Purohit",
+      "label": "PERSON"
+    },
+    {
+      "text": "Neeraj Varshney",
+      "label": "PERSON"
+    },
+    {
+      "text": "Phani",
+      "label": "NORP"
+    },
+    {
+      "text": "Rohitha Kaza",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pulkit Verma",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ravsehaj Singh Puri",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rushang Karia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shailaja Keyur\nSampat",
+      "label": "PERSON"
+    },
+    {
+      "text": "Savan Doshi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siddharth Deepak Mishra",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tanay Dixit",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xudong",
+      "label": "GPE"
+    },
+    {
+      "text": "Chitta Baral",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yejin Choi",
+      "label": "ORG"
+    },
+    {
+      "text": "Noah A. Smith",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel Khashabi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "1600+",
+      "label": "DATE"
+    },
+    {
+      "text": "Empirical Methods in Natural Language Processing",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Jason Wei",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xuezhi Wang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Dale Schuurmans",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ed Huai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chi",
+      "label": "PERSON"
+    },
+    {
+      "text": "F. Xia",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc Le",
+      "label": "PERSON"
+    },
+    {
+      "text": "Denny Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Ralph Weischedel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sean Boisen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel Bikel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Robert\nBobrow",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael Crystal",
+      "label": "PERSON"
+    },
+    {
+      "text": "William Ferguson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Allan\nWechsler",
+      "label": "PERSON"
+    },
+    {
+      "text": "The PLUM Research Group",
+      "label": "ORG"
+    },
+    {
+      "text": "1996",
+      "label": "DATE"
+    },
+    {
+      "text": "Vienna",
+      "label": "GPE"
+    },
+    {
+      "text": "Virginia",
+      "label": "GPE"
+    },
+    {
+      "text": "May 6-8, 1996",
+      "label": "DATE"
+    },
+    {
+      "text": "127\u2013138",
+      "label": "GPE"
+    },
+    {
+      "text": "Vienna",
+      "label": "GPE"
+    },
+    {
+      "text": "Virginia",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "Computational Linguistics",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hang Yan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tao Gui",
+      "label": "PERSON"
+    },
+    {
+      "text": "Junqi Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qipeng Guo",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zheng\nZhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xipeng Qiu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Zhilin Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zihang Dai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yiming Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jaime G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ruslan Salakhutdinov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Quoc V .",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Neural Information",
+      "label": "ORG"
+    },
+    {
+      "text": "Junjie Ye",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xuanting Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nuo Xu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shichun Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yuhan Cui",
+      "label": "GPE"
+    },
+    {
+      "text": "Zeyang Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chao\nGong",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yang Shen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jie Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siming Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tao Gui",
+      "label": "PERSON"
+    },
+    {
+      "text": "Qi Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xuanjing Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "abs/2303.10420",
+      "label": "PERSON"
+    },
+    {
+      "text": "Norshuhani Zamin",
+      "label": "ORG"
+    },
+    {
+      "text": "Alan Oxley",
+      "label": "PERSON"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Computer Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "Urchade Zaratiana",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nadi Tomeh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Niama Elkhbir",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pierre\nHolat",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thierry Charnois",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Urchade Zaratiana",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nadi Tomeh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pierre Holat",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thierry Charnois",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Workshop on Unimodal and Multimodal Induction",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Linguistic Structures",
+      "label": "ORG"
+    },
+    {
+      "text": "UM-IoS",
+      "label": "ORG"
+    },
+    {
+      "text": "1\u201310",
+      "label": "DATE"
+    },
+    {
+      "text": "Abu\nDhabi",
+      "label": "ORG"
+    },
+    {
+      "text": "United Arab Emirates",
+      "label": "GPE"
+    },
+    {
+      "text": "Wenxuan Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Sheng Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yu Gu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Muhao Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hoifung Poon",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    }
+  ],
+  "summary": "GLiNER is a compact Named Entity Recognition (NER) model leveraging bidirectional transformers to extract entities of any type efficiently. It outperforms Large Language Models like ChatGPT in zero-shot evaluations while being more resource-friendly, addressing the limitations of traditional NER models and expensive LLMs."
+}

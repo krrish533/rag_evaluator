@@ -1,0 +1,3155 @@
+{
+  "filename": "CHATBOT-INTENT.txt",
+  "length": 38398,
+  "context": "317 \nJournal of Applied Economic  Sciences  \nVolume XI X, Fall, Issue 3(85)  \n \nEnhancing Chatbot Intent Classification using Active Learning Pipeline for \nOptimized Data Preparation  \nKarolina KULIGOWSKA  \nhttps://orcid.org/0000 -0001 -8956 -4723  \nFaculty of Economic Sciences, University of Warsaw, Poland  \nkkuligowska@wne.uw.edu.pl  \n \nBart\u0142omiej KOWALCZUK  \nhttps://orcid.org/0000 -0003 -2367 -6268  \nTidio  Poland sp. z o.o., Szczecin , Poland  \nb.kowalczuk@tidio.net  \nArticle\u2019s h istory:  \nReceived  19th of July, 2024; Received in revised form  9th of August , 2024; Accepted  27th of August , 2024; Available online : 1st \nof September , 2024. Published  as article in the Volume XIX, Fall, Issue 3(85), 2024.  \nCopyright\u00a9 202 4 The Author(s). This article is distributed under the terms of the license CC-BY 4.0. , which permits any further \ndistribution in any medium, provided the original work is properly cited.  \nSuggested c itation:  \nKuligowska , K., & Kowalczuk , B. (2024). Enhancing chatbot intent classification using active learning pipeline  for optimized \ndata preparation . Journal of Applied Economic Sciences , Volume X IX, Fall, 3(85),  317 \u2013 325. \nhttps://doi.org/10.57017/jaes.v19.3(85).07   \nAbstract:  \nThis study presents a novel approach to enhancing chatbot intent classification through an optimized data preparation \ncombined with Active Learning. We applied the clustering mechanism using a state -of-the-art sentence -transformers model \nwith cosine simila rity for cluster detection in order to categorize messages. This process was further refined through a \ndedicated  Active Learning Pipeline, which focused on the most essential observations for labeling. Incorporating externally \nsourced labeled data from Sca le AI, the labeling process was fine -tuned iteratively, until the model's performance stabilized. \nThis approach shows promise for various datasets and tasks, suggesting a scalable solution for preparing data for supervised \nmodeling and achieving optimal mo del performance in real -world commercial chatbot scenarios.  \nKeywords : chatbot , intent classification , active learning , sentence -transformers , cluster label propagation . \nJEL C lassification:  C45, C88. \nIntroduction  \nActive Learning has already a long history of research (Cohn et al., 1994 ; Lewis & Gale, 1994 ; Settles et al., \n2008 ; Druck et al., 2009 ; Settles , 2009 , 2011), similarly to creation and development of high -quality annotated \ncorpora in the field of NLP (Dligach & Palmer, 2011 ; Settles , 2011 ; Grouin et al., 2014 ; Wissler et al., 2014). The \nquality of annotated data is essential for supervised learning paradigm in user intent detection and prediction for \nconversational artificial intelligence (Xiao et al., 2020 ; Pawlik et al., 2022 ; Chandrakala et al., 2024). Yet, there is \nstill a lack of research covering commercial chatbots that include recent advances comb ining Active Learning and \noptimized data preparation for chatbot intent classification . \nOur approach to enhance chatbot intent classification begins with a set of labeled  data, then determines the \nadequate number of messages for the purpose of intent classification, and subsequently executes clustering of all \nfirst long messages of visitors represented as transformer -based embeddings, enabling further creation of main \nlabel categories. Next, the cluster label propagation was implemented for improving the labeling coverage within \nthe dataset. Then, a dedicated  Active Learning Pipeline was proposed to filter, refine, and reduce the dataset to \nthe most informative observations . Additional labeled data from Scale AI were also incorporated, and the labeling \nprocess continued until incremental improvements in model performance began to flatten out with new data \nbatches.  \n  \nJournal of Applied Economic Sciences  \n 318 The rationale for our work arises from chatbots implemented for commercial use. The chatbot user's \ninquiries and requests regarding the products and services may cover hundreds of categories. Therefore , the \nchatbot intent classification model should quickly achieve the most accurate recognition of the intentions expressed \nin statements. Presented approach is trained considering state -of-the-art sentence -transformers model, cluster \nlabel propagation and A ctive Learning refinement. It is adaptable to various datasets and classification tasks,  and \nhas the ability to refine and prepare data for further supervised modeling in real -world commercial contexts.  \nThe rest of this paper is organized as follows. Section 1 presents the relevant work in related research areas. \nSection 2 describes our approach to dataset creation for intent classification, while section 3 explains the proposed \nactive learning pipeline . In last section we summarize our findings, and conclusions are included in  the last section . \n1. Related Literature Review  \nOur paper is related to research in three areas listed below.  \nDataset creation for conversational agents  \nCreating datasets for building and developing conversational AI usually involves collecting text data from \nconversations and labeling users' messages in terms of the category resulting from their content (Hakkani -T\u00fcr et \nal., 2015). In  case of proof of concept and very simple chatbot models, the categories may concern greeting \nrecognition, inquiry or conversation termination (Setiaji  & Wibowo, 2016). In case of chatbots implemented for \ncommercial use, the categories of user messages may include up to several hundred detailed categories (Shafi et \nal., 2020 ; Vasquez -Correa et al., 2021) relating to the user's inquiries and requests regarding the products and \nservices offered.  \nIntent classification in commercial chatbots  \nThe labeled dataset serves as input for training and testing classification models. Due to the processing of \nunstructured text data, these models are rooted in natural language processing and machine learning. These \ninclude the use of intent classification  models to understand in detail what the user wanted to achieve as a result \nof his/her message, and thus to achieve the most accurate recognition of the ideas expressed by users in their \nstatements (Ouyang et al., 2022 ; Finch et al., 2023). For example, in  messages such as: \u201ewhat is the temperature \noutside this evening \u201d, \u201eI need a ticket to Paris \u201d or \u201ethe smartwatch I purchased has stopped working \u201d, the \nclassification of intentions may consist of determining whether the user wants to get information about the weather, \nbuy a ticket, or ask questions about the complaint process \u2013 and defining their appropriate categorization.  \nThe ideal dataset created for intent classification for a commercial chatbot should contain a variety of user \nmessages and be representative of the ways in which users may formulate their queries. According to Xiao et al. \n(2020), the more a chatbot is trained on the largest possible number of types of messages containing diverse \nintents that are present in text data extracted from conversations, the better it will understand the specific user \nintents and the better it will r espond to a wide range of queries  and requests for categories related to the dataset. \nAlso, according to Chandrakala et al.  (2024), having a large and comprehensive training database on which the \nchatbot\u2019s language processing model is trained allows it to more accurately handle more diverse and specific user \nqueries. Therefore, increasingly advanced approaches are being develope d and tested in chatbots (Suryanto et \nal., 2023) that are supposed to be efficient in interpreting customer interactions and understanding context.  \nActive learning  \nHowever, for any supervised machine learning model to perform well, it needs to be trained on thousands \nof labeled data. Unfortunately, very large sets of labeled text data are extremely time -consuming to produce and \nvery expensive to obtain (Settles et al ., 2008). Hence, attempts have been made to overcome this obstacle by \ndeveloping new techniques involving machine learning to efficiently generate large amounts of labeled data in order \nto improve classification accuracy. One such method is active learning , also known in the statistical literature as \n\u201equery learning \u201d and \u201eoptimal experimental design \u201d (Settles , 2009).  \nActive learning is a technique in which a model is actively involved in the process of acquiring a dataset \n(Druck  et al., 2009). In practice, in the first step the model identifies the most informative observations and those \nthat are difficult to classify. Then, in the second step, the most difficult cases are carefully selected, manually labeled \nby a human and added  to the training set. By doing so, according to Settles et al.  (2008) and Dligach & Palmer \n(2011), the model focuses on examples that are most likely to provide the greatest benefit when labeled and \nincrease the accuracy of the model.  \n  \nVolume XIX, Fall, Issue 3(85) \n 319 In addition to ensuring a balanced representation of category classes for the training and testing phases, it \nalso aims to reduce the cost of manual data classification by limiting the procedure only to complex observations.  \n2. Dataset Creation for Intent Classification  \nInitial exploratory data analysis  \nThe starting phase of the research involved an exploratory data analysis. For this purpose we used a dataset \nof 689 ,832 unique messages that we collected from December 2020 to January 2021. This dataset served as the \ninitial corpus for extracting patterns and insights. A critical task of the starting phase, in order to ensure a \nrepresentative subset of the data, was determining the adequate number of messages for the purpose of intent \nclassification. We realized it dur ing three subsequent iterations. They are summarized in Table 1 and  described \nbelow.  \nTable  1. Initial EDA approach - selecting messages for intent classification  \nIteration  Approach  Verification: result obtained  Improvement: \nstrategy applied  \n1 Pairs of visitor -bot messages  Excessive noise in messages  Omit  \n2 First message of the visitor  Too short messages  Omit  \n3 First long message of the visitor: at least two words \nseparated by whitespaces  Many -word message  Apply  \nSource : own elaboration.  \nFirst iteration was focused on analyzing pairs of visitor -bot interactions. However, this method proved \nsuboptimal as the data contained excessive noise that complicated the extraction of meaningful patterns. Second \niteration concentrated on the first mess age written by visitors. Analysis of this subset revealed that first messages, \nin most cases, were brief, often formulated as single -word messages, consisting of greetings such as \u201eHi\u201d or \u201eHello \u201d. \nThis method also proved suboptimal, as the dominance of sho rt messages did not provide substantial analytical \nvalue. In response to the limitations observed in methods applied for the first two iterations, the third iteration set \nfocus on the first long message of the visitor (at least two words separated by white spaces). It proved optimal at \nthis point, as covering a many -word message gives clearer insights. In fact, the first long message is the most \ndescriptive one from the entire conversation. Hence, in most cases, it carries the most insightful information and  is \nsufficient to assess the topic of the whole conversation. There are, of course, cases where the topic changes within \na single conversation in the user's subsequent messages. Yet in practice, one conversation typically concerns one \nspecific topic that r eflects one clear intent of the user - which proves to be an extremely important observation from \nthe business perspective. Moreover, applying this approach excluded brief greeting messages, which were \nidentified as sources of noise and did not contribute to the analytical objectives.  \nAfter choosing the appropriate number of messages to classify intent, in order to improve the dataset and \nextract meaningful features from it, techniques such as Term Frequency -Inverse Document Frequency (TF -IDF) \nand n -grams analysis were further employed.  We realized it during two subsequent iterations.  They are summarized \nin Table 2 and described below.  \nTable  2. Initial EDA approach - feature extraction for intent classification  \nIteration  Technique  Verification: result obtained  Improvement: strategy \napplied  \n1 TF-IDF Identification of redundant entities  Omit  \n2 N-grams analysis  Identification of redundant entities  Omit  \nSource : own elaboration.  \nWhile TF -IDF was utilized to assess the importance of words within the corpus, the n -grams analysis was \nutilized to capture the context by examining neighboring sequences of terms. Yet, the application of TF -IDF to the \nentire corpus failed to provide insig htful results. It highlighted entities such as country names or product names, \nwhich did not provide deeper understanding of the text data. The subsequent n -grams analysis, focusing on the \nmost frequent pairs of words, offered a marginally more informative  perspective \u2013 but still it was too noisy and \nfocused on redundant entities already highlighted by TF -IDF. \n  \nJournal of Applied Economic Sciences  \n 320 Clustering  \nSubsequently, we executed clustering of all first long messages of visitors. To achieve this, first we wanted \nto obtain vector representations of these first substantial messages through a language model. Due to their state -\nof-the-art performance, transformer -based language models are commonly used for this purpose in NLP (Ein -Dor \net al., 2020 ; Wolf et al., 2020 ; Steegh  & Sileno, 2023). After experimenting with several transformer models based \non RoBERTa and DistilBERT, the sentence -transformers model elaborated by Reimers & Gurevych  (2019) , fine-\ntuned on quora dataset  (Huggingface , 2019), proved to perform best on our data, assumi ng that we apply cosine \nsimilarity for cluster detection.  Once we obtained vector representations, we executed clustering to group messages \nthat share the same topics or contexts. We realized it during two subsequent iterations. They are summarized in \nTable 3 and described below.  \nTable 3 . Clustering vector representations of visitors\u2019 first long messages  \nIteration  Technique  Verification: result obtained  Improvement: \nstrategy applied  \n1 UMAP, HDBSCAN, class -based TF -IDF Generic clusters  difficult to interpret,   \nbias of redundant entities  Omit  \n2 Cosine -similarity between all message pairs  Small clusters,  easy to interpret,  minimized \nbias of redundant entities  Apply  \nSource : own elaboration.  \nFirst iteration was focused on a combination of advanced techniques, including Uniform Manifold \nApproximation and Projection (UMAP) for dimensionality reduction and Hierarchical Density -Based Spatial \nClustering of Applications with Noise (HDBSCAN) for clustering. This was followed by a class -based TF -IDF \ntechnique to highlight distinctive terms: all messages within a cluster were treated as a single document and then \nTF-IDF was calculated. Despite these sophisticated methods, the results were quite poor. The clusters that \nemerged were overly generic and difficult to interpret, and the bias of redundant entities was not minimized. \nMoreover, the whole iteration was compute -intensive. This outcome indicated a need for revising the approach to \nimprove interpretability and efficiency.  \nIn the second iteration of clustering vector representations of visitors\u2019 first long messages, we applied cosine \nsimilarity to assess the relationship between all pairs of messages. The clustering resulted in smaller groups, \ntypically with up to 15 message s each, but most commonly around 5 messages per cluster. Small clusters were \neasy to interpret and included approximately 10 ,000 messages in total. This specific number of 10 ,000 represents \nthe messages that were successfully clustered based on their relev ance. Remaining messages were found to lack \nthe necessary potential that would warrant their further inclusion by clustering algorithm.  \nThis second iteration successfully minimized the bias of redundant entities, enhancing the quality and \nrelevance of the data. Moreover, the second iteration was demanding on both memory and computational \nresources, requiring about 125 GB of RAM to process approximately 100 ,000 messages in a single pass. This high \nresource usage was primarily because we had to store all message embeddings simultaneously, therefore applying \nsuch a brute -force and not optimized approach resulted in the significant memory and c omputational requirements.  \nManual labeling  \nBased on clusters of vector representations, the further creation of main categories of labels for the dataset \nwas derived from:  \n\u25aa comprehensive analysis of past messages , \n\u25aa common sense reasoning.  \nThis approach led to the development of the first version of our taxonomy of labels, providing a foundation \nfor further tasks. Manually assigning labels to each cluster resulted in 8 ,976 uniquely labeled messages, where \neach label could be applied on more than one cluster.  \nCluster label propagation  \nTo improve the labeling  coverage within the dataset, the cluster label propagation was implemented with \nthe idea of using existing labeled messages as references. For each message in the initial dataset, the cosine \nsimilarity was computed against all previously labeled messages,  thus quantifying their overall similarity. If a \nmessage without a label revealed a high similarity to an already labeled message, this label was then assigned to \nthe unlabeled message. Repeating this operation several times ensured that labels were system atically given to \nVolume XIX, Fall, Issue 3(85) \n 321 new messages that fulfilled semantic proximity. In result, the labeled dataset increased to 26 ,155 uniquely labeled \nmessages.  \nMoreover, most probably due to similar nature of quora questions dataset of Reimers and Gurevych  \n(huggingface , 2019)  to our dataset, this model continuously exhibited really good results both on train and test sets, \nachieving 0.897 accuracy and 0.752 macro averaged f1 score on test set (randomly sampled 15% of the initial \ndataset, stratified by labels). Despite the high  results of the model, it should be noted that these results were \nsomewhat distorted because they were based on simple cases of \u201eeasy exampl es\u201d. This issue was quickly exposed \nby an analysis conducted on a new sample that came from actual business operations. It turned out that the model's \nperformance, which seemed good initially, was not as effective when applied to more complex real -world scena rios. \nTherefore, we did not stop on cluster label propagation , and we decided to build a  dedicated pipeline for  the \npurpose of active learning to exclude easily classified messages and focus on more complex examples that could \nmeaningfully contribute to model performance.  \n3. Active Learning Pipeline  \nThe development of a model integrated with active learning was realized through a series of steps. As \norganization of the learning tasks in a way that they gradually progress to more complex ones is grounded in the \nliterature of never -ending learning paradigm (Mitchell et al., 2018), we were focusing on optimizing tar geted data \nutilization and iterative improvement.  \nIn the first step a new dataset, aimed to provide a fresh basis for refining the model, was assembled. It \nincluded 225 ,323 unique English messages sourced from distinct conversations originating in June , 2021. It is \nworth underlining that the name of the month is quite important here, because including  messages from summer \ncould slightly reduce the impact of seasonality. The previous sample originated from December and January, where \nmessages were heavily concentrated around holidays. Analyzing this thread in a broader perspective could \ncontribute to research in another direction, concerning the cultural environment where the chatbot operates, and \nfocusing on its impact on seasonality in training and testing data.  \nThen, to maximize the impact of the data on model performance, a dedicated  Active Learning Pipeline was \nproposed. The pipeline developed by us was designed to filter, refine, and prepare data for further modeling; \nsubsequently \u2013 to reduce the dataset to the most informative samples; and finally - to ensure a balanced \nrepresentation of classes for training and evaluation phases. The assumed strategy was to select messages that \nwere most likely to improve learning and enhance model  accuracy:  \n\u25aa The pipeline started with the detection of the language of incoming messages. We decided to use an open -\nsource tool such as FastText. Given the project's focus, only messages identified as English were retained. \nAfter comparing several algorithms of langua ge detection (including FastText, LSTM_langid, langdetect, \nand Google's cld3), FastText turned out to be the best available option. Nevertheless, it is worth adding that \nit remains a weak point in the project due to limitations in accurately identifying la nguage nuances.  \n\u25aa In the first few iterations, predictions were computed using the sentence -transformers model fine -tuned on \nquora dataset \u2013 the same model that was improved by the cluster label propagation step.  \n\u25aa Then to our dataset, we applied heuristics based on regular expressions. These heuristics were created \nbased mainly on essential keywords that could include specific predicted classes (e.g. for order status, the \nkeyword is \u201etracking number \u201d etc.). These heuristics covered 70% of the dataset. Messages that could be \nclassified through these heuristics were removed from further analysis - under the assumption that they \nconsist of \u201eeasy examples \u201d from which the model would derive minimal learning benefit.  \n\u25aa Next, remaining messages were further refined by applying a threshold to the model's scores. The assumed \nstrategy was to reduce the remaining sample by thresholding on the model's outputs. According to our \nfindings, messages with a maximum class score belo w the threshold of 0.8 should be considered as \u201edifficult \nexamples \u201d due to the model's uncertainty, indicated by a flatter distribution of scores. These complex \n\u201edifficult \u201d messages were flagged for manual labeling, a decision supported by subject literatu re (Zhang et \nal., 2023 ; Meer et al., 2024) and for own manual analysis that distinguished a clear density difference in \nexamples above and below this threshold.  \n\u25aa Finally, from the refined messages, we drew stratified samples. With fewer labeled data batches, we \nexpected them, after Settles (2011), to be more economical and more efficient at achieving high accuracy. \nBased on the predicted classes we ensured a repres entative composition in each batch. The first few \nsamples included 1000 observations each.  \n  \nJournal of Applied Economic Sciences  \n 322 After realizing steps of Active Learning Pipeline, we wanted to assess the performance of the model. It is \nworth mentioning that each individual data sample needed to be annotated by Scale AI before proceeding to the \nnext stage. Therefore , the active learning workflow could only advance once Scale AI had provided the necessary \nlabels for each sample, ensuring that the dataset was properly annotated. Thus, having accumulated around 10 ,000 \nlabeled messages sourced from Scale AI, we refined the taxonomy and va lidation set of 5 ,128 messages, stratified \non labels. Then, we fine -tuned the model on the combined dataset, focusing on messages covered by heuristics \nfor higher accuracy.  \nWe iteratively fine -tuned the model, validated performance, monitored errors, and targeted weak points with \nspecific labeled samples. Each iteration improved the model, leading to the replacement of the previous version. \nTo optimize the pipeline and data q uality, we removed messages from the \u201eundefined \u201d class with high confidence, \nlowered the threshold to capture more complex cases, and sampled missing or difficult categories. We also \nextended regex heuristics throughout the process.  \nThe labeling process was concluded once the incremental improvements in model performance began to \nflatten out with the addition of new data batches. The incremental improvements slowed down or even decreased \nafter adding new batches, as presented on Figur e 1.  \nThis step also revealed biases in the annotated data due to differences of view between taskers. Namely, \nas some categories are very similar, taskers assigned labels from their own perspective - which was not always \nthe same as our perspective. In several cases it was leading to an erroneous process of inconsistent label \nassignments. Because of this, we decided that adding more data would not improve the model\u2019s performance, \naccording to the earlier evidence discussed in research on human annotation efforts  to build reliable annotated \ndatasets (Settles , 2011 ; Grouin et al., 2014).  \nFigure 1. Graph presents crucial metrics of the model fine -tuned on increasing labeled dataset  \n \nSource : own elaboration.  \nThe final step involved merging several product categories into a single category. We have observed a high \nincidence of errors within these categories, but not between them and the remaining categories. It was determined \nthat treating these as one consolidated category would be the most effective for the current model iteration. This \nwas supported not only by considerations from the perspectiv e of machine learning engineering, but also by the \nsufficient business productivity of the entire model pipeline.  \n4. Research Results  \nOur research indicates that conventional text analysis methods, such as TF -IDF and n -grams analysis, may \nfall short when it comes to uncovering deeper, contextually significant insights within certain datasets. We found \nthat clustering techniques offer sub stantial advantages by revealing patterns that are not immediately visible \nthrough simple text analysis. Additionally, cluster label propagation improves labeling consistency and scalability, \nalthough its effectiveness is closely tied to the quality and re presentativeness of the initially labeled messages. Any \nerrors or biases in these original labels can potentially be propagated throughout the dataset, making the initial \nlabel quality a critical consideration.  \n\nVolume XIX, Fall, Issue 3(85) \n 323 To address these challenges, we developed the Active Learning Pipeline. This pipeline uses regex -based \nheuristics to filter out easily classified messages, thereby focusing on more complex examples that contribute \nmeaningfully to model performance. By applying a threshold to model outputs, the pipeli ne emphasizes data points \nwhere the model exhibits uncertainty, which can lead to significant improvements in accuracy. Moreover, stratified \nsampling based on predicted classes ensures that all classes are adequately represented in the dataset.  \nHowever, the overall effectiveness of this pipeline strongly depends on the accuracy of the initial model \npredictions. Biases or inconsistencies in the initial model can be amplified in subsequent steps, potentially leading \nto suboptimal results. Additiona lly, while regex heuristics streamline the process, they might inaccurately discard \npotentially valuable messages. Similarly, a threshold set rigidly for model scores can exclude messages that are \nnear the threshold but still hold significant potential.  \nConclusion  \nMain contribution of this study is the development of the Active Learning Pipeline designed to enhance \ncommercial chatbots performance by improving the dataset quality for classification models in user intent detection.  \nThe pipeline started with the language identification of incoming messages. Then, the initial iterations use a \npreliminary model, which was subsequently refined through cluster label propagation. Heuristics, based on regular \nexpressions and essential keywo rds indicative of specific classes, were then applied to approximately 70% of the \ndataset. The remaining messages, categorized as \u201edifficult examples \u201d, were flagged for manual annotation. \nSubsequently, stratified sampling was performed on these refined mes sages to ensure a representative \ncomposition in each batch. Following the implementation of the Active Learning Pipeline, the taxonomy was revised, \nand the model was then fine -tuned on a combined dataset, including messages addressed by heuristics.  \nThe results indicate that traditional text analysis methods (such as TF -IDF and n -grams) turn out to be \ninsufficient for extracting contextually significant insights in commercial chatbot datasets. The Active Learning \nPipeline, particularly with the integration of cluster label propagation, significantly improves dataset quality and \nclassification performance. It reduces the manual effort required to distinguish between \u201eeasy \u201d and \u201edifficult \u201d \nexamples from extensive datasets, focusing manual labeling effort s on more challenging cases.  \nThis approach offers practical value as it provides the baseline for methodologies for creating and refining \ndatasets to improve the intent recognition , and enhancing active learning of the linguistic layer of commercial \nchatbots.  \nCredit Authorship Contribution Statement  \nBoth authors play equal roles in the research and development of the project, including the analysis, writing, and \ndecision -making processes. Their contributions were collaborative and evenly distributed throughout the study.  \nAcknowledgments /Funding  \nThis work was co -financed by the National Centre for Research and Development (NCBR) POIR.01.01.01 -00-0455/19 \nand presents partial results of a research project entitled \u201eBuilding advanced chatbots (version 2.0) dedicated to automating \ncorporate customer service \u201d carried out by Tidio Poland sp. z o.o.  \nConflict of Interest Statement  \nThe authors declare that the research was conducted in the absence of any commercial or financial relationships that \ncould be construed as a potential conflict of interest.  \nReferences  \n[1] Chandrakala, C.  B., Bhardwaj, R., & Pujari, C. (2024). An intent recognition pipeline for conversational AI. International \nJournal of Information Technology , 16, 731 -743. https://doi.org/10.1007/s41870 -023-01642 -8  \n[2] Cohn, D., Atlas, L. & Ladner, R. (1994). Improving generalization with active learning. Machine Learning , 15(2), 201 \u2013\n221. https://doi.org/10.1007/BF00993277   \n[3] Dligach, D., & Palmer, M. (2011). Reducing the Need for Double Annotation. [in:] Ide, N., Meyers, A., Pradhan, S., & \nTomanek, K. (eds.). Proceedings of the 5th Linguistic Annotation Workshop (LAW -V). ACL SIGANN, USA , 65\u201373. \nhttps://aclanthology.org/W11 -0408   \n  \nJournal of Applied Economic Sciences  \n 324 [4] Druck, G., Settles, B., & McCallum, A. (2009). Active learning by labeling features. [in:] Proceedings of the Conference \non Empirical Methods in Natural Language Processing  (EMNLP '09). ACL, Singapore , 81\u201390. \nhttps://dl.acm.org/doi/10.5555/1699510.1699522   \n[5] Ein-Dor, L., Halfon, A., Gera, A., Shnarch, E., Dankin, L., Choshen, L., Danilevsky, M., Aharonov, R., Katz, Y., & Slonim, \nN. (2020). Active Learning for BERT: An Empirical Study. [in:] Proceedings of the 2020 Conference on Empirical Methods \nin Natural Lan guage Processing (EMNLP). ACL , 7949 -7962. https://doi.org/10.18653/v1/2020.emnlp -main.638   \n[6] Finch, S. E., Paek, E. S., & Choi, J. D. (2023). Leveraging Large Language Models for Automated Dialogue Analysis. \n[in:] S. Stoyanchev, S. Joty, D. Schlangen, O. Dusek, C. Kennington, & M. Alikhani (eds.), Proceedings of the 24th Annual \nMeeting of the Special Interest Group on Discourse and Dialogue . ACL. 202 -215. \nhttps://doi.org/10.18653/v1/2023.sigdial -1.20  \n[7] Grouin, C., Lavergne, T., & N\u00e9v\u00e9ol, A. (2014). Optimizing annotation efforts to build reliable annotated corpora for training  \nstatistical models. [in:] Levin L., Stede M. (eds.). Proceedings of the 8th Linguistic Annotation Workshop (LAW -VIII). ACL \nSIGANN, Ireland , 54\u201358. https://doi.org/10.3115/v1/W14 -4907   \n[8] Hakkani -T\u00fcr, D., Ju, Y. -C., Zweig, G., & Tur, G. (2015). Clustering Novel Intents in a Conversational Interaction System \nwith Semantic Parsing. [in:] Proceedings of Interspeech, Germany. 1854 -1858. \nhttps://doi.org/10.21437/Interspeech.2015 -70  \n[9] Huggingface  (2019).  https://huggingface.co/sentence -transformers/distilbert -base -nli-stsb-quora -ranking  [accessed \n08.2024]  \n[10] Lewis, D.  D., Gale, W.  A. (1994). A Sequential Algorithm for Training Text Classifiers. [in:] Croft, B.W., van Rijsbergen, \nC. J. (eds.), SIGIR \u201994, Proceedings of the 17th Annual International ACM -SIGIR Conference on Research and \nDevelopment in Information Retrieval . Springer, London. 3 -12. https://doi.org/10.1007/978 -1-4471 -2099 -5_1  \n[11] Meer, M. van der, Falk, N., Murukannaiah, P.  K., & Liscio, E. (2024). Annotator -Centric Active Learning for Subjective \nNLP Tasks. ArXiv , 1-18. https://doi.org/10.48550/arXiv.2404.15720   \n[12] Mitchell, T., Cohen, W., Hruschka, E., Talukdar, P., Yang, B., Betteridge, J., Carlson, A., Dalvi, B., Gardner, M., Kisiel, \nB., Krishnamurthy, J., Lao, N., Mazaitis, K., Mohamed, T., Nakashole, N., Platanios, E., Ritter, A., Samadi, M., Settles, \nB., Wang, R., Wijaya, D., Gupta, A., Chen, X., Saparov, A., Greaves, M., & Welling, J. (2018). Never -ending learning. \nCommunications of the ACM, 61(5), 103 \u2013115. https://doi.org/10.1145/3191513   \n[13] Nguyen, D. H. M., & Patrick, J. D. (2014). Supervised machine learning and active learning in classification of radiology \nreports. Journal of the American Medical Informatics Association , 21(5), 893 -901. https://doi.org/10.1136/amiajnl -2013 -\n002516   \n[14] Ouyang L., Wu J., Jiang X., Almeida D., Wainwright C. L., Mishkin P., Zhang C., Agarwal S., Slama K., Ray A., Schulman \nJ., Hilton J., Kelton F., Miller L., Simens M., Askell A., Welinder P., Christiano P. F., Leike J., & Lowe R. (2022). Trainin g \nlanguage m odels to follow instructions with human feedback. [in:] Proceedings of the 36th Conference on Neural \nInformation Processing Systems (NeurIPS 2022) , 1-15. \n[15] Pawlik, \u0141., P\u0142aza, M., Deniziak, S., & Boksa , E. (2022). A method for improving bot effectiveness by recognising implicit \ncustomer intent in contact centre conversations. Speech Communication , 143 , 33-45. \nhttps://doi.org/10.1016/j.specom.2022.07.003   \n[16] Reimers, N., & Gurevych, I. (2019). Sentence -BERT: Sentence embeddings using Siamese BERT -networks. [in:] \nProceedings of the Conference on Empirical Methods in Natural Language Processing . ACL , 1-11. \nhttps://doi.org/10.48550/arXiv.1908.10084   \n[17] Setiaji B., Wibowo F. W. (2016). Chatbot using a knowledge in database: Human -to-machine conversation modeling. \n[in:] Proceedings of the 7th International Conference on Intelligent Systems, Modelling and Simulation (ISMS ), IEEE , 72-\n77. https://doi.org/10.1109/ISMS.2016.53   \n[18] Settles, B. (2009). Active Learning Literature Survey. Computer Sciences Technical Report 1648. University of \nWisconsin \u2013Madison , 1-44. \n[19] Settles, B. (2011). From Theories to Queries: Active Learning in Practice. [in:] Guyon, I., Cawley, G., Dror, G., Lemaire, \nV., & Statnikov, A. (eds.). Active Learning and Experimental Design Workshop in conjunction with AISTATS 2010, \nProceedings of Machine  Learning Research, 16, 1 -18. \n[20] Settles, B., Craven, M.  W., & Friedland, L.  A. (2008). Active Learning with Real Annotation Costs. [in:] Proceedings of \nthe NIPS Workshop on Cost -Sensitive Learning , 1-10. \n  \nVolume XIX, Fall, Issue 3(85) \n 325 [21] Shafi, P.  M., Jawalkar, G.  S., Kadam, M.  A., Ambawale, R.  R., & Bankar, S.  V. (2020). AI -Assisted Chatbot for E -\nCommerce to Address Selection of Products from Multiple Products. [in:] Dey, N., Mahalle, P., Shafi, P., Kimabahune, \nV., & Hassanien, A. (eds.). Internet of Things, Smart Computing and Technology: A Roadmap Ahead. Studies in \nSystems, Decision and Control,  266, 57-80. https://doi.org/10.1007/978 -3-030-39047 -1_3  \n[22] Steegh, E., & Sileno, G. (2023). No labels? No problem! Experiments with active learning strategies for multi -class \nclassification in imbalanced low -resource settings. [in:] Proceedings of the 19th International Conference on Artificial \nIntelligence and Law  (ICAIL '23). ACM, Portugal , 277-286. https://doi.org/10.1145/3594536.3595171   \n[23] Suryanto, T., Wibawa, A., Hariyono, H., & Nafalski, A. (2023). Evolving Conversations: A Review of Chatbots and \nImplications in Natural Language Processing for Cultural Heritage Ecosystems. International Journal of Robotics and \nControl Systems,  3(4), 955-1006. https://doi.org/10.31763/ijrcs.v3i4.1195   \n[24] Vasquez -Correa, J. C., Guerrero -Sierra, J. C., Pemberty -Tamayo, J. L., Jaramillo, J. E., & Tejada -Castro, A. F. (2021). \nOne System to Rule Them All: A Universal Intent Recognition System for Customer Service Chatbots , 1-26. \nhttp://dx.doi.org/10.2139/ssrn.3986692   \n[25] Wissler, L., Almashraee, M., Monett Diaz, D., & Paschke, A. (2014). The Gold Standard in Corpus Annotation. [in:] \nProceedings of the 5th IEEE Student Conference, IEEE, Germany , 1-4. https://doi.org/10.13140/2.1.4316.3523   \n[26] Wolf, T., Debut, L., Sanh, V., Chaumond, J., Delangue, C., Moi, A., Cistac, P., Rault, T., Louf, R., Funtowicz, M., Davison, \nJ., Shleifer, S., von Platen, P., Ma, C., Jernite, Y., Plu, J., Xu, C., Le Scao, T., Gugger, S., Drame, M., Lhoest, Q., & \nRush, A. M. (2020). Transformers: State -of-the-art natural language processing. [in:] Proceedings of the Conference on \nEmpirical Methods in Natural Language Processing: System Demonstrations (EMNLP). ACL , 38\u201345. \nhttps://doi.org/10.18653/v1/2020.emnlp -demos.6   \n[27] Xiao, Z., Zhou, M. X., Chen, W., Yang, H., & Chi, C. (2020). If I Hear You Correctly: Building and Evaluating Interview \nChatbots with Active Listening Skills. [in:] Proceedings of the CHI Conference on Human Factors in Computing Systems  \n(CHI '20). ACM USA. 1 -14. https://doi.org/10.1145/3313831.3376131   \n[28] Zhang, Z., Strubell, E., & Hovy, E.  H. (2022). A Survey of Active Learning for Natural Language Processing. ArXiv. 1 -26. \nhttps://doi.org/10.48550/arXiv.2210.10109",
+  "keywords": [
+    "chatbots",
+    "chatbot",
+    "economic",
+    "productivity",
+    "classification",
+    "categorization",
+    "information",
+    "intent",
+    "keywords",
+    "ai"
+  ],
+  "intent_category": "intent_recognition",
+  "named_entities": [
+    {
+      "text": "317",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Journal of Applied Economic  Sciences  \n",
+      "label": "ORG"
+    },
+    {
+      "text": "Optimized Data Preparation",
+      "label": "ORG"
+    },
+    {
+      "text": "Faculty of Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "University of Warsaw",
+      "label": "ORG"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "o.o.",
+      "label": "GPE"
+    },
+    {
+      "text": "Szczecin",
+      "label": "GPE"
+    },
+    {
+      "text": "Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "Article\u2019s h istory:  \nReceived  ",
+      "label": "LAW"
+    },
+    {
+      "text": "19th of July, 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "9th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "27th of August , 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "1st",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "September , 2024",
+      "label": "DATE"
+    },
+    {
+      "text": "the Volume XIX",
+      "label": "LOC"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "202 4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "CC",
+      "label": "ORG"
+    },
+    {
+      "text": "4.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "3(85",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "317",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "325",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Sca le AI",
+      "label": "ORG"
+    },
+    {
+      "text": "C45",
+      "label": "ORG"
+    },
+    {
+      "text": "C88",
+      "label": "ORG"
+    },
+    {
+      "text": "Cohn et al.",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Lewis & Gale",
+      "label": "ORG"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Druck",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "Dligach & Palmer",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Grouin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Wissler",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Pawlik",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Chandrakala",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "318",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "hundreds",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "Section 1",
+      "label": "LAW"
+    },
+    {
+      "text": "Section 2",
+      "label": "LAW"
+    },
+    {
+      "text": "section 3",
+      "label": "LAW"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "Hakkani",
+      "label": "NORP"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "Setiaji  & Wibowo",
+      "label": "ORG"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "several hundred",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Shafi",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Vasquez -Correa",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "Ouyang et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Finch",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "this evening",
+      "label": "TIME"
+    },
+    {
+      "text": "Paris",
+      "label": "GPE"
+    },
+    {
+      "text": "Xiao et al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Chandrakala",
+      "label": "GPE"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Suryanto",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "thousands",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Druck",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Dligach & Palmer \n(",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "319",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "689",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "832",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "December 2020 to January 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 1",
+      "label": "LAW"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Initial EDA",
+      "label": "ORG"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "at least two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "third",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "at least two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 2",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Initial EDA",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "TF",
+      "label": "GPE"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Steegh",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Reimers & Gurevych",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Huggingface",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Table 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "First",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Uniform Manifold \nApproximation",
+      "label": "PERSON"
+    },
+    {
+      "text": "UMAP",
+      "label": "ORG"
+    },
+    {
+      "text": "Hierarchical Density -Based Spatial \nClustering of Applications",
+      "label": "ORG"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "up to 15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "approximately 10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "second",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "about 125",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "RAM",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 100",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "976",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "more than one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "321",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "155",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Reimers",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "0.897",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.752",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Mitchell",
+      "label": "PERSON"
+    },
+    {
+      "text": "al.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "225",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "June , 2021",
+      "label": "DATE"
+    },
+    {
+      "text": "the month",
+      "label": "DATE"
+    },
+    {
+      "text": "summer",
+      "label": "DATE"
+    },
+    {
+      "text": "December",
+      "label": "DATE"
+    },
+    {
+      "text": "January",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "English",
+      "label": "LANGUAGE"
+    },
+    {
+      "text": "langua ge detection",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "LSTM_langid",
+      "label": "NORP"
+    },
+    {
+      "text": "Google",
+      "label": "ORG"
+    },
+    {
+      "text": "FastText",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "70%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "0.8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "literatu re",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "Meer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "322",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "Scale AI",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "000",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Scale AI",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "128",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Figur",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Settles",
+      "label": "ORG"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Grouin",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "323",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "approximately 70%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "the Active Learning Pipeline",
+      "label": "ORG"
+    },
+    {
+      "text": "TF",
+      "label": "ORG"
+    },
+    {
+      "text": "The Active Learning \nPipeline",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "Credit Authorship Contribution Statement  \n",
+      "label": "ORG"
+    },
+    {
+      "text": "the National Centre for Research and Development (NCBR",
+      "label": "ORG"
+    },
+    {
+      "text": "POIR.01.01.01 -00-0455/19",
+      "label": "PERSON"
+    },
+    {
+      "text": "2.0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tidio Poland",
+      "label": "GPE"
+    },
+    {
+      "text": "o.o.",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "C.  B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Bhardwaj",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "International \nJournal of Information Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "731",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Atlas",
+      "label": "PERSON"
+    },
+    {
+      "text": "L. & Ladner",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Machine Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "15(2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "201",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "221",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "the Need for Double Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "Pradhan",
+      "label": "GPE"
+    },
+    {
+      "text": "S., & \nTomanek",
+      "label": "ORG"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "the 5th Linguistic Annotation Workshop",
+      "label": "ORG"
+    },
+    {
+      "text": "SIGANN",
+      "label": "GPE"
+    },
+    {
+      "text": "USA",
+      "label": "GPE"
+    },
+    {
+      "text": "Journal of Applied Economic Sciences",
+      "label": "ORG"
+    },
+    {
+      "text": "324",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "B.",
+      "label": "NORP"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Empirical Methods",
+      "label": "ORG"
+    },
+    {
+      "text": "'09",
+      "label": "DATE"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "Singapore",
+      "label": "GPE"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ein-Dor",
+      "label": "ORG"
+    },
+    {
+      "text": "Halfon",
+      "label": "PERSON"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gera",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Choshen",
+      "label": "PERSON"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aharonov",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Katz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "NORP"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "the 2020 Conference on Empirical Methods",
+      "label": "EVENT"
+    },
+    {
+      "text": "Natural Lan guage Processing (EMNLP",
+      "label": "ORG"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "7949 -7962",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "-main.638",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "S. E.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Paek",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "S. Stoyanchev",
+      "label": "PERSON"
+    },
+    {
+      "text": "S. Joty",
+      "label": "PERSON"
+    },
+    {
+      "text": "D. Schlangen",
+      "label": "PERSON"
+    },
+    {
+      "text": "O. Dusek",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. Kennington",
+      "label": "PERSON"
+    },
+    {
+      "text": "24th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Annual",
+      "label": "DATE"
+    },
+    {
+      "text": "the Special Interest Group on Discourse and Dialogue",
+      "label": "ORG"
+    },
+    {
+      "text": "202",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Grouin",
+      "label": "GPE"
+    },
+    {
+      "text": "Lavergne",
+      "label": "GPE"
+    },
+    {
+      "text": "T., & N\u00e9v\u00e9ol",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Levin L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Stede M.",
+      "label": "PERSON"
+    },
+    {
+      "text": "8th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "SIGANN",
+      "label": "GPE"
+    },
+    {
+      "text": "Ireland",
+      "label": "GPE"
+    },
+    {
+      "text": "54\u201358",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Ju",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y. -C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zweig",
+      "label": "PERSON"
+    },
+    {
+      "text": "2015",
+      "label": "DATE"
+    },
+    {
+      "text": "Semantic Parsing",
+      "label": "ORG"
+    },
+    {
+      "text": "Interspeech",
+      "label": "GPE"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "1854",
+      "label": "DATE"
+    },
+    {
+      "text": "https://doi.org/10.21437/Interspeech.2015 -70",
+      "label": "PERSON"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Huggingface",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "08.2024",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Gale",
+      "label": "PERSON"
+    },
+    {
+      "text": "1994",
+      "label": "DATE"
+    },
+    {
+      "text": "Sequential Algorithm",
+      "label": "FAC"
+    },
+    {
+      "text": "Training Text Classifiers",
+      "label": "ORG"
+    },
+    {
+      "text": "Croft",
+      "label": "GPE"
+    },
+    {
+      "text": "B.W.",
+      "label": "GPE"
+    },
+    {
+      "text": "van Rijsbergen",
+      "label": "PERSON"
+    },
+    {
+      "text": "C. J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "94",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "International ACM -SIGIR Conference on Research",
+      "label": "ORG"
+    },
+    {
+      "text": "London",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "https://doi.org/10.1007/978 -1-4471",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "M. van der",
+      "label": "PERSON"
+    },
+    {
+      "text": "Falk",
+      "label": "ORG"
+    },
+    {
+      "text": "Murukannaiah",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "T.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cohen",
+      "label": "GPE"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hruschka",
+      "label": "GPE"
+    },
+    {
+      "text": "Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Betteridge",
+      "label": "GPE"
+    },
+    {
+      "text": "J., Carlson, A.",
+      "label": "ORG"
+    },
+    {
+      "text": "Dalvi",
+      "label": "PERSON"
+    },
+    {
+      "text": "B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gardner",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kisiel",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krishnamurthy",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "NORP"
+    },
+    {
+      "text": "K.",
+      "label": "NORP"
+    },
+    {
+      "text": "Mohamed",
+      "label": "PERSON"
+    },
+    {
+      "text": "Nakashole",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "N.",
+      "label": "NORP"
+    },
+    {
+      "text": "Platanios",
+      "label": "NORP"
+    },
+    {
+      "text": "Samadi",
+      "label": "GPE"
+    },
+    {
+      "text": "Settles",
+      "label": "GPE"
+    },
+    {
+      "text": "Wang",
+      "label": "ORG"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "Gupta",
+      "label": "GPE"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Saparov",
+      "label": "GPE"
+    },
+    {
+      "text": "Greaves",
+      "label": "GPE"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "103",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "115",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "D. H. M.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "the American Medical Informatics Association",
+      "label": "ORG"
+    },
+    {
+      "text": "21(5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "893",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "002516",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ouyang L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wu J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jiang X.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Almeida D.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wainwright C. L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mishkin P.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Zhang C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Slama K.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ray A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hilton J.,",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kelton F.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Miller L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Welinder P.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Leike J., & Lowe R.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Trainin",
+      "label": "GPE"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Pawlik",
+      "label": "GPE"
+    },
+    {
+      "text": "\u0141.",
+      "label": "NORP"
+    },
+    {
+      "text": "P\u0142aza",
+      "label": "GPE"
+    },
+    {
+      "text": "Deniziak",
+      "label": "PERSON"
+    },
+    {
+      "text": "S.",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Speech Communication",
+      "label": "ORG"
+    },
+    {
+      "text": "143",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "33",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Siamese BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Setiaji B.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Wibowo F. W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2016",
+      "label": "DATE"
+    },
+    {
+      "text": "Chatbot",
+      "label": "PERSON"
+    },
+    {
+      "text": "7th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Modelling and Simulation",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "77",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Computer Sciences Technical Report",
+      "label": "ORG"
+    },
+    {
+      "text": "1648",
+      "label": "DATE"
+    },
+    {
+      "text": "Wisconsin",
+      "label": "GPE"
+    },
+    {
+      "text": "Madison",
+      "label": "PERSON"
+    },
+    {
+      "text": "1-44",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2011",
+      "label": "DATE"
+    },
+    {
+      "text": "Theories to Queries: Active Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "Guyon",
+      "label": "PERSON"
+    },
+    {
+      "text": "I.",
+      "label": "ORG"
+    },
+    {
+      "text": "Lemaire",
+      "label": "PERSON"
+    },
+    {
+      "text": "V., & Statnikov",
+      "label": "ORG"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Active Learning and Experimental Design Workshop",
+      "label": "ORG"
+    },
+    {
+      "text": "AISTATS 2010",
+      "label": "DATE"
+    },
+    {
+      "text": "Machine  Learning Research",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "DATE"
+    },
+    {
+      "text": "1 -18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "B.",
+      "label": "NORP"
+    },
+    {
+      "text": "Craven",
+      "label": "ORG"
+    },
+    {
+      "text": "2008",
+      "label": "DATE"
+    },
+    {
+      "text": "Active Learning",
+      "label": "PERSON"
+    },
+    {
+      "text": "the NIPS Workshop on",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cost -Sensitive Learning",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Volume XIX",
+      "label": "PERSON"
+    },
+    {
+      "text": "325",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jawalkar",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.  S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kadam",
+      "label": "PERSON"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "S.  V.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Multiple Products",
+      "label": "ORG"
+    },
+    {
+      "text": ":] Dey",
+      "label": "PERSON"
+    },
+    {
+      "text": "N.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Mahalle",
+      "label": "GPE"
+    },
+    {
+      "text": "Smart Computing and Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "266",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "57-80",
+      "label": "DATE"
+    },
+    {
+      "text": "https://doi.org/10.1007/978",
+      "label": "ORG"
+    },
+    {
+      "text": "22",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Steegh",
+      "label": "PERSON"
+    },
+    {
+      "text": "G.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "19th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Law",
+      "label": "PERSON"
+    },
+    {
+      "text": "ICAIL",
+      "label": "ORG"
+    },
+    {
+      "text": "'23",
+      "label": "DATE"
+    },
+    {
+      "text": "ACM",
+      "label": "ORG"
+    },
+    {
+      "text": "Portugal",
+      "label": "GPE"
+    },
+    {
+      "text": "277",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Suryanto",
+      "label": "GPE"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Wibawa",
+      "label": "GPE"
+    },
+    {
+      "text": "A.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Hariyono",
+      "label": "GPE"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "International Journal of Robotics",
+      "label": "ORG"
+    },
+    {
+      "text": "Control Systems",
+      "label": "ORG"
+    },
+    {
+      "text": "3(4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "955",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "24",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Vasquez -Correa",
+      "label": "ORG"
+    },
+    {
+      "text": "J. C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. C.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Pemberty -Tamayo",
+      "label": "PERSON"
+    },
+    {
+      "text": "J. L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jaramillo",
+      "label": "ORG"
+    },
+    {
+      "text": "2021",
+      "label": "DATE"
+    },
+    {
+      "text": "One",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Universal Intent Recognition System",
+      "label": "ORG"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "25",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wissler",
+      "label": "ORG"
+    },
+    {
+      "text": "L.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Almashraee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Monett Diaz",
+      "label": "PERSON"
+    },
+    {
+      "text": "D.",
+      "label": "NORP"
+    },
+    {
+      "text": "& Paschke",
+      "label": "ORG"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "Corpus Annotation",
+      "label": "ORG"
+    },
+    {
+      "text": "the 5th IEEE Student Conference,",
+      "label": "ORG"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "Germany",
+      "label": "GPE"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "26",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "T.",
+      "label": "GPE"
+    },
+    {
+      "text": "Debut",
+      "label": "GPE"
+    },
+    {
+      "text": "Chaumond",
+      "label": "GPE"
+    },
+    {
+      "text": "J., Delangue",
+      "label": "ORG"
+    },
+    {
+      "text": "C.",
+      "label": "NORP"
+    },
+    {
+      "text": "Rault",
+      "label": "PERSON"
+    },
+    {
+      "text": "Louf",
+      "label": "GPE"
+    },
+    {
+      "text": "R.",
+      "label": "NORP"
+    },
+    {
+      "text": "Funtowicz",
+      "label": "PERSON"
+    },
+    {
+      "text": "Davison",
+      "label": "PERSON"
+    },
+    {
+      "text": "J., Shleifer",
+      "label": "ORG"
+    },
+    {
+      "text": "S.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Y.",
+      "label": "PERSON"
+    },
+    {
+      "text": "J.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lhoest",
+      "label": "GPE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "Empirical Methods in Natural Language Processing: System Demonstrations",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "ACL",
+      "label": "ORG"
+    },
+    {
+      "text": "38\u201345",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "27",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zhou",
+      "label": "PERSON"
+    },
+    {
+      "text": "M. X.",
+      "label": "PERSON"
+    },
+    {
+      "text": "Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "W.",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "the CHI Conference on Human Factors",
+      "label": "ORG"
+    },
+    {
+      "text": "Computing Systems",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "CHI",
+      "label": "ORG"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "ACM USA",
+      "label": "ORG"
+    },
+    {
+      "text": "1 -14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "28",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Strubell",
+      "label": "GPE"
+    },
+    {
+      "text": "E., & Hovy",
+      "label": "ORG"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "1 -26",
+      "label": "CARDINAL"
+    }
+  ],
+  "summary": "This study introduces a novel approach to enhance chatbot intent classification by integrating Active Learning with optimized data preparation. Utilizing sentence-transformers for clustering and iterative labeling with external data, the method improves supervised modeling performance in real-world commercial chatbot scenarios, offering scalability across various datasets and tasks.",
+  "embedding": [
+    0.08618360012769699,
+    -0.01157686859369278,
+    -0.0612405464053154,
+    -0.048433415591716766,
+    -0.010847323574125767,
+    0.03685205057263374,
+    0.0457080714404583,
+    0.02220415323972702,
+    0.12249342352151871,
+    -0.04548555612564087,
+    0.01937808468937874,
+    0.028465645387768745,
+    -0.006876108702272177,
+    0.05756258964538574,
+    0.01677950844168663,
+    -0.06982819736003876,
+    0.04567229747772217,
+    0.03615908324718475,
+    0.05048331618309021,
+    0.016535209491848946,
+    0.03376141935586929,
+    0.007483272813260555,
+    -0.027054106816649437,
+    0.07730455696582794,
+    -0.06427132338285446,
+    -0.02103172428905964,
+    -0.032341837882995605,
+    -0.034582171589136124,
+    0.022048424929380417,
+    0.0016122048255056143,
+    0.0399828776717186,
+    0.020934050902724266,
+    0.004172194749116898,
+    0.044236283749341965,
+    2.386511141594383e-06,
+    -0.05842984467744827,
+    -0.05155078321695328,
+    -0.04399949312210083,
+    -0.04282482713460922,
+    -0.04694266989827156,
+    0.03646788001060486,
+    0.029604701325297356,
+    0.016597554087638855,
+    0.0425398051738739,
+    -0.05930499732494354,
+    -0.012445579282939434,
+    0.06908994168043137,
+    0.028237011283636093,
+    0.06314161419868469,
+    0.04883003607392311,
+    -0.018759744241833687,
+    0.002712336601689458,
+    0.014762314967811108,
+    0.017150679603219032,
+    0.004630797542631626,
+    -0.06135566160082817,
+    0.04508260264992714,
+    -0.004286792129278183,
+    -0.03814093396067619,
+    0.0011189457727596164,
+    0.0061476523987948895,
+    0.01420373935252428,
+    -0.023076774552464485,
+    -0.025742223486304283,
+    0.019565386697649956,
+    0.016679277643561363,
+    -0.01608745940029621,
+    -0.07783964276313782,
+    -0.0012448226334527135,
+    0.030424855649471283,
+    0.0311514213681221,
+    0.014644895680248737,
+    0.012662990018725395,
+    -0.033014070242643356,
+    0.04028143361210823,
+    -0.004356003366410732,
+    -0.028801204636693,
+    -0.009915811009705067,
+    -0.02123640663921833,
+    -0.014497376047074795,
+    -0.032086081802845,
+    0.010103761218488216,
+    -0.01645004004240036,
+    0.00735425716266036,
+    -0.0241421926766634,
+    0.000525962037499994,
+    -0.03907099738717079,
+    -0.003970682621002197,
+    0.015901703387498856,
+    0.00029651750810444355,
+    -0.007490288000553846,
+    -0.04563898220658302,
+    0.03302420303225517,
+    0.05619988963007927,
+    -0.061498478055000305,
+    -0.009047222323715687,
+    0.029902705922722816,
+    -0.02001124434173107,
+    0.015871934592723846,
+    -0.0816996842622757,
+    -0.04683713614940643,
+    0.04066481813788414,
+    0.005980859510600567,
+    0.03410322219133377,
+    0.007515796925872564,
+    0.03498119115829468,
+    0.03470458835363388,
+    -0.002742086537182331,
+    -0.03477827087044716,
+    0.03355048969388008,
+    -0.08280118554830551,
+    -0.03835057467222214,
+    -0.04574665427207947,
+    0.031043538823723793,
+    0.01827676221728325,
+    0.008186723105609417,
+    -0.08097980916500092,
+    0.05435697361826897,
+    -0.02450014464557171,
+    -0.037238433957099915,
+    -0.020614761859178543,
+    0.014407437294721603,
+    -0.011779658496379852,
+    0.0500553734600544,
+    -0.019758790731430054,
+    0.006420781835913658,
+    -0.048360902816057205,
+    0.04004022106528282,
+    -0.018199224025011063,
+    -0.05583161860704422,
+    0.030669018626213074,
+    0.05754080414772034,
+    -0.00035382856731303036,
+    0.006063901353627443,
+    -0.012634611688554287,
+    0.07809194922447205,
+    0.011642414145171642,
+    -0.05594482272863388,
+    0.025775153189897537,
+    -0.032943353056907654,
+    -0.00477399630472064,
+    -0.018957264721393585,
+    -0.03076227940618992,
+    -0.01988517865538597,
+    0.03784007206559181,
+    -0.02144712768495083,
+    -0.0020525266882032156,
+    -0.01099088229238987,
+    -0.03121529519557953,
+    -0.03477572649717331,
+    -0.03158295899629593,
+    0.018127283081412315,
+    -0.012939567677676678,
+    0.010628290474414825,
+    0.028816113248467445,
+    -0.0037383201997727156,
+    -0.025036044418811798,
+    0.05437447875738144,
+    -0.012850023806095123,
+    0.06384213268756866,
+    0.0452643558382988,
+    -0.02609339915215969,
+    -0.0027911297511309385,
+    0.02465079165995121,
+    -0.03294762596487999,
+    -0.04675254225730896,
+    0.05117258429527283,
+    0.03573561832308769,
+    -0.012123637832701206,
+    -0.02420146018266678,
+    -0.04072936996817589,
+    -0.0036568231880664825,
+    -0.05459145829081535,
+    0.023882081732153893,
+    0.04226094111800194,
+    0.01219091471284628,
+    -0.0059958859346807,
+    -0.010658503510057926,
+    0.03107185661792755,
+    0.05512135103344917,
+    0.026374217122793198,
+    -0.001077708788216114,
+    0.007643263321369886,
+    -0.027653036639094353,
+    -0.054021257907152176,
+    -0.05401943251490593,
+    0.005666418466717005,
+    0.01543666422367096,
+    -0.041347987949848175,
+    -0.055721867829561234,
+    0.028329122811555862,
+    -0.03653478994965553,
+    0.06330478936433792,
+    0.009477884508669376,
+    0.04048977419734001,
+    -0.009499442763626575,
+    -0.03950898349285126,
+    0.006911855190992355,
+    0.03748809173703194,
+    0.010545747354626656,
+    -0.05243396386504173,
+    -0.08414609730243683,
+    0.00758488429710269,
+    0.0031824393663555384,
+    0.01367227453738451,
+    -0.04673537239432335,
+    -0.03696093708276749,
+    -0.027684107422828674,
+    -0.04410560429096222,
+    -0.022183280438184738,
+    0.025041641667485237,
+    -0.030800625681877136,
+    -0.006919141858816147,
+    -0.021859407424926758,
+    -0.023817244917154312,
+    0.026111047714948654,
+    0.0028134866151958704,
+    -0.0071562291122972965,
+    0.005039278883486986,
+    -0.0039005230646580458,
+    -0.04513310268521309,
+    0.03035476803779602,
+    0.027495453134179115,
+    0.03142533451318741,
+    0.02742415852844715,
+    -0.018155403435230255,
+    -0.002572999568656087,
+    0.03716544806957245,
+    0.07728517055511475,
+    0.045571912080049515,
+    0.051983725279569626,
+    -0.0263055507093668,
+    0.016332363709807396,
+    0.025607604533433914,
+    -0.025961047038435936,
+    0.04496974125504494,
+    0.04786187410354614,
+    0.0034003749024122953,
+    0.009449366480112076,
+    0.024640297517180443,
+    -0.08108122646808624,
+    0.005828157998621464,
+    -0.01173572987318039,
+    0.009893881157040596,
+    -0.03259177505970001,
+    -0.05381027236580849,
+    0.045256782323122025,
+    -0.023993851616978645,
+    0.029551444575190544,
+    -0.06266722828149796,
+    0.055266670882701874,
+    -0.014835651032626629,
+    0.03298165649175644,
+    0.013366119004786015,
+    -0.017793865874409676,
+    0.005890294909477234,
+    -0.03497084975242615,
+    0.01292322389781475,
+    -0.030735021457076073,
+    0.0580950602889061,
+    -0.02751089818775654,
+    -0.036034923046827316,
+    -0.014586246572434902,
+    0.02867479808628559,
+    0.04360009357333183,
+    -0.052414871752262115,
+    0.003417456056922674,
+    -0.06911233812570572,
+    -0.0317537896335125,
+    0.009025736711919308,
+    -0.04765031859278679,
+    0.004400785081088543,
+    0.022293729707598686,
+    0.008635299280285835,
+    -0.004856502637267113,
+    0.010248320177197456,
+    0.06559471040964127,
+    0.00023500907991547137,
+    0.026053238660097122,
+    0.02498484216630459,
+    0.00020019772637169808,
+    -0.07130250334739685,
+    0.0004970491863787174,
+    0.035334959626197815,
+    -0.028027117252349854,
+    0.031221505254507065,
+    0.07018662989139557,
+    -0.0465039499104023,
+    -0.025810522958636284,
+    0.005675445776432753,
+    -0.03221810236573219,
+    -0.03189609572291374,
+    -0.0074828206561505795,
+    -0.045418914407491684,
+    0.006753197871148586,
+    -0.005863416474312544,
+    -0.018800415098667145,
+    0.05529613792896271,
+    0.057744015008211136,
+    0.061476368457078934,
+    0.01293606124818325,
+    0.00752316415309906,
+    -0.047428831458091736,
+    0.012491009198129177,
+    -0.045282479375600815,
+    0.010986453853547573,
+    -0.037096213549375534,
+    -0.06646304577589035,
+    0.024026596918702126,
+    0.01783301867544651,
+    0.029820747673511505,
+    -0.006699498742818832,
+    -0.05702095851302147,
+    0.00740094855427742,
+    0.023672547191381454,
+    -0.04659589007496834,
+    -0.048447247594594955,
+    0.00842035748064518,
+    -0.039568740874528885,
+    0.022725511342287064,
+    0.04223724454641342,
+    -0.06260398030281067,
+    0.07101175934076309,
+    0.01715298369526863,
+    -0.006265109870582819,
+    -0.0509946309030056,
+    -0.05170357972383499,
+    0.007309718988835812,
+    0.01846914179623127,
+    -0.004781258758157492,
+    0.01710253395140171,
+    0.0005872418987564743,
+    -0.04271836578845978,
+    -0.025471094995737076,
+    -0.05882148817181587,
+    -0.007323162164539099,
+    -0.005425310228019953,
+    -0.013645456172525883,
+    0.01950816437602043,
+    -0.010889692232012749,
+    0.00289083831012249,
+    -0.013141867704689503,
+    -0.0622299462556839,
+    -0.08465685695409775,
+    -0.00924651324748993,
+    2.008662704611197e-05,
+    0.07081113755702972,
+    -0.01938844472169876,
+    -0.03887055814266205,
+    0.0716475248336792,
+    0.011563380248844624,
+    -0.018739618360996246,
+    -0.005701330024749041,
+    -0.04105744510889053,
+    -0.008071750402450562,
+    -0.013924878090620041,
+    0.0006158994510769844,
+    0.005216173827648163,
+    -0.01016671396791935,
+    -0.009862568229436874,
+    0.022066641598939896,
+    0.05936100706458092,
+    -0.03264685720205307,
+    -0.017647655680775642,
+    0.009225528687238693,
+    -0.014264330267906189,
+    0.03257244452834129,
+    -0.0002462003321852535,
+    0.006745762657374144,
+    0.012587797828018665,
+    0.03934988006949425,
+    0.00414708536118269,
+    -0.01215734425932169,
+    0.08464744687080383,
+    0.05072243511676788,
+    -0.03978198394179344,
+    0.010373725555837154,
+    0.015066730789840221,
+    -0.02027318626642227,
+    -0.011258491314947605,
+    0.04361634701490402,
+    0.007891014218330383,
+    -0.01479843258857727,
+    0.00034274530480615795,
+    0.04311709478497505,
+    -0.04932776838541031,
+    -0.043944764882326126,
+    -0.0005016537616029382,
+    -0.04874392971396446,
+    0.019717488437891006,
+    -0.010369407013058662,
+    -0.09990517795085907,
+    -0.06598666310310364,
+    -0.08143249154090881,
+    -0.017014671117067337,
+    -0.031835511326789856,
+    0.015791159123182297,
+    -0.04023547098040581,
+    0.03882880508899689,
+    -0.005419540219008923,
+    0.041302189230918884,
+    -0.09331545233726501,
+    0.027497561648488045,
+    0.017372161149978638,
+    -0.020746411755681038,
+    0.050706177949905396,
+    0.02769234962761402,
+    0.06570129096508026,
+    0.028538405895233154,
+    0.051834482699632645,
+    -0.001538266777060926,
+    0.024247290566563606,
+    0.005512991454452276,
+    -0.03514916077256203,
+    0.054318226873874664,
+    0.018876224756240845,
+    0.01778080314397812,
+    -0.033848199993371964,
+    -0.0035127357114106417,
+    0.0023438576608896255,
+    0.006692915689200163,
+    0.053317151963710785,
+    0.0216435045003891,
+    -0.0365399569272995,
+    -0.009302499704062939,
+    -0.017035357654094696,
+    0.047580938786268234,
+    0.04355834797024727,
+    0.02070988528430462,
+    -0.000937946664635092,
+    -0.02483844943344593,
+    8.879814413376153e-05,
+    -0.02259788103401661,
+    -0.001895453198812902,
+    0.049101006239652634,
+    -0.044349294155836105,
+    -0.008480189368128777,
+    -0.05469091609120369,
+    -0.028829874470829964,
+    -0.07146072387695312,
+    -0.051888879388570786,
+    0.02717205323278904,
+    0.08192960172891617,
+    0.017443036660552025,
+    0.020197678357362747,
+    0.025148669257760048,
+    0.030440056696534157,
+    0.04751405864953995,
+    -0.018797438591718674,
+    0.009476208128035069,
+    0.02839437685906887,
+    -0.013933824375271797,
+    -0.06106960028409958,
+    0.0023639097344130278,
+    -0.05000190809369087,
+    -0.021862925961613655,
+    -0.00927023496478796,
+    -0.012041389010846615,
+    -0.03885812684893608,
+    0.046704161912202835,
+    0.006112704519182444,
+    0.017123010009527206,
+    0.012948392890393734,
+    -0.01724233105778694,
+    -0.017300443723797798,
+    0.024192743003368378,
+    0.036356426775455475,
+    -0.007239832542836666,
+    -0.016599074006080627,
+    0.05716788396239281,
+    0.0599919892847538,
+    -0.01618032157421112,
+    0.024444879963994026,
+    -0.03322666883468628,
+    0.014448939822614193,
+    0.022538544610142708,
+    -0.012457571923732758,
+    -0.0762673169374466,
+    -0.04994700476527214,
+    0.02207864634692669,
+    0.02489275485277176,
+    0.03387797623872757,
+    0.009421603754162788,
+    -0.06543871760368347,
+    0.0024353296030312777,
+    -0.017833398655056953,
+    0.014761392958462238,
+    -0.0030053644441068172,
+    0.008763955906033516,
+    -0.01416599377989769,
+    0.0010030620032921433,
+    0.03332887589931488,
+    0.007030694279819727,
+    0.01714923419058323,
+    -0.03413684293627739,
+    -0.007982619106769562,
+    -0.0018927267519757152,
+    0.006841694004833698,
+    0.023586416617035866,
+    0.010134061798453331,
+    -0.01550304051488638,
+    -0.029169706627726555,
+    0.0032567880116403103,
+    0.01959286816418171,
+    -0.007648180238902569,
+    0.015100231394171715,
+    0.018455766141414642,
+    0.07175297290086746,
+    0.00830232072621584,
+    0.001936230924911797,
+    -0.022209830582141876,
+    0.025077328085899353,
+    -0.06257589906454086,
+    -0.054150767624378204,
+    0.004430567380040884,
+    0.057718876749277115,
+    0.019214577972888947,
+    -0.023530030623078346,
+    0.03077883832156658,
+    -0.031228747218847275,
+    -0.004502413794398308,
+    -0.0009351710323244333,
+    0.04766860976815224,
+    -0.02378363162279129,
+    -0.05551380664110184,
+    -0.019711991772055626,
+    -0.007670158986002207,
+    -0.04047083482146263,
+    0.0052210260182619095,
+    0.007789258845150471,
+    -0.06571546196937561,
+    0.05309242755174637,
+    -0.017188917845487595,
+    -0.053165435791015625,
+    -0.050551965832710266,
+    -0.00789074320346117,
+    0.08531875908374786,
+    0.00469413073733449,
+    0.005747484974563122,
+    0.0013538927305489779,
+    -0.012430119328200817,
+    -0.02606125921010971,
+    -0.041718676686286926,
+    -0.042787522077560425,
+    0.012390206567943096,
+    0.016336580738425255,
+    0.05552716925740242,
+    0.05823469161987305,
+    0.004317032173275948,
+    0.008723757229745388,
+    -0.06351721286773682,
+    0.005809023976325989,
+    0.012360580265522003,
+    0.023137720301747322,
+    -0.023113498464226723,
+    -6.356381376947884e-33,
+    0.0032857381738722324,
+    -0.05789009481668472,
+    -0.024384906515479088,
+    -0.022881168872117996,
+    -0.04062480479478836,
+    -0.008785783313214779,
+    -0.02598460577428341,
+    -0.011309037916362286,
+    -0.01509177777916193,
+    -0.014819284901022911,
+    -0.0054006376303732395,
+    0.013698464259505272,
+    0.01887805387377739,
+    -0.03886363282799721,
+    -1.117694682761794e-05,
+    0.012033764272928238,
+    0.013748297467827797,
+    -0.0008486431324854493,
+    -0.0014798663323745131,
+    0.0290136206895113,
+    0.04878561198711395,
+    0.011590801179409027,
+    0.004199373070150614,
+    -0.06807535141706467,
+    0.031066838651895523,
+    0.02579091116786003,
+    -0.02767406590282917,
+    0.02838492952287197,
+    0.031468600034713745,
+    0.025670070201158524,
+    -0.002134042326360941,
+    0.006779335904866457,
+    0.01780601032078266,
+    -0.00011615087714744732,
+    -0.006433647591620684,
+    0.017650581896305084,
+    -0.026357920840382576,
+    -0.03626369684934616,
+    -0.028185494244098663,
+    0.043786369264125824,
+    0.0320705808699131,
+    0.00044468327541835606,
+    0.021386075764894485,
+    -0.029066329821944237,
+    -0.009894493035972118,
+    0.022394653409719467,
+    0.0626383125782013,
+    0.000696778588462621,
+    -0.001104433205910027,
+    0.02356013096868992,
+    -0.053286537528038025,
+    -0.0019954615272581577,
+    -0.10606710612773895,
+    0.027147792279720306,
+    -0.006349495612084866,
+    0.0789429172873497,
+    0.01961272768676281,
+    -0.022182727232575417,
+    -0.06218777969479561,
+    0.07046066969633102,
+    -0.06838177144527435,
+    -0.047882240265607834,
+    -0.004133923910558224,
+    0.0047872490249574184,
+    0.060706593096256256,
+    0.044247888028621674,
+    0.03630729019641876,
+    0.008189808577299118,
+    -0.010529695078730583,
+    0.030994201079010963,
+    -0.005844463128596544,
+    0.005013152491301298,
+    0.018686922267079353,
+    0.016316549852490425,
+    -0.017611104995012283,
+    -0.060922782868146896,
+    -0.04796973615884781,
+    0.026553818956017494,
+    0.13674813508987427,
+    -0.015620516613125801,
+    0.011996624059975147,
+    0.0086169159039855,
+    -0.07242448627948761,
+    -0.028603725135326385,
+    0.043548278510570526,
+    -0.0035399491898715496,
+    0.008382593281567097,
+    -0.049007199704647064,
+    -0.003249743953347206,
+    -0.007465039845556021,
+    -0.04336211085319519,
+    -0.05653980001807213,
+    0.03838669881224632,
+    -0.06103126332163811,
+    0.010598938912153244,
+    -0.01975099928677082,
+    -0.0020024150144308805,
+    0.01022187527269125,
+    -0.0014016309287399054,
+    -0.04016941040754318,
+    -0.022008871659636497,
+    -0.08257265388965607,
+    0.04571067914366722,
+    -0.011218627914786339,
+    0.04807167872786522,
+    0.0147293945774436,
+    -0.01435789093375206,
+    0.011663836427032948,
+    -0.010945947840809822,
+    -0.005732052493840456,
+    0.03561272844672203,
+    0.00607921089977026,
+    -0.021060097962617874,
+    0.015134457498788834,
+    0.015032798051834106,
+    0.013567306101322174,
+    -0.01412583515048027,
+    0.04616619274020195,
+    0.033014774322509766,
+    0.003961076028645039,
+    -0.0375329814851284,
+    0.016884922981262207,
+    -0.021516261622309685,
+    -0.011065458878874779,
+    -0.039397649466991425,
+    0.0009515616111457348,
+    -0.04066000506281853,
+    0.004176123067736626,
+    0.012740799225866795,
+    -0.059022966772317886,
+    -0.02408331073820591,
+    -0.06899669021368027,
+    2.9938701118226163e-07,
+    -0.005646297708153725,
+    0.06651098281145096,
+    -0.05814036726951599,
+    0.030652128159999847,
+    -0.003049230668693781,
+    0.07745096832513809,
+    0.021230706945061684,
+    -0.009413110092282295,
+    0.04460892826318741,
+    0.028485655784606934,
+    0.04147122800350189,
+    -0.004340872634202242,
+    0.01235781330615282,
+    0.033863700926303864,
+    -0.09339649230241776,
+    -0.03852660208940506,
+    -0.03123048134148121,
+    -0.02104535512626171,
+    -0.02440347522497177,
+    0.06552986055612564,
+    0.03937802091240883,
+    0.07093929499387741,
+    0.03184228017926216,
+    -0.024747658520936966,
+    0.018016759306192398,
+    -0.024157661944627762,
+    -0.020648933947086334,
+    0.011026740074157715,
+    0.016526460647583008,
+    0.052141979336738586,
+    0.017861688509583473,
+    -0.034762486815452576,
+    0.044021476060152054,
+    0.06479914486408234,
+    0.018482111394405365,
+    -0.0030548209324479103,
+    -0.003516556927934289,
+    0.02357976883649826,
+    0.003308291547000408,
+    -0.018795063719153404,
+    0.023834120482206345,
+    0.0055958484299480915,
+    0.03820794075727463,
+    -0.04578279331326485,
+    0.07592576742172241,
+    -0.04277802258729935,
+    -0.07763369381427765,
+    -0.0018894895911216736,
+    0.010625846683979034,
+    -0.017002755776047707,
+    0.040932342410087585,
+    0.019636964425444603,
+    0.005478610284626484,
+    0.05466544255614281,
+    -0.02695218101143837,
+    0.005524822045117617,
+    0.00775293679907918,
+    -0.06210637092590332,
+    0.010718964040279388,
+    -0.07108257710933685,
+    -0.08075752854347229,
+    -0.08731817454099655,
+    0.03669707849621773,
+    0.07343936711549759,
+    0.05722607299685478,
+    0.01637999713420868,
+    0.03858785703778267,
+    2.9023435362269704e-34,
+    0.001111089251935482,
+    0.05037370324134827,
+    0.01805160939693451,
+    0.01523701660335064,
+    0.02879565954208374,
+    0.014043823815882206,
+    0.04491664096713066,
+    0.020150646567344666,
+    0.04948792979121208,
+    -0.04344017803668976,
+    0.0014382611261680722
+  ]
+}

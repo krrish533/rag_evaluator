@@ -1,0 +1,1722 @@
+{
+  "filename": "USER-INTENT.txt",
+  "keywords": [
+    "musicdialog",
+    "intents",
+    "music",
+    "andmusical",
+    "intent",
+    "musical",
+    "playmusic",
+    "utterances",
+    "musicthats",
+    "classifying"
+  ],
+  "predicted_intent": {
+    "intent": "intent_recognition",
+    "confidence_score": 0.3711
+  },
+  "named_entities": [
+    {
+      "text": "Musical",
+      "label": "ORG"
+    },
+    {
+      "text": "Music Discovery Conversations",
+      "label": "ORG"
+    },
+    {
+      "text": "Daeyong Kwon",
+      "label": "PERSON"
+    },
+    {
+      "text": "Graduate School of Culture Technology",
+      "label": "ORG"
+    },
+    {
+      "text": "KAIST",
+      "label": "ORG"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama 3",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "billions",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "PlayMusic",
+      "label": "ORG"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1arXiv:2411.12254v2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "NLP",
+      "label": "ORG"
+    },
+    {
+      "text": "LLaMa3",
+      "label": "PERSON"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "2.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "two",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "100B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Google News Corpus",
+      "label": "ORG"
+    },
+    {
+      "text": "300",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3M",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "2.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "BERT",
+      "label": "ORG"
+    },
+    {
+      "text": "40%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "97%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "60%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "WordPiece",
+      "label": "ORG"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "768",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "first",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "SOS",
+      "label": "ORG"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "2.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "later today",
+      "label": "TIME"
+    },
+    {
+      "text": "2.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "Doh et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Doh et al",
+      "label": "PERSON"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "three",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "888",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TagLlama Sparse Representation Word Embedding",
+      "label": "ORG"
+    },
+    {
+      "text": "1B_0 1B_5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8B_0",
+      "label": "ORG"
+    },
+    {
+      "text": "Finetune\nInitial Query",
+      "label": "ORG"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04 0.41 0.79",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.46",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.41 0.87 0.91 0.93",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.90 0.97",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.10 0.17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.95 0.99",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.85 0.72 0.49 0.80 0.75 0.91 0.93",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.92 0.90 0.94 0.96\n",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Remove Filter",
+      "label": "PERSON"
+    },
+    {
+      "text": "0.36",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.82",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Macro Avg 0.27",
+      "label": "ORG"
+    },
+    {
+      "text": "0.76 0.89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "TagLlama Sparse Representation Word Embedding",
+      "label": "ORG"
+    },
+    {
+      "text": "1B_0 1B_5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8B_0",
+      "label": "ORG"
+    },
+    {
+      "text": "0.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.31 0.39 0.73",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.19 0.17 0.32 0.44 0.67 0.31 0.75 0.89",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.10 0.62",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.02 0.02 0.02",
+      "label": "EVENT"
+    },
+    {
+      "text": "0.36 0.40",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.33 0.80",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.05 0.05 0.05",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.52 0.74",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04 0.03 0.01 0.04 0.00 0.47 0.20 0.25 0.71",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.19",
+      "label": "DATE"
+    },
+    {
+      "text": "0.23",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.76",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.63",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.89",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.06",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.71 0.83 0.67",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.80 0.93",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.04",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.44",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.22 0.71",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.04 0.02 0.05",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "0.00",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.01",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2.7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8:1:1",
+      "label": "GPE"
+    },
+    {
+      "text": "64",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Adam",
+      "label": "PERSON"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.9",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Concatenate Previous Dialogue",
+      "label": "ORG"
+    },
+    {
+      "text": "Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3 Result",
+      "label": "QUANTITY"
+    },
+    {
+      "text": "3.1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "0.36 \u2212 \u21920.40",
+      "label": "MONEY"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Llama",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "70B",
+      "label": "DATE"
+    },
+    {
+      "text": "405B",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.61",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "F1",
+      "label": "GPE"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "0",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huggingface\n2Github Repository",
+      "label": "ORG"
+    },
+    {
+      "text": "4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Katherin",
+      "label": "GPE"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ground Truth",
+      "label": "PERSON"
+    },
+    {
+      "text": "5.2",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "one",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Llama",
+      "label": "PERSON"
+    },
+    {
+      "text": "5.4",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Dataset",
+      "label": "ORG"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5.5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "5",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "1]Anmol",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Bhasin",
+      "label": "GPE"
+    },
+    {
+      "text": "Bharatram Natarajan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gaurav Mathur",
+      "label": "PERSON"
+    },
+    {
+      "text": "Himanshu Mangla",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "14th",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "International Conference on Semantic Computing",
+      "label": "ORG"
+    },
+    {
+      "text": "ICSC",
+      "label": "ORG"
+    },
+    {
+      "text": "2]Wanling",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Cai",
+      "label": "PERSON"
+    },
+    {
+      "text": "Li Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "28th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Personalization",
+      "label": "NORP"
+    },
+    {
+      "text": "33\u201342",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Megan Leszczynski",
+      "label": "PERSON"
+    },
+    {
+      "text": "Shu\nZhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ravi Ganti",
+      "label": "PERSON"
+    },
+    {
+      "text": "Krisztian Balog",
+      "label": "ORG"
+    },
+    {
+      "text": "Filip Radlin-",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "46th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "ACM SIGIR Conference on Research",
+      "label": "ORG"
+    },
+    {
+      "text": "2754",
+      "label": "DATE"
+    },
+    {
+      "text": "2764",
+      "label": "DATE"
+    },
+    {
+      "text": "4]Alice",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Coucke",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alaa Saade",
+      "label": "PERSON"
+    },
+    {
+      "text": "Adrien Ball",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alexandre Caulier",
+      "label": "PERSON"
+    },
+    {
+      "text": "David Leroy",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibault Gisselbrecht",
+      "label": "PERSON"
+    },
+    {
+      "text": "Francesco Calta-",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Snips",
+      "label": "ORG"
+    },
+    {
+      "text": "5]Jacob",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Devlin",
+      "label": "PRODUCT"
+    },
+    {
+      "text": "Ming-Wei Chang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kenton Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kristina Toutanova",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "Bert",
+      "label": "PERSON"
+    },
+    {
+      "text": "6]Seungheon",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Keunwoo Choi",
+      "label": "ORG"
+    },
+    {
+      "text": "Daeyong Kwon",
+      "label": "PERSON"
+    },
+    {
+      "text": "Taesu Kim",
+      "label": "PERSON"
+    },
+    {
+      "text": "Juhan Nam",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "Society for Music Information Retrieval\nConference",
+      "label": "ORG"
+    },
+    {
+      "text": "Abhinav Jauhri",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abhinav Pandey",
+      "label": "PERSON"
+    },
+    {
+      "text": "Abhishek Kadian",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ahmad Al-Dahle",
+      "label": "PERSON"
+    },
+    {
+      "text": "Aiesha Letman",
+      "label": "PERSON"
+    },
+    {
+      "text": "Akhil Mathur",
+      "label": "PERSON"
+    },
+    {
+      "text": "Alan Schelten",
+      "label": "PERSON"
+    },
+    {
+      "text": "Amy Yang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Angela\nFan",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2024",
+      "label": "DATE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "8]Soyeon",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Caren Han",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siqu Long",
+      "label": "PERSON"
+    },
+    {
+      "text": "Huichun Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Henry\nWeld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Josiah Poon",
+      "label": "PERSON"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "International",
+      "label": "ORG"
+    },
+    {
+      "text": "10",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jimmy Ba",
+      "label": "PERSON"
+    },
+    {
+      "text": "2014",
+      "label": "DATE"
+    },
+    {
+      "text": "3rd International\nConference for Learning Representations",
+      "label": "ORG"
+    },
+    {
+      "text": "11",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Stefan Larson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anish Mahendran",
+      "label": "NORP"
+    },
+    {
+      "text": "Joseph J Peper",
+      "label": "PERSON"
+    },
+    {
+      "text": "Christopher Clarke",
+      "label": "PERSON"
+    },
+    {
+      "text": "Andrew Lee",
+      "label": "PERSON"
+    },
+    {
+      "text": "Parker Hill",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jonathan K Kummerfeld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kevin Leach",
+      "label": "PERSON"
+    },
+    {
+      "text": "Michael ALaurenzano",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lingjia Tang",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "12",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lefteris Loukas",
+      "label": "PERSON"
+    },
+    {
+      "text": "Ilias Stogiannidis",
+      "label": "PERSON"
+    },
+    {
+      "text": "Odysseas",
+      "label": "GPE"
+    },
+    {
+      "text": "Prodromos Malakasiotis",
+      "label": "ORG"
+    },
+    {
+      "text": "Stavros\nVassos",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "every penny",
+      "label": "MONEY"
+    },
+    {
+      "text": "the Fourth ACM International",
+      "label": "FAC"
+    },
+    {
+      "text": "AI",
+      "label": "GPE"
+    },
+    {
+      "text": "392\u2013400",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "13",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Fran\u00e7ois Mairesse",
+      "label": "PERSON"
+    },
+    {
+      "text": "Milica Gasic",
+      "label": "PERSON"
+    },
+    {
+      "text": "Filip Jurcicek",
+      "label": "PERSON"
+    },
+    {
+      "text": "mon Keizer",
+      "label": "PERSON"
+    },
+    {
+      "text": "Blaise Thomson",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kai Yu",
+      "label": "PERSON"
+    },
+    {
+      "text": "Steve\nYoung",
+      "label": "PERSON"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "2009",
+      "label": "DATE"
+    },
+    {
+      "text": "Acoustics",
+      "label": "ORG"
+    },
+    {
+      "text": "Speech",
+      "label": "ORG"
+    },
+    {
+      "text": "Signal Processing",
+      "label": "ORG"
+    },
+    {
+      "text": "4749\u20134752",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "IEEE",
+      "label": "ORG"
+    },
+    {
+      "text": "14",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tomas Mikolov",
+      "label": "PERSON"
+    },
+    {
+      "text": "Kai Chen",
+      "label": "PERSON"
+    },
+    {
+      "text": "Greg Corrado",
+      "label": "PERSON"
+    },
+    {
+      "text": "Jeffrey Dean",
+      "label": "PERSON"
+    },
+    {
+      "text": "2013",
+      "label": "DATE"
+    },
+    {
+      "text": "vector",
+      "label": "DATE"
+    },
+    {
+      "text": "15",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Lingfeng Pan",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yi Zhang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Feiliang Ren",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yining Hou",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yan Li",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaobo Liang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Yongkang Liu",
+      "label": "PERSON"
+    },
+    {
+      "text": "2018",
+      "label": "DATE"
+    },
+    {
+      "text": "CCKS Tasks",
+      "label": "ORG"
+    },
+    {
+      "text": "16",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Victor Sanh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lysandre Debut",
+      "label": "PERSON"
+    },
+    {
+      "text": "Julien Chaumond",
+      "label": "PERSON"
+    },
+    {
+      "text": "Thomas Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "Distilbert",
+      "label": "PERSON"
+    },
+    {
+      "text": "5th",
+      "label": "ORDINAL"
+    },
+    {
+      "text": "Cognitive Computing - NeurIPS",
+      "label": "WORK_OF_ART"
+    },
+    {
+      "text": "17",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Jetze Schuurmans",
+      "label": "PERSON"
+    },
+    {
+      "text": "Flavius Frasincar",
+      "label": "ORG"
+    },
+    {
+      "text": "2019",
+      "label": "DATE"
+    },
+    {
+      "text": "18",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Klaus Ries",
+      "label": "ORG"
+    },
+    {
+      "text": "Noah Coccaro",
+      "label": "ORG"
+    },
+    {
+      "text": "beth Shriberg",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rebecca Bates",
+      "label": "PERSON"
+    },
+    {
+      "text": "Daniel Jurafsky",
+      "label": "PERSON"
+    },
+    {
+      "text": "Paul\nTaylor",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rachel Martin",
+      "label": "PERSON"
+    },
+    {
+      "text": "Carol Van Ess-Dykema",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marie Meteer",
+      "label": "PERSON"
+    },
+    {
+      "text": "2000",
+      "label": "DATE"
+    },
+    {
+      "text": "19",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thibaut Lavril",
+      "label": "PERSON"
+    },
+    {
+      "text": "Gautier Izacard",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xavier Martinet",
+      "label": "PERSON"
+    },
+    {
+      "text": "Marie-Anne Lachaux",
+      "label": "PERSON"
+    },
+    {
+      "text": "Timoth\u00e9e\nLacroix",
+      "label": "PERSON"
+    },
+    {
+      "text": "Baptiste Rozi\u00e8re",
+      "label": "PERSON"
+    },
+    {
+      "text": "Naman Goyal",
+      "label": "PERSON"
+    },
+    {
+      "text": "Eric Ham-\n",
+      "label": "PERSON"
+    },
+    {
+      "text": "Faisal Azhar",
+      "label": "PERSON"
+    },
+    {
+      "text": "al",
+      "label": "PERSON"
+    },
+    {
+      "text": "2023",
+      "label": "DATE"
+    },
+    {
+      "text": "20",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Henry Weld",
+      "label": "PERSON"
+    },
+    {
+      "text": "Xiaoqi Huang",
+      "label": "PERSON"
+    },
+    {
+      "text": "Siqu Long",
+      "label": "PERSON"
+    },
+    {
+      "text": "Han",
+      "label": "NORP"
+    },
+    {
+      "text": "2022",
+      "label": "DATE"
+    },
+    {
+      "text": "Computing Surveys",
+      "label": "PERSON"
+    },
+    {
+      "text": "55(8):1\u201338",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "21",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Thomas Wolf",
+      "label": "PERSON"
+    },
+    {
+      "text": "Lysandre Debut",
+      "label": "PERSON"
+    },
+    {
+      "text": "Victor Sanh",
+      "label": "PERSON"
+    },
+    {
+      "text": "Julien\nChaumond",
+      "label": "PERSON"
+    },
+    {
+      "text": "Clement Delangue",
+      "label": "PERSON"
+    },
+    {
+      "text": "Anthony Moi",
+      "label": "PERSON"
+    },
+    {
+      "text": "Cistac",
+      "label": "PERSON"
+    },
+    {
+      "text": "Tim Rault",
+      "label": "PERSON"
+    },
+    {
+      "text": "R\u00e9mi Louf",
+      "label": "PERSON"
+    },
+    {
+      "text": "Morgan Funtowicz",
+      "label": "ORG"
+    },
+    {
+      "text": "al",
+      "label": "ORG"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "2020",
+      "label": "DATE"
+    },
+    {
+      "text": "38\u201345",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "6",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Tables 1",
+      "label": "EVENT"
+    },
+    {
+      "text": "the Bag of Words",
+      "label": "ORG"
+    },
+    {
+      "text": "DistilBERT",
+      "label": "NORP"
+    },
+    {
+      "text": "Train Test Overlap (Ratio",
+      "label": "ORG"
+    },
+    {
+      "text": "4,835",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "908",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "76.7%",
+      "label": "PERCENT"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Train and Test",
+      "label": "ORG"
+    },
+    {
+      "text": "Train",
+      "label": "GPE"
+    },
+    {
+      "text": "3",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "User Intents",
+      "label": "PERSON"
+    },
+    {
+      "text": "Musical",
+      "label": "ORG"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Zero",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "7",
+      "label": "CARDINAL"
+    },
+    {
+      "text": "Ed Sheeran",
+      "label": "PERSON"
+    },
+    {
+      "text": "Rihanna",
+      "label": "GPE"
+    },
+    {
+      "text": "African",
+      "label": "NORP"
+    },
+    {
+      "text": "8",
+      "label": "CARDINAL"
+    }
+  ],
+  "summary": "This paper explores intent classification in music discovery conversations using pre-trained language models, addressing both functional user intents and musical attribute classification. By incorporating chat history for context, the proposed model significantly improves prediction accuracy, outperforming zero-shot and few-shot Llama 3-based approaches."
+}
